@@ -1,8 +1,12 @@
 import "./App.css";
 import Banner from "./components/Banner";
+import CustomerReviews from "./components/CustomerReviews";
+import FAQ from "./components/FAQ";
+import Goal from "./components/Goal";
 import Hero from "./components/Hero";
 import LeadingCompanies from "./components/LeadingCompanies";
 import NavBar from "./components/NavBar";
+import NextGen from "./components/NextGen";
 import ScrollingLogos from "./components/ScrollingLogos";
 import Services from "./components/Services";
 import { ThemeProvider } from "./components/ThemeProvider";
@@ -19,6 +23,10 @@ function App() {
       <ScrollingLogos/>
       <Services/>
       <LeadingCompanies/>
+      {/* <CustomerReviews/> */}
+      <Goal/>
+      <NextGen/>
+      <FAQ/>
       </ThemeProvider>
     </div>
   );
