@@ -131,51 +131,6 @@ export default function ScrollingLogos() {
           />
         </li>
       </ul>
-
-      {/* <div className="flex gap-20 h-32 items-center justify-center overflow-hidden animate-loop-scroll">
-        <img
-          className="w-[130px] h-[46.5px]"
-          src="src\images\logos-scroll-animation\amravathi.png"
-        />
-        <img
-          className="w-[130px] h-[46.5px]"
-          src="src\images\logos-scroll-animation\IOD.png"
-        />
-        <img
-          className="w-[130px] h-[46.5px]"
-          src="src\images\logos-scroll-animation\indianOil.png"
-        />
-        <img
-          className="w-[130px] h-[46.5px]"
-          src="src\images\logos-scroll-animation\columbia.png"
-        />
-        <img
-          className="w-[130px] h-[46.5px]"
-          src="src\images\logos-scroll-animation\cyfuture.png"
-        />
-        <img
-          className="w-[130px] h-[46.5px]"
-          src="src\images\logos-scroll-animation\daffodil.png"
-        />
-        <img
-          className="w-[130px] h-[46.5px]"
-          src="src\images\logos-scroll-animation\lotus.png"
-        />
-        <img
-          className="w-[130px] h-[46.5px]"
-          src="src\images\logos-scroll-animation\shemaroo.png"
-        />
-        <img
-          className="w-[130px] h-[46.5px]"
-          src="src\images\logos-scroll-animation\singa.png"
-        />
-        <img
-          className="w-[130px] h-[46.5px]"
-          src="src\images\logos-scroll-animation\indiaMart.png"
-        />
-      </div> */}
     </div>
   );
 }
-
-// export default ScrollingLogos
