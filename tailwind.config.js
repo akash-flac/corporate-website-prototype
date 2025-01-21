@@ -10,7 +10,7 @@ export default {
         'custom-purple': '#260651',
       },
       animation: {
-        "loop-scroll" : "loop-scroll 5s linear infinite", 
+        "loop-scroll" : "loop-scroll 13.75s linear infinite", 
       },
       keyframes: {
         "loop-scroll": {

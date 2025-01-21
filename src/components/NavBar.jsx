@@ -18,8 +18,21 @@ import {
   ArrowPathIcon,
   Bars3Icon,
   ChartPieIcon,
+  ChatBubbleBottomCenterTextIcon,
+  CheckBadgeIcon,
+  CodeBracketIcon,
+  Cog6ToothIcon,
   CursorArrowRaysIcon,
+  DevicePhoneMobileIcon,
+  EllipsisHorizontalIcon,
   FingerPrintIcon,
+  GlobeAltIcon,
+  InformationCircleIcon,
+  LightBulbIcon,
+  PencilSquareIcon,
+  PercentBadgeIcon,
+  QuestionMarkCircleIcon,
+  RocketLaunchIcon,
   SquaresPlusIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
@@ -28,48 +41,316 @@ import {
   PhoneIcon,
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
+import {
+  BriefcaseIcon,
+  CloudIcon,
+  CloudLightningIcon,
+  Code2,
+  CodeIcon,
+  HandshakeIcon,
+  LucideCloudLightning,
+  MegaphoneIcon,
+  ShoppingBagIcon,
+} from "lucide-react";
 
-const products = [
+const about = [
   {
     name: "About Company",
-    description: "Get a better understanding of your traffic",
+    description:
+      "Learn more about who we are, what we stand for, and how we bring value to our customers",
+    href: "#",
+    icon: InformationCircleIcon,
+  },
+  {
+    name: "Mission",
+    description:
+      "Discover our goals, values, and commitment to making a positive impact in our industry and beyond",
+    href: "#",
+    icon: LightBulbIcon,
+  },
+  {
+    name: "Client Reviews",
+    description:
+      "Hear directly from our satisfied clients about their experiences working with us",
+    href: "#",
+    icon: ChatBubbleBottomCenterTextIcon,
+  },
+  {
+    name: "FAQs",
+    description:
+      "Find quick answers to commonly asked questions and get the information you need effortlessly",
+    href: "#",
+    icon: QuestionMarkCircleIcon,
+  },
+  {
+    name: "Careers",
+    description:
+      "Explore exciting career opportunities and join our team to shape the future together",
+    href: "#",
+    icon: BriefcaseIcon,
+  },
+  {
+    name: "Become Our Agent",
+    description:
+      "Partner with us as an agent and help bring our solutions to a broader audience",
+    href: "#",
+    icon: HandshakeIcon,
+  },
+];
+
+const services = [
+  {
+    name: "Software Development",
+    description:
+      "Custom software solutions tailored to meet your unique business needs and challenges",
+    href: "#",
+    icon: Code2,
+  },
+  {
+    name: "UI/UX Design",
+    description:
+      "Craft visually stunning and user-friendly designs to enhance user experience and engagement",
+    href: "#",
+    icon: PencilSquareIcon,
+  },
+  {
+    name: "Digital Marketing",
+    description:
+      "Boost your online presence and grow your business with targeted and effective marketing strategies",
+    href: "#",
+    icon: MegaphoneIcon,
+  },
+  {
+    name: "Mobile App Development",
+    description:
+      "Build high-performance mobile applications for iOS and Android platforms to expand your reach",
+    href: "#",
+    icon: DevicePhoneMobileIcon,
+  },
+  {
+    name: "DevOps Consultation",
+    description:
+      "Streamline your development process with our DevOps practices to ensure efficient delivery and scalability",
+    href: "#",
+    icon: Cog6ToothIcon,
+  },
+  {
+    name: "MVP Development",
+    description:
+      "Quickly bring your ideas to life with minimum viable product (MVP) development services",
+    href: "#",
+    icon: RocketLaunchIcon,
+  },
+  {
+    name: "Web Development",
+    description:
+      "Create fast, secure, and scalable websites tailored to your business goals and user needs",
+    href: "#",
+    icon: GlobeAltIcon,
+  },
+  {
+    name: "e-commerce",
+    description: "Build seamless and feature-rich online stores to deliver exceptional shopping experiences",
+    href: "#",
+    icon: ShoppingBagIcon,
+  },
+  {
+    name: "Low Code - No Code",
+    description: "Empower your team with low-code and no-code solutions to develop apps faster and more efficiently",
+    href: "#",
+    icon: LucideCloudLightning,
+  },
+  {
+    name: "Testing and QA",
+    description: "Ensure your product's quality with thorough testing and quality assurance services",
+    href: "#",
+    icon: CheckBadgeIcon,
+  },
+  {
+    name: "SaaS Products",
+    description: "Develop scalable and user-friendly SaaS applications to meet modern business demands",
+    href: "#",
+    icon: CloudIcon,
+  },
+  {
+    name: "See All Services",
+    description: "Explore the full range of services we offer to help your business thrive",
+    href: "#",
+    icon: EllipsisHorizontalIcon,
+  },
+];
+
+const industries = [
+  {
+    name: "Finance & FinTech",
+    // description: "Get a better understanding of your traffic",
     href: "#",
     icon: ChartPieIcon,
   },
   {
-    name: "Mission",
-    description: "Speak directly to your customers",
+    name: "Travel & Hospitality",
+    // description: "Speak directly to your customers",
     href: "#",
     icon: CursorArrowRaysIcon,
   },
   {
-    name: "Client Reviews",
-    description: "Your customers’ data will be safe and secure",
+    name: "Real Estate & Construction",
+    // description: "Your customers’ data will be safe and secure",
     href: "#",
     icon: FingerPrintIcon,
   },
   {
-    name: "FAQs",
-    description: "Connect with third-party tools",
+    name: "Health & Wellness",
+    // description: "Connect with third-party tools",
     href: "#",
     icon: SquaresPlusIcon,
   },
   {
-    name: "Careers",
-    description: "Build strategic funnels that will convert",
+    name: "Transportation & Logistics",
+    // description: "Build strategic funnels that will convert",
     href: "#",
     icon: ArrowPathIcon,
   },
   {
-    name: "Become Our Agent",
-    description: "Build strategic funnels that will convert",
+    name: "Professional services",
+    // description: "Build strategic funnels that will convert",
     href: "#",
     icon: ArrowPathIcon,
   },
+  {
+    name: "Media & Entertainment",
+    // description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Retail & e-Commerce",
+    // description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Education",
+    // description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Manufacturing",
+    // description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Telecommunications",
+    // description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "View All Industries",
+    // description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: EllipsisHorizontalIcon,
+  },
 ];
+
+const solutions = [
+  {
+    name: "ERP",
+    // description: "Get a better understanding of your traffic",
+    href: "#",
+    icon: ChartPieIcon,
+  },
+  {
+    name: "e-learning",
+    // description: "Speak directly to your customers",
+    href: "#",
+    icon: CursorArrowRaysIcon,
+  },
+  {
+    name: "CRM",
+    // description: "Your customers’ data will be safe and secure",
+    href: "#",
+    icon: FingerPrintIcon,
+  },
+  {
+    name: "Operations Management System",
+    // description: "Connect with third-party tools",
+    href: "#",
+    icon: SquaresPlusIcon,
+  },
+  {
+    name: "CMS",
+    // description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "e-Commerce",
+    // description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Supply Chain Management",
+    // description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Web Portals",
+    // description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "OTT Platform",
+    // description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Fleet Management",
+    // description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Financial Management",
+    // description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Project Management System",
+    // description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Human Resources Management System",
+    // description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Hospital Management System",
+    // description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "View All Products",
+    // description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: EllipsisHorizontalIcon,
+  },
+];
+
 const callsToAction = [
   { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  { name: "Contact sales", href: "#", icon: PhoneIcon },
+  { name: "Contact Sales", href: "#", icon: PhoneIcon },
 ];
 
 const NavBar = () => {
@@ -112,10 +393,10 @@ const NavBar = () => {
 
             <PopoverPanel
               transition
-              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="grid grid-cols-2 gap-4 p-4">
-                {products.map((item) => (
+                {about.map((item) => (
                   <div
                     key={item.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-lg hover:bg-gray-50"
@@ -134,28 +415,14 @@ const NavBar = () => {
                         {item.name}
                         <span className="absolute inset-0" />
                       </a>
-                      <p className="mt-1 text-gray-600">{item.description}</p>
+                      <p className="mt-1 text-xs text-gray-600">{item.description}</p>
                     </div>
                   </div>
                 ))}
               </div>
-              <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                {callsToAction.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center justify-center gap-x-2.5 p-3 text-lg font-semibold text-gray-900 hover:bg-gray-100"
-                  >
-                    <item.icon
-                      aria-hidden="true"
-                      className="size-5 flex-none text-gray-400"
-                    />
-                    {item.name}
-                  </a>
-                ))}
-              </div>
             </PopoverPanel>
           </Popover>
+
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-900">
               Services
@@ -170,7 +437,7 @@ const NavBar = () => {
               className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-3xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="grid grid-cols-3 gap-4 p-5">
-                {products.map((item) => (
+                {services.map((item) => (
                   <div
                     key={item.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-lg hover:bg-gray-50"
@@ -189,7 +456,9 @@ const NavBar = () => {
                         {item.name}
                         <span className="absolute inset-0" />
                       </a>
-                      <p className="mt-1 text-gray-600">{item.description}</p>
+                      <p className="mt-1 text-xs text-gray-600">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -212,6 +481,7 @@ const NavBar = () => {
               </div>
             </PopoverPanel>
           </Popover>
+
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-900">
               Industries
@@ -226,7 +496,7 @@ const NavBar = () => {
               className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-3xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="grid grid-cols-3 gap-4 p-5">
-                {products.map((item) => (
+                {industries.map((item) => (
                   <div
                     key={item.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-lg hover:bg-gray-50"
@@ -250,24 +520,9 @@ const NavBar = () => {
                   </div>
                 ))}
               </div>
-
-              <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                {callsToAction.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center justify-center gap-x-2.5 p-3 text-lg font-semibold text-gray-900 hover:bg-gray-100"
-                  >
-                    <item.icon
-                      aria-hidden="true"
-                      className="size-5 flex-none text-gray-400"
-                    />
-                    {item.name}
-                  </a>
-                ))}
-              </div>
             </PopoverPanel>
           </Popover>
+
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-900">
               Solutions
@@ -279,10 +534,10 @@ const NavBar = () => {
 
             <PopoverPanel
               transition
-              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-3xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+              className="absolute left-0 right-0 mt-2 w-screen inset-x-0 z-50 overflow-hidden top-full max-w-3xl rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="grid grid-cols-3 gap-4 p-5">
-                {products.map((item) => (
+                {solutions.map((item) => (
                   <div
                     key={item.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-lg hover:bg-gray-50"
@@ -304,22 +559,6 @@ const NavBar = () => {
                       <p className="mt-1 text-gray-600">{item.description}</p>
                     </div>
                   </div>
-                ))}
-              </div>
-
-              <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                {callsToAction.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center justify-center gap-x-2.5 p-3 text-lg font-semibold text-gray-900 hover:bg-gray-100"
-                  >
-                    <item.icon
-                      aria-hidden="true"
-                      className="size-5 flex-none text-gray-400"
-                    />
-                    {item.name}
-                  </a>
                 ))}
               </div>
             </PopoverPanel>
@@ -373,7 +612,7 @@ const NavBar = () => {
                     />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
-                    {[...products, ...callsToAction].map((item) => (
+                    {[...about, ...callsToAction].map((item) => (
                       <DisclosureButton
                         key={item.name}
                         as="a"
@@ -394,7 +633,7 @@ const NavBar = () => {
                     />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
-                    {[...products, ...callsToAction].map((item) => (
+                    {[...services, ...callsToAction].map((item) => (
                       <DisclosureButton
                         key={item.name}
                         as="a"
@@ -415,7 +654,7 @@ const NavBar = () => {
                     />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
-                    {[...products, ...callsToAction].map((item) => (
+                    {[...industries, ...callsToAction].map((item) => (
                       <DisclosureButton
                         key={item.name}
                         as="a"
@@ -436,7 +675,7 @@ const NavBar = () => {
                     />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
-                    {[...products, ...callsToAction].map((item) => (
+                    {[...solutions, ...callsToAction].map((item) => (
                       <DisclosureButton
                         key={item.name}
                         as="a"
@@ -467,87 +706,6 @@ const NavBar = () => {
           </div>
         </DialogPanel>
       </Dialog>
-
-      {/* 
-<nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
-    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-        <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-        </a>
-        <button data-collapse-toggle="mega-menu-full" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mega-menu-full" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-            </svg>
-        </button>
-        <div id="mega-menu-full" class="items-center justify-between font-medium hidden w-full md:flex md:w-auto md:order-1">
-            <ul class="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                <li>
-                    <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Home</a>
-                </li>
-                <li>
-                    <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Company <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-  </svg></button>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Marketplace</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Resources</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div id="mega-menu-full-dropdown" class="mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600">
-        <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
-            <ul>
-                <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <div class="font-semibold">Online Stores</div>
-                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <div class="font-semibold">Segmentation</div>
-                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <div class="font-semibold">Marketing CRM</div>
-                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
-                    </a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <div class="font-semibold">Online Stores</div>
-                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <div class="font-semibold">Segmentation</div>
-                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <div class="font-semibold">Marketing CRM</div>
-                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav> */}
     </>
   );
 };
