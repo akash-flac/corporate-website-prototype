@@ -2,6 +2,7 @@ import "./App.css";
 import Banner from "./components/Banner";
 import CustomerReviews from "./components/CustomerReviews";
 import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
 import Goal from "./components/Goal";
 import Hero from "./components/Hero";
 import LeadingCompanies from "./components/LeadingCompanies";
@@ -24,9 +25,10 @@ function App() {
       <Services/>
       <LeadingCompanies/>
       {/* <CustomerReviews/> */}
-      <Goal/>
+      {/* <Goal/> */}
       <NextGen/>
       <FAQ/>
+      <Footer/>
       </ThemeProvider>
     </div>
   );
