@@ -102,7 +102,7 @@ const Footer = () => {
             </div>
           </div>
           <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-          <div class="flex flex-col items-center sm:flex sm:items-center sm:justify-between">
+          <div class="flex flex-col items-center sm:flex md:flex-row sm:items-center sm:justify-between">
             <Typography
               variant="small"
               className="mb-4 text-center font-normal text-white md:mb-0"
