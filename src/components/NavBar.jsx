@@ -456,9 +456,9 @@ const NavBar = () => {
                         {item.name}
                         <span className="absolute inset-0" />
                       </a>
-                      <p className="mt-1 text-xs text-gray-600">
+                      {/* <p className="mt-1 text-xs text-gray-600">
                         {item.description}
-                      </p>
+                      </p> */}
                     </div>
                   </div>
                 ))}
@@ -534,7 +534,7 @@ const NavBar = () => {
 
             <PopoverPanel
               transition
-              className="absolute left-0 right-0 mt-2 w-screen inset-x-0 z-50 overflow-hidden top-full max-w-3xl rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+              className="absolute mt-2 w-screen z-50 overflow-hidden -left-32 max-w-3xl rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="grid grid-cols-3 gap-4 p-5">
                 {solutions.map((item) => (
@@ -570,7 +570,7 @@ const NavBar = () => {
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#" className="text-lg font-semibold text-gray-900">
-            Contact Us <span aria-hidden="true">&rarr;</span>
+            Contact Us
           </a>
         </div>
       </nav>

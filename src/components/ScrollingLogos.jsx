@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function ScrollingLogos() {
+  const [isPaused, setPaused] = useState(false);
+
+  const handleMouseEnter = () => setPaused(true);
+  const handleMouseLeave = () => setPaused(false);
   return (
-    <div className="bg-[#260651] w-full inline-flex flex-nowrap overflow-hidden h-32">
-      <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-loop-scroll">
+    <div
+      className="bg-[#260651] w-full inline-flex flex-nowrap overflow-hidden h-32"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <ul
+        className={`flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none ${
+          isPaused ? "" : "animate-loop-scroll"
+        }`}
+      >
         <li>
           <img
             className="w-[130px] h-[46.5px]"
@@ -67,7 +79,9 @@ export default function ScrollingLogos() {
       </ul>
 
       <ul
-        className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-loop-scroll"
+        className={`flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none ${
+          isPaused ? "" : "animate-loop-scroll"
+        }`}
         aria-hidden="true"
       >
         <li>

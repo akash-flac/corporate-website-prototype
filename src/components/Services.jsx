@@ -14,8 +14,7 @@ const Services = () => {
                 Software Development
               </h5>
               <p class="text-slate-600 leading-normal font-light group-hover:text-slate-400">
-                Crafting tailored software systems that solve complex
-                challenges, automate tasks & achieve business efficiency
+              Custom software solutions tailored to meet your unique business needs and challenges
               </p>
             </div>
           </div>
@@ -25,8 +24,7 @@ const Services = () => {
                 Website Development
               </h5>
               <p class="text-slate-600 leading-normal font-light group-hover:text-slate-300">
-                We creare custom, responsive webites that elevate your brand and
-                engage users, ensuring a seamless online experience.
+              Create fast, secure, and scalable websites tailored to your business goals and user needs
               </p>
             </div>
           </div>
