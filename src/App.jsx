@@ -1,6 +1,9 @@
 import "./App.css";
 import Banner from "./components/Banner";
+import BlurReveal from "./components/blur-reveal";
+// import { CardSpotlightDemo } from "./components/card";
 import CustomerReviews from "./components/CustomerReviews";
+import ExpandableCard from "./components/expandablecard";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import Goal from "./components/Goal";
@@ -11,15 +14,16 @@ import NextGen from "./components/NextGen";
 import ScrollingLogos from "./components/ScrollingLogos";
 import Services from "./components/Services";
 import { ThemeProvider } from "./components/ThemeProvider";
+import ToolsSection from "./components/tools-section";
 
 function App() {
   return (
-    <div className="scroll-smooth">
-      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <header>
+    <div>
+      {/* <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme"> */}
+      {/* <header> */}
         <Banner />
         <NavBar />
-      </header>
+      {/* </header> */}
       <Hero/>
       <ScrollingLogos/>
       <Services/>
@@ -27,9 +31,14 @@ function App() {
       {/* <CustomerReviews/> */}
       {/* <Goal/> */}
       <NextGen/>
+      {/* <CardSpotlightDemo/> */}
+      {/* <BlurReveal/> */}
+      {/* <ExpandableCardDemo/> */}
+      <ExpandableCard/>
+      {/* <ToolsSection/> */}
       <FAQ/>
       <Footer/>
-      </ThemeProvider>
+      {/* </ThemeProvider> */}
     </div>
   );
 }
