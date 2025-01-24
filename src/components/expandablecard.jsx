@@ -72,24 +72,17 @@ export default function ExpandableCard() {
       <div className="m-8 sm:m-20">
         <div className="">
           <div className="">
-            <h2 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-3 font-semibold text-[#260651] text-center">
-              Tools
+            <h2 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-3 font-bold text-[#260651] text-center">
+              Tools We Use
             </h2>
-            {/* <p className="text-center">
-              Crafting innovative, scalable, and user-centric web applications
-              requires a precise set of tools, ensuring seamless functionality,
-              cutting-edge technology, and measurable growth for your business.
-            </p> */}
             <div className="flex space-x-3 md:space-x-6 mb-6 justify-center items-center mt-4">
               {/* Tools Headings */}
               {Object.keys(cardData).map((key) => (
                 <button
                   key={key}
                   onClick={() => setActiveHeading(key)}
-                  className={` px-3 md:py-1 rounded-lg group ${
-                    activeHeading === key
-                      ? "text-[#260651] bg-[#E9D9FF]"
-                      : "bg-gray-200 text-gray-800"
+                  className={` px-3 md:py-1 rounded-lg font-mono font-semibold group ${
+                    activeHeading === key ? "text-[#260651]" : " text-gray-500"
                   }`}
                 >
                   {cardData[key].heading}
@@ -99,7 +92,7 @@ export default function ExpandableCard() {
           </div>
 
           {/* Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
             {" "}
             {activeHeading &&
               cardData[activeHeading].items.map((item, index) => (
@@ -109,17 +102,18 @@ export default function ExpandableCard() {
                     if (isExpanded == index) setIsExpanded(null);
                     else if (isExpanded != index) setIsExpanded(index);
                   }}
+                  // onMouseEnter={()=>setIsExpanded(index)}
                   onMouseLeave={() => setIsExpanded(null)}
                   className={`w-60 border border-gray-300 cursor-pointer rounded-lg overflow-hidden transition-all duration-500 ease-in-out ${
                     isExpanded === index ? "max-h-60 shadow-lg" : "max-h-16"
                   }`}
                 >
                   {/* Card Title */}
-                  <h3 className="font-bold text-lg p-4">{item.title}</h3>
+                  <h3 className={`font-bold text-lg p-4 ${isExpanded === index ? "bg-[#E9D9FF] text-[#260651]" : "bg-white"}`}>{item.title}</h3>
 
                   {/* Card Content */}
                   <div
-                    className={`p-4 text-gray-600 text-sm bg-[#E9D9FF] ${
+                    className={`p-4 pt-0 text-sm text-[#260651] bg-[#E9D9FF] ${
                       isExpanded === index ? "block" : "hidden"
                     }`}
                   >
