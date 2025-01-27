@@ -4,31 +4,33 @@ const Services = () => {
   return (
     <div>
       <div className="">
-        <h1 className="text-center text-4xl font-bold p-4 py-8">
+        <h1 className="text-center text-4xl font-bold text-[#260651] px-6 pt-10 sm:py-8">
           Services We Offer
         </h1>
         <div className="flex justify-evenly flex-wrap mx-6">
-          <div class="group relative flex flex-col my-6 bg-slate-50 shadow-sm hover:border border-slate-300 hover:shadow-md hover:bg-[#260651] hover:-translate-y-2 hover:scale-105 rounded-lg transition-all duration-500 ease-in-out cursor-pointer w-96">
+          <div class="group relative flex flex-col my-6 shadow-sm hover:border border-slate-300 hover:shadow-md hover:bg-[#260651] hover:-translate-y-2 hover:scale-105 rounded-lg transition-all duration-500 ease-in-out cursor-pointer w-96">
             <div class="p-4">
               <h5 class="mb-2 text-slate-800 text-xl font-semibold group-hover:text-white">
                 Software Development
               </h5>
               <p class="text-slate-600 leading-normal font-light group-hover:text-slate-400">
-              Custom software solutions tailored to meet your unique business needs and challenges
+                Custom software solutions tailored to meet your unique business
+                needs and challenges
               </p>
             </div>
           </div>
-          <div class="group relative flex flex-col my-6 bg-slate-50 shadow-sm hover:border border-slate-300 hover:shadow-md hover:bg-[#260651] hover:-translate-y-2 hover:scale-105 rounded-lg transition-all duration-500 ease-in-out cursor-pointer w-96">
+          <div class="group relative flex flex-col my-6 shadow-sm hover:border border-slate-300 hover:shadow-md hover:bg-[#260651] hover:-translate-y-2 hover:scale-105 rounded-lg transition-all duration-500 ease-in-out cursor-pointer w-96">
             <div class="p-4">
               <h5 class="mb-2 text-slate-800 text-xl font-semibold group-hover:text-white">
                 Website Development
               </h5>
               <p class="text-slate-600 leading-normal font-light group-hover:text-slate-300">
-              Create fast, secure, and scalable websites tailored to your business goals and user needs
+                Create fast, secure, and scalable websites tailored to your
+                business goals and user needs
               </p>
             </div>
           </div>
-          <div class="group relative flex flex-col my-6 bg-slate-50 shadow-sm hover:border border-slate-300 hover:shadow-md hover:bg-[#260651] hover:-translate-y-2 hover:scale-105 rounded-lg transition-all duration-500 ease-in-out cursor-pointer w-96">
+          <div class="group relative flex flex-col my-6 shadow-sm hover:border border-slate-300 hover:shadow-md hover:bg-[#260651] hover:-translate-y-2 hover:scale-105 rounded-lg transition-all duration-500 ease-in-out cursor-pointer w-96">
             <div class="p-4">
               <h5 class="mb-2 text-slate-800 text-xl font-semibold group-hover:text-white">
                 Digital Marketing Services
@@ -40,7 +42,7 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div class="group relative flex flex-col my-6 bg-slate-50 shadow-sm hover:border border-slate-300 hover:shadow-md hover:bg-[#260651] hover:-translate-y-2 hover:scale-105 rounded-lg transition-all duration-500 ease-in-out cursor-pointer w-96">
+          <div class="group relative flex flex-col my-6 shadow-sm hover:border border-slate-300 hover:shadow-md hover:bg-[#260651] hover:-translate-y-2 hover:scale-105 rounded-lg transition-all duration-500 ease-in-out cursor-pointer w-96">
             <div class="p-4">
               <h5 class="mb-2 text-slate-800 text-xl font-semibold group-hover:text-white">
                 IT Consulting Services
@@ -52,7 +54,7 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div class="group relative flex flex-col my-6 bg-slate-50 shadow-sm hover:border border-slate-300 hover:shadow-md hover:bg-[#260651] hover:-translate-y-2 hover:scale-105 rounded-lg transition-all duration-500 ease-in-out cursor-pointer w-96">
+          <div class="group relative flex flex-col my-6 shadow-sm hover:border border-slate-300 hover:shadow-md hover:bg-[#260651] hover:-translate-y-2 hover:scale-105 rounded-lg transition-all duration-500 ease-in-out cursor-pointer w-96">
             <div class="p-4">
               <h5 class="mb-2 text-slate-800 text-xl font-semibold group-hover:text-white">
                 IT Consulting Services
@@ -64,7 +66,7 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div class="group relative flex flex-col my-6 bg-slate-50 shadow-sm hover:border border-slate-300 hover:shadow-md hover:bg-[#260651] hover:-translate-y-2 hover:scale-105 rounded-lg transition-all duration-500 ease-in-out cursor-pointer w-96">
+          <div class="group relative flex flex-col my-6 shadow-sm hover:border border-slate-300 hover:shadow-md hover:bg-[#260651] hover:-translate-y-2 hover:scale-105 rounded-lg transition-all duration-500 ease-in-out cursor-pointer w-96">
             <div class="p-4">
               <h5 class="mb-2 text-slate-800 text-xl font-semibold group-hover:text-white">
                 IT Consulting Services

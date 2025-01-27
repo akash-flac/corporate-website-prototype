@@ -21,15 +21,14 @@ function App() {
     <div>
       {/* <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme"> */}
       {/* <header> */}
-        <Banner />
-        <NavBar />
+        
       {/* </header> */}
       <Hero/>
       <ScrollingLogos/>
       <Services/>
       <LeadingCompanies/>
       {/* <CustomerReviews/> */}
-      {/* <Goal/> */}
+      <Goal/>
       <NextGen/>
       {/* <CardSpotlightDemo/> */}
       {/* <BlurReveal/> */}

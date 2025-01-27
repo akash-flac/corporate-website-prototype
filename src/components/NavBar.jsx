@@ -366,7 +366,7 @@ const NavBar = () => {
             <span className="sr-only">Markle Tech</span>
             <img
               alt=""
-              src="src\images\markle-logo-black-text.svg"
+              src="src\images\markle-logo-white-text.webp"
               className="h-8 md:h-10 lg:h-12 w-auto"
             />
           </a>
@@ -375,7 +375,7 @@ const NavBar = () => {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-100"
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon aria-hidden="true" className="size-6" />
@@ -383,7 +383,7 @@ const NavBar = () => {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-900">
+            <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100">
               About
               <ChevronDownIcon
                 aria-hidden="true"
@@ -424,7 +424,7 @@ const NavBar = () => {
           </Popover>
 
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-900">
+            <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100">
               Services
               <ChevronDownIcon
                 aria-hidden="true"
@@ -483,7 +483,7 @@ const NavBar = () => {
           </Popover>
 
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-900">
+            <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100">
               Industries
               <ChevronDownIcon
                 aria-hidden="true"
@@ -524,7 +524,7 @@ const NavBar = () => {
           </Popover>
 
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-900">
+            <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100">
               Solutions
               <ChevronDownIcon
                 aria-hidden="true"
@@ -564,12 +564,12 @@ const NavBar = () => {
             </PopoverPanel>
           </Popover>
 
-          <a href="#" className="text-lg font-semibold text-gray-900">
+          <a href="#" className="text-lg font-semibold text-gray-100">
             Pricing
           </a>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-lg font-semibold text-gray-900">
+          <a href="#" className="text-lg font-semibold text-gray-100">
             Contact Us
           </a>
         </div>
@@ -587,14 +587,14 @@ const NavBar = () => {
               {/* <span className="sr-only"></span> */}
               <img
                 alt=""
-                src="public\markle-logo.webp"
+                src="src\images\markle-logo-black-text.svg"
                 className="h-8 md:h-10 w-auto"
               />
             </a>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 rounded-md p-2.5 text-black"
             >
               <span className="sr-only">Close menu</span>
               <XMarkIcon aria-hidden="true" className="size-6" />

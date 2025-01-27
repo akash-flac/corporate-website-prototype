@@ -22,26 +22,26 @@ const Footer = () => {
   return (
     <div>
       <footer class="bg-[#260651]">
-        <div class="mx-auto w-full max-w-screen-2xl p-4 py-6 lg:py-8">
-          <div class="ms-3 md:flex md:justify-between">
+        <div class="mx-auto w-full max-w-screen-2xl p-4 py-6 md:py-8">
+          <div class="ms-3">
             <div class="mb-5 md:mb-0">
-              <a href="#" class="">
+              <a href="#" class="flex justify-center">
                 <img
                   src="src\images\markle-logo-white-text.webp"
                   class="h-20"
                   alt="MarkleTech Logo"
                 />
               </a>
-              <div className="">
-                <hr class="w-full my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                <p className="text-white max-w-lg">
+              <div className="flex flex-col items-center md:my-6">
+                <hr class="w-full my-3 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-3" />
+                <p className="text-white text-center max-w-lg">
                   Subscribe to our newsletter and unlock a world of exclusive
                   benefits. Be the first to know about our latest products,
                   special promotions, and exciting updates.
                 </p>
               </div>
             </div>
-            <div class="grid grid-cols-2 gap-8 sm:gap-48 sm:grid-cols-3">
+            <div class="grid grid-cols-2 gap-8 sm:gap-48 sm:grid-cols-3 ms-8">
               <div>
                 <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                   Products
@@ -105,18 +105,18 @@ const Footer = () => {
           <div class="flex flex-col items-center sm:flex md:flex-row sm:items-center sm:justify-between">
             <Typography
               variant="small"
-              className="mb-4 text-center font-normal text-white md:mb-0"
+              className="mb-2 text-center font-normal text-white md:mb-0"
             >
               &copy; {currentYear} <a href="#">Markle Tech</a>. All Rights
               Reserved.
             </Typography>
 
-            <div className="flex gap-10 text-white font-light">
+            <div className="flex gap-8 text-white font-light">
               <p className="">Terms</p>
               <p className="">Privacy</p>
               <p className="">Cookies</p>
             </div>
-            <div class="flex mt-4 sm:justify-center sm:mt-0">
+            <div class="flex mt-4 sm:justify-center sm:mt-2">
               <a
                 href="#"
                 class="text-gray-500 hover:text-gray-900 dark:hover:text-white"

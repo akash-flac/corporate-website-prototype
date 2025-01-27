@@ -7,7 +7,7 @@ export default function ScrollingLogos() {
   const handleMouseLeave = () => setPaused(false);
   return (
     <div
-      className="bg-[#260651] w-full inline-flex flex-nowrap overflow-hidden h-32"
+      className="bg-[#260651] w-full inline-flex flex-nowrap overflow-hidden h-24 md:h-32"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
