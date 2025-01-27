@@ -14,10 +14,10 @@ const FAQ = () => {
     <div className="m-10 md:m-5">
       {/* Heading */}
       <div className="flex flex-col justify-center items-center my-5 md:my-10">
-        <h1 className="text-2xl mb-3 md:text-3xl/relaxed lg:text-3xl/relaxed md:pb-1 font-semibold text-[#260651] text-center">
+        <h1 className="text-2xl mb-1 md:text-3xl/relaxed lg:text-3xl/relaxed md:pb-1 font-semibold text-[#260651] text-center">
           Frequently Asked <span className="font-bold">Questions</span>{" "}
         </h1>
-        <p className="font-light text-xl md:text-2xl md:max-w-7xl text-justify md:text-center">
+        <p className="font-light text-gray-600 text-sm md:text-lg md:max-w-7xl text-justify md:text-center">
           Here's a list of FAQs that will help you to know more about Markle
           Tech.
         </p>

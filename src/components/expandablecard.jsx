@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+// TOOLS section
 export default function ExpandableCard() {
   const [isExpanded, setIsExpanded] = useState(null);
   const [activeHeading, setActiveHeading] = useState("Frontend"); // Track the active heading
