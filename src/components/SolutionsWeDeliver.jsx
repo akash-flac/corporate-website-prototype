@@ -38,7 +38,7 @@ const solutions = [
 const SolutionsWeDeliver = () => {
   return (
     <div>
-      <div>
+      <div className="m-10">
         <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-0 font-semibold text-[#260651] text-center">
           <span className="font-bold">Solutions</span> We Deliver
         </h1>
@@ -48,15 +48,16 @@ const SolutionsWeDeliver = () => {
             operations.
           </p>
         </div>
-        <div className="grid grid-cols-4 gap-4 mx-44 my-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:mx-44 my-5">
           {solutions.map((solution) => (
             <a
               href="/"
               key={solution.id}
-              className="border-2 rounded-full border-[#260651] w-60 h-16 grid grid-cols-2 px-6 group hover:bg-[#260651] hover:text-white"
+              className="flex items-center justify-center border-2 rounded-full border-[#260651] w-60 h-16 px-10 relative group hover:bg-[#260651] hover:text-white"
             >
-              <h2>{solution.name}</h2>
-              <ArrowTopRightOnSquareIcon className="w-6 text-[#260651] group-hover:text-white" />
+              {" "}
+              <span className="text-center">{solution.name}</span>
+              <ArrowTopRightOnSquareIcon className="absolute right-4 w-6 text-[#260651] group-hover:text-white" />
             </a>
           ))}
         </div>

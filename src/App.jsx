@@ -27,7 +27,7 @@ function App() {
       <Goal />
       <NextGen />
       <ExpandableCard />
-      <Achievements/>
+      {/* <Achievements/> */}
       <SolutionsWeDeliver/>
       <FAQ />
       <Footer />
