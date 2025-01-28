@@ -38,17 +38,18 @@ const solutions = [
 const SolutionsWeDeliver = () => {
   return (
     <div>
-      <div className="m-10">
+      <div className="">
         <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-0 font-semibold text-[#260651] text-center">
           <span className="font-bold">Solutions</span> We Deliver
         </h1>
         <div className="flex justify-center">
-          <p className="font-light text-gray-600 text-sm md:text-lg md:max-w-7xl text-justify md:text-center">
+          <p className="font-light text-gray-600 text-sm px-8 md:text-lg md:max-w-7xl text-center">
             We IT-enable all kinds of B2B, B2C interactions and internal
             operations.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:mx-44 my-5">
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 place-content-center max-w-7xl mx-auto lg:mx-44 my-5"> */}
+        <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:mx-10 lg:mx-6 gap-5 justify-center items-center my-5">
           {solutions.map((solution) => (
             <a
               href="/"

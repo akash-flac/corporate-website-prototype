@@ -114,14 +114,15 @@ export default function Banner() {
       <div class="flex items-center justify-center gap-4 flex-wrap">
         {/* https://pagedone.io/docs/social-media-icons#Rounded-Button */}
 
-        <IconButton svg={fbIcons} bgColor={"bg-blue-500"}></IconButton>
+        <IconButton svg={fbIcons} bgColor={"bg-blue-500"} href={"https://www.facebook.com/markletechandmedia/"}></IconButton>
         <IconButton
           svg={insta}
           bgColor={
             "bg-gradient-to-bl from-purple-500 via-pink-500 to-yellow-500"
           }
+          href={"https://www.instagram.com/markletechandmedia/"}
         ></IconButton>
-        <IconButton svg={linkedIn} bgColor={"bg-[#006699]"}></IconButton>
+        <IconButton svg={linkedIn} bgColor={"bg-[#006699]"} href={"https://in.linkedin.com/company/markle-tech-and-mediaagency"}></IconButton>
       </div>
     </div>
   );

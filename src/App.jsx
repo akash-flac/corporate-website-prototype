@@ -23,12 +23,12 @@ function App() {
       <ScrollingLogos />
       <Services />
       <LeadingCompanies />
-      {/* <CustomerReviews/> */}
+      <CustomerReviews/>
       <Goal />
       <NextGen />
       <ExpandableCard />
-      {/* <Achievements/> */}
-      <SolutionsWeDeliver/>
+      <Achievements />
+      <SolutionsWeDeliver />
       <FAQ />
       <Footer />
       {/* </ThemeProvider> */}

@@ -92,7 +92,8 @@ export default function ExpandableCard() {
           </div>
 
           {/* Cards */}
-          <div className="flex flex-col gap-4 items-center sm:flex-row sm:justify-center">
+          {/* <div className="flex flex-wrap gap-6 items-center sm:flex-row sm:justify-center"> */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
             {" "}
             {activeHeading &&
               cardData[activeHeading].items.map((item, index) => (
