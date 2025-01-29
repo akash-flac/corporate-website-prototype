@@ -52,13 +52,14 @@ import {
   MegaphoneIcon,
   ShoppingBagIcon,
 } from "lucide-react";
+import { NavLink, Route } from "react-router";
 
 const about = [
   {
     name: "About Company",
     description:
       "Learn more about who we are, what we stand for, and how we bring value to our customers",
-    href: "#",
+    href: "/aboutCompany",
     icon: InformationCircleIcon,
   },
   {
@@ -408,13 +409,13 @@ const NavBar = () => {
                       />
                     </div>
                     <div className="flex-auto">
-                      <a
-                        href={item.href}
+                      <NavLink
+                        to={item.href}
                         className="block font-semibold text-gray-900"
                       >
                         {item.name}
                         <span className="absolute inset-0" />
-                      </a>
+                      </NavLink>
                       <p className="mt-1 text-xs text-gray-600">{item.description}</p>
                     </div>
                   </div>

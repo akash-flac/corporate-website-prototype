@@ -105,16 +105,16 @@ export default function ExpandableCard() {
                   }}
                   // onMouseEnter={()=>setIsExpanded(index)}
                   onMouseLeave={() => setIsExpanded(null)}
-                  className={`w-60 border border-gray-300 cursor-pointer rounded-lg overflow-hidden transition-all duration-500 ease-in-out ${
+                  className={`w-60 border cursor-pointer rounded-lg overflow-hidden transition-all duration-500 ease-in-out ${
                     isExpanded === index ? "max-h-60 shadow-lg" : "max-h-16"
                   }`}
                 >
                   {/* Card Title */}
-                  <h3 className={`font-bold text-lg p-4 ${isExpanded === index ? "bg-[#E9D9FF] text-[#260651]" : "bg-white"}`}>{item.title}</h3>
+                  <h3 className={`font-bold text-lg p-4 ${isExpanded === index ? "bg-[#260651] text-[#E9D9FF]" : "bg-[#E9D9FF]"}`}>{item.title}</h3>
 
                   {/* Card Content */}
                   <div
-                    className={`p-4 pt-0 text-sm text-[#260651] bg-[#E9D9FF] ${
+                    className={`p-4 pt-0 text-sm text-[#E9D9FF] bg-[#260651] ${
                       isExpanded === index ? "block" : "hidden"
                     }`}
                   >

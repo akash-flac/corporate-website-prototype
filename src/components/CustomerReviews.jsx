@@ -72,7 +72,7 @@ const CustomerReviews = () => {
             onClick={() => changeReview(currRev - 1)}
           ></ArrowLeftCircle>
           <div className="flex flex-col items-center w-md max-w-md sm:max-w-screen-sm sm:w-screen md:h-60">
-            <p className="text-sm sm:text-xl h-40 max-h-40 max-w-sm sm:max-w-screen-sm sm:w-lg sm:h-20 text-center font-normal font-serif">
+            <p className="text-sm sm:text-xl h-40 max-h-40 max-w-sm sm:max-w-screen-sm sm:w-lg text-center font-normal font-serif">
               {currentReviewer.review}
             </p>
             <div className="flex items-center gap-3 md:gap-10">
