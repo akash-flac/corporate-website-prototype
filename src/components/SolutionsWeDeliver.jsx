@@ -49,7 +49,7 @@ const SolutionsWeDeliver = () => {
           </p>
         </div>
         {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 place-content-center max-w-7xl mx-auto lg:mx-44 my-5"> */}
-        <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:mx-10 lg:mx-6 gap-5 justify-center items-center my-5">
+        <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:mx-10 lg:mx-4 lg:ms-12 gap-5 place-items-center my-5">
           {solutions.map((solution) => (
             <a
               href="/"

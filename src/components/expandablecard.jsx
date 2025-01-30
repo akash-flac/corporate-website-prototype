@@ -4,10 +4,9 @@ export default function ExpandableCard() {
   const [isExpanded, setIsExpanded] = useState(null);
   const [activeHeading, setActiveHeading] = useState("Frontend"); // Track the active heading
 
-  const cardData = {
-    Frontend: {
-      heading: "Frontend",
-      // index: 0,
+  const cardDataArray = [
+    {
+      category: "Frontend",
       items: [
         { title: "HTML", content: "HTML is the structure of web pages." },
         { title: "CSS", content: "CSS is used to style web pages." },
@@ -21,9 +20,8 @@ export default function ExpandableCard() {
         },
       ],
     },
-    Backend: {
-      heading: "Backend",
-      // index: 1,
+    {
+      category: "Backend",
       items: [
         {
           title: "NodeJS",
@@ -44,9 +42,8 @@ export default function ExpandableCard() {
         },
       ],
     },
-    DatabasesandStorage: {
-      heading: "Databases and Storage",
-      // index: 2,
+    {
+      category: "Databases and Storage",
       items: [
         {
           title: "MySQL",
@@ -66,7 +63,7 @@ export default function ExpandableCard() {
         },
       ],
     },
-  };
+  ];
   return (
     <div className="">
       <div className="m-8 sm:m-20">
@@ -93,7 +90,7 @@ export default function ExpandableCard() {
 
           {/* Cards */}
           {/* <div className="flex flex-wrap gap-6 items-center sm:flex-row sm:justify-center"> */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center">
             {" "}
             {activeHeading &&
               cardData[activeHeading].items.map((item, index) => (
@@ -105,12 +102,20 @@ export default function ExpandableCard() {
                   }}
                   // onMouseEnter={()=>setIsExpanded(index)}
                   onMouseLeave={() => setIsExpanded(null)}
-                  className={`w-60 border cursor-pointer rounded-lg overflow-hidden transition-all duration-500 ease-in-out ${
+                  className={`w-60 border mx-10 cursor-pointer rounded-lg overflow-hidden transition-all duration-500 ease-in-out ${
                     isExpanded === index ? "max-h-60 shadow-lg" : "max-h-16"
                   }`}
                 >
                   {/* Card Title */}
-                  <h3 className={`font-bold text-lg p-4 ${isExpanded === index ? "bg-[#260651] text-[#E9D9FF]" : "bg-[#E9D9FF]"}`}>{item.title}</h3>
+                  <h3
+                    className={`font-bold text-lg p-4 ${
+                      isExpanded === index
+                        ? "bg-[#260651] text-[#E9D9FF]"
+                        : "bg-[#E9D9FF]"
+                    }`}
+                  >
+                    {item.title}
+                  </h3>
 
                   {/* Card Content */}
                   <div

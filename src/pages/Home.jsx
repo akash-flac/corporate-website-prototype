@@ -1,29 +1,35 @@
-import React from 'react'
+import React from "react";
 // import "./App.css";
-import Achievements from "../components/Achievements.jsx";
+import Achievements from "/src/components/Achievements.jsx";
 // import Banner from "./components/Banner";
-import CustomerReviews from "../components/CustomerReviews";
-import ExpandableCard from "../components/ExpandableCard";
-import FAQ from "../components/FAQ";
-import Footer from "../components/Footer";
-import Goal from "../components/Goal";
-import Hero from "../components/Hero";
-import LeadingCompanies from "../components/LeadingCompanies";
+import CustomerReviews from "/src/components/CustomerReviews";
+import ExpandableCard from "/src/components/ExpandableCard";
+import FAQ from "/src/components/FAQ";
+import Footer from "/src/components/Footer";
+import Goal from "/src/components/Goal";
+import Hero from "/src/components/Hero";
+import LeadingCompanies from "/src/components/LeadingCompanies";
 // import NavBar from "./components/NavBar";
-import NextGen from "../components/NextGen";
-import ScrollingLogos from "../components/ScrollingLogos";
-import Services from "../components/Services";
-import SolutionsWeDeliver from "../components/SolutionsWeDeliver";
-
+import NextGen from "/src/components/NextGen";
+import ScrollingLogos from "/src/components/ScrollingLogos";
+import Services from "/src/components/Services";
+import SolutionsWeDeliver from "/src/components/SolutionsWeDeliver";
+import heroImage from "/src/images/hero-image.png";
 const Home = () => {
   return (
     <div>
       {/* <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme"> */}
-      <Hero />
+      <Hero
+        bgImage={heroImage}
+        heading={"Transoforming Ideas Into Digital Solutions"}
+        content={
+          "As a leading software development establishment, we turn complex challenges into innovative digital solutions. Be it website development or app development, we empower organizations toinnovate, automate, and grow in today’s fast-paced digital ecosystem."
+        }
+      />
       <ScrollingLogos />
       <Services />
       <LeadingCompanies />
-      <CustomerReviews/>
+      <CustomerReviews />
       <Goal />
       <NextGen />
       <ExpandableCard />
@@ -33,7 +39,7 @@ const Home = () => {
       <Footer />
       {/* </ThemeProvider> */}
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
