@@ -66,35 +66,35 @@ const about = [
     name: "Mission",
     description:
       "Discover our goals, values, and commitment to making a positive impact in our industry and beyond",
-    href: "#",
+    href: "/ourMission",
     icon: LightBulbIcon,
   },
   {
     name: "Client Reviews",
     description:
       "Hear directly from our satisfied clients about their experiences working with us",
-    href: "#",
+    href: "",
     icon: ChatBubbleBottomCenterTextIcon,
   },
   {
     name: "FAQs",
     description:
       "Find quick answers to commonly asked questions and get the information you need effortlessly",
-    href: "#",
+    href: "",
     icon: QuestionMarkCircleIcon,
   },
   {
     name: "Careers",
     description:
       "Explore exciting career opportunities and join our team to shape the future together",
-    href: "#",
+    href: "",
     icon: BriefcaseIcon,
   },
   {
     name: "Become Our Agent",
     description:
       "Partner with us as an agent and help bring our solutions to a broader audience",
-    href: "#",
+    href: "",
     icon: HandshakeIcon,
   },
 ];
@@ -151,31 +151,36 @@ const services = [
   },
   {
     name: "e-commerce",
-    description: "Build seamless and feature-rich online stores to deliver exceptional shopping experiences",
+    description:
+      "Build seamless and feature-rich online stores to deliver exceptional shopping experiences",
     href: "#",
     icon: ShoppingBagIcon,
   },
   {
     name: "Low Code - No Code",
-    description: "Empower your team with low-code and no-code solutions to develop apps faster and more efficiently",
+    description:
+      "Empower your team with low-code and no-code solutions to develop apps faster and more efficiently",
     href: "#",
     icon: LucideCloudLightning,
   },
   {
     name: "Testing and QA",
-    description: "Ensure your product's quality with thorough testing and quality assurance services",
+    description:
+      "Ensure your product's quality with thorough testing and quality assurance services",
     href: "#",
     icon: CheckBadgeIcon,
   },
   {
     name: "SaaS Products",
-    description: "Develop scalable and user-friendly SaaS applications to meet modern business demands",
+    description:
+      "Develop scalable and user-friendly SaaS applications to meet modern business demands",
     href: "#",
     icon: CloudIcon,
   },
   {
     name: "See All Services",
-    description: "Explore the full range of services we offer to help your business thrive",
+    description:
+      "Explore the full range of services we offer to help your business thrive",
     href: "#",
     icon: EllipsisHorizontalIcon,
   },
@@ -360,7 +365,7 @@ const NavBar = () => {
     <>
       <nav
         aria-label="Global"
-        className="flex items-center justify-between p-3 lg:px-8"
+        className="flex items-center justify-between p-4 lg:px-8"
       >
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
@@ -403,10 +408,18 @@ const NavBar = () => {
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-lg hover:bg-gray-50"
                   >
                     <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <item.icon
-                        aria-hidden="true"
-                        className="size-6 text-gray-600 group-hover:text-indigo-600"
-                      />
+                      {/* {item.icon} */}
+                      {item.icon ? (
+                        <item.icon
+                          aria-hidden="true"
+                          className="size-6 text-gray-600 group-hover:text-indigo-600"
+                        />
+                      ) : (
+                        <Code2
+                          aria-hidden="true"
+                          className="size-6 text-gray-600 group-hover:text-indigo-600"
+                        />
+                      )}
                     </div>
                     <div className="flex-auto">
                       <NavLink
@@ -416,7 +429,9 @@ const NavBar = () => {
                         {item.name}
                         <span className="absolute inset-0" />
                       </NavLink>
-                      <p className="mt-1 text-xs text-gray-600">{item.description}</p>
+                      <p className="mt-1 text-xs text-gray-600">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                 ))}
