@@ -67,73 +67,78 @@ export default function ExpandableCard() {
 
   return (
     // <div className="">
-      <div className="m-8 p-8 sm:m-20 md:h-60">
-        <div className="">
-          {/* <div className=""> */}
-            <h2 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-3 font-bold text-[#260651] text-center">
-              Tools We Use
-            </h2>
-            <div className="flex space-x-3 md:space-x-6 mb-6 justify-center items-center mt-4">
-              {/* Tools Headings */}
-              {cardDataArray.map((category) => (
-                <button
-                  key={category.category}
-                  onClick={() => setActiveHeading(category.category)}
-                  className={`px-3 md:py-1 rounded-lg font-mono font-semibold group ${
-                    activeHeading === category.category
-                      ? "text-[#260651]"
-                      : " text-gray-500"
+    <div className="m-8 px-8 sm:m-10 md:h-64">
+      <div className="">
+        {/* <div className=""> */}
+        <h2 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed font-bold text-[#260651] text-center">
+          Tools We Use
+        </h2>
+        <div className="flex space-x-3 md:space-x-6 mb-6 justify-center items-center mt-4">
+          {/* Tools Headings */}
+          {cardDataArray.map((category) => (
+            <button
+              key={category.category}
+              onClick={() => setActiveHeading(category.category)}
+              className={`px-3 md:py-1 rounded-lg font-mono font-semibold group ${
+                activeHeading === category.category
+                  ? "text-[#260651]"
+                  : " text-gray-500"
+              }`}
+            >
+              {category.category}
+            </button>
+          ))}
+        </div>
+        {/* </div> */}
+
+        {/* Cards */}
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center"> */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 justify-items-center my-4 mx-11 p-2">
+          {" "}
+          {cardDataArray
+            .find((category) => category.category === activeHeading)
+            .items.map((item, index) => (
+              <div
+                key={index}
+                // onClick={() => {
+                //   if (isExpanded == index) setIsExpanded(null);
+                //   else if (isExpanded != index) setIsExpanded(index);
+                // }}
+                onMouseEnter={() => setIsExpanded(index)}
+                onMouseLeave={() => setIsExpanded(null)}
+                onClick={() =>
+                  isExpanded === index
+                    ? setIsExpanded(null)
+                    : setIsExpanded(index)
+                }
+                className={`w-60 cursor-pointer overflow-hidden transition-all duration-700 ease-in-out ${
+                  isExpanded === index ? "max-h-64" : "max-h-16"
+                }`}
+              >
+                {/* Card Title */}
+                <h3
+                  className={`font-bold text-lg p-4 transition-colors rounded-t-2xl ${
+                    isExpanded === index
+                      ? "bg-[#260651] text-[#E9D9FF]"
+                      : "bg-[#E9D9FF] rounded-xl"
                   }`}
                 >
-                  {category.category}
-                </button>
-              ))}
-            </div>
-          {/* </div> */}
+                  {item.title}
+                </h3>
 
-          {/* Cards */}
-          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center"> */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 justify-items-center my-4 mx-11 p-2">
-            {" "}
-            {cardDataArray
-              .find((category) => category.category === activeHeading)
-              .items.map((item, index) => (
+                {/* Card Content */}
                 <div
-                  key={index}
-                  // onClick={() => {
-                  //   if (isExpanded == index) setIsExpanded(null);
-                  //   else if (isExpanded != index) setIsExpanded(index);
-                  // }}
-                  onMouseEnter={()=>setIsExpanded(index)}
-                  onMouseLeave={() => setIsExpanded(null)}
-                  className={`w-60 overflow-hidden rounded-xl cursor-pointer transition-all duration-700 ease-in-out sm:px-10 lg:px-5 ${
-                    isExpanded === index ? "max-h-60 rounded-xl" : "max-h-16"
+                  className={`p-4 text-sm text-[#E9D9FF] bg-[#260651] rounded-b-2xl transition-opacity duration-500 ${
+                    isExpanded === index ? "opacity-100" : "opacity-0 hidden"
                   }`}
                 >
-                  {/* Card Title */}
-                  <h3
-                    className={`font-bold text-lg p-4 ${
-                      isExpanded === index
-                        ? "bg-[#260651] text-[#E9D9FF]"
-                        : "bg-[#E9D9FF] rounded-xl"
-                    }`}
-                  >
-                    {item.title}
-                  </h3>
-
-                  {/* Card Content */}
-                  <div
-                    className={`p-4 text-sm text-[#E9D9FF] bg-[#260651] ${
-                      isExpanded === index ? "block" : "hidden"
-                    }`}
-                  >
-                    {item.content}
-                  </div>
+                  {item.content}
                 </div>
-              ))}
-          </div>
+              </div>
+            ))}
         </div>
       </div>
+    </div>
     // </div>
   );
 }

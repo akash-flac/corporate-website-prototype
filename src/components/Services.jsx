@@ -58,24 +58,6 @@ const servicesObj = [
     icon: "",
     id: 8,
   },
-  // {
-  //   name: "Testing & QA",
-  //   description:
-  //     "We deliver targeted digital marketing strategies that drive traffic, boost engagement, and enhance brand visibility across all online channels.",
-  //   id: 3,
-  // },
-  // {
-  //   name: "SaaS Products",
-  //   description:
-  //     "We deliver targeted digital marketing strategies that drive traffic, boost engagement, and enhance brand visibility across all online channels.",
-  //   id: 3,
-  // },
-  // {
-  //   name: "See All Services",
-  //   description:
-  //     "We deliver targeted digital marketing strategies that drive traffic, boost engagement, and enhance brand visibility across all online channels.",
-  //   id: 3,
-  // }
 ];
 const Services = () => {
   return (
