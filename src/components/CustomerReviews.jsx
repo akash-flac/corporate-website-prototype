@@ -86,7 +86,7 @@ const CustomerReviews = () => {
                   alt=""
                   className="w-12 md:w-16 h-12 md:h-16 rounded-full opacity-20"
                 />
-                <h2 className="text-center">{prevToPrevReviewer.name}</h2>
+                <h2 className="text-center w-16">{prevToPrevReviewer.name}</h2>
               </div>
               <div
                 className="cursor-pointer"
@@ -98,7 +98,7 @@ const CustomerReviews = () => {
                   alt=""
                   className="w-12 md:w-16 h-12 md:h-16 rounded-full opacity-50"
                 />
-                <h2 className="text-center">{prevReviewer.name}</h2>
+                <h2 className="text-center w-16">{prevReviewer.name}</h2>
               </div>
 
               <div className="cursor-pointer">
@@ -120,7 +120,7 @@ const CustomerReviews = () => {
                   alt=""
                   className="w-12 md:w-16 h-12 md:h-16 rounded-full opacity-50"
                 />
-                <h2 className="text-center">{nextReviewer.name}</h2>
+                <h2 className="text-center w-16">{nextReviewer.name}</h2>
               </div>
               <div
                 className="cursor-pointer hidden md:block"
@@ -132,7 +132,7 @@ const CustomerReviews = () => {
                   alt=""
                   className="w-12 md:w-16 h-12 md:h-16 rounded-full opacity-20"
                 />
-                <h2 className="text-center">{nextToNextReviewer.name}</h2>
+                <h2 className="text-center w-16">{nextToNextReviewer.name}</h2>
               </div>
             </div>
           </div>

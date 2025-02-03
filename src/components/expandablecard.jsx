@@ -111,13 +111,13 @@ export default function ExpandableCard() {
                     ? setIsExpanded(null)
                     : setIsExpanded(index)
                 }
-                className={`w-60 cursor-pointer overflow-hidden transition-all duration-700 ease-in-out ${
+                className={`w-60 cursor-pointer overflow-hidden transition delay-150 duration-500 ease-in-out ${
                   isExpanded === index ? "max-h-64" : "max-h-16"
                 }`}
               >
                 {/* Card Title */}
                 <h3
-                  className={`font-bold text-lg p-4 transition-colors rounded-t-2xl ${
+                  className={`font-bold text-lg p-4 rounded-t-2xl duration-100 ease-in-out ${
                     isExpanded === index
                       ? "bg-[#260651] text-[#E9D9FF]"
                       : "bg-[#E9D9FF] rounded-xl"
@@ -128,7 +128,7 @@ export default function ExpandableCard() {
 
                 {/* Card Content */}
                 <div
-                  className={`p-4 text-sm text-[#E9D9FF] bg-[#260651] rounded-b-2xl transition-opacity duration-500 ${
+                  className={`p-4 text-sm text-[#E9D9FF] bg-[#260651] rounded-b-2xl duration-500 ease-in-out ${
                     isExpanded === index ? "opacity-100" : "opacity-0 hidden"
                   }`}
                 >
