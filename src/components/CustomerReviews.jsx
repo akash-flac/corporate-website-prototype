@@ -108,7 +108,7 @@ const CustomerReviews = () => {
                   alt=""
                   className="w-16 md:w-20 h-16 md:h-20 rounded-full"
                 />
-                <h2 className="text-center">{currentReviewer.name}</h2>
+                <h2 className="text-center w-20">{currentReviewer.name}</h2>
               </div>
               <div
                 className="cursor-pointer"

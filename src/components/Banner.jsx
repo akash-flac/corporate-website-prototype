@@ -78,7 +78,7 @@ const linkedIn = (
 
 export default function Banner() {
   return (
-    <div className="bg-[#260651] relative items-center gap-x-6 overflow-hidden px-6 py-0.5 sm:px-3.5 justify-evenly hidden md:flex">
+    <div className="bg-[#330073] relative items-center gap-x-6 overflow-hidden px-6 py-0.5 sm:px-3.5 justify-evenly hidden md:flex z-10">
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
         <img src="src\images\8years.png" alt="8 years" className="" />
       </div>

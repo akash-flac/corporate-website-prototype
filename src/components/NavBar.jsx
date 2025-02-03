@@ -59,42 +59,42 @@ const about = [
     name: "About Company",
     description:
       "Learn more about who we are, what we stand for, and how we bring value to our customers",
-    href: "/aboutCompany",
+    href: "/about-company",
     icon: InformationCircleIcon,
   },
   {
     name: "Mission",
     description:
       "Discover our goals, values, and commitment to making a positive impact in our industry and beyond",
-    href: "/ourMission",
+    href: "/our-mission",
     icon: LightBulbIcon,
   },
   {
     name: "Client Reviews",
     description:
       "Hear directly from our satisfied clients about their experiences working with us",
-    href: "",
+    href: "/client-reviews",
     icon: ChatBubbleBottomCenterTextIcon,
   },
   {
     name: "FAQs",
     description:
       "Find quick answers to commonly asked questions and get the information you need effortlessly",
-    href: "",
+    href: "/FAQs",
     icon: QuestionMarkCircleIcon,
   },
   {
     name: "Careers",
     description:
       "Explore exciting career opportunities and join our team to shape the future together",
-    href: "",
+    href: "/careers",
     icon: BriefcaseIcon,
   },
   {
     name: "Become Our Agent",
     description:
       "Partner with us as an agent and help bring our solutions to a broader audience",
-    href: "",
+    href: "/become-our-agent",
     icon: HandshakeIcon,
   },
 ];
@@ -365,7 +365,7 @@ const NavBar = () => {
     <>
       <nav
         aria-label="Global"
-        className="flex items-center justify-between p-4 lg:px-8"
+        className="flex items-center justify-between p-4 lg:px-8 relative z-10"
       > 
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">

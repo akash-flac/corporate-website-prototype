@@ -57,7 +57,7 @@ const Footer = () => {
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
                     {link.items.map((item, i) => (
                       <li key={i} class="mb-2">
-                        <a href="https://flowbite.com/" class="hover:underline">
+                        <a href="#" class="hover:text-white">
                           {item}
                         </a>
                       </li>
@@ -77,10 +77,10 @@ const Footer = () => {
               Reserved.
             </Typography>
 
-            <div className="flex gap-8 text-white font-light">
-              <p className="">Terms</p>
-              <p className="">Privacy</p>
-              <p className="">Cookies</p>
+            <div className="flex gap-8 text-gray-400 font-light">
+              <a href="" className="hover:text-white">Terms</a>
+              <a href="" className="hover:text-white">Privacy</a>
+              <a href="" className="hover:text-white">Cookies</a>
             </div>
             <div class="flex mt-4 sm:justify-center sm:mt-2">
               <a
