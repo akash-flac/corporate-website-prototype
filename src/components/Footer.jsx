@@ -1,18 +1,25 @@
 import { Typography } from "@material-tailwind/react";
 import React from "react";
 
-const LINKS = [
+const links = [
   {
     title: "Product",
-    items: ["Overview", "Features", "Solutions", "Tutorials"],
+    items: [
+      "Employee Database",
+      "Payroll",
+      "Absences",
+      "Time Tracking",
+      "Shift Planner",
+      "Recruiting",
+    ],
+  },
+  {
+    title: "Information",
+    items: ["FAQ", "Blog", "Support", "News"],
   },
   {
     title: "Company",
-    items: ["About us", "Careers", "Press", "News"],
-  },
-  {
-    title: "Resource",
-    items: ["Blog", "Newsletter", "Events", "Help center"],
+    items: ["About Us", "Careers", "Contact Us", "Lift Media"],
   },
 ];
 
@@ -21,88 +28,47 @@ const currentYear = new Date().getFullYear();
 const Footer = () => {
   return (
     <div>
-      <footer class="bg-[#260651]">
-        <div class="mx-auto w-full max-w-screen-2xl p-4 py-6 md:py-8">
-          <div class="ms-3">
-            <div class="mb-5 md:mb-0">
-              <a href="#" class="flex justify-center">
+      <footer className="bg-[#330073]">
+        <div className="w-full max-w-screen-3xl p-4 py-6 md:py-8">
+          <div className="md:grid md:grid-cols-2 ms-3">
+            <div className="my-5 mx-4 flex flex-col justify-center items-center">
+              <a href="#">
                 <img
                   src="src\images\markle-logo-white-text.webp"
-                  class="h-20"
+                  class="h-14 md:h-20"
                   alt="MarkleTech Logo"
                 />
               </a>
-              <div className="flex flex-col items-center md:my-6">
+              <div className="md:my-6">
                 <hr class="w-full my-3 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-3" />
-                <p className="text-white text-center max-w-lg">
+                <p className="text-white text-justify max-w-lg">
                   Subscribe to our newsletter and unlock a world of exclusive
                   benefits. Be the first to know about our latest products,
                   special promotions, and exciting updates.
                 </p>
               </div>
             </div>
-            <div class="grid grid-cols-2 gap-8 sm:gap-48 sm:grid-cols-3 ms-8">
-              <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  Products
-                </h2>
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                  <li class="mb-4">
-                    <a href="https://flowbite.com/" class="hover:underline">
-                      ERP
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://tailwindcss.com/" class="hover:underline">
-                      CRM
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="">
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  Information
-                </h2>
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                  <li class="mb-4">
-                    <a
-                      href="https://github.com/themesberg/flowbite"
-                      class="hover:underline "
-                    >
-                      FAQ
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://discord.gg/4eeurUVvTy"
-                      class="hover:underline"
-                    >
-                      Support
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  Company
-                </h2>
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                  <li class="mb-4">
-                    <a href="#" class="hover:underline">
-                      About Us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:underline">
-                      Careers
-                    </a>
-                  </li>
-                </ul>
-              </div>
+            <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 mx-4 sm:place-content-center md:mx-5 md:place-items-start">
+              {links.map((link, index) => (
+                <div key={index}>
+                  <h2 class="mb-3 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                    {link.title}
+                  </h2>
+                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    {link.items.map((item, i) => (
+                      <li key={i} class="mb-2">
+                        <a href="https://flowbite.com/" class="hover:underline">
+                          {item}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
-          <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-          <div class="flex flex-col items-center sm:flex md:flex-row sm:items-center sm:justify-between">
+          <hr class="my-4 border-gray-200 sm:mx-auto dark:border-gray-700" />
+          <div class="flex flex-col items-center sm:flex md:flex-row sm:items-center sm:justify-around">
             <Typography
               variant="small"
               className="mb-2 text-center font-normal text-white md:mb-0"
