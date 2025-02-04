@@ -82,7 +82,7 @@ const SolutionsWeDeliver = () => {
         </div>
         {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 place-content-center max-w-7xl mx-auto lg:mx-44 my-5"> */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 justify-items-center my-4 mx-28">
-          {solutions.map((solution) => (
+          {solutions.slice(0, window.innerWidth < 640 ? 8 : solutions.length).map((solution) => (
             <a
               href="/"
               key={solution.id}

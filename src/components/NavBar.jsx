@@ -104,7 +104,7 @@ const services = [
     name: "Software Development",
     description:
       "Custom software solutions tailored to meet your unique business needs and challenges",
-    href: "#",
+    href: "/services/software-development",
     icon: Code2,
   },
   {
@@ -181,7 +181,7 @@ const services = [
     name: "See All Services",
     description:
       "Explore the full range of services we offer to help your business thrive",
-    href: "#",
+    href: "/services",
     icon: EllipsisHorizontalIcon,
   },
 ];
@@ -256,7 +256,7 @@ const industries = [
   {
     name: "View All Industries",
     // description: "Build strategic funnels that will convert",
-    href: "#",
+    href: "/industries",
     icon: EllipsisHorizontalIcon,
   },
 ];
@@ -349,7 +349,7 @@ const solutions = [
   {
     name: "View All Products",
     // description: "Build strategic funnels that will convert",
-    href: "#",
+    href: "/our-products",
     icon: EllipsisHorizontalIcon,
   },
 ];
@@ -580,12 +580,12 @@ const NavBar = () => {
             </PopoverPanel>
           </Popover>
 
-          <a href="#" className="text-lg font-semibold text-gray-100">
+          <a href="/pricing" className="text-lg font-semibold text-gray-100">
             Pricing
           </a>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-lg font-semibold text-gray-100">
+          <a href="/contact-us" className="text-lg font-semibold text-gray-100">
             Contact Us
           </a>
         </div>

@@ -68,10 +68,10 @@ const Services = () => {
           Services We Offer
         </h1>
         <div className="flex justify-evenly flex-wrap mx-6">
-          {servicesObj.map((service, id) => (
+          {servicesObj.slice(0,8).map((service, id) => (
             <div
               key={id}
-              class="group relative flex flex-col items-center shadow-sm m-2 hover:border border-slate-300 hover:shadow-md hover:bg-[#330073] hover:-translate-y-2 hover:scale-105 rounded-lg transition-all duration-500 ease-in-out cursor-pointer w-72"
+              class="group relative flex flex-col items-center shadow-sm shadow-gray-300 m-2 hover:border border-slate-300 hover:shadow-md hover:bg-[#330073] hover:-translate-y-2 hover:scale-105 rounded-lg transition-all duration-500 ease-in-out cursor-pointer w-72"
             >
               <div class="p-4 flex flex-col items-center">
                 {service.icon ? (

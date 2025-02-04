@@ -58,7 +58,7 @@ export const AccordionItem = ({ item, open, handleOpen }) => {
     <Accordion
       open={open === item.id}
       className={`mb-1 p-4 md:p-1 rounded-lg border border-blue-gray-100 md:px-6 ${
-        open === item.id ? " bg-[#260651]" : " bg-[#E9D9FF]"
+        open === item.id ? " bg-[#330073]" : " bg-[#E9D9FF]"
       }`}
     >
       <div
@@ -67,7 +67,7 @@ export const AccordionItem = ({ item, open, handleOpen }) => {
       >
         <AccordionHeader
           className={`border-b-0 text-sm sm:text-lg md:text-xl transition-colors ${
-            open === item.id ? "text-white " : "text-[#260651]"
+            open === item.id ? "text-white " : "text-[#330073]"
           }`}
         >
           {item.question}
@@ -76,7 +76,7 @@ export const AccordionItem = ({ item, open, handleOpen }) => {
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
-          fill={open === item.id ? "#fff" : "#260651"}
+          fill={open === item.id ? "#fff" : "#330073"}
           className="size-8 ml-1 sm:size-11 md:size-14 md:mx-2 md:mb-1"
           initial={{ opacity: 0, scale: 0.8, rotate: 0 }}
           animate={{
@@ -118,7 +118,7 @@ const FAQ = () => {
     <div className="m-4 md:m-8">
       {/* Heading */}
       <div className="">
-        <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed font-semibold text-[#260651] text-center">
+        <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed font-semibold text-[#330073] text-center">
           Frequently Asked <span className="font-bold">Questions</span>{" "}
         </h1>
         <div className="flex justify-center">
@@ -130,7 +130,7 @@ const FAQ = () => {
 
         {/* Accordion for FAQs */}
         <div className="m-4">
-          {faqObj.map((item) => (
+          {faqObj.slice(0, window.innerWidth < 640 ? 3 : 5).map((item) => (
             <AccordionItem
               key={item.id}
               item={item}
@@ -143,7 +143,7 @@ const FAQ = () => {
       {/* <Accordion
         open={open === 1}
         className={`mb-1 p-4 md:p-1 rounded-lg border border-blue-gray-100 md:px-6 ${
-          open === 1 ? " bg-[#260651]" : " bg-[#E9D9FF]"
+          open === 1 ? " bg-[#330073]" : " bg-[#E9D9FF]"
         }`}
       >
         <div
