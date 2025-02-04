@@ -13,19 +13,19 @@ const WhyMarkle = () => {
             <div className="overflow-x-hidden">
               <div className="hidden lg:block">
                 <div className="grid grid-cols-3">
-                  <div className="border border-black px-4 py-2">
+                  <div className="border-t border-l border-black px-4 py-2">
                     FLEXIBLE ENGAGEMENT MODELS
                   </div>
-                  <div className="border border-black px-4 py-2">
+                  <div className="border-t border-l border-black px-4 py-2">
                     STATE OF THE ART IT INFRASTRUCTURE
                   </div>
-                  <div className="border border-black px-4 py-2">
+                  <div className="border-t border-l border-r border-black px-4 py-2">
                     24X7 SUPPORT ACROSS ALL TIMEZONES
                   </div>
-                  <div className="border border-black px-4 py-2">
+                  <div className="border-t border-l border-b border-black px-4 py-2">
                     STRONG TECHNOLOGY COMPETENCY
                   </div>
-                  <div className="border border-black px-4 py-2">
+                  <div className="border-t border-l border-b border-black px-4 py-2">
                     COMPETITIVE PRICING & ONTIME DELIVERY
                   </div>
                   <div className="border border-black px-4 py-2">SEAMLESS COMMUNICATION</div>
