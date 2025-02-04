@@ -6,7 +6,7 @@ import {
 } from "@material-tailwind/react";
 import { motion } from "motion/react";
 
-const faqObj = [
+export const faqObj = [
   {
     id: 1,
     question:
@@ -53,7 +53,7 @@ const faqObj = [
 ];
 
 // Accordion
-const AccordionItem = ({ item, open, handleOpen }) => {
+export const AccordionItem = ({ item, open, handleOpen }) => {
   return (
     <Accordion
       open={open === item.id}

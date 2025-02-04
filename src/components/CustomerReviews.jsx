@@ -2,19 +2,21 @@ import { ArrowRightCircleIcon } from "@heroicons/react/20/solid";
 import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
 import React, { useState } from "react";
 
-const reviews = [
+export const reviews = [
   {
     name: "Imran Khan",
     review:
       "Without any doubt I recommend Markle Tech as one of the best web design and digital marketing agencies. One of the best agencies I’ve came across so far. Wouldn’t be hesitated to introduce their work tosomeone else.",
     id: 1,
     icon: "src/images/reviews/p1.jpeg",
+    reviewerDesc: "Person"
   },
   {
     name: "Alok Aggarwal",
     review: "Smile, it's free therapy.",
     id: 2,
     icon: "src/images/reviews/p2.jpeg",
+    reviewerDesc: "Backend Engineer"
   },
   {
     name: "Sourav Kumar",
@@ -22,6 +24,7 @@ const reviews = [
       "Emancipate yourselves from mental slavery, none but ourselves can free our minds!",
     id: 3,
     icon: "src/images/reviews/p3.jpeg",
+    reviewerDesc: "App Developer"
   },
   {
     name: "Heera Lal",
@@ -29,6 +32,7 @@ const reviews = [
       "Expose yourself to your deepest fear; after that, fear has no power, and the fear of freedom shrinks and vanishes. You are free.",
     id: 4,
     icon: "src/images/reviews/p4.jpeg",
+    reviewerDesc: "Senior FullStack Developer"
   },
   {
     name: "Vivek Raina",
@@ -36,6 +40,7 @@ const reviews = [
       "Birds sing after a storm; why shouldn't people feel as free to delight in whatever sunlight remains to them?",
     id: 5,
     icon: "src/images/reviews/p5.jpeg",
+    reviewerDesc: "Wordpress"
   },
   {
     name: "Vaibhav Kumar",
@@ -43,6 +48,7 @@ const reviews = [
       "I believe that it is better to tell the truth than a lie. I believe it is better to be free than to be a slave. And I believe it is better to know than to be ignorant.",
     id: 6,
     icon: "src/images/reviews/p6.jpeg",
+    reviewerDesc: "DevOps Engineer"
   },
 ];
 const CustomerReviews = () => {

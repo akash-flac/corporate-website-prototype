@@ -34,7 +34,7 @@ const Footer = () => {
             <div className="my-5 mx-4 flex flex-col justify-center items-center">
               <a href="#">
                 <img
-                  src="src\images\markle-logo-white-text.webp"
+                  src="src\images\markle-tech-new-logo.png"
                   class="h-14 md:h-20"
                   alt="MarkleTech Logo"
                 />

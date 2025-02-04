@@ -372,7 +372,7 @@ const NavBar = () => {
             <span className="sr-only">Markle Tech</span>
             <img
               alt=""
-              src="src\images\markle-logo-white-text.webp"
+              src="src\images\markle-tech-new-logo.png"
               className="h-8 md:h-10 lg:h-12 w-auto"
             />
           </a>
