@@ -46,7 +46,7 @@ const Careers = () => {
           <div class="flow-root">
             <ul role="list" class="divide-y divide-gray-200 ">
               {careerObj.map((career) => (
-                <li key={career.id} class="py-3 sm:py-4">
+                <li key={career.id} class="p-4 py-3 sm:py-4 hover:bg-gray-50">
                   <div class="flex items-center space-x-4">
                     <div class="flex-1 min-w-0">
                       <p class="text-sm font-medium text-gray-900 truncate ">

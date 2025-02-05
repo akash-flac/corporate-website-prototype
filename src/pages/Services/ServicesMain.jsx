@@ -21,12 +21,12 @@ const ServicesMain = () => {
       <Services />
       {/*  */}
 
-      <div className="flex flex-col items-center p-8">
+      <div className="flex flex-col items-center p-8 mx-10">
         <h2 className="text-2xl font-semibold text-purple-900 mb-8">
           How it Works
         </h2>
 
-        <div className="relative flex flex-col md:flex-row items-center justify-center gap-8">
+        <div className="relative flex flex-col md:flex-row justify-center items-center gap-8">
           {/* Step 1 */}
           <div className="relative flex flex-col items-center text-center bg-purple-100 p-6 rounded-2xl shadow-lg w-64">
             <div className="bg-white text-black p-4 rounded-xl shadow-md">
