@@ -11,8 +11,10 @@ import SoftwareDevelopment from "./pages/Services/SoftwareDevelopment";
 import ServicesMain from "./pages/Services/ServicesMain";
 import IndustriesMain from "./pages/Industries/IndustriesMain";
 import SolutionsMain from "./pages/Solutions/SolutionsMain";
-import Pricing from "./pages/Pricing";
+import Pricing from "./pages/Pricing/Pricing";
+import PricingTwo from "./pages/Pricing/PricingTwo";
 import ContactUs from "./pages/ContactUs";
+import CostCalculator from "./pages/Pricing/CostCalculator";
 // import {user} from "./utils/data"
 // import { ThemeProvider } from "./components/ThemeProvider";
 function App() {
@@ -30,7 +32,6 @@ function App() {
           <Route path="/FAQs" element={<FAQs />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/become-our-agent" element={<BecomeOurAgent />} />
-
           <Route
             path="/services/software-development"
             element={<SoftwareDevelopment />}
@@ -44,10 +45,11 @@ function App() {
           <Route path="/become-our-agent" element={<BecomeOurAgent />} />
           <Route path="/become-our-agent" element={<BecomeOurAgent />} />
           <Route path="/industries" element={<IndustriesMain />} />
-
           <Route path="/our-products" element={<SolutionsMain />} />
-
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/pricing-2" element={<PricingTwo />} />
+          <Route path="/cost-calculator/:step" element={<CostCalculator />} />
+          <Route path="*" element={<CostCalculator />} /> {/* Default route */}
           <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
       </BrowserRouter>
