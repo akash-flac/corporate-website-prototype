@@ -15,10 +15,15 @@ import Pricing from "./pages/Pricing/Pricing";
 import PricingTwo from "./pages/Pricing/PricingTwo";
 import ContactUs from "./pages/ContactUs";
 import CostCalculator from "./pages/Pricing/CostCalculator";
-// import {user} from "./utils/data"
+import FinanceAndFintech from "./pages/Industries/FinanceAndFintech";
+import TravelAndHospitality from "./pages/Industries/TravelAndHospitality";
+import Education from "./pages/Industries/Education";
+import RealEstateAndConstruction from "./pages/Industries/RealEstateAndConstruction";
+import TransportationAndLogistics from "./pages/Industries/TransportationAndLogistics";
+import RetailAndEcommerce from "./pages/Industries/RetailAndEcommerce";
+
 // import { ThemeProvider } from "./components/ThemeProvider";
 function App() {
-  // console.log(user);
   return (
     <div>
       {/* <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme"> */}
@@ -26,30 +31,54 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+
+          {/* About Section */}
           <Route path="/about-company" element={<AboutCompany />} />
           <Route path="/our-mission" element={<OurMission />} />
           <Route path="/client-reviews" element={<ClientReviews />} />
           <Route path="/FAQs" element={<FAQs />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/become-our-agent" element={<BecomeOurAgent />} />
+
+          {/* Services */}
           <Route
             path="/services/software-development"
             element={<SoftwareDevelopment />}
           />
           <Route path="/services" element={<ServicesMain />} />
-          <Route path="/become-our-agent" element={<BecomeOurAgent />} />
-          <Route path="/become-our-agent" element={<BecomeOurAgent />} />
-          <Route path="/become-our-agent" element={<BecomeOurAgent />} />
-          <Route path="/become-our-agent" element={<BecomeOurAgent />} />
-          <Route path="/become-our-agent" element={<BecomeOurAgent />} />
-          <Route path="/become-our-agent" element={<BecomeOurAgent />} />
-          <Route path="/become-our-agent" element={<BecomeOurAgent />} />
+
+          {/* Industries */}
           <Route path="/industries" element={<IndustriesMain />} />
+          <Route
+            path="/finance-and-fintech"
+            element={<FinanceAndFintech />}
+          />
+          <Route
+            path="/travel-and-hospitality"
+            element={<TravelAndHospitality />}
+          />
+          <Route path="/industries/education" element={<Education />} />
+          <Route
+            path="/real-estate-and-construction"
+            element={<RealEstateAndConstruction />}
+          />
+          <Route
+            path="/industries/transportation-and-logistics"
+            element={<TransportationAndLogistics />}
+          />
+          <Route
+            path="/industries/retail-and-ecommerce"
+            element={<RetailAndEcommerce />}
+          />
+  
           <Route path="/our-products" element={<SolutionsMain />} />
+
+          {/* Pricing */}
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/pricing-2" element={<PricingTwo />} />
           <Route path="/cost-calculator/:step" element={<CostCalculator />} />
-          <Route path="*" element={<CostCalculator />} /> {/* Default route */}
+          <Route path="*" element={<CostCalculator />} /> 
+
           <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
       </BrowserRouter>

@@ -1,8 +1,11 @@
 import React from 'react'
+import Hero from '../../components/Hero'
 
 const SoftwareDevelopment = () => {
   return (
-    <div>SoftwareDevelopment</div>
+    <div>
+      <Hero/>
+    </div>
   )
 }
 
