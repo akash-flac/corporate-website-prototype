@@ -1,6 +1,7 @@
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
+//Data
 const solutions = [
   {
     name: "Enterprise Applications",
@@ -67,34 +68,57 @@ const solutions = [
     id: 16,
   },
 ];
+
+//Functions
+const renderSolutions = (solutionsToDisplay) => {
+  return solutionsToDisplay.map((solution) => (
+    <a
+      href="/"
+      key={solution.id}
+      className="flex items-center justify-center border-2 rounded-full border-[#260651] w-52 h-14 px-6 relative group hover:bg-[#260651] hover:text-white transition duration-300"
+    >
+      <span className="text-center text-sm font-medium mx-2">{solution.name}</span>
+      <ArrowTopRightOnSquareIcon className="absolute right-3 w-5 text-[#260651] group-hover:text-white transition duration-300" />
+    </a>
+  ));
+};
+
 const SolutionsWeDeliver = () => {
+  const [showAll, setShowAll] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 640);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const displayedSolutions =
+    showAll || !isMobile ? solutions : solutions.slice(0, 8);
+
   return (
-    <div>
-      <div className="">
-        <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed font-semibold text-[#260651] text-center">
-          <span className="font-bold">Solutions</span> We Deliver
-        </h1>
-        <div className="flex justify-center">
-          <p className="font-light text-gray-600 text-sm px-8 md:text-lg md:max-w-7xl text-center">
-            We IT-enable all kinds of B2B, B2C interactions and internal
-            operations.
-          </p>
-        </div>
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 place-content-center max-w-7xl mx-auto lg:mx-44 my-5"> */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 justify-items-center my-4 mx-28">
-          {solutions.slice(0, window.innerWidth < 640 ? 8 : solutions.length).map((solution) => (
-            <a
-              href="/"
-              key={solution.id}
-              className="flex items-center justify-center border-2 rounded-full border-[#260651] w-60 h-16 px-10 relative group hover:bg-[#260651] hover:text-white transition"
-            >
-              {" "}
-              <span className="text-center">{solution.name}</span>
-              <ArrowTopRightOnSquareIcon className="absolute right-4 w-6 text-[#260651] group-hover:text-white" />
-            </a>
-          ))}
-        </div>
+    <div className="px-4 sm:px-8 md:px-16 lg:px-32 py-8">
+      <h1 className="text-3xl md:text-4xl font-bold text-[#260651] text-center">
+        <span className="font-extrabold">Solutions</span> We Deliver
+      </h1>
+      <p className="text-gray-600 text-center text-sm md:text-lg max-w-3xl mx-auto mt-2">
+        We IT-enable all kinds of B2B, B2C interactions and internal operations.
+      </p>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 gap-x-16 justify-items-center my-6">
+        {renderSolutions(displayedSolutions)}
       </div>
+
+      {isMobile && (
+        <div className="flex justify-center">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="px-6 py-2 bg-[#260651] text-white rounded-full hover:bg-[#3b0b7d] transition duration-300"
+          >
+            {showAll ? "View Less" : "View More"}
+          </button>
+        </div>
+      )}
     </div>
   );
 };

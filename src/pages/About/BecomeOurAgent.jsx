@@ -106,7 +106,6 @@ const BecomeOurAgent = () => {
           </div>
         </div>
       </div>
-
       <Footer />
     </div>
   );
