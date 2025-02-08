@@ -30,7 +30,7 @@ const ServicesMain = () => {
           {/* Step 1 */}
           <div className="relative flex flex-col items-center text-center bg-purple-100 p-6 rounded-2xl shadow-lg w-64">
             <div className="bg-white text-black p-4 rounded-xl shadow-md">
-              <MagnifyingGlassIcon className="text-[#330073] w-10 h-10"/>
+              <MagnifyingGlassIcon className="text-[#330073] w-10 h-10" />
             </div>
             <h3 className="text-lg font-semibold mt-4">Define the problem</h3>
             <p className="text-gray-600 mt-2 text-sm">
@@ -44,18 +44,42 @@ const ServicesMain = () => {
             <svg
               width="80"
               height="80"
-              viewBox="0 0 80 40"
+              viewBox="0 0 300 500"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              stroke="#d8d8d8"
+              transform="matrix(1.2, 0, 0, 1, 0, 0)rotate(10)"
             >
-              <path
-                d="M5 20 Q40 5, 75 20"
-                stroke="#A78BFA"
-                strokeWidth="2"
-                strokeDasharray="5,5"
-                fill="transparent"
+              <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#CCCCCC"
+                stroke-width="76.8"
               />
-              <polygon points="75,20 68,16 68,24" fill="#A78BFA" />
+
+              <g id="SVGRepo_iconCarrier">
+                {" "}
+                <path
+                  d="M56 270.5C56 256.429 79.5553 218.859 120.902 197.186C162.249 175.512 194.07 164.5 242.113 164.5C274.142 164.5 306.771 175.395 340 197.186"
+                  stroke="#d8d8d8"
+                  stroke-opacity="0.9"
+                  stroke-width="16"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-dasharray="16 32"
+                />{" "}
+                <path
+                  d="M325.63 129C337.877 172.588 344 195.072 344 196.45C344 198.518 308.436 212.998 292 235"
+                  stroke="#d8d8d8"
+                  stroke-opacity="0.9"
+                  stroke-width="16"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />{" "}
+              </g>
             </svg>
           </div>
 
@@ -67,7 +91,7 @@ const ServicesMain = () => {
                 alt="Develop a Solution"
                 className="w-10 h-10"
               /> */}
-              <SettingsIcon className="text-[#330073] w-10 h-10"/>
+              <SettingsIcon className="text-[#330073] w-10 h-10" />
             </div>
             <h3 className="text-lg font-semibold mt-4">Develop a Solution</h3>
             <p className="text-gray-600 mt-2 text-sm">
@@ -80,26 +104,50 @@ const ServicesMain = () => {
           <div className="hidden md:block absolute right-56 top-1/2 z-10 transform -translate-y-1/2">
             <svg
               width="80"
-              height="40"
-              viewBox="0 0 80 40"
+              height="80"
+              viewBox="0 -40 450 500"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              stroke="#d8d8d8"
+              transform="matrix(1.2, 0, 0, -1, 0, 0)rotate(20)"
             >
-              <path
-                d="M5 20 Q40 5, 75 20"
-                stroke="#A78BFA"
-                strokeWidth="2"
-                strokeDasharray="5,5"
-                fill="transparent"
+              <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#CCCCCC"
+                stroke-width="76.8"
               />
-              <polygon points="75,20 68,16 68,24" fill="#A78BFA" />
+
+              <g id="SVGRepo_iconCarrier">
+                {" "}
+                <path
+                  d="M56 270.5C56 256.429 79.5553 218.859 120.902 197.186C162.249 175.512 194.07 164.5 242.113 164.5C274.142 164.5 306.771 175.395 340 197.186"
+                  stroke="#d8d8d8"
+                  stroke-opacity="0.9"
+                  stroke-width="16"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-dasharray="16 32"
+                />{" "}
+                <path
+                  d="M325.63 129C337.877 172.588 344 195.072 344 196.45C344 198.518 308.436 212.998 292 235"
+                  stroke="#d8d8d8"
+                  stroke-opacity="0.9"
+                  stroke-width="16"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />{" "}
+              </g>
             </svg>
           </div>
 
           {/* Step 3 */}
           <div className="relative flex flex-col items-center text-center bg-purple-100 p-6 rounded-2xl shadow-lg w-64">
             <div className="bg-white p-4 rounded-xl shadow-md">
-              <PenTool className="text-[#330073] w-10 h-10"/>
+              <PenTool className="text-[#330073] w-10 h-10" />
             </div>
             <h3 className="text-lg font-semibold mt-4">Refine</h3>
             <p className="text-gray-600 mt-2 text-sm">
