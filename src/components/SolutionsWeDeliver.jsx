@@ -1,4 +1,5 @@
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import { ArrowDown } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 //Data
@@ -113,9 +114,10 @@ const SolutionsWeDeliver = () => {
         <div className="flex justify-center">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="px-6 py-2 bg-[#260651] text-white rounded-full hover:bg-[#3b0b7d] transition duration-300"
+            className="px-6 py-2 bg-[#3b0b7d] text-white rounded-full hover:bg-[#3b0b7d] transition duration-300"
           >
-            {showAll ? "View Less" : "View More"}
+            
+            {showAll ? "View Less" : (`View More`)}
           </button>
         </div>
       )}

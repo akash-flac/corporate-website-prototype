@@ -141,7 +141,7 @@ const FAQ = () => {
         <div className="flex justify-center items-center">
           <a
             href="/FAQs"
-            className=" px-6 py-2 bg-[#260651] text-white text-center rounded-full hover:bg-[#3b0b7d] transition duration-300"
+            className=" px-6 py-2 bg-[#3b0b7d] text-white text-center rounded-full hover:bg-[#3b0b7d] transition duration-300"
           >
             View More
           </a>
