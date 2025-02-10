@@ -33,6 +33,8 @@ import MVPDev from "./pages/Services/MVPDev";
 import DevOps from "./pages/Services/DevOps";
 import ProfessionalServices from "./pages/Industries/ProfessionalServices";
 import MediaAndEntertainment from "./pages/Industries/MediaAndEntertainment";
+import Manufacturing from "./pages/Industries/Manufacturing";
+import Telecommunications from "./pages/Industries/Telecommunications";
 
 function App() {
   return (
@@ -42,12 +44,14 @@ function App() {
           <Route path="/" element={<Home />} />
 
           {/* About Section */}
-          <Route path="/about-company" element={<AboutCompany />} />
-          <Route path="/our-mission" element={<OurMission />} />
-          <Route path="/client-reviews" element={<ClientReviews />} />
-          <Route path="/FAQs" element={<FAQs />} />
-          <Route path="/careers" element={<Careers />} />
-          <Route path="/become-our-agent" element={<BecomeOurAgent />} />
+          <Route path="about">
+            <Route path="company" element={<AboutCompany />} />
+            <Route path="mission" element={<OurMission />} />
+            <Route path="reviews" element={<ClientReviews />} />
+            <Route path="faqs" element={<FAQs />} />
+            <Route path="careers" element={<Careers />} />
+            <Route path="become-agent" element={<BecomeOurAgent />} />
+          </Route>
 
           {/* Services */}
           <Route
@@ -79,7 +83,10 @@ function App() {
 
           {/* Industries */}
           <Route path="/industries" element={<IndustriesMain />} />
-          <Route path="/industries/finance-and-fintech" element={<FinanceAndFintech />} />
+          <Route
+            path="/industries/finance-and-fintech"
+            element={<FinanceAndFintech />}
+          />
           <Route
             path="/industries/travel-and-hospitality"
             element={<TravelAndHospitality />}
@@ -105,6 +112,11 @@ function App() {
           <Route
             path="/industries/media-and-entertainment"
             element={<MediaAndEntertainment />}
+          />
+          <Route path="/industries/manufacturing" element={<Manufacturing />} />
+          <Route
+            path="/industries/telecommunications"
+            element={<Telecommunications />}
           />
 
           {/* Solutions */}

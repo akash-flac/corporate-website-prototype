@@ -7,28 +7,28 @@ const imgs = [
     id: 1,
     number: 250,
     content: "Tech Experts On-board",
-    src: "src/images/techExperts.png",
+    src: "/src/images/techExperts.png",
   },
   {
     name: "Tech Experts on Board",
     id: 2,
     number: 8,
     content: "Years Of Expertise",
-    src: "src/images/skills.jpeg",
+    src: "/src/images/skills.jpeg",
   },
   {
     name: "Tech Experts on Board",
     id: 3,
     number: 3350,
     content: "Projects Delivered",
-    src: "src/images/projectManagement.jpeg",
+    src: "/src/images/projectManagement.jpeg",
   },
   {
     name: "Tech Experts on Board",
     id: 4,
     number: 3120,
     content: "Happy Clients",
-    src: "src/images/happyClients.jpeg",
+    src: "/src/images/happyClients.jpeg",
   },
 ];
 const WhyChooseMarkle = () => {

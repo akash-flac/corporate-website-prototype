@@ -9,7 +9,7 @@ const AboutCompany = () => {
   return (
     <div>
       <Hero
-        bgImage={"src/images/aboutUs.jpeg"}
+        bgImage={"/src/images/aboutUs.jpeg"}
         heading={"About Us"}
         content={
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ipsa eveniet optio tempore enim voluptatum odit natus nihil culpa neque, impedit dicta, commodi quos ratione earum explicabo dignissimos. Vel, sequi."

@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import Hero from "../../components/Hero";
+import { retailingObj } from "../../data/industries/industries";
+import IndustryCommon from "../../components/IndustryCommon";
 
 const RetailAndEcommerce = () => {
   return (
-    <div>RetailAndEcommerce</div>
-  )
-}
+    <div>
+      <Hero
+        heading={retailingObj.title}
+        bgImage={retailingObj.src}
+        content={retailingObj.description}
+      />
+      <IndustryCommon obj={retailingObj} />
+    </div>
+  );
+};
 
-export default RetailAndEcommerce
+export default RetailAndEcommerce;

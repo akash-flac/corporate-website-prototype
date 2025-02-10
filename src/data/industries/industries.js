@@ -907,6 +907,71 @@ const professionalObj = {
   ],
 };
 
+const mediaObj = {
+  title: "Media and Entertainment",
+  src: transportationImg,
+  description: "Driving Efficiency Through Advanced Technology",
+  extendedContent: `Revolutionize your logistics and transportation operations with our innovative IT solutions. We specialize in fleet management systems, supply chain optimization tools, and real-time tracking technologies that improve route efficiency, reduce costs, and ensure regulatory compliance.`,
+  sections: [
+    {
+      title: "Fleet Management",
+      description: "Tools to manage and optimize vehicle fleets.",
+      items: [
+        {
+          name: "GPS Tracking Systems",
+          info: "Real-time tracking of vehicles and routes.",
+        },
+        {
+          name: "Fleet Maintenance Software",
+          info: "Applications to schedule and track vehicle maintenance.",
+        },
+      ],
+    },
+    {
+      title: "Supply Chain Optimization",
+      description: "Improving supply chain efficiency and transparency.",
+      items: [
+        {
+          name: "Logistics Management Systems",
+          info: "Software to streamline logistics operations.",
+        },
+        {
+          name: "Warehouse Management Tools",
+          info: "Applications for inventory control and storage optimization.",
+        },
+      ],
+    },
+    {
+      title: "Route Planning Solutions",
+      description: "Enhancing delivery efficiency with optimized routes.",
+      items: [
+        {
+          name: "Dynamic Routing Tools",
+          info: "Real-time route optimization based on traffic conditions.",
+        },
+        {
+          name: "Delivery Scheduling Software",
+          info: "Applications for planning and managing delivery schedules.",
+        },
+      ],
+    },
+    {
+      title: "Compliance & Safety Management",
+      description: "Ensuring transportation safety and regulatory compliance.",
+      items: [
+        {
+          name: "Driver Safety Monitoring Systems",
+          info: "Tools to monitor driver behavior and promote safety.",
+        },
+        {
+          name: "Regulatory Compliance Software",
+          info: "Applications to manage industry-specific compliance requirements.",
+        },
+      ],
+    },
+  ],
+};
+
 export {
   industriesObj,
   financeObj,
@@ -919,4 +984,5 @@ export {
   telecommunicationsObj,
   retailingObj,
   professionalObj,
+  mediaObj
 };
