@@ -7,7 +7,7 @@ import ServicesCommon from "../../components/ServicesCommon";
 const SoftwareDevelopment = () => {
   return (
     <div>
-      <Hero heading={softwareObj.title} bgImage={softwareObj.src}/>
+      <Hero heading={softwareObj.title} bgImage={softwareObj.src} content={softwareObj.description}/>
       <ServicesCommon obj={softwareObj} />
       <Footer />
     </div>

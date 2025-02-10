@@ -81,7 +81,7 @@ export default function Banner() {
     <div className="bg-[#330073] relative items-center overflow-hidden px-4 sm:px-6 py-2 md:py-1 hidden sm:flex justify-between md:items-center z-10">
   {/* Left Section: 8 Years Image (Hidden on Mobile) */}
   <div className="hidden md:flex items-center gap-4">
-    <img src="src/images/8years.png" alt="8 years" className="h-8 w-auto" />
+    <img src="/src/images/8years.png" alt="8 years" className="h-8 w-auto" />
   </div>
 
   {/* Center Section: Contact Information */}

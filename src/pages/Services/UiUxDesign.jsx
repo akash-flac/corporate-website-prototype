@@ -1,17 +1,17 @@
 import React from "react";
 import Hero from "../../components/Hero";
 import Footer from "../../components/Footer";
-import { softwareObj } from "../../data/services/services";
+import { uiuxObj } from "../../data/services/services";
 import ServicesCommon from "../../components/ServicesCommon";
 
-const SoftwareDevelopment = () => {
+const UiUxDesign = () => {
   return (
     <div>
-      <Hero heading={softwareObj.title} bgImage={softwareObj.src}/>
-      <ServicesCommon obj={softwareObj} />
+      <Hero heading={uiuxObj.title} bgImage={uiuxObj.src} content={uiuxObj.description}/>
+      <ServicesCommon obj={uiuxObj} />
       <Footer />
     </div>
   );
 };
 
-export default SoftwareDevelopment;
+export default UiUxDesign;

@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 
-import { ModeToggle } from "./DartkModeToggler";
-
 //libraries
 import {
   Dialog,
@@ -60,6 +58,7 @@ import { servicesObj } from "../data/services/services";
 import { aboutObj } from "../data/about/about";
 import { industriesObj } from "../data/industries/industries";
 import { solutionsObj } from "../data/solutions/solutions";
+import Logo from "/src/images/markle-tech-new-logo.png"
 
 const callsToAction = [
   { name: "Watch demo", href: "#", icon: PlayCircleIcon },
@@ -79,7 +78,7 @@ const NavBar = () => {
             <span className="sr-only">Markle Tech</span>
             <img
               alt=""
-              src="src\images\markle-tech-new-logo.png"
+              src={Logo}
               className="h-8 md:h-10 lg:h-12 w-auto"
             />
           </a>

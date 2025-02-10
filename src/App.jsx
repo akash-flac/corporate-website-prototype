@@ -22,13 +22,19 @@ import RealEstateAndConstruction from "./pages/Industries/RealEstateAndConstruct
 import TransportationAndLogistics from "./pages/Industries/TransportationAndLogistics";
 import RetailAndEcommerce from "./pages/Industries/RetailAndEcommerce";
 import HealthAndWellness from "./pages/Industries/HealthAndWellness";
+import WebDevelopment from "./pages/Services/WebDevelopment";
+import MobileAppDevelopment from "./pages/Services/MobileAppDevelopment";
+import UiUxDesign from "./pages/Services/UiUxDesign";
+import ECommerce from "./pages/Services/ECommerce";
+import DigitalMarketing from "./pages/Services/DigitalMarketing";
+import LowCode from "./pages/Services/LowCode";
+import TestingAndQA from "./pages/Services/TestingAndQA";
+import MVPDev from "./pages/Services/MVPDev";
+import DevOps from "./pages/Services/DevOps";
 
-// import { ThemeProvider } from "./components/ThemeProvider";
 function App() {
   return (
     <div>
-      {/* <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme"> */}
-      {/* </ThemeProvider> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -42,18 +48,37 @@ function App() {
           <Route path="/become-our-agent" element={<BecomeOurAgent />} />
 
           {/* Services */}
+
           <Route
             path="/services/software-development"
             element={<SoftwareDevelopment />}
+          />
+          <Route
+            path="/services/web-development"
+            element={<WebDevelopment />}
+          />
+          <Route
+            path="/services/app-development"
+            element={<MobileAppDevelopment />}
+          />
+          <Route path="/services/mvp-development" element={<MVPDev />} />
+          <Route path="/services/ui-ux-design" element={<UiUxDesign />} />
+          <Route path="/services/e-commerce" element={<ECommerce />} />
+          <Route
+            path="/services/digital-marketing"
+            element={<DigitalMarketing />}
+          />
+          <Route path="/services/low-code" element={<LowCode />} />
+          <Route path="/services/devOps-consultation" element={<DevOps />} />
+          <Route
+            path="/services/testing-and-quality-assurance"
+            element={<TestingAndQA />}
           />
           <Route path="/services" element={<ServicesMain />} />
 
           {/* Industries */}
           <Route path="/industries" element={<IndustriesMain />} />
-          <Route
-            path="/finance-and-fintech"
-            element={<FinanceAndFintech />}
-          />
+          <Route path="/finance-and-fintech" element={<FinanceAndFintech />} />
           <Route
             path="/travel-and-hospitality"
             element={<TravelAndHospitality />}
@@ -63,10 +88,7 @@ function App() {
             path="/real-estate-and-construction"
             element={<RealEstateAndConstruction />}
           />
-          <Route
-            path="/health-and-wellness"
-            element={<HealthAndWellness />}
-          />
+          <Route path="/health-and-wellness" element={<HealthAndWellness />} />
           <Route
             path="/industries/transportation-and-logistics"
             element={<TransportationAndLogistics />}
@@ -75,14 +97,14 @@ function App() {
             path="/industries/retail-and-ecommerce"
             element={<RetailAndEcommerce />}
           />
-  
+
           <Route path="/our-products" element={<SolutionsMain />} />
 
           {/* Pricing */}
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/pricing-2" element={<PricingTwo />} />
           <Route path="/cost-calculator/:step" element={<CostCalculator />} />
-          <Route path="*" element={<CostCalculator />} /> 
+          <Route path="*" element={<CostCalculator />} />
 
           <Route path="/contact-us" element={<ContactUs />} />
         </Routes>

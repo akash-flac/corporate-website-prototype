@@ -37,9 +37,18 @@ import {
   ShoppingBagIcon,
 } from "lucide-react";
 
-import softwareDev from "/src/images/services/servicesHero/software-development.jpg";
+import softwareDevImg from "/src/images/services/servicesHero/software-development.jpg";
+import devOpsImg from "/src/images/services/servicesHero/devops-consulting.jpg";
+import ecommerceImg from "/src/images/services/servicesHero/ecommerce.jpg";
+import mobileAppDevImg from "/src/images/services/servicesHero/mobile-app-dev.jpg";
+import testingAndQaImg from "/src/images/services/servicesHero/testing-and-qa.jpg";
+import UiUxImg from "/src/images/services/servicesHero/ui-ux-design.jpg";
+import webDevImg from "/src/images/services/servicesHero/web-dev.jpg";
+import mvpImg from "/src/images/services/servicesHero/mvp.jpg";
+import lowCodeImg from "/src/images/services/servicesHero/low-code.jpg";
+import digitalMarketingImg from "/src/images/services/servicesHero/digital-marketing.jpg";
 
-export const servicesObj = [
+const servicesObj = [
   {
     name: "Software Development",
     description:
@@ -51,72 +60,72 @@ export const servicesObj = [
     name: "UI/UX Design",
     description:
       "Craft visually stunning and user-friendly designs to enhance user experience and engagement",
-    href: "#",
+    href: "/services/ui-ux-design",
     icon: PencilSquareIcon,
   },
   {
     name: "Digital Marketing",
     description:
       "Boost your online presence and grow your business with targeted and effective marketing strategies",
-    href: "#",
+    href: "/services/digital-marketing",
     icon: MegaphoneIcon,
   },
   {
     name: "Mobile App Development",
     description:
       "Build high-performance mobile applications for iOS and Android platforms to expand your reach",
-    href: "#",
+    href: "/services/app-development",
     icon: DevicePhoneMobileIcon,
   },
   {
     name: "DevOps Consultation",
     description:
       "Streamline your development process with our DevOps practices to ensure efficient delivery and scalability",
-    href: "#",
+    href: "/services/devOps-consultation",
     icon: Cog6ToothIcon,
   },
   {
     name: "MVP Development",
     description:
       "Quickly bring your ideas to life with minimum viable product (MVP) development services",
-    href: "#",
+    href: "/services/mvp-development",
     icon: RocketLaunchIcon,
   },
   {
     name: "Web Development",
     description:
       "Create fast, secure, and scalable websites tailored to your business goals and user needs",
-    href: "#",
+    href: "/services/web-development",
     icon: GlobeAltIcon,
   },
   {
     name: "e-commerce",
     description:
       "Build seamless and feature-rich online stores to deliver exceptional shopping experiences",
-    href: "#",
+    href: "/services/e-commerce",
     icon: ShoppingBagIcon,
   },
   {
     name: "Low Code - No Code",
     description:
       "Empower your team with low-code and no-code solutions to develop apps faster and more efficiently",
-    href: "#",
+    href: "/services/low-code",
     icon: LucideCloudLightning,
   },
   {
     name: "Testing and QA",
     description:
       "Ensure your product's quality with thorough testing and quality assurance services",
-    href: "#",
+    href: "/services/testing-and-quality-assurance",
     icon: CheckBadgeIcon,
   },
-  {
-    name: "SaaS Products",
-    description:
-      "Develop scalable and user-friendly SaaS applications to meet modern business demands",
-    href: "#",
-    icon: CloudIcon,
-  },
+  // {
+  //   name: "SaaS Products",
+  //   description:
+  //     "Develop scalable and user-friendly SaaS applications to meet modern business demands",
+  //   href: "/services/saas-products",
+  //   icon: CloudIcon,
+  // },
   {
     name: "See All Services",
     description:
@@ -128,7 +137,7 @@ export const servicesObj = [
 
 const softwareObj = {
   title: "Software Development",
-  src: softwareDev,
+  src: softwareDevImg,
   description:
     "We build scalable and secure software solutions tailored to your business needs. Our team of expert developers ensures high-performance, reliability, and efficiency, helping you achieve your digital transformation goals.",
   details:
@@ -157,6 +166,7 @@ const softwareObj = {
 
 const uiuxObj = {
   title: "UI/UX Design",
+  src: UiUxImg,
   description:
     "Crafting intuitive and visually stunning user interfaces for seamless digital experiences.",
   details:
@@ -185,6 +195,7 @@ const uiuxObj = {
 
 const digitalMarketingObj = {
   title: "Digital Marketing",
+  src: digitalMarketingImg,
   description:
     "Helping brands grow online through strategic marketing campaigns and targeted outreach.",
   details:
@@ -213,6 +224,7 @@ const digitalMarketingObj = {
 
 const mobileAppObj = {
   title: "Mobile App Development",
+  src: mobileAppDevImg,
   description:
     "Building high-performance mobile applications for iOS and Android platforms.",
   details:
@@ -241,6 +253,7 @@ const mobileAppObj = {
 
 const devOpsObj = {
   title: "DevOps Consultation",
+  src: devOpsImg,
   description:
     "Optimizing software development and deployment processes with DevOps best practices.",
   details:
@@ -269,6 +282,7 @@ const devOpsObj = {
 
 const mvpObj = {
   title: "MVP Development",
+  src: mvpImg,
   description:
     "Helping startups and enterprises build Minimum Viable Products quickly and efficiently.",
   details:
@@ -297,6 +311,7 @@ const mvpObj = {
 
 const webObj = {
   title: "Web Development",
+  src: webDevImg,
   description:
     "Designing and developing modern, responsive, and high-performing websites.",
   details:
@@ -325,6 +340,7 @@ const webObj = {
 
 const eCommerceObj = {
   title: "E-Commerce",
+  src: ecommerceImg,
   description:
     "Developing secure and scalable e-commerce platforms for businesses of all sizes.",
   details:
@@ -353,6 +369,7 @@ const eCommerceObj = {
 
 const lowCodeObj = {
   title: "Low Code/No Code",
+  src: lowCodeImg,
   description:
     "Empowering businesses to build applications quickly without extensive coding.",
   details:
@@ -381,6 +398,7 @@ const lowCodeObj = {
 
 const testingObj = {
   title: "Testing and QA",
+  src: testingAndQaImg,
   description:
     "Ensuring software quality through rigorous testing and quality assurance methodologies.",
   details:
@@ -407,4 +425,16 @@ const testingObj = {
   icon: "🛠",
 };
 
-export { softwareObj };
+export {
+  servicesObj,
+  softwareObj,
+  uiuxObj,
+  digitalMarketingObj,
+  mobileAppObj,
+  devOpsObj,
+  mvpObj,
+  webObj,
+  eCommerceObj,
+  lowCodeObj,
+  testingObj,
+};
