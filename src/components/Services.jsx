@@ -2,64 +2,8 @@ import { Cog6ToothIcon, DevicePhoneMobileIcon, RocketLaunchIcon } from "@heroico
 import { Code2, LucideCloudLightning, MegaphoneIcon, ShoppingBagIcon } from "lucide-react";
 import React from "react";
 
-const servicesObj = [
-  {
-    name: "Software Development",
-    description:
-      "Custom software solutions tailored to meet your unique business needs and challenges",
-    icon: Code2,
-    id: 1,
-  },
-  {
-    name: "Web Development",
-    description:
-      "Create fast, secure, and scalable websites tailored to your business goals and user needs",
-    icon: "",
-    id: 2,
-  },
-  {
-    name: "Digital Marketing",
-    description:
-      "We deliver targeted digital marketing strategies that drive traffic, boost engagement, and enhance brand visibility across all online channels.",
-    icon: MegaphoneIcon,
-    id: 3,
-  },
-  {
-    name: "Mobile App Development",
-    description:
-      "We deliver targeted digital marketing strategies that drive traffic, boost engagement, and enhance brand visibility across all online channels.",
-    icon: DevicePhoneMobileIcon,
-    id: 4,
-  },
-  {
-    name: "DevOps Consultation",
-    description:
-      "We deliver targeted digital marketing strategies that drive traffic, boost engagement, and enhance brand visibility across all online channels.",
-    icon: Cog6ToothIcon,
-    id: 5,
-  },
-  {
-    name: "MVP Development",
-    description:
-      "We deliver targeted digital marketing strategies that drive traffic, boost engagement, and enhance brand visibility across all online channels.",
-    icon: RocketLaunchIcon,
-    id: 6,
-  },
-  {
-    name: "e-Commerce",
-    description:
-      "We deliver targeted digital marketing strategies that drive traffic, boost engagement, and enhance brand visibility across all online channels.",
-    icon: ShoppingBagIcon,
-    id: 7,
-  },
-  {
-    name: "Low Code - No Code",
-    description:
-      "We deliver targeted digital marketing strategies that drive traffic, boost engagement, and enhance brand visibility across all online channels.",
-    icon: LucideCloudLightning,
-    id: 8,
-  },
-];
+import { servicesObj } from "../data/services/services";
+
 const Services = () => {
   return (
     <div>

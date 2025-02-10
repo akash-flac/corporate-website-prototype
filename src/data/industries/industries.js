@@ -1,3 +1,117 @@
+import {
+  ArrowPathIcon,
+  Bars3Icon,
+  ChartPieIcon,
+  ChatBubbleBottomCenterTextIcon,
+  CheckBadgeIcon,
+  CodeBracketIcon,
+  Cog6ToothIcon,
+  CursorArrowRaysIcon,
+  DevicePhoneMobileIcon,
+  EllipsisHorizontalIcon,
+  FingerPrintIcon,
+  GlobeAltIcon,
+  InformationCircleIcon,
+  LightBulbIcon,
+  PencilSquareIcon,
+  PercentBadgeIcon,
+  QuestionMarkCircleIcon,
+  RocketLaunchIcon,
+  SquaresPlusIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
+import {
+  ChevronDownIcon,
+  PhoneIcon,
+  PlayCircleIcon,
+} from "@heroicons/react/20/solid";
+import {
+  BriefcaseIcon,
+  CloudIcon,
+  CloudLightningIcon,
+  Code2,
+  CodeIcon,
+  HandshakeIcon,
+  LucideCloudLightning,
+  MegaphoneIcon,
+  ShoppingBagIcon,
+} from "lucide-react";
+
+export const industriesObj = [
+  {
+    name: "Finance & FinTech",
+    // description: "Get a better understanding of your traffic",
+    href: "/finance-and-fintech",
+    icon: ChartPieIcon,
+  },
+  {
+    name: "Travel & Hospitality",
+    // description: "Speak directly to your customers",
+    href: "/travel-and-hospitality",
+    icon: CursorArrowRaysIcon,
+  },
+  {
+    name: "Real Estate & Construction",
+    // description: "Your customers’ data will be safe and secure",
+    href: "/industries/real-estate-and-construction",
+    icon: FingerPrintIcon,
+  },
+  {
+    name: "Health & Wellness",
+    // description: "Connect with third-party tools",
+    href: "/industries/health-and-wellness",
+    icon: SquaresPlusIcon,
+  },
+  {
+    name: "Transportation & Logistics",
+    // description: "Build strategic funnels that will convert",
+    href: "/industries/transportation-and-logistics",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Professional services",
+    // description: "Build strategic funnels that will convert",
+    href: "/industries/professional-services",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Media & Entertainment",
+    // description: "Build strategic funnels that will convert",
+    href: "/industries/media-and-entertainment",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Retail & e-Commerce",
+    // description: "Build strategic funnels that will convert",
+    href: "/industries/retail-and-ecommerce",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Education",
+    // description: "Build strategic funnels that will convert",
+    href: "/industries/education",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Manufacturing",
+    // description: "Build strategic funnels that will convert",
+    href: "/industries/manufacturing",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Telecommunications",
+    // description: "Build strategic funnels that will convert",
+    href: "/industries/telecommunications",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "View All Industries",
+    // description: "Build strategic funnels that will convert",
+    href: "/industries",
+    icon: EllipsisHorizontalIcon,
+  },
+];
+
 export const financeObj = [
   {
     title: "Who We Serve",

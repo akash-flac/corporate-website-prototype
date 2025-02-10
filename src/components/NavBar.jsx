@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import { ModeToggle } from "./DartkModeToggler";
 
+//libraries
 import {
   Dialog,
   DialogPanel,
@@ -54,305 +55,11 @@ import {
 } from "lucide-react";
 import { NavLink, Route } from "react-router";
 
-const about = [
-  {
-    name: "About Company",
-    description:
-      "Learn more about who we are, what we stand for, and how we bring value to our customers",
-    href: "/about-company",
-    icon: InformationCircleIcon,
-  },
-  {
-    name: "Mission",
-    description:
-      "Discover our goals, values, and commitment to making a positive impact in our industry and beyond",
-    href: "/our-mission",
-    icon: LightBulbIcon,
-  },
-  {
-    name: "Client Reviews",
-    description:
-      "Hear directly from our satisfied clients about their experiences working with us",
-    href: "/client-reviews",
-    icon: ChatBubbleBottomCenterTextIcon,
-  },
-  {
-    name: "FAQs",
-    description:
-      "Find quick answers to commonly asked questions and get the information you need effortlessly",
-    href: "/FAQs",
-    icon: QuestionMarkCircleIcon,
-  },
-  {
-    name: "Careers",
-    description:
-      "Explore exciting career opportunities and join our team to shape the future together",
-    href: "/careers",
-    icon: BriefcaseIcon,
-  },
-  {
-    name: "Become Our Agent",
-    description:
-      "Partner with us as an agent and help bring our solutions to a broader audience",
-    href: "/become-our-agent",
-    icon: HandshakeIcon,
-  },
-];
-
-const services = [
-  {
-    name: "Software Development",
-    description:
-      "Custom software solutions tailored to meet your unique business needs and challenges",
-    href: "/services/software-development",
-    icon: Code2,
-  },
-  {
-    name: "UI/UX Design",
-    description:
-      "Craft visually stunning and user-friendly designs to enhance user experience and engagement",
-    href: "#",
-    icon: PencilSquareIcon,
-  },
-  {
-    name: "Digital Marketing",
-    description:
-      "Boost your online presence and grow your business with targeted and effective marketing strategies",
-    href: "#",
-    icon: MegaphoneIcon,
-  },
-  {
-    name: "Mobile App Development",
-    description:
-      "Build high-performance mobile applications for iOS and Android platforms to expand your reach",
-    href: "#",
-    icon: DevicePhoneMobileIcon,
-  },
-  {
-    name: "DevOps Consultation",
-    description:
-      "Streamline your development process with our DevOps practices to ensure efficient delivery and scalability",
-    href: "#",
-    icon: Cog6ToothIcon,
-  },
-  {
-    name: "MVP Development",
-    description:
-      "Quickly bring your ideas to life with minimum viable product (MVP) development services",
-    href: "#",
-    icon: RocketLaunchIcon,
-  },
-  {
-    name: "Web Development",
-    description:
-      "Create fast, secure, and scalable websites tailored to your business goals and user needs",
-    href: "#",
-    icon: GlobeAltIcon,
-  },
-  {
-    name: "e-commerce",
-    description:
-      "Build seamless and feature-rich online stores to deliver exceptional shopping experiences",
-    href: "#",
-    icon: ShoppingBagIcon,
-  },
-  {
-    name: "Low Code - No Code",
-    description:
-      "Empower your team with low-code and no-code solutions to develop apps faster and more efficiently",
-    href: "#",
-    icon: LucideCloudLightning,
-  },
-  {
-    name: "Testing and QA",
-    description:
-      "Ensure your product's quality with thorough testing and quality assurance services",
-    href: "#",
-    icon: CheckBadgeIcon,
-  },
-  {
-    name: "SaaS Products",
-    description:
-      "Develop scalable and user-friendly SaaS applications to meet modern business demands",
-    href: "#",
-    icon: CloudIcon,
-  },
-  {
-    name: "See All Services",
-    description:
-      "Explore the full range of services we offer to help your business thrive",
-    href: "/services",
-    icon: EllipsisHorizontalIcon,
-  },
-];
-
-const industries = [
-  {
-    name: "Finance & FinTech",
-    // description: "Get a better understanding of your traffic",
-    href: "/finance-and-fintech",
-    icon: ChartPieIcon,
-  },
-  {
-    name: "Travel & Hospitality",
-    // description: "Speak directly to your customers",
-    href: "/travel-and-hospitality",
-    icon: CursorArrowRaysIcon,
-  },
-  {
-    name: "Real Estate & Construction",
-    // description: "Your customers’ data will be safe and secure",
-    href: "/industries/real-estate-and-construction",
-    icon: FingerPrintIcon,
-  },
-  {
-    name: "Health & Wellness",
-    // description: "Connect with third-party tools",
-    href: "/industries/health-and-wellness",
-    icon: SquaresPlusIcon,
-  },
-  {
-    name: "Transportation & Logistics",
-    // description: "Build strategic funnels that will convert",
-    href: "/industries/transportation-and-logistics",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Professional services",
-    // description: "Build strategic funnels that will convert",
-    href: "/industries/professional-services",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Media & Entertainment",
-    // description: "Build strategic funnels that will convert",
-    href: "/industries/media-and-entertainment",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Retail & e-Commerce",
-    // description: "Build strategic funnels that will convert",
-    href: "/industries/retail-and-ecommerce",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Education",
-    // description: "Build strategic funnels that will convert",
-    href: "/industries/education",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Manufacturing",
-    // description: "Build strategic funnels that will convert",
-    href: "/industries/manufacturing",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Telecommunications",
-    // description: "Build strategic funnels that will convert",
-    href: "/industries/telecommunications",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "View All Industries",
-    // description: "Build strategic funnels that will convert",
-    href: "/industries",
-    icon: EllipsisHorizontalIcon,
-  },
-];
-
-const solutions = [
-  {
-    name: "ERP",
-    // description: "Get a better understanding of your traffic",
-    href: "#",
-    icon: ChartPieIcon,
-  },
-  {
-    name: "e-learning",
-    // description: "Speak directly to your customers",
-    href: "#",
-    icon: CursorArrowRaysIcon,
-  },
-  {
-    name: "CRM",
-    // description: "Your customers’ data will be safe and secure",
-    href: "#",
-    icon: FingerPrintIcon,
-  },
-  {
-    name: "Operations Management System",
-    // description: "Connect with third-party tools",
-    href: "#",
-    icon: SquaresPlusIcon,
-  },
-  {
-    name: "CMS",
-    // description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "e-Commerce",
-    // description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Supply Chain Management",
-    // description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Web Portals",
-    // description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "OTT Platform",
-    // description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Fleet Management",
-    // description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Financial Management",
-    // description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Project Management System",
-    // description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Human Resources Management System",
-    // description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Hospital Management System",
-    // description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "View All Products",
-    // description: "Build strategic funnels that will convert",
-    href: "/our-products",
-    icon: EllipsisHorizontalIcon,
-  },
-];
+//data
+import { servicesObj } from "../data/services/services";
+import { aboutObj } from "../data/about/about";
+import { industriesObj } from "../data/industries/industries";
+import { solutionsObj } from "../data/solutions/solutions";
 
 const callsToAction = [
   { name: "Watch demo", href: "#", icon: PlayCircleIcon },
@@ -389,7 +96,7 @@ const NavBar = () => {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100">
+            <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
               About
               <ChevronDownIcon
                 aria-hidden="true"
@@ -402,7 +109,7 @@ const NavBar = () => {
               className="absolute left-10 top-full z-10 mt-3 w-screen max-w-xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="grid grid-cols-2 gap-4 p-4">
-                {about.map((item) => (
+                {aboutObj.map((item) => (
                   <div
                     key={item.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-lg hover:bg-gray-50"
@@ -440,7 +147,7 @@ const NavBar = () => {
           </Popover>
 
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100">
+            <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
               Services
               <ChevronDownIcon
                 aria-hidden="true"
@@ -453,7 +160,7 @@ const NavBar = () => {
               className="absolute -left-24 top-full z-10 mt-3 w-screen max-w-3xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="grid grid-cols-3 gap-4 p-5">
-                {services.map((item) => (
+                {servicesObj.map((item) => (
                   <div
                     key={item.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-lg hover:bg-gray-50"
@@ -499,7 +206,7 @@ const NavBar = () => {
           </Popover>
 
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100">
+            <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
               Industries
               <ChevronDownIcon
                 aria-hidden="true"
@@ -512,7 +219,7 @@ const NavBar = () => {
               className="absolute -left-56 top-full z-10 mt-3 w-screen max-w-3xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="grid grid-cols-3 gap-4 p-5">
-                {industries.map((item) => (
+                {industriesObj.map((item) => (
                   <div
                     key={item.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-lg hover:bg-gray-50"
@@ -540,7 +247,7 @@ const NavBar = () => {
           </Popover>
 
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100">
+            <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
               Solutions
               <ChevronDownIcon
                 aria-hidden="true"
@@ -553,7 +260,7 @@ const NavBar = () => {
               className="absolute mt-2 w-screen z-10 overflow-hidden -left-96 max-w-3xl rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="grid grid-cols-3 gap-4 p-5">
-                {solutions.map((item) => (
+                {solutionsObj.map((item) => (
                   <div
                     key={item.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-2 text-lg hover:bg-gray-50"
@@ -580,12 +287,12 @@ const NavBar = () => {
             </PopoverPanel>
           </Popover>
 
-          <a href="/pricing" className="text-lg font-semibold text-gray-100">
+          <a href="/pricing" className="text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
             Pricing
           </a>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="/contact-us" className="text-lg font-semibold text-gray-100">
+          <a href="/contact-us" className="text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
             Contact Us
           </a>
         </div>
@@ -628,7 +335,7 @@ const NavBar = () => {
                     />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
-                    {[...about, ...callsToAction].map((item) => (
+                    {[...aboutObj].map((item) => (
                       <DisclosureButton
                         key={item.name}
                         as="a"
@@ -649,7 +356,7 @@ const NavBar = () => {
                     />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
-                    {[...services, ...callsToAction].map((item) => (
+                    {[...servicesObj, ...callsToAction].map((item) => (
                       <DisclosureButton
                         key={item.name}
                         as="a"
@@ -670,7 +377,7 @@ const NavBar = () => {
                     />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
-                    {[...industries, ...callsToAction].map((item) => (
+                    {[...industriesObj].map((item) => (
                       <DisclosureButton
                         key={item.name}
                         as="a"
@@ -691,7 +398,7 @@ const NavBar = () => {
                     />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
-                    {[...solutions, ...callsToAction].map((item) => (
+                    {[...solutionsObj].map((item) => (
                       <DisclosureButton
                         key={item.name}
                         as="a"

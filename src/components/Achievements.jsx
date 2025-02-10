@@ -1,5 +1,22 @@
 import React from "react";
-
+const achievementsObj = [
+  {
+    id: 1,
+    src: "src/images/microsoft.png",
+  },
+  {
+    id: 2,
+    src: "src/images/google-cloud.png",
+  },
+  {
+    id: 3,
+    src: "src/images/clutch.png",
+  },
+  {
+    id: 4,
+    src: "src/images/aws.png",
+  },
+];
 const Achievements = () => {
   return (
     <div className="m-10">
@@ -14,11 +31,23 @@ const Achievements = () => {
           </p>
         </div>
       </div>
-      <div className="flex justify-evenly flex-wrap gap-4 my-5">
-        <img src="src\images\microsoft.png" alt="" className="" />
-        <img src="src\images\google-cloud.png" alt="" className="" />
-        <img src="src\images\clutch.png" alt="" className="" />
-        <img src="src\images\aws.png" alt="" className="" />
+      <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4">
+        {/* Image Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-items-center gap-6 gap-x-14 m-4">
+          {achievementsObj.map((achievementsObj, imgIndex) => (
+            <div
+              key={imgIndex}
+              className="w-full rounded-md transform transition duration-300 hover:scale-105"
+            >
+              {/* Image */}
+              <img
+                src={achievementsObj.src}
+                alt={achievementsObj.alt || "Image"}
+                className="w-full h-20 object-contain"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
