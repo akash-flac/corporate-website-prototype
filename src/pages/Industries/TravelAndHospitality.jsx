@@ -1,18 +1,21 @@
-import React from 'react'
-import Hero from '../../components/Hero'
-import Footer from '../../components/Footer'
+import React from "react";
+
+//components
+import Hero from "../../components/Hero";
+import Footer from "../../components/Footer";
+import IndustryCommon from "../../components/IndustryCommon";
+
+//data
+import { travelObj } from "../../data/industries/industries";
 
 const TravelAndHospitality = () => {
   return (
     <div>
-      <Hero bgImage={`src/images/industries/IndustriesHero/finance.jpg`}/>
-      <div className="bg-green-500 m-10">
-      CRAZY
-      <img src="src/images/industries/IndustriesHero/finance.jpg" alt="" className="w-20 h-96" />
-      </div>
-      <Footer/>
+      <Hero heading={travelObj.title} bgImage={travelObj.src}/>
+      <IndustryCommon obj={travelObj.sections} />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default TravelAndHospitality
+export default TravelAndHospitality;

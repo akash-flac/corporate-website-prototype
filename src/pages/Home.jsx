@@ -27,7 +27,7 @@ const Home = () => {
         }
       />
       <ScrollingLogos />
-      <Services />
+      <Services renderComplete={false}/>
       <LeadingCompanies />
       <CustomerReviews />
       <Goal />

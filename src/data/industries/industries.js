@@ -37,7 +37,10 @@ import {
   ShoppingBagIcon,
 } from "lucide-react";
 
-export const industriesObj = [
+import travelAndHospitality from "/src/images/industries/IndustriesHero/travel-and-hospitality.jpg"
+import healthAndWellness from "/src/images/industries/IndustriesHero/health-and-wellness.jpg"
+import education from "/src/images/industries/IndustriesHero/education.jpg/"
+const industriesObj = [
   {
     name: "Finance & FinTech",
     // description: "Get a better understanding of your traffic",
@@ -59,7 +62,7 @@ export const industriesObj = [
   {
     name: "Health & Wellness",
     // description: "Connect with third-party tools",
-    href: "/industries/health-and-wellness",
+    href: "/health-and-wellness",
     icon: SquaresPlusIcon,
   },
   {
@@ -112,7 +115,7 @@ export const industriesObj = [
   },
 ];
 
-export const financeObj = [
+const financeObj = [
   {
     title: "Who We Serve",
     description:
@@ -264,7 +267,10 @@ export const financeObj = [
   },
 ];
 
-export const travelObj = [
+const travelObj = {
+  title: "Travel and Hospitality",
+  src: travelAndHospitality,
+  sections: [
   {
     title: "Who We Serve",
     description:
@@ -298,77 +304,241 @@ export const travelObj = [
       },
     ],
   },
-];
+  {
+    title: "Operational Efficiency Tools",
+    description: "Optimizing operations in the travel and hospitality sector.",
+    items: [
+      {
+        name: "Property Management Systems",
+        info: "Software for managing hotel operations.",
+      },
+      {
+        name: "Reservation Platforms",
+        info: "Solutions for booking management.",
+      },
+      {
+        name: "Staff Scheduling Tools",
+        info: "Applications for efficient workforce management.",
+      },
+    ],
+  },
+  {
+    title: "Marketing and Engagement Platforms",
+    description: "Driving customer engagement through targeted marketing.",
+    items: [
+      {
+        name: "Loyalty Programs",
+        info: "Tools to manage customer loyalty rewards.",
+      },
+      {
+        name: "Social Media Integration Tools",
+        info: "Platforms for seamless social media marketing.",
+      },
+      {
+        name: "Feedback and Review Management",
+        info: "Solutions to manage customer feedback effectively.",
+      },
+    ],
+  },
+]};
 
-export const health = [
-  {
-    title: "Healthcare Providers",
-    description: "Supporting hospitals, clinics, and healthcare networks.",
-    items: [
-      {
-        name: "Hospitals & Clinics",
-        info: "Facilities providing medical treatment and services.",
-      },
-      {
-        name: "Telemedicine Platforms",
-        info: "Virtual healthcare consultation services.",
-      },
-      {
-        name: "Pharmaceutical Companies",
-        info: "Organizations involved in drug development and distribution.",
-      },
-    ],
-  },
-  {
-    title: "Patient-Centric Solutions",
-    description: "Improving patient care through technology.",
-    items: [
-      {
-        name: "Health Monitoring Apps",
-        info: "Mobile apps for tracking health metrics.",
-      },
-      {
-        name: "Electronic Health Records",
-        info: "Systems for managing patient medical histories.",
-      },
-    ],
-  },
-  {
-    title: "Healthcare Administration Tools",
-    description: "Streamlining healthcare administrative processes.",
-    items: [
-      {
-        name: "Hospital Management Systems",
-        info: "Software for managing hospital operations.",
-      },
-      {
-        name: "Billing and Coding Software",
-        info: "Tools for efficient medical billing.",
-      },
-      {
-        name: "Inventory Management for Healthcare",
-        info: "Solutions for tracking medical supplies.",
-      },
-    ],
-  },
-  {
-    title: "Wellness and Fitness Applications",
-    description: "Promoting health and wellness through technology.",
-    items: [
-      {
-        name: "Fitness Tracking Apps",
-        info: "Applications for monitoring physical activity.",
-      },
-      {
-        name: "Mental Health Platforms",
-        info: "Tools to support mental health and well-being.",
-      },
-      {
-        name: "Nutrition Management Apps",
-        info: "Apps for managing diet and nutrition.",
-      },
-    ],
-  },
-];
+const healthObj = {
+  title: 'Health and Wellness',
+  src: healthAndWellness,
+  sections: [
+    {
+      title: 'Healthcare Providers',
+      description: 'Supporting hospitals, clinics, and healthcare networks.',
+      items: [
+        { name: 'Hospitals & Clinics', info: 'Facilities providing medical treatment and services.' },
+        { name: 'Telemedicine Platforms', info: 'Virtual healthcare consultation services.' },
+        { name: 'Pharmaceutical Companies', info: 'Organizations involved in drug development and distribution.' }
+      ]
+    },
+    {
+      title: 'Patient-Centric Solutions',
+      description: 'Improving patient care through technology.',
+      items: [
+        { name: 'Health Monitoring Apps', info: 'Mobile apps for tracking health metrics.' },
+        { name: 'Electronic Health Records', info: 'Systems for managing patient medical histories.' }
+      ]
+    },
+    {
+      title: 'Healthcare Administration Tools',
+      description: 'Streamlining healthcare administrative processes.',
+      items: [
+        { name: 'Hospital Management Systems', info: 'Software for managing hospital operations.' },
+        { name: 'Billing and Coding Software', info: 'Tools for efficient medical billing.' },
+        { name: 'Inventory Management for Healthcare', info: 'Solutions for tracking medical supplies.' }
+      ]
+    },
+    {
+      title: 'Wellness and Fitness Applications',
+      description: 'Promoting health and wellness through technology.',
+      items: [
+        { name: 'Fitness Tracking Apps', info: 'Applications for monitoring physical activity.' },
+        { name: 'Mental Health Platforms', info: 'Tools to support mental health and well-being.' },
+        { name: 'Nutrition Management Apps', info: 'Apps for managing diet and nutrition.' }
+      ]
+    }
+  ]
+};
 
+const manufacturingObj = {
+  title: 'Manufacturing',
+  sections: [
+    {
+      title: 'Production Management',
+      description: 'Optimizing manufacturing processes for efficiency.',
+      items: [
+        { name: 'Manufacturing Execution Systems', info: 'Tools for managing production operations.' },
+        { name: 'Supply Chain Management', info: 'Software to streamline supply chain processes.' },
+        { name: 'Inventory Control Systems', info: 'Applications for tracking and managing inventory.' }
+      ]
+    },
+    {
+      title: 'Quality Assurance Solutions',
+      description: 'Ensuring product quality through advanced tools.',
+      items: [
+        { name: 'Inspection Software', info: 'Tools for product quality inspection.' },
+        { name: 'Defect Tracking Systems', info: 'Applications to monitor and address defects.' }
+      ]
+    },
+    {
+      title: 'Workforce Management',
+      description: 'Enhancing productivity with effective workforce tools.',
+      items: [
+        { name: 'Employee Scheduling Software', info: 'Tools for managing employee shifts and schedules.' },
+        { name: 'Training and Development Platforms', info: 'Solutions for workforce skill development.' }
+      ]
+    },
+    {
+      title: 'Data Analytics and Reporting',
+      description: 'Leveraging data for smarter manufacturing decisions.',
+      items: [
+        { name: 'Real-Time Analytics Tools', info: 'Software for live production data analysis.' },
+        { name: 'Business Intelligence Platforms', info: 'Tools for advanced data reporting and insights.' }
+      ]
+    }
+  ]
+};
 
+const educationObj = {
+  title: 'Education',
+  src: education,
+  sections: [
+    {
+      title: 'Learning Management Systems',
+      description: 'Platforms to manage educational content and track progress.',
+      items: [
+        { name: 'Virtual Classrooms', info: 'Environments for online learning and collaboration.' },
+        { name: 'Assessment Tools', info: 'Applications for quizzes and exams.' },
+        { name: 'Content Authoring Tools', info: 'Software to create educational materials.' }
+      ]
+    },
+    {
+      title: 'Student Engagement Platforms',
+      description: 'Technologies to enhance student participation.',
+      items: [
+        { name: 'Gamified Learning Apps', info: 'Games designed to make learning fun and engaging.' },
+        { name: 'Discussion Forums', info: 'Spaces for academic discussions and peer learning.' }
+      ]
+    },
+    {
+      title: 'Administration Solutions',
+      description: 'Streamlining administrative tasks for educational institutions.',
+      items: [
+        { name: 'Enrollment Management Software', info: 'Tools for handling student admissions.' },
+        { name: 'Attendance Tracking Systems', info: 'Applications to monitor student attendance.' }
+      ]
+    },
+    {
+      title: 'Research and Development Tools',
+      description: 'Supporting academic research through advanced technology.',
+      items: [
+        { name: 'Data Analysis Software', info: 'Tools for conducting academic research.' },
+        { name: 'Reference Management Tools', info: 'Applications to organize and manage research references.' }
+      ]
+    }
+  ]
+};
+
+const realEstateObj = {
+  title: 'Real Estate & Construction',
+  sections: [
+    {
+      title: 'Property Management',
+      description: 'Solutions to manage properties efficiently.',
+      items: [
+        { name: 'Real Estate CRM', info: 'Tools to manage client relationships and property listings.' },
+        { name: 'Lease Management Software', info: 'Applications to handle lease agreements and renewals.' },
+        { name: 'Building Maintenance Systems', info: 'Software to schedule and track maintenance activities.' }
+      ]
+    },
+    {
+      title: 'Construction Project Management',
+      description: 'Optimizing construction workflows and project timelines.',
+      items: [
+        { name: 'Project Scheduling Tools', info: 'Software to plan and manage construction projects.' },
+        { name: 'Resource Allocation Systems', info: 'Tools for managing construction resources effectively.' }
+      ]
+    },
+    {
+      title: 'Marketing & Sales Platforms',
+      description: 'Boosting real estate sales and marketing efforts.',
+      items: [
+        { name: 'Virtual Tour Software', info: 'Applications for showcasing properties virtually.' },
+        { name: 'Lead Generation Tools', info: 'Platforms to attract potential buyers and renters.' }
+      ]
+    },
+    {
+      title: 'Financial Management Solutions',
+      description: 'Handling finances for real estate businesses.',
+      items: [
+        { name: 'Property Accounting Software', info: 'Tools for managing property-related finances.' },
+        { name: 'Investment Analysis Tools', info: 'Applications to analyze real estate investments.' }
+      ]
+    }
+  ]
+};
+
+// data/transportation.js
+const transportationObj = {
+  title: 'Transportation & Logistics',
+  sections: [
+    {
+      title: 'Fleet Management',
+      description: 'Tools to manage and optimize vehicle fleets.',
+      items: [
+        { name: 'GPS Tracking Systems', info: 'Real-time tracking of vehicles and routes.' },
+        { name: 'Fleet Maintenance Software', info: 'Applications to schedule and track vehicle maintenance.' }
+      ]
+    },
+    {
+      title: 'Supply Chain Optimization',
+      description: 'Improving supply chain efficiency and transparency.',
+      items: [
+        { name: 'Logistics Management Systems', info: 'Software to streamline logistics operations.' },
+        { name: 'Warehouse Management Tools', info: 'Applications for inventory control and storage optimization.' }
+      ]
+    },
+    {
+      title: 'Route Planning Solutions',
+      description: 'Enhancing delivery efficiency with optimized routes.',
+      items: [
+        { name: 'Dynamic Routing Tools', info: 'Real-time route optimization based on traffic conditions.' },
+        { name: 'Delivery Scheduling Software', info: 'Applications for planning and managing delivery schedules.' }
+      ]
+    },
+    {
+      title: 'Compliance & Safety Management',
+      description: 'Ensuring transportation safety and regulatory compliance.',
+      items: [
+        { name: 'Driver Safety Monitoring Systems', info: 'Tools to monitor driver behavior and promote safety.' },
+        { name: 'Regulatory Compliance Software', info: 'Applications to manage industry-specific compliance requirements.' }
+      ]
+    }
+  ]
+};
+
+export {industriesObj, financeObj, travelObj, healthObj, manufacturingObj, educationObj, realEstateObj, transportationObj}

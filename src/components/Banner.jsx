@@ -78,52 +78,71 @@ const linkedIn = (
 
 export default function Banner() {
   return (
-    <div className="bg-[#330073] relative items-center gap-x-6 overflow-hidden px-6 py-0.5 sm:px-3.5 justify-evenly hidden md:flex z-10">
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-        <img src="src\images\8years.png" alt="8 years" className="" />
-      </div>
+    <div className="bg-[#330073] relative items-center overflow-hidden px-4 sm:px-6 py-2 md:py-1 hidden sm:flex justify-between md:items-center z-10">
+  {/* Left Section: 8 Years Image (Hidden on Mobile) */}
+  <div className="hidden md:flex items-center gap-4">
+    <img src="src/images/8years.png" alt="8 years" className="h-8 w-auto" />
+  </div>
 
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-        <p className="text-sm/6 text-white">
-          <strong className="font-semibold uppercase">
-            Contact@markletech.com
-          </strong>
-          <svg
-            viewBox="0 0 2 2"
-            aria-hidden="true"
-            className="mx-2 inline size-0.5 fill-current"
-          >
-            <circle r={1} cx={1} cy={1} />
-          </svg>
-          <strong className="font-semibold uppercase">
-            IN: +91-7982 332 070
-          </strong>
-          <svg
-            viewBox="0 0 2 2"
-            aria-hidden="true"
-            className="mx-2 inline size-0.5 fill-current"
-          >
-            <circle r={1} cx={1} cy={1} />
-          </svg>
-          <strong className="font-semibold uppercase">
-            USA: +1-628 277 4060 
-          </strong>
-        </p>
-      </div>
+  {/* Center Section: Contact Information */}
+  <div className="flex flex-col sm:flex-row items-center text-center md:text-left gap-2 md:gap-4 mx-3">
+    <p className="text-sm text-white font-semibold uppercase">
+      Contact@markletech.com
+    </p>
+    <svg
+      viewBox="0 0 2 2"
+      aria-hidden="true"
+      className="hidden md:inline mx-2 size-1 fill-current text-white"
+    >
+      <circle r={1} cx={1} cy={1} />
+    </svg>
+    <p className="text-sm text-white font-semibold uppercase">
+      IN: +91-7982 332 070
+    </p>
+    <svg
+      viewBox="0 0 2 2"
+      aria-hidden="true"
+      className="hidden md:inline mx-2 size-1 fill-current text-white"
+    >
+      <circle r={1} cx={1} cy={1} />
+    </svg>
+    <p className="text-sm text-white font-semibold uppercase">
+      USA: +1-628 277 4060
+    </p>
+  </div>
 
-      <div class="flex items-center justify-center gap-4 flex-wrap">
-        {/* https://pagedone.io/docs/social-media-icons#Rounded-Button */}
+  {/* Right Section: Social Media Icons (Hidden on Mobile) */}
+  <div className="hidden md:flex items-center gap-4">
+    <IconButton
+      svg={fbIcons}
+      bgColor="bg-blue-500"
+      href="https://www.facebook.com/markletechandmedia/"
+      target="_blank"
+      rel="noopener noreferrer"
+    />
+    <IconButton
+      svg={insta}
+      bgColor="bg-gradient-to-bl from-purple-500 via-pink-500 to-yellow-500"
+      href="https://www.instagram.com/markletechandmedia/"
+      target="_blank"
+      rel="noopener noreferrer"
+    />
+    <IconButton
+      svg={linkedIn}
+      bgColor="bg-[#006699]"
+      href="https://in.linkedin.com/company/markle-tech-and-mediaagency"
+      target="_blank"
+      rel="noopener noreferrer"
+    />
+  </div>
 
-        <IconButton svg={fbIcons} bgColor={"bg-blue-500"} href={"https://www.facebook.com/markletechandmedia/"}></IconButton>
-        <IconButton
-          svg={insta}
-          bgColor={
-            "bg-gradient-to-bl from-purple-500 via-pink-500 to-yellow-500"
-          }
-          href={"https://www.instagram.com/markletechandmedia/"}
-        ></IconButton>
-        <IconButton svg={linkedIn} bgColor={"bg-[#006699]"} href={"https://in.linkedin.com/company/markle-tech-and-mediaagency"}></IconButton>
-      </div>
-    </div>
+  {/* Login Button */}
+  <div className="flex items-center justify-center md:ml-4">
+    <a href="/login" className="text-white font-semibold uppercase hover:underline">
+      LOGIN
+    </a>
+  </div>
+</div>
+
   );
 }

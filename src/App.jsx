@@ -21,6 +21,7 @@ import Education from "./pages/Industries/Education";
 import RealEstateAndConstruction from "./pages/Industries/RealEstateAndConstruction";
 import TransportationAndLogistics from "./pages/Industries/TransportationAndLogistics";
 import RetailAndEcommerce from "./pages/Industries/RetailAndEcommerce";
+import HealthAndWellness from "./pages/Industries/HealthAndWellness";
 
 // import { ThemeProvider } from "./components/ThemeProvider";
 function App() {
@@ -61,6 +62,10 @@ function App() {
           <Route
             path="/real-estate-and-construction"
             element={<RealEstateAndConstruction />}
+          />
+          <Route
+            path="/health-and-wellness"
+            element={<HealthAndWellness />}
           />
           <Route
             path="/industries/transportation-and-logistics"
