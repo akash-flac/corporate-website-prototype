@@ -13,9 +13,9 @@ const FinanceAndFintech = () => {
   return (
     <div>
       <Hero
-        heading={`Finance and Fintech`}
-        bgImage={`/src/images/industries/IndustriesHero/finance.jpg`}
-        content={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit veritatis aspernatur quasi optio maxime sed amet tenetur at. A, aspernatur.`}
+        heading={financeObj.title}
+        bgImage={financeObj.src}
+        content={financeObj.description}
       />
       <IndustryCommon obj={financeObj} />
       <Footer />

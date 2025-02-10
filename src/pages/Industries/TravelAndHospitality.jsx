@@ -12,7 +12,7 @@ const TravelAndHospitality = () => {
   return (
     <div>
       <Hero heading={travelObj.title} bgImage={travelObj.src}/>
-      <IndustryCommon obj={travelObj.sections} />
+      <IndustryCommon obj={travelObj} />
       <Footer />
     </div>
   );

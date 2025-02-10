@@ -5,7 +5,7 @@ const IndustryCommon = ({obj}) => {
     <div>
       <div className="bg-gray-100 text-gray-800 min-h-screen p-6 md:p-12">
         <div className="max-w-5xl mx-auto space-y-12">
-          {obj.map((section, index) => (
+          {obj.sections.map((section, index) => (
             <div
               key={index}
               className="bg-white shadow-lg rounded-3xl p-8 md:p-12 border border-gray-300 transition-transform transform"

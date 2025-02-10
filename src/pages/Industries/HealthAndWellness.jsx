@@ -12,7 +12,7 @@ const HealthAndWellness = () => {
   return (
     <div>
       <Hero heading={healthObj.title} bgImage={healthObj.src}/>
-      <IndustryCommon obj={healthObj.sections} />
+      <IndustryCommon obj={healthObj} />
       <Footer/>
     </div>
   )

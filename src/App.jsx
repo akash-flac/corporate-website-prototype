@@ -31,6 +31,8 @@ import LowCode from "./pages/Services/LowCode";
 import TestingAndQA from "./pages/Services/TestingAndQA";
 import MVPDev from "./pages/Services/MVPDev";
 import DevOps from "./pages/Services/DevOps";
+import ProfessionalServices from "./pages/Industries/ProfessionalServices";
+import MediaAndEntertainment from "./pages/Industries/MediaAndEntertainment";
 
 function App() {
   return (
@@ -96,7 +98,16 @@ function App() {
             path="/industries/retail-and-ecommerce"
             element={<RetailAndEcommerce />}
           />
+          <Route
+            path="/industries/professional-services"
+            element={<ProfessionalServices />}
+          />
+          <Route
+            path="/industries/media-and-entertainment"
+            element={<MediaAndEntertainment />}
+          />
 
+          {/* Solutions */}
           <Route path="/our-products" element={<SolutionsMain />} />
 
           {/* Pricing */}

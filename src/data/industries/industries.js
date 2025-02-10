@@ -37,9 +37,17 @@ import {
   ShoppingBagIcon,
 } from "lucide-react";
 
-import travelAndHospitality from "/src/images/industries/IndustriesHero/travel-and-hospitality.jpg";
-import healthAndWellness from "/src/images/industries/IndustriesHero/health-and-wellness.jpg";
-import education from "/src/images/industries/IndustriesHero/education.jpg/";
+import HealthImg from "/src/images/industries/IndustriesHero/health-and-wellness.jpg";
+import educationImg from "/src/images/industries/IndustriesHero/education.jpg/";
+import financeImg from "/src/images/industries/IndustriesHero/finance.jpg";
+import travelImg from "/src/images/industries/IndustriesHero/travel-and-hospitality.jpg";
+import realEstateImg from "/src/images/industries/IndustriesHero/real-estate-and-construction.jpg";
+import retailImg from "/src/images/industries/IndustriesHero/retail-and-ecommerce.jpg";
+import telecommunicationsImg from "/src/images/industries/IndustriesHero/telecommunications.jpg";
+import transportationImg from "/src/images/industries/IndustriesHero/transportation-and-logistics.jpg";
+import professionalImg from "/src/images/industries/IndustriesHero/professional-services.jpg";
+import manufacturingImg from "/src/images/industries/IndustriesHero/manufacturing.jpg";
+
 // import
 const industriesObj = [
   {
@@ -116,168 +124,169 @@ const industriesObj = [
   },
 ];
 
-// const financeObj = {
-// title: "Finance and Fintech",
-// src: "",
-// description: ``,
-// extendedContent: ``,
-// e
-// sections: [
-//   {
-//     title: "Who We Serve",
-//     description:
-//       "We cater to a variety of financial institutions and service providers.",
-//     items: [
-//       {
-//         name: "Banks",
-//         info: "Financial institutions providing banking services.",
-//       },
-//       {
-//         name: "Insurance Companies",
-//         info: "Organizations offering risk management through insurance.",
-//       },
-//       {
-//         name: "Lending Companies",
-//         info: "Firms that provide loans to individuals and businesses.",
-//       },
-//       {
-//         name: "Payment Service Providers",
-//         info: "Companies facilitating electronic payments.",
-//       },
-//       {
-//         name: "Investment Companies",
-//         info: "Firms that manage investments for clients.",
-//       },
-//       {
-//         name: "Fintech Startups",
-//         info: "Emerging companies leveraging technology for financial services.",
-//       },
-//       {
-//         name: "Defi Companies",
-//         info: "Decentralized finance firms offering blockchain-based services.",
-//       },
-//       {
-//         name: "Financial Software Product Companies",
-//         info: "Businesses developing software for financial applications.",
-//       },
-//     ],
-//   },
-//   {
-//     title: "Financial Services and Solutions We Specialize In",
-//     description:
-//       "Our expertise spans across various financial systems and solutions.",
-//     items: [
-//       {
-//         name: "Underwriting Automation Systems",
-//         info: "Software to automate underwriting processes.",
-//       },
-//       {
-//         name: "Insurance Claims Processing Systems",
-//         info: "Tools to manage and process insurance claims.",
-//       },
-//       {
-//         name: "Policy Administrative Systems",
-//         info: "Software for handling policy administration tasks.",
-//       },
-//       {
-//         name: "Actuarial Software",
-//         info: "Applications for actuarial calculations and risk assessment.",
-//       },
-//       {
-//         name: "Loan Management Software",
-//         info: "Solutions for tracking and managing loans.",
-//       },
-//       {
-//         name: "Debt Collection Systems",
-//         info: "Tools for managing debt recovery processes.",
-//       },
-//       {
-//         name: "Treasury Software",
-//         info: "Applications for managing treasury operations.",
-//       },
-//       {
-//         name: "Payment Gateways",
-//         info: "Platforms for processing online payments securely.",
-//       },
-//       {
-//         name: "Payment Orchestration Software",
-//         info: "Solutions to streamline payment processing.",
-//       },
-//       {
-//         name: "Investor Relationship Management Software",
-//         info: "Tools for managing investor relations effectively.",
-//       },
-//       {
-//         name: "Investment Platforms",
-//         info: "Online platforms for managing investments.",
-//       },
-//     ],
-//   },
-//   {
-//     title: "Customer-Facing Apps",
-//     description: "We develop apps designed to enhance customer experiences.",
-//     items: [
-//       {
-//         name: "Mobile Banking Apps",
-//         info: "Applications for mobile banking services.",
-//       },
-//       {
-//         name: "Insurance Apps",
-//         info: "Apps to manage insurance policies and claims.",
-//       },
-//       { name: "Lending Apps", info: "Applications for facilitating loans." },
-//       {
-//         name: "Buy Now Pay Later Apps",
-//         info: "Apps offering flexible payment options.",
-//       },
-//       {
-//         name: "Payment Apps",
-//         info: "Applications for secure and easy transactions.",
-//       },
-//       {
-//         name: "Money Transfer Apps",
-//         info: "Apps designed for fast and secure money transfers.",
-//       },
-//       {
-//         name: "Investor Portals",
-//         info: "Platforms for investors to manage their portfolios.",
-//       },
-//       {
-//         name: "Crypto Wallets",
-//         info: "Applications for managing cryptocurrency assets.",
-//       },
-//     ],
-//   },
-//   {
-//     title: "Software For General Business Administration",
-//     description:
-//       "We provide versatile software solutions for business operations.",
-//     items: [
-//       { name: "CRM", info: "Customer Relationship Management software." },
-//       {
-//         name: "Accounting Software",
-//         info: "Tools for managing financial accounts.",
-//       },
-//       {
-//         name: "Document Management Software",
-//         info: "Software for organizing and managing documents.",
-//       },
-//       {
-//         name: "Human Resource Management Systems",
-//         info: "Applications for HR management.",
-//       },
-//       {
-//         name: "Corporate ERPs",
-//         info: "Enterprise Resource Planning software for businesses.",
-//       },
-//     ],
-//   },
-// ]
-// }
+const financeObj = {
+  title: "Finance and Fintech",
+  src: financeImg,
+  description: `Driving Digital Transformation in Financial Services`,
+  extendedContent: `Stay ahead in the fast-evolving finance and fintech landscape with our secure, scalable IT solutions. We offer digital banking platforms, payment processing systems, fraud detection tools, and financial analytics to enhance customer experiences, ensure compliance, and foster growth in a digital-first economy.`,
+  sections: [
+    {
+      title: "Who We Serve",
+      description:
+        "We cater to a variety of financial institutions and service providers.",
+      items: [
+        {
+          name: "Banks",
+          info: "Financial institutions providing banking services.",
+        },
+        {
+          name: "Insurance Companies",
+          info: "Organizations offering risk management through insurance.",
+        },
+        {
+          name: "Lending Companies",
+          info: "Firms that provide loans to individuals and businesses.",
+        },
+        {
+          name: "Payment Service Providers",
+          info: "Companies facilitating electronic payments.",
+        },
+        {
+          name: "Investment Companies",
+          info: "Firms that manage investments for clients.",
+        },
+        {
+          name: "Fintech Startups",
+          info: "Emerging companies leveraging technology for financial services.",
+        },
+        {
+          name: "Defi Companies",
+          info: "Decentralized finance firms offering blockchain-based services.",
+        },
+        {
+          name: "Financial Software Product Companies",
+          info: "Businesses developing software for financial applications.",
+        },
+      ],
+    },
+    {
+      title: "Financial Services and Solutions We Specialize In",
+      description:
+        "Our expertise spans across various financial systems and solutions.",
+      items: [
+        {
+          name: "Underwriting Automation Systems",
+          info: "Software to automate underwriting processes.",
+        },
+        {
+          name: "Insurance Claims Processing Systems",
+          info: "Tools to manage and process insurance claims.",
+        },
+        {
+          name: "Policy Administrative Systems",
+          info: "Software for handling policy administration tasks.",
+        },
+        {
+          name: "Actuarial Software",
+          info: "Applications for actuarial calculations and risk assessment.",
+        },
+        {
+          name: "Loan Management Software",
+          info: "Solutions for tracking and managing loans.",
+        },
+        {
+          name: "Debt Collection Systems",
+          info: "Tools for managing debt recovery processes.",
+        },
+        {
+          name: "Treasury Software",
+          info: "Applications for managing treasury operations.",
+        },
+        {
+          name: "Payment Gateways",
+          info: "Platforms for processing online payments securely.",
+        },
+        {
+          name: "Payment Orchestration Software",
+          info: "Solutions to streamline payment processing.",
+        },
+        {
+          name: "Investor Relationship Management Software",
+          info: "Tools for managing investor relations effectively.",
+        },
+        {
+          name: "Investment Platforms",
+          info: "Online platforms for managing investments.",
+        },
+      ],
+    },
+    {
+      title: "Customer-Facing Apps",
+      description: "We develop apps designed to enhance customer experiences.",
+      items: [
+        {
+          name: "Mobile Banking Apps",
+          info: "Applications for mobile banking services.",
+        },
+        {
+          name: "Insurance Apps",
+          info: "Apps to manage insurance policies and claims.",
+        },
+        { name: "Lending Apps", info: "Applications for facilitating loans." },
+        {
+          name: "Buy Now Pay Later Apps",
+          info: "Apps offering flexible payment options.",
+        },
+        {
+          name: "Payment Apps",
+          info: "Applications for secure and easy transactions.",
+        },
+        {
+          name: "Money Transfer Apps",
+          info: "Apps designed for fast and secure money transfers.",
+        },
+        {
+          name: "Investor Portals",
+          info: "Platforms for investors to manage their portfolios.",
+        },
+        {
+          name: "Crypto Wallets",
+          info: "Applications for managing cryptocurrency assets.",
+        },
+      ],
+    },
+    {
+      title: "Software For General Business Administration",
+      description:
+        "We provide versatile software solutions for business operations.",
+      items: [
+        { name: "CRM", info: "Customer Relationship Management software." },
+        {
+          name: "Accounting Software",
+          info: "Tools for managing financial accounts.",
+        },
+        {
+          name: "Document Management Software",
+          info: "Software for organizing and managing documents.",
+        },
+        {
+          name: "Human Resource Management Systems",
+          info: "Applications for HR management.",
+        },
+        {
+          name: "Corporate ERPs",
+          info: "Enterprise Resource Planning software for businesses.",
+        },
+      ],
+    },
+  ],
+};
 
 const travelObj = {
   title: "Travel and Hospitality",
-  src: travelAndHospitality,
+  src: travelImg,
+  description: `Redefining Travel Experiences with Smart Technologies`,
+  extendedContent: `Create unforgettable travel and hospitality experiences with our tailored IT solutions. From reservation systems and customer engagement platforms to property management software and data-driven marketing, we help businesses in this dynamic industry improve guest satisfaction and operational efficiency.`,
   sections: [
     {
       title: "Who We Serve",
@@ -354,7 +363,9 @@ const travelObj = {
 
 const healthObj = {
   title: "Health and Wellness",
-  src: healthAndWellness,
+  src: HealthImg,
+  description: `Revolutionizing Healthcare with Digital Solutions`,
+  extendedContent: `Enhance patient care and operational efficiency with our comprehensive IT solutions for the health and wellness sector. We specialize in electronic health records (EHR), telemedicine platforms, patient engagement systems, and health analytics to support better health outcomes and streamline workflows.`,
   sections: [
     {
       title: "Healthcare Providers",
@@ -429,6 +440,9 @@ const healthObj = {
 
 const manufacturingObj = {
   title: "Manufacturing",
+  src: manufacturingImg,
+  description: `Driving Operational Excellence in Manufacturing`,
+  extendedContent: `Optimize your manufacturing processes with cutting-edge technology solutions. From supply chain automation and production management systems to IoT integration and predictive maintenance, we help manufacturers improve efficiency, reduce costs, and achieve greater agility in a competitive global market.`,
   sections: [
     {
       title: "Production Management",
@@ -495,7 +509,9 @@ const manufacturingObj = {
 
 const educationObj = {
   title: "Education",
-  src: education,
+  src: educationImg,
+  description: `Empowering Learning Through Innovative Technology`,
+  extendedContent: `Transform the educational landscape with our smart IT solutions designed for schools, universities, and e-learning platforms. We offer learning management systems, virtual classrooms, student information systems, and data-driven analytics to enhance teaching efficiency, student engagement, and administrative operations.`,
   sections: [
     {
       title: "Learning Management Systems",
@@ -564,7 +580,7 @@ const educationObj = {
 
 const realEstateObj = {
   title: "Real Estate & Construction",
-  src: "",
+  src: realEstateImg,
   description: "Transforming Property Management with Smart Tech Solutions",
   extendedContent: `We empower real estate and construction businesses with cutting-edge digital solutions. From property management platforms to construction project optimization tools, we help streamline operations, enhance marketing strategies, and improve financial management for seamless growth.`,
   sections: [
@@ -631,10 +647,204 @@ const realEstateObj = {
   ],
 };
 
-// data/transportation.js
 const transportationObj = {
   title: "Transportation & Logistics",
-  src: "",
+  src: transportationImg,
+  description: "Driving Efficiency Through Advanced Technology",
+  extendedContent: `Revolutionize your logistics and transportation operations with our innovative IT solutions. We specialize in fleet management systems, supply chain optimization tools, and real-time tracking technologies that improve route efficiency, reduce costs, and ensure regulatory compliance.`,
+  sections: [
+    {
+      title: "Fleet Management",
+      description: "Tools to manage and optimize vehicle fleets.",
+      items: [
+        {
+          name: "GPS Tracking Systems",
+          info: "Real-time tracking of vehicles and routes.",
+        },
+        {
+          name: "Fleet Maintenance Software",
+          info: "Applications to schedule and track vehicle maintenance.",
+        },
+      ],
+    },
+    {
+      title: "Supply Chain Optimization",
+      description: "Improving supply chain efficiency and transparency.",
+      items: [
+        {
+          name: "Logistics Management Systems",
+          info: "Software to streamline logistics operations.",
+        },
+        {
+          name: "Warehouse Management Tools",
+          info: "Applications for inventory control and storage optimization.",
+        },
+      ],
+    },
+    {
+      title: "Route Planning Solutions",
+      description: "Enhancing delivery efficiency with optimized routes.",
+      items: [
+        {
+          name: "Dynamic Routing Tools",
+          info: "Real-time route optimization based on traffic conditions.",
+        },
+        {
+          name: "Delivery Scheduling Software",
+          info: "Applications for planning and managing delivery schedules.",
+        },
+      ],
+    },
+    {
+      title: "Compliance & Safety Management",
+      description: "Ensuring transportation safety and regulatory compliance.",
+      items: [
+        {
+          name: "Driver Safety Monitoring Systems",
+          info: "Tools to monitor driver behavior and promote safety.",
+        },
+        {
+          name: "Regulatory Compliance Software",
+          info: "Applications to manage industry-specific compliance requirements.",
+        },
+      ],
+    },
+  ],
+};
+
+const telecommunicationsObj = {
+  title: "Transportation & Logistics",
+  src: transportationImg,
+  description: "Driving Efficiency Through Advanced Technology",
+  extendedContent: `Revolutionize your logistics and transportation operations with our innovative IT solutions. We specialize in fleet management systems, supply chain optimization tools, and real-time tracking technologies that improve route efficiency, reduce costs, and ensure regulatory compliance.`,
+  sections: [
+    {
+      title: "Fleet Management",
+      description: "Tools to manage and optimize vehicle fleets.",
+      items: [
+        {
+          name: "GPS Tracking Systems",
+          info: "Real-time tracking of vehicles and routes.",
+        },
+        {
+          name: "Fleet Maintenance Software",
+          info: "Applications to schedule and track vehicle maintenance.",
+        },
+      ],
+    },
+    {
+      title: "Supply Chain Optimization",
+      description: "Improving supply chain efficiency and transparency.",
+      items: [
+        {
+          name: "Logistics Management Systems",
+          info: "Software to streamline logistics operations.",
+        },
+        {
+          name: "Warehouse Management Tools",
+          info: "Applications for inventory control and storage optimization.",
+        },
+      ],
+    },
+    {
+      title: "Route Planning Solutions",
+      description: "Enhancing delivery efficiency with optimized routes.",
+      items: [
+        {
+          name: "Dynamic Routing Tools",
+          info: "Real-time route optimization based on traffic conditions.",
+        },
+        {
+          name: "Delivery Scheduling Software",
+          info: "Applications for planning and managing delivery schedules.",
+        },
+      ],
+    },
+    {
+      title: "Compliance & Safety Management",
+      description: "Ensuring transportation safety and regulatory compliance.",
+      items: [
+        {
+          name: "Driver Safety Monitoring Systems",
+          info: "Tools to monitor driver behavior and promote safety.",
+        },
+        {
+          name: "Regulatory Compliance Software",
+          info: "Applications to manage industry-specific compliance requirements.",
+        },
+      ],
+    },
+  ],
+};
+
+const retailingObj = {
+  title: "Transportation & Logistics",
+  src: transportationImg,
+  description: "Driving Efficiency Through Advanced Technology",
+  extendedContent: `Revolutionize your logistics and transportation operations with our innovative IT solutions. We specialize in fleet management systems, supply chain optimization tools, and real-time tracking technologies that improve route efficiency, reduce costs, and ensure regulatory compliance.`,
+  sections: [
+    {
+      title: "Fleet Management",
+      description: "Tools to manage and optimize vehicle fleets.",
+      items: [
+        {
+          name: "GPS Tracking Systems",
+          info: "Real-time tracking of vehicles and routes.",
+        },
+        {
+          name: "Fleet Maintenance Software",
+          info: "Applications to schedule and track vehicle maintenance.",
+        },
+      ],
+    },
+    {
+      title: "Supply Chain Optimization",
+      description: "Improving supply chain efficiency and transparency.",
+      items: [
+        {
+          name: "Logistics Management Systems",
+          info: "Software to streamline logistics operations.",
+        },
+        {
+          name: "Warehouse Management Tools",
+          info: "Applications for inventory control and storage optimization.",
+        },
+      ],
+    },
+    {
+      title: "Route Planning Solutions",
+      description: "Enhancing delivery efficiency with optimized routes.",
+      items: [
+        {
+          name: "Dynamic Routing Tools",
+          info: "Real-time route optimization based on traffic conditions.",
+        },
+        {
+          name: "Delivery Scheduling Software",
+          info: "Applications for planning and managing delivery schedules.",
+        },
+      ],
+    },
+    {
+      title: "Compliance & Safety Management",
+      description: "Ensuring transportation safety and regulatory compliance.",
+      items: [
+        {
+          name: "Driver Safety Monitoring Systems",
+          info: "Tools to monitor driver behavior and promote safety.",
+        },
+        {
+          name: "Regulatory Compliance Software",
+          info: "Applications to manage industry-specific compliance requirements.",
+        },
+      ],
+    },
+  ],
+};
+
+const professionalObj = {
+  title: "Transportation & Logistics",
+  src: transportationImg,
   description: "Driving Efficiency Through Advanced Technology",
   extendedContent: `Revolutionize your logistics and transportation operations with our innovative IT solutions. We specialize in fleet management systems, supply chain optimization tools, and real-time tracking technologies that improve route efficiency, reduce costs, and ensure regulatory compliance.`,
   sections: [
@@ -706,4 +916,7 @@ export {
   educationObj,
   realEstateObj,
   transportationObj,
+  telecommunicationsObj,
+  retailingObj,
+  professionalObj,
 };
