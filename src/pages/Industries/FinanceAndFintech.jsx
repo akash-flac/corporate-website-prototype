@@ -6,6 +6,7 @@ import Footer from "../../components/Footer";
 import IndustryCommon from "../../components/IndustryCommon";
 
 //data
+
 import { financeObj } from "../../data/industries/industries";
 
 const FinanceAndFintech = () => {
@@ -13,7 +14,7 @@ const FinanceAndFintech = () => {
     <div>
       <Hero
         heading={`Finance and Fintech`}
-        bgImage={`src/images/industries/IndustriesHero/finance.jpg`}
+        bgImage={`/src/images/industries/IndustriesHero/finance.jpg`}
         content={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit veritatis aspernatur quasi optio maxime sed amet tenetur at. A, aspernatur.`}
       />
       <IndustryCommon obj={financeObj} />

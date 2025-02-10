@@ -48,7 +48,6 @@ function App() {
           <Route path="/become-our-agent" element={<BecomeOurAgent />} />
 
           {/* Services */}
-
           <Route
             path="/services/software-development"
             element={<SoftwareDevelopment />}
@@ -78,14 +77,14 @@ function App() {
 
           {/* Industries */}
           <Route path="/industries" element={<IndustriesMain />} />
-          <Route path="/finance-and-fintech" element={<FinanceAndFintech />} />
+          <Route path="/industries/finance-and-fintech" element={<FinanceAndFintech />} />
           <Route
-            path="/travel-and-hospitality"
+            path="/industries/travel-and-hospitality"
             element={<TravelAndHospitality />}
           />
           <Route path="/industries/education" element={<Education />} />
           <Route
-            path="/real-estate-and-construction"
+            path="/industries/real-estate-and-construction"
             element={<RealEstateAndConstruction />}
           />
           <Route path="/health-and-wellness" element={<HealthAndWellness />} />

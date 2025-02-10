@@ -425,6 +425,62 @@ const testingObj = {
   icon: "🛠",
 };
 
+const itConsultingObj = {
+  name: "IT Consulting Services",
+  description:
+    "Expert IT guidance to help businesses optimize technology infrastructure and strategy.",
+  details:
+    "We provide tailored IT consulting services, ensuring businesses leverage the best technology solutions for efficiency, security, and scalability.",
+  extendedContent:
+    "Our IT consulting services focus on aligning technology with business goals. We assess your current IT landscape, identify areas for improvement, and create a roadmap for digital transformation. Whether you need cloud migration, cybersecurity enhancements, or IT infrastructure optimization, our experts help you make informed decisions. We also offer IT strategy planning, software recommendations, and process automation to enhance operational efficiency.",
+  keywords: [
+    "IT Strategy",
+    "Digital Transformation",
+    "Cloud Solutions",
+    "Cybersecurity",
+    "Infrastructure Optimization",
+    "Process Automation",
+    "Risk Management",
+    "Enterprise Architecture",
+    "Business Continuity",
+    "Data Management",
+    "Technology Assessment",
+    "IT Governance",
+    "Scalability Planning",
+    "Software Consultation",
+    "Networking Solutions",
+  ],
+  icon: "💻",
+};
+
+const saasProducts = {
+  name: "SaaS Products",
+  description:
+    "Designing and developing cloud-based SaaS solutions for businesses across industries.",
+  details:
+    "We build scalable, secure, and high-performance SaaS applications that streamline operations and enhance user experience.",
+  extendedContent:
+    "Our SaaS development services focus on delivering cloud-based applications with multi-tenancy, security, and seamless user experience. We handle end-to-end development, from ideation and architecture planning to deployment and maintenance. Our expertise covers payment gateway integration, subscription management, API development, and data analytics, ensuring your SaaS product remains competitive in the market.",
+  keywords: [
+    "Cloud Applications",
+    "Multi-Tenancy",
+    "Subscription Management",
+    "Payment Integration",
+    "API Development",
+    "User Management",
+    "Security & Compliance",
+    "Performance Optimization",
+    "Microservices",
+    "Scalability",
+    "Database Architecture",
+    "DevOps Integration",
+    "AI-Powered SaaS",
+    "Data Analytics",
+    "Customer Retention",
+  ],
+  icon: "☁",
+};
+
 export {
   servicesObj,
   softwareObj,
