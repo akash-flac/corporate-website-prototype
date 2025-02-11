@@ -68,7 +68,7 @@ import SolutionsMain from "./pages/Solutions/SolutionsMain";
 function App() {
   return (
     <div>
-      <BrowserRouter basename="/MarkleTech">
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
 
