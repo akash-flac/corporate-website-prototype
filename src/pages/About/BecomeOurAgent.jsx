@@ -23,7 +23,7 @@ const BecomeOurAgent = () => {
   return (
     <div className="">
       <Hero
-        bgImage={"src/images/become-our-agent.jpeg"}
+        bgImage={"/src/images/become-our-agent.jpeg"}
         heading={"Become Our Agent"}
         content={`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur soluta voluptatem ipsum accusantium labore. A sequi consequuntur error recusandae nisi.`}
       />
@@ -47,7 +47,7 @@ const BecomeOurAgent = () => {
                 <MapPin className="w-8 h-8" />
                 <p className="font-bold">
                    A, A-52, Som Bazar Chowk, 52, Som Bazar Rd, Chowk, Vikas
-                  Nagar, Uttam Nagar, East, New Delhi, Delhi 110059
+                  Nagar, Uttam Nagar East, New Delhi, Delhi 110059
                 </p>
               </div>
               <div className="flex items-center space-x-3">

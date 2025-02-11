@@ -47,6 +47,7 @@ import webDevImg from "/src/images/services/servicesHero/web-dev.jpg";
 import mvpImg from "/src/images/services/servicesHero/mvp.jpg";
 import lowCodeImg from "/src/images/services/servicesHero/low-code.jpg";
 import digitalMarketingImg from "/src/images/services/servicesHero/digital-marketing.jpg";
+import saasImg from "/src/images/services/servicesHero/saas.jpg";
 
 const servicesObj = [
   {
@@ -119,18 +120,18 @@ const servicesObj = [
     href: "/services/testing-and-quality-assurance",
     icon: CheckBadgeIcon,
   },
-  // {
-  //   name: "SaaS Products",
-  //   description:
-  //     "Develop scalable and user-friendly SaaS applications to meet modern business demands",
-  //   href: "/services/saas-products",
-  //   icon: CloudIcon,
-  // },
+  {
+    name: "SaaS Products",
+    description:
+      "Develop scalable and user-friendly SaaS applications to meet modern business demands",
+    href: "/services/saas-products",
+    icon: CloudIcon,
+  },
   {
     name: "See All Services",
     description:
       "Explore the full range of services we offer to help your business thrive",
-    href: "/services",
+    href: "/services/all-services",
     icon: EllipsisHorizontalIcon,
   },
 ];
@@ -426,7 +427,8 @@ const testingObj = {
 };
 
 const itConsultingObj = {
-  name: "IT Consulting Services",
+  title: "IT Consulting Services",
+  src: "",
   description:
     "Expert IT guidance to help businesses optimize technology infrastructure and strategy.",
   details:
@@ -453,8 +455,9 @@ const itConsultingObj = {
   icon: "💻",
 };
 
-const saasProducts = {
-  name: "SaaS Products",
+const saasProductsObj = {
+  title: "SaaS Products",
+  src: saasImg,
   description:
     "Designing and developing cloud-based SaaS solutions for businesses across industries.",
   details:
@@ -493,4 +496,6 @@ export {
   eCommerceObj,
   lowCodeObj,
   testingObj,
+  itConsultingObj,
+  saasProductsObj,
 };

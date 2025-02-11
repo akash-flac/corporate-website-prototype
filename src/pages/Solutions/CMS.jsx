@@ -1,8 +1,13 @@
 import React from 'react'
+import Hero from '../../components/Hero'
+import SolutionsCommon from '../../components/SolutionsCommon'
+import { CMSObj } from '../../data/solutions/solutions'
 
 const CMS = () => {
   return (
-    <div>CMS</div>
+    <div>
+      <SolutionsCommon obj={CMSObj} />
+    </div>
   )
 }
 

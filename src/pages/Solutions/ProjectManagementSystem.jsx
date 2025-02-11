@@ -1,8 +1,12 @@
 import React from 'react'
+import SolutionsCommon from '../../components/SolutionsCommon'
+import { ProjectManagementSystemObj } from '../../data/solutions/solutions'
 
 const ProjectManagementSystem = () => {
   return (
-    <div>ProjectManagementSystem</div>
+    <div>
+      <SolutionsCommon obj={ProjectManagementSystemObj} />
+    </div>
   )
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "../../components/Hero";
 import Footer from "../../components/Footer";
+import { motion } from "motion/react";
 
 const industriesObj = [
   {
@@ -114,7 +115,7 @@ const industriesObj = [
 ];
 const IndustriesMain = () => {
   return (
-    <div>
+    <div className="bg-gray-50">
       <Hero
         bgImage={`src/images/Industries/industries.jpeg`}
         heading={`Industries We Serve`}
@@ -125,7 +126,11 @@ const IndustriesMain = () => {
       </h2>
       <div className="">
         {industriesObj.map((industry) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            viewport={{ once: true }}
             className="flex flex-col md:flex-row items-center rounded-lg p-4 my-6 max-w-6xl mx-auto"
             key={industry.id}
           >
@@ -153,12 +158,12 @@ const IndustriesMain = () => {
               <h2 className="text-2xl font-bold text-purple-900 mx-4 mb-4 uppercase">
                 {industry.name}
               </h2>
-              <p className="text-lg m-2 p-2">{industry.description}</p>
+              <p className="text-lg m-2 p-2 text-gray-800">{industry.description}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

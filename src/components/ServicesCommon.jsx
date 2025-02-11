@@ -8,7 +8,7 @@ const ServicesCommon = ({ obj }) => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="bg-white text-[#330073] rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl max-w-3xl w-full border border-[#330073] hover:shadow-3xl transition-shadow duration-300"
+        className="bg-white text-[#330073] rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl max-w-3xl w-full border hover:shadow-3xl transition-shadow duration-300"
       >
         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6">
           <span className="text-5xl sm:text-6xl drop-shadow-lg">
@@ -33,12 +33,16 @@ const ServicesCommon = ({ obj }) => {
 
         <div className="flex flex-wrap gap-3 mt-6 justify-center sm:justify-start">
           {obj.keywords.map((keyword, i) => (
-            <span
+            <motion.span
               key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true }}
               className="bg-[#330073] text-white px-4 py-2 text-sm rounded-full shadow-md hover:bg-white hover:text-[#330073] transition-colors duration-200 cursor-pointer border border-[#330073]"
             >
               {keyword}
-            </span>
+            </motion.span>
           ))}
         </div>
       </motion.div>

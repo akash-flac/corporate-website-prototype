@@ -712,6 +712,7 @@ const transportationObj = {
   ],
 };
 
+// Content needs to be updated
 const telecommunicationsObj = {
   title: "Transportation & Logistics",
   src: transportationImg,

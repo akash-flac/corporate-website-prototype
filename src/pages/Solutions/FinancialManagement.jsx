@@ -1,8 +1,12 @@
 import React from 'react'
+import SolutionsCommon from '../../components/SolutionsCommon'
+import { FinancialManagementObj } from '../../data/solutions/solutions'
 
 const FinancialManagement = () => {
   return (
-    <div>FinancialManagement</div>
+    <div>
+      <SolutionsCommon obj={FinancialManagementObj} />
+    </div>
   )
 }
 

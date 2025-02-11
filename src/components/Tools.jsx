@@ -6,27 +6,40 @@ const cardDataArray = [
   {
     category: "Frontend",
     items: [
-      { title: "HTML", content: "HTML is the structure of web pages." },
-      { title: "CSS", content: "CSS is used to style web pages." },
+      {
+        title: "HTML",
+        content: "HTML structures web pages with semantic elements.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      },
+      {
+        title: "CSS",
+        content: "CSS styles web pages with layouts, colors, and fonts.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      },
       {
         title: "JavaScript",
-        content: "JavaScript adds interactivity to websites.",
+        content: "JavaScript adds interactivity and dynamic content.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
       },
       {
         title: "ReactJS",
-        content: "ReactJS is a library for building UI components.",
+        content: "ReactJS builds reusable UI components efficiently.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       },
       {
-        title: "ReactJS",
-        content: "ReactJS is a library for building UI components.",
+        title: "Tailwind CSS",
+        content: "Tailwind CSS provides utility-first classes for design.",
+        logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
       },
       {
-        title: "ReactJS",
-        content: "ReactJS is a library for building UI components.",
+        title: "TypeScript",
+        content: "TypeScript enhances JavaScript with static typing.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
       },
       {
-        title: "ReactJS",
-        content: "ReactJS is a library for building UI components.",
+        title: "Next.js",
+        content: "Next.js enables server-side rendering for React apps.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
       },
     ],
   },
@@ -35,19 +48,33 @@ const cardDataArray = [
     items: [
       {
         title: "NodeJS",
-        content: "NodeJS is a runtime for JavaScript on the server side.",
+        content: "NodeJS runs JavaScript on the server side.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      },
+      {
+        title: "ExpressJS",
+        content: "ExpressJS is a minimalist web framework for Node.js.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
       },
       {
         title: "PHP",
-        content: "PHP is a server-side scripting language for web development.",
+        content: "PHP handles server-side logic for dynamic web apps.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
       },
       {
-        title: "MySQL",
-        content: "MySQL is a relational database management system.",
+        title: "Python",
+        content: "Python is versatile for web development and automation.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
       },
       {
-        title: "Redis",
-        content: "Redis is an in-memory key-value store for caching.",
+        title: "Django",
+        content: "Django is a high-level Python framework for web apps.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+      },
+      {
+        title: "Golang",
+        content: "Golang is efficient for building scalable backends.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
       },
     ],
   },
@@ -56,26 +83,159 @@ const cardDataArray = [
     items: [
       {
         title: "MySQL",
-        content: "MySQL is widely used for relational databases.",
+        content: "MySQL is a robust relational database management system.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
       },
       {
-        title: "NoSQL",
-        content: "NoSQL is a database format for non-relational data.",
+        title: "PostgreSQL",
+        content: "PostgreSQL is an advanced open-source SQL database.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
       },
       {
-        title: "PostGreSQL",
-        content: "PostGreSQL is an advanced open-source database.",
+        title: "MongoDB",
+        content: "MongoDB stores data in flexible, JSON-like documents.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
       },
       {
         title: "Redis",
-        content: "Redis supports in-memory caching for high-speed access.",
+        content: "Redis is an in-memory data structure store for caching.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+      },
+      {
+        title: "Firebase",
+        content: "Firebase provides real-time NoSQL cloud database services.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+      },
+      {
+        title: "Amazon S3",
+        content: "Amazon S3 offers scalable cloud object storage.",
+        logo: "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg",
+      },
+      {
+        title: "Cassandra",
+        content: "Cassandra is a NoSQL database optimized for scalability.",
+        logo: "https://www.vectorlogo.zone/logos/apache_cassandra/apache_cassandra-icon.svg",
+      },
+    ],
+  },
+  {
+    category: "Deployment Tools",
+    items: [
+      {
+        title: "Docker",
+        content:
+          "Docker packages applications into containers for easy deployment.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+      },
+      {
+        title: "Kubernetes",
+        content:
+          "Kubernetes automates containerized application deployment and scaling.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
+      },
+      {
+        title: "AWS",
+        content: "AWS provides cloud computing services for app hosting.",
+        logo: "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg",
+      },
+      {
+        title: "Netlify",
+        content: "Netlify automates modern web app deployments.",
+        logo: "https://www.netlify.com/v3/img/components/logomark.png",
+      },
+      {
+        title: "Vercel",
+        content: "Vercel optimizes React-based apps with seamless deployment.",
+        logo: "https://assets.vercel.com/image/upload/v1592322480/front/favicon/vercel/favicon.ico",
+      },
+      {
+        title: "GitHub Actions",
+        content: "GitHub Actions automates CI/CD pipelines for projects.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+      },
+      {
+        title: "Jenkins",
+        content:
+          "Jenkins facilitates continuous integration and continuous delivery.",
+        logo: "https://www.jenkins.io/images/logos/jenkins/jenkins.svg",
+      },
+    ],
+  },
+  {
+    category: "APIs and Integration",
+    items: [
+      {
+        title: "REST API",
+        content: "REST APIs allow communication via standard HTTP methods.",
+        logo: "https://cdn-icons-png.flaticon.com/512/3659/3659737.png",
+      },
+      {
+        title: "GraphQL",
+        content: "GraphQL enables flexible data queries for APIs.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+      },
+      {
+        title: "gRPC",
+        content: "gRPC facilitates high-performance API communication.",
+        logo: "https://grpc.io/img/logos/grpc-icon-color.png",
+      },
+      {
+        title: "Postman",
+        content: "Postman tests and manages API requests efficiently.",
+        logo: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+      },
+      {
+        title: "OAuth",
+        content: "OAuth secures authorization for APIs and apps.",
+        logo: "https://cdn-icons-png.flaticon.com/512/5968/5968941.png",
+      },
+      {
+        title: "Firebase API",
+        content:
+          "Firebase APIs integrate real-time databases and authentication.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+      },
+    ],
+  },
+  {
+    category: "Application and Monitoring",
+    items: [
+      {
+        title: "Prometheus",
+        content: "Prometheus monitors system performance and metrics.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg",
+      },
+      {
+        title: "Grafana",
+        content: "Grafana visualizes monitoring data with dashboards.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg",
+      },
+      {
+        title: "New Relic",
+        content: "New Relic tracks application performance in real-time.",
+        logo: "https://www.vectorlogo.zone/logos/newrelic/newrelic-icon.svg",
+      },
+      {
+        title: "Sentry",
+        content: "Sentry helps detect and fix application errors.",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sentry/sentry-original.svg",
+      },
+      {
+        title: "Datadog",
+        content: "Datadog provides cloud infrastructure monitoring tools.",
+        logo: "https://www.vectorlogo.zone/logos/datadoghq/datadoghq-icon.svg",
+      },
+      {
+        title: "Nagios",
+        content: "Nagios monitors networks, servers, and system health.",
+        logo: "https://www.vectorlogo.zone/logos/nagios/nagios-icon.svg",
       },
     ],
   },
 ];
 
 // TOOLS section
-export default function ExpandableCard() {
+export default function Tools() {
   const [activeHeading, setActiveHeading] = useState("Frontend");
   const carouselRef = useRef(null);
   const isDragging = useRef(false);
@@ -149,7 +309,7 @@ export default function ExpandableCard() {
         {showArrows && (
           <button
             onClick={() => scrollCarousel("left")}
-            className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-1 sm:p-2 rounded-full z-10 hover:bg-gray-200"
+            className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-1 sm:p-2 rounded-full z-10 opacity-85 hover:bg-gray-200"
           >
             <ChevronLeft size={20} />
           </button>
@@ -181,12 +341,14 @@ export default function ExpandableCard() {
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
-                className="min-w-[200px] sm:min-w-[250px] lg:min-w-[300px] bg-[#E9D9FF] rounded-2xl shadow-md m-4 p-6 cursor-pointer scroll-snap-align-start transition-transform duration-300"
+                className="min-w-[200px] sm:min-w-[250px] lg:min-w-[300px] shadow-[#E9D9FF] border-2 border-[#E9D9FF] hover:bg-[#E9D9FF] rounded-2xl shadow-lg m-4 p-6 cursor-pointer scroll-snap-align-start transition-transform duration-300"
               >
-                <h3 className="font-bold text-lg sm:text-xl text-[#260651] mb-1 sm:mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-sm sm:text-base text-gray-700">
+                <img
+                  src={item.logo}
+                  alt="Item Logo"
+                  className="w-12 h-12 sm:w-16 sm:h-16 mb-2 mx-auto"
+                />
+                <p className="text-sm sm:text-base text-gray-700 text-center">
                   {item.content}
                 </p>
               </motion.div>
@@ -196,7 +358,7 @@ export default function ExpandableCard() {
         {showArrows && (
           <button
             onClick={() => scrollCarousel("right")}
-            className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-1 sm:p-2 rounded-full z-10 hover:bg-gray-200"
+            className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-1 sm:p-2 rounded-full z-10 opacity-85 hover:bg-gray-200"
           >
             <ChevronRight size={20} />
           </button>

@@ -1,9 +1,9 @@
 import React from "react";
 
-const IndustryCommon = ({obj}) => {
+const IndustryCommon = ({ obj }) => {
   return (
     <div>
-      <div className="bg-gray-100 text-gray-800 min-h-screen p-6 md:p-12">
+      <div className="bg-[#E9D9FF] text-gray-800 min-h-screen p-6 md:p-12">
         <div className="max-w-5xl mx-auto space-y-12">
           {obj.sections.map((section, index) => (
             <div

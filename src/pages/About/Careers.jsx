@@ -28,7 +28,7 @@ const careerObj = [
 const Careers = () => {
   return (
     <div>
-      <Hero bgImage={`src/images/careers.jpeg`} heading={`Careers at Markle`} />
+      <Hero bgImage={`/src/images/careers.jpeg`} heading={`Careers at Markle`} />
 
       {/* Flowbite Component */}
       <div class="">

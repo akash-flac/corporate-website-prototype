@@ -79,7 +79,7 @@ const WhyMarkle = () => {
         </div>
         <div className="lg:flex-1 flex justify-center mx-5 px-5">
           <img
-            src="src\images\whyMarkle.jpeg"
+            src="/src/images/whyMarkle.jpeg"
             alt=""
             className="w-40 md:w-80 h-fit rounded-xl"
           />

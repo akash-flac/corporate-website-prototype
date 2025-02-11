@@ -1,40 +1,60 @@
-import React from 'react'
+import { motion } from "motion/react";
+import React from "react";
+import Footer from "./Footer";
+import Hero from "./Hero";
 
-const SolutionsCommon = ({obj}) => {
+const SolutionsCommon = ({ obj }) => {
   return (
     <div>
-        <div>
-      <div className="bg-gray-100 text-gray-800 min-h-screen p-6 md:p-12">
-        <div className="max-w-5xl mx-auto space-y-12">
-          {obj.sections.map((section, index) => (
-            <div
-              key={index}
-              className="bg-white shadow-lg rounded-3xl p-8 md:p-12 border border-gray-300 transition-transform transform"
-            >
-              <h2 className="text-3xl md:text-4xl font-extrabold text-[#330073] mb-3 border-b-4 border-[#330073] flex justify-center text-center pb-2">
-                {section.title}
-              </h2>
-              <p className="text-gray-700 mb-6 text-lg leading-relaxed text-center">
-                {section.description}
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                {section.items.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="p-3 text-[#330073] hover:bg-gray-100 bg-white transition rounded-xl shadow-sm shadow-[#330073] text-center font-semibold border hover:shadow-md hover:-translate-y-1"
-                  >
-                    <h3 className="text-md font-bold mb-2">{item.name}</h3>
-                    <p className="text-xs text-gray-800">{item.info}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-    </div>
-  )
-}
+      <Hero heading={obj.title} bgImage={obj.src} content={obj.description}/>
+      <div className="min-h-screen bg-[#E9D9FF] flex items-center justify-center py-10 px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="bg-white text-[#330073] rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl max-w-4xl w-full border hover:shadow-3xl transition-shadow duration-300"
+        >
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6">
+            <span className="text-5xl sm:text-6xl drop-shadow-lg">
+              {obj.icon}
+            </span>
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight text-center sm:text-left">
+              {obj.title}
+            </h1>
+          </div>
 
-export default SolutionsCommon
+          {/* <p className="mb-4 text-lg sm:text-xl font-semibold text-center sm:text-left">
+            {obj.description}
+          </p> */}
+
+          <p className="mb-4 text-md sm:text-lg leading-relaxed text-justify">
+            {obj.extendedContent}
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+            {obj.sections.map((section, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-r from-[#330073] to-[#6C4AB6] text-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-transparent hover:border-[#330073] hover:bg-white hover:scale-105"
+              >
+                <h2 className="text-xl font-bold mb-2 text-center sm:text-left">
+                  {section.title}
+                </h2>
+                <p className="text-md leading-relaxed text-justify">
+                  {section.content}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+export default SolutionsCommon;

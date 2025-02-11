@@ -1,8 +1,12 @@
 import React from 'react'
+import SolutionsCommon from '../../components/SolutionsCommon'
+import { HRMSystemObj } from '../../data/solutions/solutions'
 
 const HRMS = () => {
   return (
-    <div>HRMS</div>
+    <div>
+      <SolutionsCommon obj={HRMSystemObj} />
+    </div>
   )
 }
 

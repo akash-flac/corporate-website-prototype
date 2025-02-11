@@ -3,7 +3,7 @@ import React from "react";
 import Achievements from "/src/components/Achievements.jsx";
 // import Banner from "./components/Banner";
 import CustomerReviews from "/src/components/CustomerReviews";
-import ExpandableCard from "/src/components/ExpandableCard";
+import Tools from "/src/components/Tools"
 import FAQ from "/src/components/FAQ";
 import Footer from "/src/components/Footer";
 import Goal from "/src/components/Goal";
@@ -32,7 +32,7 @@ const Home = () => {
       <CustomerReviews />
       <Goal />
       <NextGen />
-      <ExpandableCard />
+      <Tools/>
       <Achievements />
       <SolutionsWeDeliver />
       <FAQ />
