@@ -650,5 +650,5 @@ export {
   ProjectManagementSystemObj,
   FinancialManagementObj,
   FleetManagementObj,
-  OTTPlatformObj
+  OTTPlatformObj,
 };
