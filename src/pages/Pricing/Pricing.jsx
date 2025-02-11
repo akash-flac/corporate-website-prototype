@@ -126,9 +126,9 @@ const Pricing = () => {
   return (
     <div className="bg-gray-50">
       <Hero
-        bgImage={`src/images/pricing.jpeg`}
+        bgImage={`/src/images/pricing.jpeg`}
         heading={`how much will your project cost?`}
-        content={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,`}
+        content={`Pricing is customized to fit your unique project requirements. Contact us for a detailed estimate!`}
       />
       <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4 bg-gray-50">
         {pricingComponentObj.map((component, index) => (

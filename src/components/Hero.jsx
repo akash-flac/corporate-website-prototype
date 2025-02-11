@@ -8,7 +8,7 @@ export default function Hero({ bgImage, heading, content }) {
   return (
     <>
       <div
-        className={`h-screen bg-cover bg-center justify-start text-white`}
+        className={`h-screen bg-cover bg-center text-white`}
         style={{
           // backgroundImage: "url('src/images/hero-image.png')",
           backgroundImage: `url(${bgImage})`,

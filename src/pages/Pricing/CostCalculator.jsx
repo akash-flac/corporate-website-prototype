@@ -6,36 +6,6 @@ import Footer from "../../components/Footer";
 import { Route, Routes, useNavigate } from "react-router";
 import { Router } from "lucide-react";
 
-const formObj = [
-  {
-    step: 1,
-    content: "",
-  },
-  {
-    step: 1,
-    content: "",
-  },
-  {
-    step: 1,
-    content: "",
-  },
-  {
-    step: 1,
-    content: "",
-  },
-  {
-    step: 1,
-    content: "",
-  },
-  {
-    step: 1,
-    content: "",
-  },
-  {
-    step: 1,
-    content: "",
-  },
-];
 
 const steps = [1, 2, 3, 4, 5, 6, 7];
 const Step = ({ step }) => (

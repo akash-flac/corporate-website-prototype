@@ -16,9 +16,9 @@ const FAQs = () => {
     <div className="">
       {/* Hero Section */}
       <Hero
-        bgImage={`src/images/faq-hero.jpeg`}
-        heading={`Markle answers FAQs`}
-        content={`Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda quam, voluptatum repellendus vero laudantium magni voluptates voluptatibus aliquid soluta fuga vel ratione quaerat? Eligendi, cum ducimus laborum commodi placeat possimus?`}
+        bgImage={`/src/images/faq-hero.jpeg`}
+        heading={`Markle Tech answers FAQs`}
+        content={`Markle Tech answers your go-to FAQs for quick solutions, expert insights, and all the information in place`}
       />
       {/* Heading */}
       <div className="m-4 md:m-8">
@@ -44,7 +44,7 @@ const FAQs = () => {
           ))}
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

@@ -7,7 +7,7 @@ const ClientReviews = () => {
   return (
     <div>
       <Hero
-        bgImage={`src/images/client-reviews.jpeg`}
+        bgImage={`/src/images/client-reviews.jpeg`}
         heading={`Client Reviews`}
         content={`Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quam quos at fuga ea expedita, optio similique eaque. Voluptatum rem dolorum doloribus tempora voluptas animi nostrum modi quae aperiam sed.`}
       />

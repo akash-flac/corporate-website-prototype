@@ -24,8 +24,8 @@ const ContactUs = () => {
     <div className="bg-gray-50">
       <Hero
         heading="Contact Us"
-        bgImage="src/images/ContactUsBg.jpeg"
-        content="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        bgImage="/src/images/ContactUsBg.jpeg"
+        content="Let's Connect and Start Bringing Your Ideas to Life!"
       />
 
       <div className="container mx-auto px-4 py-8">

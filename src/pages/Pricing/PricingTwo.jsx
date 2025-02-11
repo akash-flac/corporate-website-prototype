@@ -174,9 +174,9 @@ const PricingTwo = () => {
   return (
     <div>
       <Hero
-        bgImage={`src/images/pricing/pricingPageTwo.jpeg`}
+        bgImage={`/src/images/pricing/pricingPageTwo.jpeg`}
         heading={`What software do you need to develop?`}
-        content={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,`}
+        content={` From custom apps to complex systems, we build software designed for your unique needs`}
       />
       <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4 bg-gray-50">
         {pricingComponentObj2.map((component, index) => (
@@ -222,7 +222,7 @@ const PricingTwo = () => {
           </div>
         ))}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

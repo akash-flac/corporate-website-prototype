@@ -119,7 +119,7 @@ const IndustriesMain = () => {
       <Hero
         bgImage={`src/images/Industries/industries.jpeg`}
         heading={`Industries We Serve`}
-        content={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, architecto, voluptatem eum dicta accusamus ex dolores incidunt facilis maxime facere commodi inventore totam aspernatur ratione explicabo corporis mollitia? Esse ex ipsa, suscipit eum quasi velit ab repudiandae, incidunt vel iste voluptatem impedit, perferendis deleniti tenetur? Fugit libero tempora ipsum maxime!`}
+        content={`Providing Tailored IT Solutions to Healthcare, Finance, Retail, and Beyond.`}
       />
       <h2 className="text-2xl font-bold text-purple-900 m-8 text-center uppercase">
         industries
@@ -158,7 +158,9 @@ const IndustriesMain = () => {
               <h2 className="text-2xl font-bold text-purple-900 mx-4 mb-4 uppercase">
                 {industry.name}
               </h2>
-              <p className="text-lg m-2 p-2 text-gray-800">{industry.description}</p>
+              <p className="text-lg m-2 p-2 text-gray-800">
+                {industry.description}
+              </p>
             </div>
           </motion.div>
         ))}

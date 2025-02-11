@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 
+const logoCarousel = [
+  {
+    
+  }
+]
 export default function ScrollingLogos() {
   const [isPaused, setPaused] = useState(false);
 
@@ -19,61 +24,61 @@ export default function ScrollingLogos() {
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\amravathi.png"
+            src="/src/images/logos-scroll-animation/amravathi.png"
           />
         </li>
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\IOD.png"
+            src="/src/images/logos-scroll-animation/IOD.png"
           />
         </li>
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\indianOil.png"
+            src="/src/images/logos-scroll-animation/indianOil.png"
           />
         </li>
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\columbia.png"
+            src="/src/images/logos-scroll-animation/columbia.png"
           />
         </li>
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\cyfuture.png"
+            src="/src/images/logos-scroll-animation/cyfuture.png"
           />
         </li>
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\daffodil.png"
+            src="/src/images/logos-scroll-animation/daffodil.png"
           />
         </li>
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\lotus.png"
+            src="/src/images/logos-scroll-animation/lotus.png"
           />
         </li>
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\shemaroo.png"
+            src="/src/images/logos-scroll-animation/shemaroo.png"
           />
         </li>
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\singa.png"
+            src="/src/images/logos-scroll-animation/singa.png"
           />
         </li>
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\indiaMart.png"
+            src="/src/images/logos-scroll-animation/indiaMart.png"
           />
         </li>
       </ul>
@@ -87,61 +92,61 @@ export default function ScrollingLogos() {
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\amravathi.png"
+            src="/src/images/logos-scroll-animation/amravathi.png"
           />
         </li>
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\IOD.png"
+            src="/src/images/logos-scroll-animation/IOD.png"
           />
         </li>
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\indianOil.png"
+            src="/src/images/logos-scroll-animation/indianOil.png"
           />
         </li>
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\columbia.png"
+            src="/src/images/logos-scroll-animation/columbia.png"
           />
         </li>
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\cyfuture.png"
+            src="/src/images/logos-scroll-animation/cyfuture.png"
           />
         </li>
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\daffodil.png"
+            src="/src/images/logos-scroll-animation/daffodil.png"
           />
         </li>
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\lotus.png"
+            src="/src/images/logos-scroll-animation/lotus.png"
           />
         </li>
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\shemaroo.png"
+            src="/src/images/logos-scroll-animation/shemaroo.png"
           />
         </li>
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\singa.png"
+            src="/src/images/logos-scroll-animation/singa.png"
           />
         </li>
         <li>
           <img
             className="w-[130px] h-[46.5px]"
-            src="src\images\logos-scroll-animation\indiaMart.png"
+            src="/src/images/logos-scroll-animation/indiaMart.png"
           />
         </li>
       </ul>

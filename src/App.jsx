@@ -180,8 +180,8 @@ function App() {
           {/* Pricing */}
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/pricing-2" element={<PricingTwo />} />
-          <Route path="/cost-calculator/:step" element={<CostCalculator />} />
-          <Route path="*" element={<CostCalculator />} />
+          <Route path="/cost-calculator/*" element={<CostCalculator />} />
+        {/* <Route path="/thank-you" element={<ThankYou />} /> */}
 
           <Route path="/contact-us" element={<ContactUs />} />
         </Routes>

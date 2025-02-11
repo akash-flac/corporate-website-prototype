@@ -25,7 +25,7 @@ const BecomeOurAgent = () => {
       <Hero
         bgImage={"/src/images/become-our-agent.jpeg"}
         heading={"Become Our Agent"}
-        content={`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur soluta voluptatem ipsum accusantium labore. A sequi consequuntur error recusandae nisi.`}
+        content={`Unlock New Opportunities, Drive Growth, and Be a Part of Our Success Story at Markle Tech!`}
       />
       <div className="container mx-auto p-6">
         <div className="flex flex-col md:flex-row justify-center mx-4 space-y-6 md:space-x-8">
