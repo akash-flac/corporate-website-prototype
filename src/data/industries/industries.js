@@ -71,7 +71,7 @@ const industriesObj = [
   {
     name: "Health & Wellness",
     // description: "Connect with third-party tools",
-    href: "/health-and-wellness",
+    href: "/industries/health-and-wellness",
     icon: SquaresPlusIcon,
   },
   {

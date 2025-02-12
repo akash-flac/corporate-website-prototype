@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./Footer";
 
 const IndustryCommon = ({ obj }) => {
   return (
@@ -31,6 +32,7 @@ const IndustryCommon = ({ obj }) => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
