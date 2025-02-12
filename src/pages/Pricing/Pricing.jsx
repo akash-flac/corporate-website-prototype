@@ -1,6 +1,29 @@
 import React from "react";
 import Hero from "../../components/Hero";
 import Footer from "../../components/Footer";
+import PricingHero from "/src/images/pricing.jpeg";
+// import
+import Web from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
+// import PricingHero from "/src/images/pricing.jpeg";
 
 const pricingComponentObj = [
   {
@@ -9,23 +32,23 @@ const pricingComponentObj = [
     items: [
       {
         title: "Web, Mobile, Desktop, DWH",
-        src: `src/images/pricing/web.jpeg`,
+        src: Web,
       },
       {
         title: "ERP, CRM, SCM, accounting, etc.",
-        src: `src/images/pricing/crm.jpeg`,
+        src: `/src/images/pricing/crm.jpeg`,
       },
       {
         title: "BFSI, Healthcare, Retail, & Other",
-        src: `src/images/pricing/bfsi.jpeg`,
+        src: `/src/images/pricing/bfsi.jpeg`,
       },
       {
         title: "AI/ML, AR, Blockchain, And More",
-        src: `src/images/pricing/aiml.jpeg`,
+        src: `/src/images/pricing/aiml.jpeg`,
       },
       {
         title: "SharePoint, ServiceNow, Dynamics 365",
-        src: `src/images/pricing/sharepoint.jpeg`,
+        src: `/src/images/pricing/sharepoint.jpeg`,
       },
     ],
   },
@@ -126,7 +149,7 @@ const Pricing = () => {
   return (
     <div className="bg-gray-50">
       <Hero
-        bgImage={`/src/images/pricing.jpeg`}
+        bgImage={PricingHero}
         heading={`how much will your project cost?`}
         content={`Pricing is customized to fit your unique project requirements. Contact us for a detailed estimate!`}
       />

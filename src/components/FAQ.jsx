@@ -350,7 +350,7 @@ export const AccordionItem = ({ item, open, handleOpen }) => {
   return (
     <Accordion
       open={open === item.id}
-      className={`mb-1 p-4 md:p-1 rounded-lg border border-blue-gray-100 md:px-6 ${
+      className={`mb-1 p-4 md:p-1 rounded-lg border border-blue-gray-100 md:px-6 transition-all ease-in-out  ${
         open === item.id ? " bg-[#330073]" : " bg-[#E9D9FF]"
       }`}
     >
@@ -359,7 +359,7 @@ export const AccordionItem = ({ item, open, handleOpen }) => {
         className="flex cursor-pointer items-center justify-between"
       >
         <AccordionHeader
-          className={`border-b-0 text-sm sm:text-lg md:text-xl transition-colors ${
+          className={`border-b-0 text-sm sm:text-lg md:text-xl transition-all ease-in-out ${
             open === item.id ? "text-white " : "text-[#330073]"
           }`}
         >

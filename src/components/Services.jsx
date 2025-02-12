@@ -48,14 +48,18 @@ const Services = ({ renderComplete }) => {
           ))}
         </div>
       </div>
-      <div className="flex justify-center items-center">
-        <a
-          href="/services/all-services"
-          className=" px-6 py-2 bg-[#330073] text-white text-center rounded-full hover:bg-[#330073] transition duration-300"
-        >
-          View More
-        </a>
-      </div>
+      {renderComplete ? (
+        ""
+      ) : (
+        <div className="flex justify-center items-center">
+          <a
+            href="/services/all-services"
+            className=" px-6 py-2 bg-[#330073] text-white text-center rounded-full hover:bg-[#330073] transition duration-300"
+          >
+            View More
+          </a>
+        </div>
+      )}
     </div>
   );
 };

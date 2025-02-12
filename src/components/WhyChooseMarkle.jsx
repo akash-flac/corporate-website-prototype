@@ -1,5 +1,9 @@
 import React from "react";
 import CountUp from "react-countup";
+import techExperts from "/src/images/techExperts.png";
+import skills from "/src/images/skills.jpeg";
+import projectManagement from "/src/images/projectManagement.jpeg";
+import happyClients from "/src/images/happyClients.jpeg";
 
 const imgs = [
   {
@@ -7,28 +11,28 @@ const imgs = [
     id: 1,
     number: 250,
     content: "Tech Experts On-board",
-    src: "/src/images/techExperts.png",
+    src: techExperts,
   },
   {
     name: "Tech Experts on Board",
     id: 2,
     number: 8,
     content: "Years Of Expertise",
-    src: "/src/images/skills.jpeg",
+    src: skills,
   },
   {
     name: "Tech Experts on Board",
     id: 3,
     number: 3350,
     content: "Projects Delivered",
-    src: "/src/images/projectManagement.jpeg",
+    src: projectManagement,
   },
   {
     name: "Tech Experts on Board",
     id: 4,
     number: 3120,
     content: "Happy Clients",
-    src: "/src/images/happyClients.jpeg",
+    src: happyClients,
   },
 ];
 const WhyChooseMarkle = () => {

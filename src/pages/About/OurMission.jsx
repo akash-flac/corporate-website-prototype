@@ -1,11 +1,14 @@
 import React from "react";
 import Hero from "/src/components/Hero.jsx";
 import Footer from "/src/components/Footer";
+import MissionHero from "/src/images/ourMission.jpeg";
+import Mission from "/src/images/missionImage.jpeg";
+
 const OurMission = () => {
   return (
     <div>
       <Hero
-        bgImage={"/src/images/ourMission.jpeg"}
+        bgImage={MissionHero}
         heading={"Our Mission"}
         content={
           "Creating Impactful Tech Solutions that Empower Businesses and Shape the Future."
@@ -13,8 +16,8 @@ const OurMission = () => {
       />
       <div className="flex flex-col lg:flex-row justify-evenly items-center my-10 lg:my-24 mx-8 md:mx-4">
         <img
-          src="/src/images/missionImage.jpeg"
-          alt=""
+          src={Mission}
+          alt="mission"
           className="rounded-2xl my-3 md:h-72"
         />
         <p className="max-w-xl text-md md:text-xl text-center lg:text-start md:mx-4">

@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "../../components/Hero";
 import Footer from "../../components/Footer";
-
+import CareersHero from "/src/images/careers.jpeg";
 const careerObj = [
   {
     name: "Motion Graphics Artist",
@@ -29,7 +29,7 @@ const Careers = () => {
   return (
     <div>
       <Hero
-        bgImage={`/src/images/careers.jpeg`}
+        bgImage={CareersHero}
         heading={`Careers at Markle`}
         content={`Explore exciting opportunities to innovate, grow, and make an impact in the tech world with Markle Tech.`}
       />

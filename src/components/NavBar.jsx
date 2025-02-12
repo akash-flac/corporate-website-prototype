@@ -58,7 +58,7 @@ import { servicesObj } from "../data/services/services";
 import { aboutObj } from "../data/about/about";
 import { industriesObj } from "../data/industries/industries";
 import { solutionsObj } from "../data/solutions/solutions";
-import Logo from "/src/images/markle-tech-new-logo.png"
+import { Logo } from "../data/home/homepage";
 
 const callsToAction = [
   { name: "Watch demo", href: "#", icon: PlayCircleIcon },
@@ -286,9 +286,9 @@ const NavBar = () => {
             </PopoverPanel>
           </Popover>
 
-          <a href="/pricing" className="text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
+          {/* <a href="/pricing" className="text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
             Pricing
-          </a>
+          </a> */}
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="/contact-us" className="text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">

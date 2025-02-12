@@ -36,7 +36,10 @@ import {
   MegaphoneIcon,
   ShoppingBagIcon,
 } from "lucide-react";
-export const aboutObj = [
+
+//aboutHeroImgs
+import AboutUsImg from "/src/images/aboutUs.jpeg";
+const aboutObj = [
   {
     name: "About Company",
     description:
@@ -80,3 +83,17 @@ export const aboutObj = [
     icon: HandshakeIcon,
   },
 ];
+
+import techExperts from "/src/images/techExperts.png";
+import skills from "/src/images/skills.jpeg";
+import projectManagement from "/src/images/projectManagement.jpeg";
+import happyClients from "/src/images/happyClients.jpeg";
+
+export {
+  aboutObj,
+  AboutUsImg,
+  techExperts,
+  skills,
+  projectManagement,
+  happyClients,
+};

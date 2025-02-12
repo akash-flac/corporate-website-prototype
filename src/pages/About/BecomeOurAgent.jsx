@@ -3,6 +3,7 @@ import Hero from "../../components/Hero";
 import { Mail, MapPin, Phone } from "lucide-react";
 // import Form from "../../components/Form";
 import Footer from "../../components/Footer";
+import becomeAgentHero from "/src/images/become-our-agent.jpeg";
 const BecomeOurAgent = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -23,7 +24,7 @@ const BecomeOurAgent = () => {
   return (
     <div className="">
       <Hero
-        bgImage={"/src/images/become-our-agent.jpeg"}
+        bgImage={becomeAgentHero}
         heading={"Become Our Agent"}
         content={`Unlock New Opportunities, Drive Growth, and Be a Part of Our Success Story at Markle Tech!`}
       />

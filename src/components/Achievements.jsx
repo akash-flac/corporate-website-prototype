@@ -1,22 +1,6 @@
 import React from "react";
-const achievementsObj = [
-  {
-    id: 1,
-    src: "src/images/microsoft.png",
-  },
-  {
-    id: 2,
-    src: "src/images/google-cloud.png",
-  },
-  {
-    id: 3,
-    src: "src/images/clutch.png",
-  },
-  {
-    id: 4,
-    src: "src/images/aws.png",
-  },
-];
+import { achievementsObj } from "../data/home/homepage";
+
 const Achievements = () => {
   return (
     <div className="m-10">

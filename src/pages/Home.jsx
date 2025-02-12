@@ -15,6 +15,7 @@ import ScrollingLogos from "/src/components/ScrollingLogos";
 import Services from "/src/components/Services";
 import SolutionsWeDeliver from "/src/components/SolutionsWeDeliver";
 import heroImage from "/src/images/hero-image.png";
+
 const Home = () => {
   return (
     <div>

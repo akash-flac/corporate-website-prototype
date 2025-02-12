@@ -3,14 +3,14 @@ import Hero from "../../components/Hero";
 import { TestimonialCard } from "../../components/TestimonialCard";
 import { reviews } from "../../data/about/clientReviews";
 import Footer from "../../components/Footer";
-
+import ReviewsHero from "/src/images/client-reviews.jpeg";
 const ClientReviews = () => {
   return (
     <div>
       <Hero
-        bgImage={`/src/images/client-reviews.jpeg`}
+        bgImage={ReviewsHero}
         heading={`Client Reviews`}
-        content={`Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quam quos at fuga ea expedita, optio similique eaque. Voluptatum rem dolorum doloribus tempora voluptas animi nostrum modi quae aperiam sed.`}
+        content={`Real Success Stories from Our Valued Clients!`}
       />
       <div className="m-4 p-4 flex justify-evenly flex-wrap">
         {reviews.map((reviewer) => (
@@ -23,7 +23,7 @@ const ClientReviews = () => {
           />
         ))}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

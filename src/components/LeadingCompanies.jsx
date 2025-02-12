@@ -1,4 +1,5 @@
 import React from "react";
+import { LeadingCompaniesImg } from "../data/home/homepage";
 
 const LeadingCompanies = () => {
   return (
@@ -25,7 +26,7 @@ const LeadingCompanies = () => {
         </div>
         <div className="my-4 md: px-4">
           <img
-            src="src\images\leading.jpeg"
+            src={LeadingCompaniesImg}
             alt=""
             className="border rounded-2xl"
           />

@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "../../components/Hero";
 import Footer from "../../components/Footer";
+import PricingTwoHero from "/src/images/pricingPageTwo.jpeg";
 
 const pricingComponentObj2 = [
   {
@@ -174,7 +175,7 @@ const PricingTwo = () => {
   return (
     <div>
       <Hero
-        bgImage={`/src/images/pricing/pricingPageTwo.jpeg`}
+        bgImage={PricingTwoHero}
         heading={`What software do you need to develop?`}
         content={` From custom apps to complex systems, we build software designed for your unique needs`}
       />

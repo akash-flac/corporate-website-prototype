@@ -9,12 +9,12 @@ import {
 } from "@heroicons/react/24/outline";
 import { MagnifyingGlassMinusIcon } from "@heroicons/react/20/solid";
 import { PenTool, SettingsIcon } from "lucide-react";
-
+import ServicesHero from "/src/images/services.jpeg";
 const ServicesMain = () => {
   return (
     <div>
       <Hero
-        bgImage={`/src/images/services.jpeg`}
+        bgImage={ServicesHero}
         heading={`Services We Provide`}
         content={`Empowering Businesses with Advanced IT Services and Custom Solutions.`}
       />
@@ -34,8 +34,9 @@ const ServicesMain = () => {
             </div>
             <h3 className="text-lg font-semibold mt-4">Define the problem</h3>
             <p className="text-gray-600 mt-2 text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
+              We analyze your business challenges, identify inefficiencies, and
+              understand your specific IT needs to develop a clear problem
+              statement.
             </p>
           </div>
 
@@ -95,8 +96,9 @@ const ServicesMain = () => {
             </div>
             <h3 className="text-lg font-semibold mt-4">Develop a Solution</h3>
             <p className="text-gray-600 mt-2 text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
+              Our experts design and implement tailored IT solutions,
+              integrating cutting-edge technology to enhance efficiency,
+              security, and scalability.
             </p>
           </div>
 
@@ -151,8 +153,9 @@ const ServicesMain = () => {
             </div>
             <h3 className="text-lg font-semibold mt-4">Refine</h3>
             <p className="text-gray-600 mt-2 text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
+              We continuously optimize and fine-tune the solution, ensuring
+              seamless performance, adaptability, and long-term success
+              for your business.
             </p>
           </div>
         </div>

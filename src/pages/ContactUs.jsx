@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Hero from "../components/Hero";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Footer from "../components/Footer";
+import contactUsHero from "/src/images/ContactUsBg.jpeg";
+import astronaut from "/src/images/astronaut.png";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -24,7 +26,7 @@ const ContactUs = () => {
     <div className="bg-gray-50">
       <Hero
         heading="Contact Us"
-        bgImage="/src/images/ContactUsBg.jpeg"
+        bgImage={contactUsHero}
         content="Let's Connect and Start Bringing Your Ideas to Life!"
       />
 
@@ -90,7 +92,7 @@ const ContactUs = () => {
           {/* Image Section */}
           <div className="md:w-1/2 w-full p-8 flex justify-center items-center bg-[#330073]">
             <img
-              src="src/images/astronaut.png"
+              src={astronaut}
               alt="Astronaut Illustration"
               className="max-w-full h-auto rounded-lg shadow-md"
             />

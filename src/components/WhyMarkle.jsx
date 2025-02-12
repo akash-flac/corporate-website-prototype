@@ -1,4 +1,5 @@
 import React from "react";
+import WhyMarkleImg from "/src/images/whyMarkle.jpeg";
 
 const WhyMarkle = () => {
   return (
@@ -9,7 +10,6 @@ const WhyMarkle = () => {
             Why customers in over 50+ countries choose Markle Tech?
           </h1>
           <div className="my-8">
-
             <div className="overflow-x-hidden">
               <div className="hidden lg:block">
                 <div className="grid grid-cols-3">
@@ -28,7 +28,9 @@ const WhyMarkle = () => {
                   <div className="border-t border-l border-b border-black px-4 py-2">
                     COMPETITIVE PRICING & ONTIME DELIVERY
                   </div>
-                  <div className="border border-black px-4 py-2">SEAMLESS COMMUNICATION</div>
+                  <div className="border border-black px-4 py-2">
+                    SEAMLESS COMMUNICATION
+                  </div>
                 </div>
               </div>
 
@@ -79,7 +81,7 @@ const WhyMarkle = () => {
         </div>
         <div className="lg:flex-1 flex justify-center mx-5 px-5">
           <img
-            src="/src/images/whyMarkle.jpeg"
+            src={WhyMarkleImg}
             alt=""
             className="w-40 md:w-80 h-fit rounded-xl"
           />

@@ -1,10 +1,6 @@
 import React, { useState } from "react";
+import logoCarousel from "../data/home/logos";
 
-const logoCarousel = [
-  {
-    
-  }
-]
 export default function ScrollingLogos() {
   const [isPaused, setPaused] = useState(false);
 
@@ -21,134 +17,22 @@ export default function ScrollingLogos() {
           isPaused ? "" : "animate-loop-scroll"
         }`}
       >
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/amravathi.png"
-          />
-        </li>
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/IOD.png"
-          />
-        </li>
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/indianOil.png"
-          />
-        </li>
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/columbia.png"
-          />
-        </li>
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/cyfuture.png"
-          />
-        </li>
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/daffodil.png"
-          />
-        </li>
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/lotus.png"
-          />
-        </li>
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/shemaroo.png"
-          />
-        </li>
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/singa.png"
-          />
-        </li>
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/indiaMart.png"
-          />
-        </li>
+        {logoCarousel.map((logo, id) => (
+          <li key={id}>
+            <img className="w-[130px] h-[46.5px]" src={logo.src} />
+          </li>
+        ))}
       </ul>
-
       <ul
         className={`flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none ${
           isPaused ? "" : "animate-loop-scroll"
         }`}
-        aria-hidden="true"
       >
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/amravathi.png"
-          />
-        </li>
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/IOD.png"
-          />
-        </li>
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/indianOil.png"
-          />
-        </li>
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/columbia.png"
-          />
-        </li>
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/cyfuture.png"
-          />
-        </li>
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/daffodil.png"
-          />
-        </li>
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/lotus.png"
-          />
-        </li>
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/shemaroo.png"
-          />
-        </li>
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/singa.png"
-          />
-        </li>
-        <li>
-          <img
-            className="w-[130px] h-[46.5px]"
-            src="/src/images/logos-scroll-animation/indiaMart.png"
-          />
-        </li>
+        {logoCarousel.map((logo, id) => (
+          <li key={id}>
+            <img className="w-[130px] h-[46.5px]" src={logo.src} />
+          </li>
+        ))}
       </ul>
     </div>
   );
