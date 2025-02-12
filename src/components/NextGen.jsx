@@ -3,7 +3,7 @@ import React from "react";
 const NextGen = () => {
   return (
     <div className="mx-10 m-3">
-      <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-3 font-semibold text-[#260651] text-center">
+      <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-3 font-semibold text-[#330073] text-center">
         Next Gen <span className="font-bold">Technology Solutions</span> for
         every business
       </h1>

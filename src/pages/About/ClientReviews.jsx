@@ -1,7 +1,8 @@
 import React from "react";
 import Hero from "../../components/Hero";
 import { TestimonialCard } from "../../components/TestimonialCard";
-import { reviews } from "../../components/CustomerReviews";
+import { reviews } from "../../data/about/clientReviews";
+import Footer from "../../components/Footer";
 
 const ClientReviews = () => {
   return (
@@ -22,6 +23,7 @@ const ClientReviews = () => {
           />
         ))}
       </div>
+      <Footer/>
     </div>
   );
 };

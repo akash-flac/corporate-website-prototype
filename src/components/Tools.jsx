@@ -286,7 +286,7 @@ export default function Tools() {
 
   return (
     <div className="p-4 sm:p-6 lg:p-10">
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-[#260651] mb-4">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-[#330073] mb-4">
         Tools We Use
       </h2>
       <div className="flex flex-wrap justify-center space-x-2 sm:space-x-4 mb-4 sm:mb-6">
@@ -296,7 +296,7 @@ export default function Tools() {
             onClick={() => setActiveHeading(category.category)}
             className={`px-3 sm:px-4 py-1 sm:py-2 rounded-full font-semibold font-mono transition-colors duration-300 ${
               activeHeading === category.category
-                ? "text-[#260651] "
+                ? "text-[#330073] "
                 : "text-gray-400"
             }`}
           >
@@ -371,7 +371,7 @@ export default function Tools() {
   //     <div className="m-8 px-8 sm:m-10 md:h-64">
   //       <div className="">
   //         {/* <div className=""> */}
-  //         <h2 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed font-bold text-[#260651] text-center">
+  //         <h2 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed font-bold text-[#330073] text-center">
   //           Tools We Use
   //         </h2>
   //         <div className="flex space-x-3 md:space-x-6 mb-6 justify-center items-center mt-4">
@@ -382,7 +382,7 @@ export default function Tools() {
   //               onClick={() => setActiveHeading(category.category)}
   //               className={`px-3 md:py-1 rounded-lg font-mono font-semibold group ${
   //                 activeHeading === category.category
-  //                   ? "text-[#260651]"
+  //                   ? "text-[#330073]"
   //                   : " text-gray-500"
   //               }`}
   //             >
@@ -447,7 +447,7 @@ export default function Tools() {
   //                 //   <h3
   //                 //     className={`font-bold text-lg p-4 rounded-t-2xl duration-100 ease-in-out ${
   //                 //       isExpanded === index
-  //                 //         ? "bg-[#260651] text-[#E9D9FF]"
+  //                 //         ? "bg-[#330073] text-[#E9D9FF]"
   //                 //         : "bg-[#E9D9FF] rounded-xl"
   //                 //     }`}
   //                 //   >
@@ -456,7 +456,7 @@ export default function Tools() {
 
   //                 //   {/* Card Content */}
   //                 //   <div
-  //                 //     className={`p-4 text-sm text-[#E9D9FF] bg-[#260651] rounded-b-2xl duration-500 ease-in-out ${
+  //                 //     className={`p-4 text-sm text-[#E9D9FF] bg-[#330073] rounded-b-2xl duration-500 ease-in-out ${
   //                 //       isExpanded === index ? "opacity-100" : "opacity-0 hidden"
   //                 //     }`}
   //                 //   >
@@ -469,7 +469,7 @@ export default function Tools() {
   //                   whileHover={{ scale: 1.05 }}
   //                   className="min-w-[240px] bg-[#E9D9FF] rounded-2xl shadow-md p-4 cursor-pointer scroll-snap-align-start transition-transform duration-300"
   //                 >
-  //                   <h3 className="font-bold text-xl text-[#260651] mb-2">
+  //                   <h3 className="font-bold text-xl text-[#330073] mb-2">
   //                     {item.title}
   //                   </h3>
   //                   <p className="text-gray-700">{item.content}</p>

@@ -34,7 +34,7 @@ const imgs = [
 const WhyChooseMarkle = () => {
   return (
     <div className="m-6">
-      <h1 className="row-span-1 text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-3 font-semibold text-[#260651] text-center uppercase">
+      <h1 className="row-span-1 text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-3 font-semibold text-[#330073] text-center uppercase">
         Why choose <span className="font-bold"> Markle</span>?
       </h1>
       <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4 bg-gray-50">

@@ -1,58 +1,15 @@
-import { ArrowRightCircleIcon } from "@heroicons/react/20/solid";
 import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { reviews } from "../data/about/clientReviews";
 
-export const reviews = [
-  {
-    name: "Imran Khan",
-    review:
-      "Without any doubt I recommend Markle Tech as one of the best web design and digital marketing agencies. One of the best agencies I’ve came across so far. Wouldn’t be hesitated to introduce their work tosomeone else.",
-    id: 1,
-    icon: "src/images/reviews/p1.jpeg",
-    reviewerDesc: "Person"
-  },
-  {
-    name: "Alok Aggarwal",
-    review: "Smile, it's free therapy.",
-    id: 2,
-    icon: "src/images/reviews/p2.jpeg",
-    reviewerDesc: "Backend Engineer"
-  },
-  {
-    name: "Sourav Kumar",
-    review:
-      "Emancipate yourselves from mental slavery, none but ourselves can free our minds!",
-    id: 3,
-    icon: "src/images/reviews/p3.jpeg",
-    reviewerDesc: "App Developer"
-  },
-  {
-    name: "Heera Lal",
-    review:
-      "Expose yourself to your deepest fear; after that, fear has no power, and the fear of freedom shrinks and vanishes. You are free.",
-    id: 4,
-    icon: "src/images/reviews/p4.jpeg",
-    reviewerDesc: "Senior FullStack Developer"
-  },
-  {
-    name: "Vivek Raina",
-    review:
-      "Birds sing after a storm; why shouldn't people feel as free to delight in whatever sunlight remains to them?",
-    id: 5,
-    icon: "src/images/reviews/p5.jpeg",
-    reviewerDesc: "Wordpress"
-  },
-  {
-    name: "Vaibhav Kumar",
-    review:
-      "I believe that it is better to tell the truth than a lie. I believe it is better to be free than to be a slave. And I believe it is better to know than to be ignorant.",
-    id: 6,
-    icon: "src/images/reviews/p6.jpeg",
-    reviewerDesc: "DevOps Engineer"
-  },
-];
 const CustomerReviews = () => {
   const [currRev, setCurrRev] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isOverflowing, setIsOverflowing] = useState(false);
+  const reviewRef = useRef(null);
+  const modalRef = useRef(null);
+
   const totalReviews = reviews.length;
   const currentReviewer = reviews[currRev];
   const prevReviewer = reviews[(currRev - 1 + totalReviews) % totalReviews];
@@ -60,94 +17,177 @@ const CustomerReviews = () => {
   const nextToNextReviewer = reviews[(currRev + 2) % totalReviews];
   const prevToPrevReviewer =
     reviews[(currRev - 2 + totalReviews) % totalReviews];
-  console.log(currentReviewer.id);
+
+  useEffect(() => {
+    const checkOverflow = () => {
+      if (reviewRef.current) {
+        setIsOverflowing(
+          reviewRef.current.scrollHeight > reviewRef.current.clientHeight
+        );
+      }
+    };
+    checkOverflow();
+  }, [currRev]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        setIsModalOpen(false);
+      }
+    };
+    if (isModalOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isModalOpen]);
+
   const changeReview = (newIndex) => {
     setCurrRev((currRev) => (newIndex + totalReviews) % totalReviews);
   };
-  // setInterval(() => changeReview(currRev + 1), 1000);
-  return (
-    <div className="m-5 mb-12 md:mb-20">
-      <div className="">
-        <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed text-center pb-4 md:pb-3 font-semibold text-[#260651]">
-          Why customers love{" "}
-          <span className="font-bold lg:block"> working with us</span>
-        </h1>
-        <div className="flex justify-evenly items-center">
-          <ArrowLeftCircle
-            className="text-[#260651] md:hover:bg-gray-100 rounded-full cursor-pointer w-12 md:h-12"
-            onClick={() => changeReview(currRev - 1)}
-          ></ArrowLeftCircle>
-          <div className="flex flex-col items-center w-md max-w-md sm:max-w-screen-sm sm:w-screen md:h-60">
-            <p className="text-sm sm:text-xl h-40 max-h-40 max-w-sm sm:max-w-screen-sm sm:w-lg text-center font-normal font-serif">
-              {currentReviewer.review}
-            </p>
-            <div className="flex items-center gap-3 md:gap-10">
-              <div
-                className="cursor-pointer hidden md:block"
-                onClick={() => changeReview(currRev - 2)}
-              >
-                <img
-                  src={prevToPrevReviewer.icon}
-                  // src="src/images/reviews/p1.jpeg"
-                  alt=""
-                  className="w-12 md:w-16 h-12 md:h-16 rounded-full opacity-20"
-                />
-                <h2 className="text-center w-16">{prevToPrevReviewer.name}</h2>
-              </div>
-              <div
-                className="cursor-pointer"
-                onClick={() => changeReview(currRev - 1)}
-              >
-                <img
-                  src={prevReviewer.icon}
-                  // src="src/images/reviews/p1.jpeg"
-                  alt=""
-                  className="w-12 md:w-16 h-12 md:h-16 rounded-full opacity-50"
-                />
-                <h2 className="text-center w-16">{prevReviewer.name}</h2>
-              </div>
 
-              <div className="cursor-pointer">
-                <img
-                  src={currentReviewer.icon}
-                  // src="src/images/reviews/p1.jpeg"
-                  alt=""
-                  className="w-16 md:w-20 h-16 md:h-20 rounded-full"
-                />
-                <h2 className="text-center w-20">{currentReviewer.name}</h2>
-              </div>
-              <div
-                className="cursor-pointer"
-                onClick={() => changeReview(currRev + 1)}
-              >
-                <img
-                  src={nextReviewer.icon}
-                  // src="src/images/reviews/p1.jpeg"
-                  alt=""
-                  className="w-12 md:w-16 h-12 md:h-16 rounded-full opacity-50"
-                />
-                <h2 className="text-center w-16">{nextReviewer.name}</h2>
-              </div>
-              <div
-                className="cursor-pointer hidden md:block"
-                onClick={() => changeReview(currRev + 2)}
-              >
-                <img
-                  src={nextToNextReviewer.icon}
-                  // src="src/images/reviews/p1.jpeg"
-                  alt=""
-                  className="w-12 md:w-16 h-12 md:h-16 rounded-full opacity-20"
-                />
-                <h2 className="text-center w-16">{nextToNextReviewer.name}</h2>
-              </div>
+  const handleSwipe = (e) => {
+    if (e.changedTouches && e.changedTouches.length > 0) {
+      const touchEndX = e.changedTouches[0].clientX;
+      const deltaX = touchStartX - touchEndX;
+
+      if (deltaX > 50) {
+        changeReview(currRev + 1);
+      } else if (deltaX < -50) {
+        changeReview(currRev - 1);
+      }
+    }
+  };
+
+  let touchStartX = 0;
+  const handleTouchStart = (e) => {
+    touchStartX = e.touches[0].clientX;
+  };
+
+  const formatName = (name, isCurrent) => {
+    if (isCurrent) return name;
+    return "";
+  };
+
+  return (
+    <div
+      className="m-5 mb-12 md:mb-20"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleSwipe}
+    >
+      <div>
+        <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed text-center pb-4 md:pb-3 font-semibold text-[#330073]">
+          Why customers love{" "}
+          <span className="font-bold lg:block">working with us</span>
+        </h1>
+        <div className="flex justify-evenly items-center gap-4 md:gap-8">
+          <ArrowLeftCircle
+            className="text-[#330073] md:hover:bg-gray-100 rounded-full cursor-pointer w-10 md:w-12 h-10 md:h-12 transition-transform duration-300 hover:scale-110"
+            onClick={() => changeReview(currRev - 1)}
+          />
+          <div className="flex flex-col items-center w-full max-w-md sm:max-w-screen-sm md:h-auto p-4 bg-white rounded-xl shadow-lg">
+            <div className="h-auto min-h-52 max-h-80 w-full max-w-sm sm:max-w-screen-sm flex items-center justify-center overflow-hidden relative">
+              {/* <AnimatePresence mode="wait"> */}
+                <motion.p
+                  key={currRev}
+                  ref={reviewRef}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-base sm:text-lg text-center font-normal font-serif px-6 leading-relaxed text-gray-700 line-clamp-4"
+                  onClick={() => isOverflowing && setIsModalOpen(true)}
+                >
+                  {currentReviewer.review}
+                </motion.p>
+              {/* </AnimatePresence> */}
+              {isOverflowing && (
+                <button
+                  className="absolute bottom-2 right-2 text-sm text-blue-500 underline cursor-pointer"
+                  onClick={() => setIsModalOpen(true)}
+                >
+                  Read more
+                </button>
+              )}
+            </div>
+            <p className="text-sm font-semibold text-gray-800 mt-1">
+              {currentReviewer.name}
+            </p>
+            <p className="text-sm text-gray-500 italic mt-1">
+              {currentReviewer.reviewerDesc}
+            </p>
+
+            <div className="flex items-center gap-3 md:gap-6 mt-6 h-28">
+              {[
+                prevToPrevReviewer,
+                prevReviewer,
+                currentReviewer,
+                nextReviewer,
+                nextToNextReviewer,
+              ].map((reviewer, index) => (
+                <div
+                  key={index}
+                  className={`cursor-pointer transition-transform duration-300 hover:scale-105 ${
+                    index === 0 || index === 4 ? "hidden md:block" : ""
+                  }`}
+                  onClick={() => changeReview(currRev - 2 + index)}
+                >
+                  <motion.img
+                    src={reviewer.icon}
+                    alt="Reviewer"
+                    className={`rounded-full border-2 ${
+                      index === 2
+                        ? "w-20 md:w-24 h-20 md:h-24 border-[#330073]"
+                        : "w-12 md:w-16 h-12 md:h-16 border-gray-300"
+                    } ${
+                      index === 0 || index === 4
+                        ? "opacity-20"
+                        : index === 1 || index === 3
+                        ? "opacity-50"
+                        : ""
+                    }`}
+                    initial={{ scale: 0.8 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </div>
+              ))}
             </div>
           </div>
           <ArrowRightCircle
-            className="text-[#260651] md:hover:bg-gray-100 rounded-full cursor-pointer w-12 md:h-12"
+            className="text-[#330073] md:hover:bg-gray-100 rounded-full cursor-pointer w-10 md:w-12 h-10 md:h-12 transition-transform duration-300 hover:scale-110"
             onClick={() => changeReview(currRev + 1)}
-          ></ArrowRightCircle>
+          />
         </div>
       </div>
+
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div
+            ref={modalRef}
+            className="bg-white rounded-lg p-6 w-11/12 max-w-lg shadow-xl relative"
+          >
+            <button
+              className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
+              onClick={() => setIsModalOpen(false)}
+            >
+              &times;
+            </button>
+            <h2 className="text-xl font-semibold text-center text-[#330073] mb-2">
+              {currentReviewer.name}
+            </h2>
+            <p className="text-sm text-gray-500 italic text-center mb-4">
+              {currentReviewer.reviewerDesc}
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              {currentReviewer.review}
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

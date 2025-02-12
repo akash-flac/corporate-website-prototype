@@ -10,7 +10,7 @@ import {
 const steps = [1, 2, 3, 4, 5, 6, 7];
 
 const Step = ({ step }) => (
-  <div className="text-center text-xl font-semibold text-purple-800">
+  <div className="text-center text-xl font-semibold text-[#330073]">
     <p>Content for Step {step}</p>
   </div>
 );

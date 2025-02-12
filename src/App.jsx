@@ -106,42 +106,38 @@ function App() {
           </Route>
 
           {/* Industries */}
-          <Route path="/industries" element={<IndustriesMain />} />
-          <Route
-            path="/industries/finance-and-fintech"
-            element={<FinanceAndFintech />}
-          />
-          <Route
-            path="/industries/travel-and-hospitality"
-            element={<TravelAndHospitality />}
-          />
-          <Route path="/industries/education" element={<Education />} />
-          <Route
-            path="/industries/real-estate-and-construction"
-            element={<RealEstateAndConstruction />}
-          />
-          <Route path="/health-and-wellness" element={<HealthAndWellness />} />
-          <Route
-            path="/industries/transportation-and-logistics"
-            element={<TransportationAndLogistics />}
-          />
-          <Route
-            path="/industries/retail-and-ecommerce"
-            element={<RetailAndEcommerce />}
-          />
-          <Route
-            path="/industries/professional-services"
-            element={<ProfessionalServices />}
-          />
-          <Route
-            path="/industries/media-and-entertainment"
-            element={<MediaAndEntertainment />}
-          />
-          <Route path="/industries/manufacturing" element={<Manufacturing />} />
-          <Route
-            path="/industries/telecommunications"
-            element={<Telecommunications />}
-          />
+          <Route path="industries">
+            <Route path="finance-and-fintech" element={<FinanceAndFintech />} />
+            <Route
+              path="travel-and-hospitality"
+              element={<TravelAndHospitality />}
+            />
+            <Route path="education" element={<Education />} />
+            <Route
+              path="real-estate-and-construction"
+              element={<RealEstateAndConstruction />}
+            />
+            <Route path="health-and-wellness" element={<HealthAndWellness />} />
+            <Route
+              path="transportation-and-logistics"
+              element={<TransportationAndLogistics />}
+            />
+            <Route
+              path="retail-and-ecommerce"
+              element={<RetailAndEcommerce />}
+            />
+            <Route
+              path="professional-services"
+              element={<ProfessionalServices />}
+            />
+            <Route
+              path="media-and-entertainment"
+              element={<MediaAndEntertainment />}
+            />
+            <Route path="manufacturing" element={<Manufacturing />} />
+            <Route path="telecommunications" element={<Telecommunications />} />
+            <Route path="all-industries" element={<IndustriesMain />} />
+          </Route>
 
           {/* Solutions */}
           <Route path="solutions">
@@ -181,7 +177,7 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/pricing-2" element={<PricingTwo />} />
           <Route path="/cost-calculator/*" element={<CostCalculator />} />
-        {/* <Route path="/thank-you" element={<ThankYou />} /> */}
+          {/* <Route path="/thank-you" element={<ThankYou />} /> */}
 
           <Route path="/contact-us" element={<ContactUs />} />
         </Routes>

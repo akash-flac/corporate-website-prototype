@@ -21,7 +21,7 @@ const Achievements = () => {
   return (
     <div className="m-10">
       <div className="">
-        <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-0 font-semibold text-[#260651] text-center">
+        <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-0 font-semibold text-[#330073] text-center">
           Our <span className="font-bold">Achievements</span>
         </h1>
         <div className="flex justify-center">

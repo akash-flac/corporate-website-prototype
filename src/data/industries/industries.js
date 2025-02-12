@@ -119,7 +119,7 @@ const industriesObj = [
   {
     name: "View All Industries",
     // description: "Build strategic funnels that will convert",
-    href: "/industries",
+    href: "/industries/all-industries",
     icon: EllipsisHorizontalIcon,
   },
 ];

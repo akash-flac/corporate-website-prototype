@@ -22,29 +22,39 @@ const Services = ({ renderComplete }) => {
         </h1>
         <div className="flex justify-evenly flex-wrap mx-6">
           {/* Conditional rendering based on if complete rendering or not */}
-          {(renderComplete ? servicesObj.slice(0, servicesObj.length-1) : servicesObj.slice(0, 8)).map(
-            (service, id) => (
-              <div
-                key={id}
-                class="group relative flex flex-col items-center shadow-sm shadow-gray-300 m-2 hover:border border-slate-300 hover:shadow-md hover:bg-[#330073] hover:-translate-y-2 hover:scale-105 rounded-lg transition-all duration-500 ease-in-out cursor-pointer w-72"
-              >
-                <div class="p-4 flex flex-col items-center">
-                  {service.icon ? (
-                    <service.icon className="size-6 text-[#330073] group-hover:text-white mb-2" />
-                  ) : (
-                    <Code2 className="size-6 text-[#330073] group-hover:text-white mb-2" />
-                  )}
-                  <h5 class="mb-2 text-slate-800 text-xl text-center font-semibold group-hover:text-white">
-                    {service.name}
-                  </h5>
-                  <p class="text-slate-700 leading-normal text-sm text-center font-light group-hover:text-slate-400">
-                    {service.description}
-                  </p>
-                </div>
+          {(renderComplete
+            ? servicesObj.slice(0, servicesObj.length - 1)
+            : servicesObj.slice(0, 8)
+          ).map((service, id) => (
+            <a
+              key={id}
+              href={service.href}
+              class="group relative flex flex-col items-center shadow-sm shadow-gray-300 m-2 hover:border border-slate-300 hover:shadow-md hover:bg-[#330073] hover:-translate-y-2 hover:scale-105 rounded-lg transition-all duration-500 ease-in-out cursor-pointer w-72"
+            >
+              <div class="p-4 flex flex-col items-center">
+                {service.icon ? (
+                  <service.icon className="size-6 text-[#330073] group-hover:text-white mb-2" />
+                ) : (
+                  <Code2 className="size-6 text-[#330073] group-hover:text-white mb-2" />
+                )}
+                <h5 class="mb-2 text-slate-800 text-xl text-center font-semibold group-hover:text-white">
+                  {service.name}
+                </h5>
+                <p class="text-slate-700 leading-normal text-sm text-center font-light group-hover:text-slate-400">
+                  {service.description}
+                </p>
               </div>
-            )
-          )}
+            </a>
+          ))}
         </div>
+      </div>
+      <div className="flex justify-center items-center">
+        <a
+          href="/services/all-services"
+          className=" px-6 py-2 bg-[#330073] text-white text-center rounded-full hover:bg-[#330073] transition duration-300"
+        >
+          View More
+        </a>
       </div>
     </div>
   );
