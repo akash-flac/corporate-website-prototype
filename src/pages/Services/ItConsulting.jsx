@@ -7,7 +7,7 @@ import { itConsultingObj } from '../../data/services/services'
 const ItConsulting = () => {
   return (
     <div>
-        <Hero heading={itConsultingObj}/>
+        <Hero heading={itConsultingObj.title} bgImage={itConsultingObj.src} content={itConsultingObj.description}/>
         <ServicesCommon obj={itConsultingObj} />
         <Footer />
     </div>

@@ -48,6 +48,7 @@ import mvpImg from "/src/images/services/servicesHero/mvp.jpg";
 import lowCodeImg from "/src/images/services/servicesHero/low-code.jpg";
 import digitalMarketingImg from "/src/images/services/servicesHero/digital-marketing.jpg";
 import saasImg from "/src/images/services/servicesHero/saas.jpg";
+import ItConsulting from "/src/images/services/servicesHero/it-consulting.jpeg";
 
 const servicesObj = [
   {
@@ -119,6 +120,13 @@ const servicesObj = [
       "Ensure your product's quality with thorough testing and quality assurance services",
     href: "/services/testing-and-quality-assurance",
     icon: CheckBadgeIcon,
+  },
+  {
+    name: "IT Consulting",
+    description:
+      "Develop scalable and user-friendly SaaS applications to meet modern business demands",
+    href: "/services/it-consulting",
+    icon: CloudIcon,
   },
   {
     name: "SaaS Products",
@@ -428,7 +436,7 @@ const testingObj = {
 
 const itConsultingObj = {
   title: "IT Consulting Services",
-  src: "",
+  src: ItConsulting,
   description:
     "Expert IT guidance to help businesses optimize technology infrastructure and strategy.",
   details:

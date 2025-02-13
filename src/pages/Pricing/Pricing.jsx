@@ -1,146 +1,152 @@
 import React from "react";
 import Hero from "../../components/Hero";
 import Footer from "../../components/Footer";
+
+//hero
 import PricingHero from "/src/images/pricing.jpeg";
-// import
-import Web from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
-// import PricingHero from "/src/images/pricing.jpeg";
+
+//images
+import web from "/src/images/pricing/web.jpeg";
+import crm from "/src/images/pricing/crm.jpeg";
+import bfsi from "/src/images/pricing/bfsi.jpeg";
+import aiml from "/src/images/pricing/aiml.jpeg";
+import sharepoint from "/src/images/pricing/sharepoint.jpeg";
+import dataManagement from "/src/images/pricing/data-management.jpg";
+import dataAnalytics from "/src/images/pricing/data-analytics.jpg";
+import dataVisualization from "/src/images/pricing/data-visualization.jpg";
+import dataWarehouse from "/src/images/pricing/data-warehouse.jpg";
+import helpDesk from "/src/images/pricing/help-desk.jpg";
+import complianceAssessment from "/src/images/pricing/compliance-assessment.jpg";
+import dataScience from "/src/images/pricing/data-science.jpg";
+import itConsulting from "/src/images/pricing/it-consulting.jpg";
+import itInfrastructure from "/src/images/pricing/it-infrastructure.jpg";
+import bigData from "/src/images/pricing/big-data.jpg";
+import cloudMigration from "/src/images/pricing/cloud-migration.jpg";
+import qaConsulting from "/src/images/pricing/qa-consulting.jpg";
+import securityTesting from "/src/images/pricing/security-testing.jpg";
+import siemImplementation from "/src/images/pricing/siem-implementation.jpg";
+import softwareMaintenance from "/src/images/pricing/software-maintenance.jpg";
+import softwareTesting from "/src/images/pricing/software-testing.jpg";
+import staffAugmentation from "/src/images/pricing/staff-augmentation.jpg";
+
+// Click on the card to reach the cost calculator for your required solution type (30+ options to choose from)
 
 const pricingComponentObj = [
   {
     heading: `Software Development Cost Calculators`,
-    desc: `Click on the card to reach the cost calculator for your required solution type (30+ options to choose from)`,
+    desc: `Explore our comprehensive cost calculators for custom software development across multiple platforms and industries. Get instant, transparent pricing estimates tailored to your specific requirements, helping you plan your project budget effectively.`,
     items: [
       {
         title: "Web, Mobile, Desktop, DWH",
-        src: Web,
+        src: web,
       },
       {
         title: "ERP, CRM, SCM, accounting, etc.",
-        src: `/src/images/pricing/crm.jpeg`,
+        src: crm,
       },
       {
         title: "BFSI, Healthcare, Retail, & Other",
-        src: `/src/images/pricing/bfsi.jpeg`,
+        src: bfsi,
       },
       {
         title: "AI/ML, AR, Blockchain, And More",
-        src: `/src/images/pricing/aiml.jpeg`,
+        src: aiml,
       },
       {
         title: "SharePoint, ServiceNow, Dynamics 365",
-        src: `/src/images/pricing/sharepoint.jpeg`,
+        src: sharepoint,
       },
     ],
   },
   {
     heading: `Data Analytics Cost Calculators`,
-    desc: `In data analytics and AI since ScienceSoft’s inception, we help businesses organize even the most voluminous and high-velocity data at an optimal cost .`,
+    desc: `Calculate costs for transforming your raw data into actionable insights. Our advanced analytics solutions help you harness the power of your data through efficient management, visualization, and analysis tools, all with predictable pricing.`,
     items: [
       {
         title: "Data management services",
-        src: `src/images/pricing/web.jpeg`,
+        src: dataManagement,
       },
       {
         title: "Data analytics & BI implementation",
-        src: `src/images/pricing/crm.jpeg`,
+        src: dataAnalytics,
       },
       {
         title: "Big data consulting and implementation",
-        src: `src/images/pricing/bfsi.jpeg`,
+        src: bigData,
       },
       {
         title: "Data science services",
-        src: `src/images/pricing/aiml.jpeg`,
+        src: dataScience,
       },
       {
         title: "Data warehouse services",
-        src: `src/images/pricing/sharepoint.jpeg`,
+        src: dataWarehouse,
       },
       {
         title: " Data visualization services",
-        src: `src/images/pricing/sharepoint.jpeg`,
+        src: dataVisualization,
       },
     ],
   },
   {
     heading: `Managed IT Service Cost Calculators`,
-    desc: `A trusted partner to monitor, troubleshoot, and evolve any components of your IT infrastructure, we always keep the costs transparent by fixing the prices and KPIs in an SLA.`,
+    desc: `Get precise cost estimates for comprehensive IT management services. Our transparent pricing model includes detailed SLAs, ensuring you receive reliable, high-quality IT support while maintaining complete visibility of your investment.`,
     items: [
       {
         title: "Software maintenance",
-        src: `src/images/pricing/web.jpeg`,
+        src: softwareMaintenance,
       },
       {
         title: "IT Infrastructure Management",
-        src: `src/images/pricing/crm.jpeg`,
+        src: itInfrastructure,
       },
       {
         title: "Help Desk Services",
-        src: `src/images/pricing/bfsi.jpeg`,
+        src: helpDesk,
       },
       {
         title: "Cloud Migration",
-        src: `src/images/pricing/aiml.jpeg`,
+        src: cloudMigration,
       },
     ],
   },
   {
     heading: `QA and Cyber Security Cost Calculators`,
-    desc: ``,
+    desc: `Calculate investment requirements for ensuring your software's quality and security. From comprehensive testing to compliance assessments, our calculators help you understand the costs of protecting your digital assets and maintaining high standards.`,
     items: [
       {
         title: "QA Consulting",
-        src: `src/images/pricing/web.jpeg`,
+        src: qaConsulting,
       },
       {
         title: "Software Testing",
-        src: `src/images/pricing/crm.jpeg`,
+        src: softwareTesting,
       },
       {
         title: "Security Testing",
-        src: `src/images/pricing/bfsi.jpeg`,
+        src: securityTesting,
       },
       {
         title: "Compliance assessment: HIPAA, PCI, etc.",
-        src: `src/images/pricing/aiml.jpeg`,
+        src: complianceAssessment,
       },
       {
         title: "SIEM Implementation",
-        src: `src/images/pricing/sharepoint.jpeg`,
+        src: siemImplementation,
       },
     ],
   },
   {
     heading: `Other Cost Calculators`,
-    desc: ``,
+    desc: `Estimate costs for specialized IT services including strategic consulting and skilled staff augmentation. Our calculators provide clear pricing insights for additional services that can enhance your technology initiatives and team capabilities.`,
     items: [
       {
         title: "IT Consulting",
-        src: `src/images/pricing/web.jpeg`,
+        src: itConsulting,
       },
       {
         title: "Staff Augmentation",
-        src: `src/images/pricing/crm.jpeg`,
+        src: staffAugmentation,
       },
     ],
   },
@@ -151,7 +157,7 @@ const Pricing = () => {
       <Hero
         bgImage={PricingHero}
         heading={`how much will your project cost?`}
-        content={`Pricing is customized to fit your unique project requirements. Contact us for a detailed estimate!`}
+        content={`Pricing is customized to fit your unique project requirements. Contact us for a detailed estimate! \n Click on any card to reach the cost calculator for your required solution type.`}
       />
       <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4 bg-gray-50">
         {pricingComponentObj.map((component, index) => (

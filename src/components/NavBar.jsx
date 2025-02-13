@@ -65,22 +65,20 @@ const callsToAction = [
   { name: "Contact Sales", href: "#", icon: PhoneIcon },
 ];
 
-const NavBar = () => {
+const NavBar = ({ isBlack = false }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <>
       <nav
         aria-label="Global"
-        className="flex items-center justify-between p-4 lg:px-8 relative z-10"
+        className={`flex items-center justify-between p-4 lg:px-8 relative z-10 ${
+          isBlack ? "bg-black" : ""
+        }`}
       >
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Markle Tech</span>
-            <img
-              alt=""
-              src={Logo}
-              className="h-8 md:h-10 lg:h-12 w-auto"
-            />
+            <img alt="" src={Logo} className="h-8 md:h-10 lg:h-12 w-auto" />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -159,7 +157,10 @@ const NavBar = () => {
               className="absolute -left-24 top-full z-10 mt-3 w-screen max-w-3xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="grid grid-cols-3 gap-4 p-5">
-                {servicesObj.map((item) => (
+                {[
+                  ...servicesObj.slice(0, 11),
+                  servicesObj[servicesObj.length - 1],
+                ].map((item) => (
                   <div
                     key={item.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-lg hover:bg-gray-50"
@@ -218,7 +219,10 @@ const NavBar = () => {
               className="absolute -left-56 top-full z-10 mt-3 w-screen max-w-3xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="grid grid-cols-3 gap-4 p-5">
-                {industriesObj.map((item) => (
+                {[
+                  ...industriesObj.slice(0, 11),
+                  industriesObj[industriesObj.length - 1],
+                ].map((item) => (
                   <div
                     key={item.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-lg hover:bg-gray-50"
@@ -286,12 +290,18 @@ const NavBar = () => {
             </PopoverPanel>
           </Popover>
 
-          {/* <a href="/pricing" className="text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
+          <a
+            href="/pricing"
+            className="text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0"
+          >
             Pricing
-          </a> */}
+          </a>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="/contact-us" className="text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
+          <a
+            href="/contact-us"
+            className="text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0"
+          >
             Contact Us
           </a>
         </div>

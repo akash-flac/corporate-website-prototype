@@ -65,6 +65,16 @@ import ProjectManagementSystem from "./pages/Solutions/ProjectManagementSystem";
 import ELearning from "./pages/Solutions/Elearning";
 import SolutionsMain from "./pages/Solutions/SolutionsMain";
 
+//Pricing
+import Step1 from "./pages/Pricing/Steps/Step1";
+import Step2 from "./pages/Pricing/Steps/Step2";
+import Step3 from "./pages/Pricing/Steps/Step3";
+import Step4 from "./pages/Pricing/Steps/Step4";
+import Step5 from "./pages/Pricing/Steps/Step5";
+import Step6 from "./pages/Pricing/Steps/Step6";
+import Step7 from "./pages/Pricing/Steps/Step7";
+import ThankYou from "./pages/Pricing/ThankYou";
+
 function App() {
   return (
     <div>
@@ -177,7 +187,14 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/pricing-2" element={<PricingTwo />} />
           <Route path="/cost-calculator/*" element={<CostCalculator />} />
-          {/* <Route path="/thank-you" element={<ThankYou />} /> */}
+          <Route path="/cost-calculator/1" element={<Step1 />} />
+          <Route path="/cost-calculator/2" element={<Step2 />} />
+          <Route path="/cost-calculator/3" element={<Step3 />} />
+          <Route path="/cost-calculator/4" element={<Step4 />} />
+          <Route path="/cost-calculator/5" element={<Step5 />} />
+          <Route path="/cost-calculator/6" element={<Step6 />} />
+          <Route path="/cost-calculator/7" element={<Step7 />} />
+          <Route path="/cost-calculator/thank-you" element={<ThankYou />} />
 
           <Route path="/contact-us" element={<ContactUs />} />
         </Routes>

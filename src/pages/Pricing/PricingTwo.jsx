@@ -3,170 +3,227 @@ import Hero from "../../components/Hero";
 import Footer from "../../components/Footer";
 import PricingTwoHero from "/src/images/pricingPageTwo.jpeg";
 
+//images
+// import enterprise from "/src/images/pricing/pricingTwo/enterprise.jpg";
+import consumer from "/src/images/pricing/pricingTwo/consumer.jpg";
+import website from "/src/images/pricing/pricingTwo/website.jpg";
+import aiml from "/src/images/pricing/pricingTwo/ai.jpg";
+import dwh from "/src/images/pricing/pricingTwo/dwh.jpg";
+import desktop from "/src/images/pricing/pricingTwo/desktop.jpg";
+import erp from "/src/images/pricing/pricingTwo/erp.jpg";
+import crm from "/src/images/pricing/pricingTwo/crm.jpg";
+import corporate from "/src/images/pricing/pricingTwo/corporate.jpg";
+import ar from "/src/images/pricing/pricingTwo/ar.jpg";
+import accounting from "/src/images/pricing/pricingTwo/accounting.jpg";
+import banking from "/src/images/pricing/pricingTwo/banking.jpg";
+import bi from "/src/images/pricing/pricingTwo/bi.jpg";
+import big from "/src/images/pricing/pricingTwo/big.jpg";
+import blockchain from "/src/images/pricing/pricingTwo/blockchain.jpg";
+import content from "/src/images/pricing/pricingTwo/content.jpg";
+import dynamics from "/src/images/pricing/pricingTwo/dynamics.jpg";
+import ecommerce from "/src/images/pricing/pricingTwo/ecommerce.jpg";
+import elearning from "/src/images/pricing/pricingTwo/elearning.jpg";
+import enterpriseSystem from "/src/images/pricing/pricingTwo/enterprise.jpg";
+import hr from "/src/images/pricing/pricingTwo/hr.jpg";
+import industry from "/src/images/pricing/pricingTwo/industry.jpg";
+import insurance from "/src/images/pricing/pricingTwo/insurance.jpg";
+import inventory from "/src/images/pricing/pricingTwo/inventory.jpg";
+import investment from "/src/images/pricing/pricingTwo/investment.jpg";
+import kiosk from "/src/images/pricing/pricingTwo/kiosk.jpg";
+import lending from "/src/images/pricing/pricingTwo/lending.jpg";
+import medical from "/src/images/pricing/pricingTwo/medical.jpg";
+import mobile from "/src/images/pricing/pricingTwo/mobile.jpg";
+import order from "/src/images/pricing/pricingTwo/order.jpg";
+import otherTechnology from "/src/images/pricing/pricingTwo/other-technology.jpg";
+import other from "/src/images/pricing/pricingTwo/other.jpg";
+import payment from "/src/images/pricing/pricingTwo/payment.jpg";
+import professional from "/src/images/pricing/pricingTwo/professional.jpg";
+import retail from "/src/images/pricing/pricingTwo/retail.jpg";
+import servicenow from "/src/images/pricing/pricingTwo/servicenow.jpg";
+import sharepoint from "/src/images/pricing/pricingTwo/sharepoint.jpg";
+import supply from "/src/images/pricing/pricingTwo/supply.jpg";
+import asset from "/src/images/pricing/pricingTwo/asset.jpg";
+
 const pricingComponentObj2 = [
   {
     heading: `By Platform`,
-    desc: ``,
+    desc: `Choose from our range of platform-specific solutions designed to meet your exact needs. Whether you're looking for web, mobile, or desktop applications, we deliver seamless experiences across all platforms with optimal performance and user engagement.`,
     items: [
       {
         title: "Enterprise Web App",
-        src: `src/images/pricing/web.jpeg`,
+        src: industry,
       },
       {
         title: "Consumer-focused Web App",
-        src: `src/images/pricing/crm.jpeg`,
+        src: consumer,
       },
       {
         title: "Website",
-        src: `src/images/pricing/bfsi.jpeg`,
+        src: website,
       },
       {
         title: "Mobile Application",
-        src: `src/images/pricing/aiml.jpeg`,
+        src: mobile,
       },
       {
         title: "DWH",
-        src: `src/images/pricing/sharepoint.jpeg`,
+        src: dwh,
       },
       {
         title: "Desktop and other types",
-        src: `src/images/pricing/sharepoint.jpeg`,
+        src: desktop,
       },
     ],
   },
   {
     heading: `By Business Function`,
-    desc: ``,
+    desc: `Transform your business operations with our function-specific software solutions. From streamlining operations to enhancing productivity, our tailored applications address every aspect of your business workflow while ensuring seamless integration across departments.`,
     items: [
       {
         title: "ERP Software",
-        src: `src/images/pricing/web.jpeg`,
+        src: erp,
       },
       {
         title: "CRM Software",
-        src: `src/images/pricing/crm.jpeg`,
+        src: crm,
       },
       {
         title: "Supply Chain Software",
-        src: `src/images/pricing/bfsi.jpeg`,
+        src: supply,
       },
       {
         title: "Inventory Management Software",
-        src: `src/images/pricing/aiml.jpeg`,
+        src: inventory,
       },
       {
         title: "Order Management Software",
-        src: `src/images/pricing/sharepoint.jpeg`,
+        src: order,
       },
       {
         title: "Corporate Finance Software",
-        src: `src/images/pricing/sharepoint.jpeg`,
+        src: corporate,
       },
       {
         title: "Accounting Software",
-        src: `src/images/pricing/sharepoint.jpeg`,
+        src: accounting,
       },
       {
         title: "BI Software",
-        src: `src/images/pricing/sharepoint.jpeg`,
+        src: bi,
       },
       {
         title: "Payment Software",
-        src: `src/images/pricing/sharepoint.jpeg`,
+        src: payment,
       },
       {
         title: "HR Software",
-        src: `src/images/pricing/sharepoint.jpeg`,
+        src: hr,
       },
       {
         title: "e-Learning Software",
-        src: `src/images/pricing/sharepoint.jpeg`,
+        src: elearning,
       },
       {
         title: "Kiosk Software",
-        src: `src/images/pricing/sharepoint.jpeg`,
+        src: kiosk,
       },
       {
         title: "Content Management Software",
-        src: `src/images/pricing/sharepoint.jpeg`,
+        src: content,
       },
       {
         title: "Other",
-        src: `src/images/pricing/sharepoint.jpeg`,
+        src: other,
       },
     ],
   },
   {
     heading: `By Industry`,
-    desc: ``,
+    desc: `Get industry-specific solutions that understand your unique challenges and requirements. Our specialized software is built with deep domain knowledge, ensuring compliance with industry standards while driving innovation in your sector.`,
     items: [
       {
-        title: "ERP Software",
-        src: `src/images/pricing/web.jpeg`,
+        title: "Medical Software",
+        src: medical,
       },
       {
-        title: "CRM Software",
-        src: `src/images/pricing/crm.jpeg`,
+        title: "Banking Software",
+        src: banking,
       },
       {
-        title: "Supply Chain Software",
-        src: `src/images/pricing/bfsi.jpeg`,
+        title: "Insurance Software",
+        src: insurance,
       },
       {
-        title: "Inventory Management Software",
-        src: `src/images/pricing/aiml.jpeg`,
+        title: "Lending Software",
+        src: lending,
       },
       {
-        title: "Order Management Software",
-        src: `src/images/pricing/sharepoint.jpeg`,
+        title: "Investment Software",
+        src: investment,
       },
       {
-        title: "Corporate Finance Software",
-        src: `src/images/pricing/sharepoint.jpeg`,
+        title: "E-commerce Software",
+        src: ecommerce,
+      },
+      {
+        title: "Retail Software",
+        src: retail,
+      },
+      {
+        title: "Professional Services Software",
+        src: professional,
+      },
+      {
+        title: "Other Software Types",
+        src: industry,
       },
     ],
   },
   {
     heading: `By Technology`,
-    desc: ``,
+    desc: `Leverage cutting-edge technologies to stay ahead of the competition. Our advanced solutions incorporate the latest technological innovations, from blockchain to artificial intelligence, helping you build future-ready digital infrastructure.`,
     items: [
       {
-        title: "ERP Software",
-        src: `src/images/pricing/web.jpeg`,
+        title: "Blockchain Software",
+        src: blockchain,
       },
       {
-        title: "CRM Software",
-        src: `src/images/pricing/crm.jpeg`,
+        title: "Big Data Software",
+        src: big,
       },
       {
-        title: "Supply Chain Software",
-        src: `src/images/pricing/bfsi.jpeg`,
+        title: "AI-based Software",
+        src: aiml,
       },
       {
-        title: "Inventory Management Software",
-        src: `src/images/pricing/aiml.jpeg`,
+        title: "AR Software",
+        src: ar,
       },
       {
-        title: "Order Management Software",
-        src: `src/images/pricing/sharepoint.jpeg`,
+        title: "Asset Tokenization Software",
+        src: asset,
+      },
+      {
+        title: "Other Software Types",
+        src: otherTechnology,
       },
     ],
   },
   {
     heading: `Platform-Based Solutions`,
-    desc: ``,
+    desc: `Maximize the potential of leading enterprise platforms with our specialized solutions. Our expertise in SharePoint, Dynamics 365, and ServiceNow helps you unlock the full capabilities of these powerful platforms for your business needs.`,
     items: [
       {
         title: "Sharepoint Software",
-        src: `src/images/pricing/web.jpeg`,
+        src: sharepoint,
       },
       {
         title: "Dynamics 365 Software",
-        src: `src/images/pricing/crm.jpeg`,
+        src: dynamics,
       },
       {
         title: "ServiceNow Software",
-        src: `src/images/pricing/bfsi.jpeg`,
+        src: servicenow,
       },
     ],
   },
@@ -200,7 +257,7 @@ const PricingTwo = () => {
               {component.items?.map((img, imgIndex) => (
                 <a
                   key={imgIndex}
-                  href="/cost-calculator"
+                  href="/cost-calculator/1"
                   className="relative w-48 h-48 cursor-pointer rounded-xl overflow-hidden shadow-md transform transition duration-300 group hover:scale-105"
                 >
                   {/* Image */}
