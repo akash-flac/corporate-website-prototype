@@ -285,16 +285,16 @@ export default function Tools() {
   const showArrows = currentItems.length > 4;
 
   return (
-    <div className="p-4 sm:p-6 lg:p-10">
+    <div className="py-4 sm:p-6 lg:p-10">
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-[#330073] mb-4">
         Tools We Use
       </h2>
-      <div className="flex flex-wrap justify-center space-x-2 sm:space-x-4 mb-4 sm:mb-6">
+      <div className="grid grid-cols-2 sm:grid-cols-6 sm:space-x-4 mb-4 sm:mb-6">
         {cardDataArray.map((category) => (
           <button
             key={category.category}
             onClick={() => setActiveHeading(category.category)}
-            className={`px-3 sm:px-4 py-1 sm:py-2 rounded-full font-semibold font-mono transition-colors duration-300 ${
+            className={`px-4 sm:px-4 py-1 sm:py-2 rounded-full font-semibold font-mono transition-colors duration-300 text-left sm:text-center ${
               activeHeading === category.category
                 ? "text-[#330073] "
                 : "text-gray-400"
@@ -309,7 +309,7 @@ export default function Tools() {
         {showArrows && (
           <button
             onClick={() => scrollCarousel("left")}
-            className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-1 sm:p-2 rounded-full z-10 opacity-85 hover:bg-gray-200"
+            className="absolute hidden md:block left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-1 sm:p-2 rounded-full z-10 opacity-85 hover:bg-gray-200"
           >
             <ChevronLeft size={20} />
           </button>
@@ -317,7 +317,7 @@ export default function Tools() {
 
         <div
           ref={carouselRef}
-          className="flex space-x-2 sm:space-x-4 overflow-x-auto px-4 sm:px-10 scrollbar-hide"
+          className="flex space-x-1 sm:space-x-4 overflow-x-auto px-4 sm:px-10 scrollbar-hide"
           style={{
             scrollSnapType: "x mandatory",
             scrollbarWidth: "none",
@@ -358,7 +358,7 @@ export default function Tools() {
         {showArrows && (
           <button
             onClick={() => scrollCarousel("right")}
-            className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-1 sm:p-2 rounded-full z-10 opacity-85 hover:bg-gray-200"
+            className="absolute hidden md:block right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-1 sm:p-2 rounded-full z-10 opacity-85 hover:bg-gray-200"
           >
             <ChevronRight size={20} />
           </button>

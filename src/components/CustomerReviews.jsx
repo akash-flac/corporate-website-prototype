@@ -67,14 +67,14 @@ const CustomerReviews = () => {
     touchStartX = e.touches[0].clientX;
   };
 
-  const formatName = (name, isCurrent) => {
-    if (isCurrent) return name;
-    return "";
-  };
+  // const formatName = (name, isCurrent) => {
+  //   if (isCurrent) return name;
+  //   return "";
+  // };
 
   return (
     <div
-      className="m-5 mb-12 md:mb-20"
+      className="m-3 mb-12 md:mb-20"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleSwipe}
     >
@@ -88,21 +88,21 @@ const CustomerReviews = () => {
             className="text-[#330073] md:hover:bg-gray-100 rounded-full cursor-pointer w-10 md:w-12 h-10 md:h-12 transition-transform duration-300 hover:scale-110"
             onClick={() => changeReview(currRev - 1)}
           />
-          <div className="flex flex-col items-center w-full max-w-md sm:max-w-screen-sm md:h-auto p-4 bg-white rounded-xl shadow-lg">
-            <div className="h-auto min-h-52 max-h-80 w-full max-w-sm sm:max-w-screen-sm flex items-center justify-center overflow-hidden relative">
+          <div className="flex flex-col items-center w-full max-w-md sm:max-w-screen-sm md:h-auto sm:p-4 bg-white rounded-xl shadow-lg">
+            <div className="h-80 sm:h-52 min-h-52 max-h-80 max-w-sm sm:max-w-screen-sm flex sm:items-center justify-center overflow-hidden relative m-1">
               {/* <AnimatePresence mode="wait"> */}
-                <motion.p
-                  key={currRev}
-                  ref={reviewRef}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.5 }}
-                  className="text-base sm:text-lg text-center font-normal font-serif px-6 leading-relaxed text-gray-700 line-clamp-4"
-                  onClick={() => isOverflowing && setIsModalOpen(true)}
-                >
-                  {currentReviewer.review}
-                </motion.p>
+              <motion.p
+                key={currRev}
+                ref={reviewRef}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.5 }}
+                className="text-base sm:text-lg text-center font-normal font-serif px-5 leading-relaxed text-gray-700 line-clamp-8 sm:line-clamp-4"
+                onClick={() => isOverflowing && setIsModalOpen(true)}
+              >
+                {currentReviewer.review}
+              </motion.p>
               {/* </AnimatePresence> */}
               {isOverflowing && (
                 <button
@@ -116,11 +116,11 @@ const CustomerReviews = () => {
             <p className="text-sm font-semibold text-gray-800 mt-1">
               {currentReviewer.name}
             </p>
-            <p className="text-sm text-gray-500 italic mt-1">
+            <p className="text-sm text-gray-500 italic m-1 text-center">
               {currentReviewer.reviewerDesc}
             </p>
 
-            <div className="flex items-center gap-3 md:gap-6 mt-6 h-28">
+            <div className="flex items-center gap-2 md:gap-6 mt-6 h-24">
               {[
                 prevToPrevReviewer,
                 prevReviewer,

@@ -4,7 +4,7 @@ import { achievementsObj } from "../data/home/homepage";
 const Achievements = () => {
   return (
     <div className="m-10">
-      <div className="">
+      <div className="m-2">
         <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-0 font-semibold text-[#330073] text-center">
           Our <span className="font-bold">Achievements</span>
         </h1>
@@ -15,9 +15,9 @@ const Achievements = () => {
           </p>
         </div>
       </div>
-      <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4">
+      <div className="flex justify-evenly flex-wrap md:m-5">
         {/* Image Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-items-center gap-6 gap-x-14 m-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 justify-items-center gap-6 m-2">
           {achievementsObj.map((achievementsObj, imgIndex) => (
             <div
               key={imgIndex}

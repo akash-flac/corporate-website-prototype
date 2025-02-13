@@ -32,7 +32,7 @@ export default function Hero({ bgImage, heading, content, bgVideo }) {
         <div className="relative z-10">
           <Banner />
           <NavBar />
-          <div className="px-10 max-w-5xl py-10 sm:py-32 lg:py-56 text-left">
+          <div className="px-10 max-w-5xl py-36 sm:py-32 lg:py-56 text-left">
             <h1 className="text-2xl tracking-normal uppercase sm:text-5xl md:text-6xl lg:text-7xl font-black">
               {heading}
             </h1>

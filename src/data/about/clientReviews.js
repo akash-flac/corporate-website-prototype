@@ -9,20 +9,20 @@ import danielClark from "/src/images/reviews/danielClark.jpg";
 
 export const reviews = [
   {
+    name: "Sarah Patel",
+    review:
+      "We reached out to Markle Tech for help with a system upgrade, and they delivered beyond our expectations. Their consultants are highly knowledgeable, and the project was completed on time and within budget. We trust Markletech with all our IT needs. ",
+    id: 1,
+    icon: sarahPatel,
+    reviewerDesc: "Operations Manager at NextGen Retailers",
+  },
+  {
     name: "Rahul Deo",
     review:
       "Working with Markle Tech has been a game-changer for our business. Their team quickly understood our needs and provided tailored IT solutions that enhanced our efficiency and security. We couldn't be happier with their professionalism and attention to detail!",
-    id: 1,
+    id: 2,
     icon: rahulDeo,
     reviewerDesc: "CEO of TechWave Solutions",
-  },
-  {
-    name: "Sarah Patel",
-    review:
-      "We reached out to Markle Tech for help with a system upgrade, and they delivered beyond our expectations. Their consultants are highly knowledgeable, and the project was completed on time and within budget. We trust Markletech with all our IT needs",
-    id: 2,
-    icon: sarahPatel,
-    reviewerDesc: "Operations Manager at NextGen Retailers",
   },
   {
     name: "Akash",
