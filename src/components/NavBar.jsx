@@ -86,7 +86,13 @@ const NavBar = ({ isBlack = false }) => {
       <nav
         aria-label="Global"
         className={`fixed left-0 w-full z-50 transition-all p-4 lg:px-8
-        ${scrolled ? "bg-black/80 backdrop-blur-md top-0" : "bg-transparent top-10"}`}
+        ${
+          scrolled
+            ? "bg-black/80 backdrop-blur-md top-0"
+            : isBlack
+            ? "bg-black/80 top-0"
+            : "bg-transparent top-0 sm:top-10"
+        }`}
       >
         <div className="flex items-center justify-between">
           <div className="flex lg:flex-1">
@@ -95,7 +101,7 @@ const NavBar = ({ isBlack = false }) => {
               <img
                 alt="Logo"
                 src={Logo}
-                className="h-8 md:h-10 lg:h-12 w-auto"
+                className="h-8 md:h-8 lg:w-48 lg:h-12 w-auto"
               />
             </NavLink>
           </div>
@@ -207,9 +213,9 @@ const NavBar = ({ isBlack = false }) => {
 
                 <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
                   {callsToAction.map((item) => (
-                    <a
+                    <NavLink
                       key={item.name}
-                      href={item.href}
+                      to={item.href}
                       className="flex items-center justify-center gap-x-2.5 p-3 text-lg font-semibold text-gray-900 hover:bg-gray-100"
                     >
                       <item.icon
@@ -217,7 +223,7 @@ const NavBar = ({ isBlack = false }) => {
                         className="size-5 flex-none text-gray-400"
                       />
                       {item.name}
-                    </a>
+                    </NavLink>
                   ))}
                 </div>
               </PopoverPanel>
@@ -308,12 +314,12 @@ const NavBar = ({ isBlack = false }) => {
               </PopoverPanel>
             </Popover>
 
-            <a
-              href="/pricing"
+            <NavLink
+              to="/pricing"
               className="text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0"
             >
               Pricing
-            </a>
+            </NavLink>
           </PopoverGroup>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end me-6">
             <NavLink

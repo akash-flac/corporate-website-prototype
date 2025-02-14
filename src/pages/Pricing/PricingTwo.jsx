@@ -241,7 +241,7 @@ const PricingTwo = () => {
         {pricingComponentObj2.map((component, index) => (
           <div
             key={index}
-            className="max-w-6xl w-full bg-white rounded-xl shadow-lg p-6 m-4"
+            className="max-w-6xl w-full bg-white rounded-xl shadow-lg p-6 my-4 mx-0"
           >
             {/* Heading */}
             <h2 className="text-xl md:text-3xl font-extrabold text-purple-800 m-4 text-center uppercase tracking-wide">
@@ -259,7 +259,7 @@ const PricingTwo = () => {
                 <Link
                   key={imgIndex}
                   to="/cost-calculator/1"
-                  className="relative w-48 h-48 cursor-pointer rounded-xl overflow-hidden shadow-md transform transition duration-300 group hover:scale-105"
+                  className="relative w-52 h-52 md:w-48 md:h-48 cursor-pointer rounded-xl overflow-hidden shadow-md transform transition duration-300 group hover:scale-105"
                 >
                   {/* Image */}
                   <img

@@ -9,6 +9,7 @@ const CustomerReviews = () => {
   const [isOverflowing, setIsOverflowing] = useState(false);
   const reviewRef = useRef(null);
   const modalRef = useRef(null);
+  let touchStartX = 0;
 
   const totalReviews = reviews.length;
   const currentReviewer = reviews[currRev];
@@ -45,6 +46,13 @@ const CustomerReviews = () => {
     };
   }, [isModalOpen]);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrRev((prev) => (prev + 1) % totalReviews);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [totalReviews]);
+
   const changeReview = (newIndex) => {
     setCurrRev((currRev) => (newIndex + totalReviews) % totalReviews);
   };
@@ -62,7 +70,6 @@ const CustomerReviews = () => {
     }
   };
 
-  let touchStartX = 0;
   const handleTouchStart = (e) => {
     touchStartX = e.touches[0].clientX;
   };

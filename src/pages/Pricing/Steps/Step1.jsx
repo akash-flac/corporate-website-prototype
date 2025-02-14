@@ -41,7 +41,7 @@ const Step1 = () => {
   return (
     <div className="">
       <NavBar isBlack={true} />
-      <div className="flex flex-col items-center bg-gray-50 p-4 sm:p-6 lg:p-8 min-h-screen">
+      <div className="flex flex-col items-center bg-gray-50 p-4 sm:p-6 lg:p-8 mt-20 min-h-screen">
         <h1 className="text-2xl sm:text-3xl font-bold text-[#330073] m-3 text-center">
           Cost Calculator
         </h1>

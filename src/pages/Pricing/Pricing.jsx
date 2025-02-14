@@ -164,7 +164,7 @@ const Pricing = () => {
         {pricingComponentObj.map((component, index) => (
           <div
             key={index}
-            className="max-w-6xl w-full bg-white rounded-xl shadow-lg p-6 m-4"
+            className="max-w-6xl w-full bg-white rounded-xl shadow-lg p-6 my-4 mx-0"
           >
             {/* Heading */}
             <h2 className="text-xl md:text-3xl font-extrabold text-purple-800 m-4 text-center uppercase tracking-wide">
@@ -182,9 +182,8 @@ const Pricing = () => {
                 <Link
                   key={imgIndex}
                   to="/pricing-2"
-                  className="relative w-48 h-48 cursor-pointer rounded-xl overflow-hidden shadow-md transform transition duration-300 group hover:scale-105"
+                  className="relative w-52 h-52 md:w-48 md:h-48 cursor-pointer rounded-xl overflow-hidden shadow-md transform transition duration-300 group hover:scale-105"
                 >
-                  
                   {/* Image */}
                   <img
                     src={img.src}
@@ -206,7 +205,7 @@ const Pricing = () => {
         ))}
       </div>
       <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4 bg-[#E9D9FF]">
-        <div className="max-w-6xl w-full bg-white rounded-xl shadow-lg p-6 m-4">
+        <div className="max-w-6xl w-full bg-white rounded-xl shadow-lg p-6 my-4 mx-0">
           {/* Heading */}
           <h2 className="text-xl md:text-3xl font-extrabold text-purple-800 m-4 text-center uppercase tracking-wide">
             Pricing Models We Rely On
@@ -225,7 +224,7 @@ const Pricing = () => {
       </div>
 
       <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4 bg-[#E9D9FF]">
-        <div className="max-w-6xl w-full bg-white rounded-xl shadow-lg p-6 m-4">
+        <div className="max-w-6xl w-full bg-white rounded-xl shadow-lg p-6 my-4 mx-0">
           {/* Heading */}
           <h2 className="text-xl md:text-3xl font-extrabold text-purple-800 m-4 text-center uppercase tracking-wide">
             Check Our Sample Estimates

@@ -43,7 +43,7 @@ const Step5 = () => {
   return (
     <div>
       <NavBar isBlack={true} />
-      <div className="flex flex-col items-center bg-gray-50 p-4">
+      <div className="flex flex-col items-center bg-gray-50 p-4 mt-20">
         <h1 className="text-2xl sm:text-3xl font-bold text-[#330073] m-3">
           Cost Calculator
         </h1>
