@@ -28,6 +28,7 @@ import siemImplementation from "/src/images/pricing/siem-implementation.jpg";
 import softwareMaintenance from "/src/images/pricing/software-maintenance.jpg";
 import softwareTesting from "/src/images/pricing/software-testing.jpg";
 import staffAugmentation from "/src/images/pricing/staff-augmentation.jpg";
+import { Link } from "react-router";
 
 // Click on the card to reach the cost calculator for your required solution type (30+ options to choose from)
 
@@ -153,13 +154,13 @@ const pricingComponentObj = [
 ];
 const Pricing = () => {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-[#E9D9FF]">
       <Hero
         bgImage={PricingHero}
         heading={`how much will your project cost?`}
         content={`Pricing is customized to fit your unique project requirements. Contact us for a detailed estimate! \n Click on any card to reach the cost calculator for your required solution type.`}
       />
-      <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4 bg-gray-50">
+      <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4 bg-[#E9D9FF]">
         {pricingComponentObj.map((component, index) => (
           <div
             key={index}
@@ -178,11 +179,12 @@ const Pricing = () => {
             {/* Image Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center gap-6 m-4">
               {component.items?.map((img, imgIndex) => (
-                <a
+                <Link
                   key={imgIndex}
-                  href="/pricing-2"
+                  to="/pricing-2"
                   className="relative w-48 h-48 cursor-pointer rounded-xl overflow-hidden shadow-md transform transition duration-300 group hover:scale-105"
                 >
+                  
                   {/* Image */}
                   <img
                     src={img.src}
@@ -197,13 +199,13 @@ const Pricing = () => {
                   <p className="absolute inset-0 flex items-center justify-center text-white font-semibold text-lg px-3 text-center leading-tight">
                     {img.title}
                   </p>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
         ))}
       </div>
-      <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4 bg-gray-50">
+      <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4 bg-[#E9D9FF]">
         <div className="max-w-6xl w-full bg-white rounded-xl shadow-lg p-6 m-4">
           {/* Heading */}
           <h2 className="text-xl md:text-3xl font-extrabold text-purple-800 m-4 text-center uppercase tracking-wide">
@@ -222,7 +224,7 @@ const Pricing = () => {
         </div>
       </div>
 
-      <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4 bg-gray-50">
+      <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4 bg-[#E9D9FF]">
         <div className="max-w-6xl w-full bg-white rounded-xl shadow-lg p-6 m-4">
           {/* Heading */}
           <h2 className="text-xl md:text-3xl font-extrabold text-purple-800 m-4 text-center uppercase tracking-wide">

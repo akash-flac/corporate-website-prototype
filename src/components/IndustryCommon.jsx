@@ -1,9 +1,15 @@
 import React from "react";
 import Footer from "./Footer";
+import Hero from "./Hero";
 
 const IndustryCommon = ({ obj }) => {
   return (
     <div>
+      <Hero
+        heading={obj.title}
+        bgImage={obj.src}
+        content={obj.description}
+      />
       <div className="bg-[#E9D9FF] text-gray-800 min-h-screen p-6 md:p-12">
         <div className="max-w-5xl mx-auto space-y-12">
           {obj.sections.map((section, index) => (

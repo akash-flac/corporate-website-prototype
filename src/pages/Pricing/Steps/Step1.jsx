@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Footer from "../../../components/Footer";
 import NavBar from "../../../components/NavBar";
 import ProgressBar from "../../../components/ProgressBar";
+import { Link } from "react-router";
 
 const industries = [
   "Healthcare",
@@ -38,7 +39,7 @@ const Step1 = () => {
   };
 
   return (
-    <div>
+    <div className="">
       <NavBar isBlack={true} />
       <div className="flex flex-col items-center bg-gray-50 p-4 sm:p-6 lg:p-8 min-h-screen">
         <h1 className="text-2xl sm:text-3xl font-bold text-[#330073] m-3 text-center">
@@ -48,7 +49,7 @@ const Step1 = () => {
           Select Your Software Type
         </h2> */}
 
-        <ProgressBar currentStep={1}/>
+        <ProgressBar currentStep={1} />
 
         <div className="w-full sm:w-4/5 lg:w-1/2 px-6 py-6 m-8 bg-white shadow-md rounded-3xl">
           <h2 className="text-lg sm:text-xl font-semibold mb-4 text-center">
@@ -73,12 +74,12 @@ const Step1 = () => {
         </div>
 
         <div className="m-6 flex flex-row gap-4">
-          <a
-            href="/cost-calculator/2"
+          <Link
+            to="/cost-calculator/2"
             className="px-6 py-2 text-white bg-[#330073] hover:bg-[#E9D9FF] hover:text-gray-700 rounded-full transition-all text-center"
           >
             Next
-          </a>
+          </Link>
         </div>
       </div>
       <Footer />

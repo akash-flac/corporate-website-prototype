@@ -18,7 +18,7 @@ import IndustriesMain from "./pages/Industries/IndustriesMain";
 import Pricing from "./pages/Pricing/Pricing";
 import PricingTwo from "./pages/Pricing/PricingTwo";
 import ContactUs from "./pages/ContactUs";
-import CostCalculator from "./pages/Pricing/CostCalculator";
+// import CostCalculator from "./pages/Pricing/CostCalculator";
 
 // Industries
 import FinanceAndFintech from "./pages/Industries/FinanceAndFintech";
@@ -74,14 +74,22 @@ import Step5 from "./pages/Pricing/Steps/Step5";
 import Step6 from "./pages/Pricing/Steps/Step6";
 import Step7 from "./pages/Pricing/Steps/Step7";
 import ThankYou from "./pages/Pricing/ThankYou";
+import AstroHoroscope from "./pages/Industries/AstroHoroscope";
+import Insurance from "./pages/Industries/Insurance";
+import Banking from "./pages/Industries/Banking";
+import Automotive from "./pages/Industries/Automotive";
+import OilGas from "./pages/Industries/OilGas";
+import ScrollToTop from "./components/ScrollToTop";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
-
+          <Route path="*" element={<NotFoundPage />} />
           {/* About Section */}
           <Route path="about">
             <Route path="company" element={<AboutCompany />} />
@@ -146,6 +154,14 @@ function App() {
             />
             <Route path="manufacturing" element={<Manufacturing />} />
             <Route path="telecommunications" element={<Telecommunications />} />
+            <Route
+              path="astrology-and-horoscope"
+              element={<AstroHoroscope />}
+            />
+            <Route path="insurance" element={<Insurance />} />
+            <Route path="banking" element={<Banking />} />
+            <Route path="automotive" element={<Automotive />} />
+            <Route path="oil-and-gas" element={<OilGas />} />
             <Route path="all-industries" element={<IndustriesMain />} />
           </Route>
 
@@ -186,7 +202,7 @@ function App() {
           {/* Pricing */}
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/pricing-2" element={<PricingTwo />} />
-          <Route path="/cost-calculator/*" element={<CostCalculator />} />
+          {/* <Route path="/cost-calculator/*" element={<CostCalculator />} /> */}
           <Route path="/cost-calculator/1" element={<Step1 />} />
           <Route path="/cost-calculator/2" element={<Step2 />} />
           <Route path="/cost-calculator/3" element={<Step3 />} />

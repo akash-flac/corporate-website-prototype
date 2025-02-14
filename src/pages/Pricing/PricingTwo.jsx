@@ -43,6 +43,7 @@ import servicenow from "/src/images/pricing/pricingTwo/servicenow.jpg";
 import sharepoint from "/src/images/pricing/pricingTwo/sharepoint.jpg";
 import supply from "/src/images/pricing/pricingTwo/supply.jpg";
 import asset from "/src/images/pricing/pricingTwo/asset.jpg";
+import { Link } from "react-router";
 
 const pricingComponentObj2 = [
   {
@@ -230,13 +231,13 @@ const pricingComponentObj2 = [
 ];
 const PricingTwo = () => {
   return (
-    <div>
+    <div className="bg-[#E9D9FF]">
       <Hero
         bgImage={PricingTwoHero}
         heading={`What software do you need to develop?`}
         content={` From custom apps to complex systems, we build software designed for your unique needs`}
       />
-      <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4 bg-gray-50">
+      <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4 bg-[#E9D9FF]">
         {pricingComponentObj2.map((component, index) => (
           <div
             key={index}
@@ -255,9 +256,9 @@ const PricingTwo = () => {
             {/* Image Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center gap-6 m-4">
               {component.items?.map((img, imgIndex) => (
-                <a
+                <Link
                   key={imgIndex}
-                  href="/cost-calculator/1"
+                  to="/cost-calculator/1"
                   className="relative w-48 h-48 cursor-pointer rounded-xl overflow-hidden shadow-md transform transition duration-300 group hover:scale-105"
                 >
                   {/* Image */}
@@ -274,7 +275,7 @@ const PricingTwo = () => {
                   <p className="absolute inset-0 flex items-center justify-center text-white font-semibold text-lg px-3 text-center leading-tight">
                     {img.title}
                   </p>
-                </a>
+                </Link>
               ))}
             </div>
           </div>

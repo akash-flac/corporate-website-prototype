@@ -1,17 +1,15 @@
-import React from 'react'
-import Hero from '../../components/Hero'
-import IndustryCommon from '../../components/IndustryCommon'
-import { manufacturingObj } from '../../data/industries/industries'
-import Footer from '../../components/Footer'
-
+import React from "react";
+import Hero from "../../components/Hero";
+import IndustryCommon from "../../components/IndustryCommon";
+import { manufacturingObj } from "../../data/industries/industries";
+import Footer from "../../components/Footer";
 
 const Manufacturing = () => {
   return (
     <div>
-      <Hero heading={manufacturingObj.title} bgImage={manufacturingObj.src} content={manufacturingObj.description}/>
       <IndustryCommon obj={manufacturingObj} />
     </div>
-  )
-}
+  );
+};
 
-export default Manufacturing
+export default Manufacturing;

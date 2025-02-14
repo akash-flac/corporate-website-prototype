@@ -34,7 +34,7 @@ const allIndustriesObj = [
     name: `automotive`,
     description: `We support the automotive industry with advanced technology solutions that enhance both manufacturing and mobility services. From autonomous driving systems to supply chain optimization, we deliver solutions that keep your business at the forefront of innovation.`,
     src: automotive,
-    href: "/industries/manufacturing",
+    href: "/industries/automotive",
     id: 2,
   },
   {
@@ -44,15 +44,15 @@ const allIndustriesObj = [
     href: "/industries/education",
     id: 3,
   },
+  // {
+  //   name: `agritech`,
+  //   description: `In agritech, we empower farmers and agribusinesses with technology solutions that boost productivity, enhance resource management, and promote sustainability. Our tools include precision farming, crop monitoring, and supply chain tracking.`,
+  //   src: agritech,
+  //   href: "/industries/manufacturing",
+  //   id: 4,
+  // },
   {
-    name: `agritech`,
-    description: `In agritech, we empower farmers and agribusinesses with technology solutions that boost productivity, enhance resource management, and promote sustainability. Our tools include precision farming, crop monitoring, and supply chain tracking.`,
-    src: agritech,
-    href: "/industries/manufacturing",
-    id: 4,
-  },
-  {
-    name: `Media & Entertainment:`,
+    name: `Media & Entertainment`,
     description: `We create cutting-edge media and entertainment solutions, from content creation and distribution to audience analytics and engagement. Our technology enables seamless streaming, personalized experiences, and optimized workflows for media production companies.`,
     src: mediaAndEntertainment,
     href: "/industries/media-and-entertainment",
@@ -90,7 +90,7 @@ const allIndustriesObj = [
     name: `Oil and Gas`,
     description: `In the oil and gas sector, we provide solutions for data management, predictive maintenance, and safety compliance. Our technology helps companies improve operational efficiency, enhance safety, and minimize environmental impact.`,
     src: oilAndGas,
-    href: "/industries/manufacturing",
+    href: "/industries/oil-and-gas",
     id: 10,
   },
   {
@@ -100,34 +100,34 @@ const allIndustriesObj = [
     href: "/industries/health-and-wellness",
     id: 11,
   },
-  {
-    name: `Compliance`,
-    description: `Our compliance solutions ensure your business adheres to regulatory standards with automated reporting, risk assessment, and data management. We help you navigate complex regulatory environments with ease and accuracy.`,
-    src: compliance,
-    href: "/industries/manufacturing",
-    id: 12,
-  },
+  // {
+  //   name: `Compliance`,
+  //   description: `Our compliance solutions ensure your business adheres to regulatory standards with automated reporting, risk assessment, and data management. We help you navigate complex regulatory environments with ease and accuracy.`,
+  //   src: compliance,
+  //   href: "/industries/compliance",
+  //   id: 12,
+  // },
   {
     name: `Banking`,
     description: `Our digital banking solutions modernize financial institutions with secure and innovative platforms for transactions, customer management, and fraud detection. We help banks improve customer satisfaction and streamline operations.`,
     src: banking,
-    href: "/industries/manufacturing",
+    href: "/industries/banking",
     id: 13,
   },
   {
     name: `Insurance`,
     description: `Our insurance technology solutions support claims management, customer service, and data analytics. We help insurers optimize processes, enhance customer engagement, and leverage data for better decision-making.`,
     src: insurance,
-    href: "/industries/manufacturing",
+    href: "/industries/insurance",
     id: 14,
   },
-  {
-    name: `E-commerce`,
-    description: `Our e-commerce solutions enhance online retail with intuitive interfaces, secure payment systems, and personalized product recommendations. We help businesses create seamless shopping experiences that drive customer satisfaction and loyalty.`,
-    src: ecommerce,
-    href: "/industries/retail-and-ecommerce",
-    id: 15,
-  },
+  // {
+  //   name: `E-commerce`,
+  //   description: `Our e-commerce solutions enhance online retail with intuitive interfaces, secure payment systems, and personalized product recommendations. We help businesses create seamless shopping experiences that drive customer satisfaction and loyalty.`,
+  //   src: ecommerce,
+  //   href: "/industries/retail-and-ecommerce",
+  //   id: 15,
+  // },
   {
     name: `Real estate`,
     description: `We enable real estate businesses with solutions for property management, virtual tours, and customer relationship management. Our technology helps streamline transactions, enhance property listings, and improve client interactions.`,
@@ -139,13 +139,13 @@ const allIndustriesObj = [
     name: `Astrology and Horoscope`,
     description: `Our astrology solutions offer personalized readings, horoscope predictions, and other astrological services for users. We provide a platform for astrologers to connect with clients and deliver tailored experiences.`,
     src: astro,
-    href: "/industries/manufacturing",
+    href: "/industries/astrology-and-horoscope",
     id: 17,
   },
 ];
 const IndustriesMain = () => {
   return (
-    <div className="">
+    <div className="bg-[#E9D9FF]">
       <Hero
         heading={`industries we serve`}
         bgImage={industriesHero}
@@ -153,18 +153,18 @@ const IndustriesMain = () => {
       />
       <div className="space-y-6 px-4 m-6">
         {allIndustriesObj.map((industry) => (
-          <Link to={industry.href} key={industry.id} className="block">
+          <Link to={industry.href} key={industry} className="block">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="flex flex-col md:flex-row items-center rounded-2xl p-4 max-w-6xl mx-auto shadow-xl hover:bg-gray-100 transition-colors duration-200"
+              className="flex flex-col md:flex-row items-center rounded-2xl p-6 max-w-6xl mx-auto shadow-xl bg-gray-50 hover:bg-gray-200 transition-colors duration-200"
             >
               {/* Image Section */}
               <div
                 className={`w-full md:w-1/2 mb-4 md:mb-0 ${
-                  industry.id % 2 === 0 ? "md:order-1" : "md:order-2"
+                  industry % 2 === 0 ? "md:order-1" : "md:order-2"
                 }`}
               >
                 <img
@@ -177,7 +177,7 @@ const IndustriesMain = () => {
               {/* Text Section */}
               <div
                 className={`w-full md:w-1/2 text-center md:text-left ${
-                  industry.id % 2 === 0
+                  industry % 2 === 0
                     ? "md:order-2 md:pl-6"
                     : "md:order-1 md:pr-6"
                 }`}

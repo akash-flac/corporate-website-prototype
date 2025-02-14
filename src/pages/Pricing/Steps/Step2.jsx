@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Footer from "../../../components/Footer";
 import NavBar from "../../../components/NavBar";
 import ProgressBar from "../../../components/ProgressBar";
+import { Link } from "react-router";
 
 const industries = [
   "Internal use (to support business operations or enhance client experience)",
@@ -54,18 +55,18 @@ const Step2 = () => {
         </div>
 
         <div className="m-6 flex flex-row gap-4">
-          <a
-            href="/cost-calculator/1"
+          <Link
+            to="/cost-calculator/1"
             className="px-6 py-2 text-white bg-[#330073] hover:bg-[#E9D9FF] hover:text-gray-700 rounded-full text-center w-full"
           >
             Prev
-          </a>
-          <a
-            href="/cost-calculator/3"
+          </Link>
+          <Link
+            to="/cost-calculator/3"
             className="px-6 py-2 text-white bg-[#330073] hover:bg-[#E9D9FF] hover:text-gray-700 rounded-full text-center w-full"
           >
             Next
-          </a>
+          </Link>
         </div>
       </div>
       <Footer />
