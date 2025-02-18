@@ -1,14 +1,35 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const ServicesCommon = ({ obj }) => {
+  const [scrolled, setScrolled] = useState(false);
+
+  // When scrollY > 200, we update state to trigger our layout change.
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-[#E9D9FF] flex items-center justify-center py-10 px-4 sm:px-6 lg:px-8">
+    <div
+      className={`min-h-screen bg-[#E9D9FF] flex items-center justify-center transition-all duration-500 ease-in-out py-10 px-4 sm:px-6 lg:px-8 ${
+        scrolled ? "flex-row" : "flex-col"
+      }`}
+    >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="bg-white text-[#330073] rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl max-w-3xl w-full border hover:shadow-3xl transition-shadow duration-300"
+        className={`bg-white text-[#330073] rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl max-w-3xl w-full border hover:shadow-3xl transition-transform duration-500 ease-in-out ${
+          scrolled ? "-translate-x-10" : "translate-x-0"
+        }`}
       >
         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6">
           <span className="text-5xl sm:text-6xl drop-shadow-lg">
@@ -46,6 +67,8 @@ const ServicesCommon = ({ obj }) => {
           ))}
         </div>
       </motion.div>
+
+      
     </div>
   );
 };

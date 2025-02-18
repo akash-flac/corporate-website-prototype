@@ -5,23 +5,21 @@ import { Link } from "react-router";
 
 const links = [
   {
-    title: "Product",
+    title: "Products",
     items: [
-      { name: "Employee Database", href: "" },
-      { name: "Payroll", href: "" },
-      { name: "Absences", href: "" },
-      { name: "Time Tracking", href: "" },
-      { name: "Shift Planner", href: "" },
-      { name: "Recruiting", href: "" },
+      { name: "ERP", href: "/solutions/erp" },
+      { name: "CRM", href: "/solutions/crm" },
+      { name: "e-commerce", href: "/solutions/e-commerce" },
+      { name: "OTT Platform", href: "/solutions/erp" },
     ],
   },
   {
     title: "Information",
     items: [
       { name: "FAQs", href: "/about/faqs" },
-      { name: "Blog", href: "/*" },
+      { name: "Blogs", href: "/*" },
       { name: "Support", href: "/contact-us" },
-      { name: "News", href: "/*" },
+      // { name: "News", href: "/*" },
     ],
   },
   {
@@ -30,7 +28,7 @@ const links = [
       { name: "About Us", href: "/about/company" },
       { name: "Careers", href: "/about/careers" },
       { name: "Contact Us", href: "/contact-us" },
-      { name: "Lift Media", href: "/*" },
+      // { name: "Lift Media", href: "/*" },
     ],
   },
 ];

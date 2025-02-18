@@ -6,7 +6,7 @@ import Footer from "../../components/Footer";
 const ThankYou = () => (
   <div className="flex flex-col min-h-screen">
     <NavBar isBlack={true} />
-    <div className="flex-grow flex items-center justify-center px-4 py-10">
+    <div className="flex-grow flex items-center justify-center px-4 py-10 mt-20">
       <div className="w-full max-w-3xl p-6 bg-white text-center shadow-lg rounded-lg">
         <div className="flex justify-center items-center mb-4">
           <img
