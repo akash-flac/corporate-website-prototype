@@ -7,9 +7,9 @@ import ServicesCommon from "../../components/ServicesCommon";
 const DevOps = () => {
   return (
     <div>
-      <Hero heading={devOpsObj.title} bgImage={devOpsObj.src} content={devOpsObj.description}/>
+      {/* <Hero heading={devOpsObj.title} bgImage={devOpsObj.src} content={devOpsObj.description}/> */}
       <ServicesCommon obj={devOpsObj} />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

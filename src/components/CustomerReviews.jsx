@@ -86,7 +86,7 @@ const CustomerReviews = () => {
       onTouchEnd={handleSwipe}
     >
       <div>
-        <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed text-center pb-4 md:pb-3 font-semibold text-[#330073]">
+        <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed text-center pb-4 md:pb-3 font-semibold text-[#330073] font-montserrat">
           Why customers love{" "}
           <span className="font-bold lg:block">working with us</span>
         </h1>
@@ -105,7 +105,7 @@ const CustomerReviews = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.5 }}
-                className="text-base sm:text-lg text-center font-normal font-serif px-5 leading-relaxed text-gray-700 line-clamp-8 sm:line-clamp-4"
+                className="text-base sm:text-lg text-center font-normal px-5 leading-relaxed text-gray-700 line-clamp-8 sm:line-clamp-4 font-poppins"
                 onClick={() => isOverflowing && setIsModalOpen(true)}
               >
                 {currentReviewer.review}
@@ -113,17 +113,17 @@ const CustomerReviews = () => {
               {/* </AnimatePresence> */}
               {isOverflowing && (
                 <button
-                  className="absolute bottom-2 right-2 text-sm text-blue-500 underline cursor-pointer"
+                  className="absolute bottom-2 right-2 text-sm text-blue-500 underline cursor-pointer font-plex"
                   onClick={() => setIsModalOpen(true)}
                 >
                   Read more
                 </button>
               )}
             </div>
-            <p className="text-sm font-semibold text-gray-800 mt-1">
+            <p className="text-sm font-semibold text-gray-800 mt-1 font-montserrat">
               {currentReviewer.name}
             </p>
-            <p className="text-sm text-gray-500 italic m-1 text-center">
+            <p className="text-sm text-gray-500 italic m-1 text-center font-poppins">
               {currentReviewer.reviewerDesc}
             </p>
 

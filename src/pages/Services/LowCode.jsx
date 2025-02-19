@@ -7,9 +7,7 @@ import ServicesCommon from "../../components/ServicesCommon";
 const LowCode = () => {
   return (
     <div>
-      <Hero heading={lowCodeObj.title} bgImage={lowCodeObj.src} content={lowCodeObj.description}/>
       <ServicesCommon obj={lowCodeObj} />
-      <Footer />
     </div>
   );
 };

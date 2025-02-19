@@ -81,6 +81,7 @@ import Automotive from "./pages/Industries/Automotive";
 import OilGas from "./pages/Industries/OilGas";
 import ScrollToTop from "./components/ScrollToTop";
 import NotFoundPage from "./pages/NotFoundPage";
+import AiMl from "./pages/Services/AiMl";
 
 function App() {
   return (
@@ -120,6 +121,7 @@ function App() {
             />
             <Route path="saas-products" element={<SaasProducts />} />
             <Route path="it-consulting" element={<ItConsulting />} />
+            <Route path="aiml-services" element={<AiMl />} />
             <Route path="all-services" element={<ServicesMain />} />
           </Route>
 

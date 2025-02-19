@@ -182,10 +182,10 @@ const IndustriesMain = () => {
                     : "md:order-1 md:pr-6"
                 }`}
               >
-                <h2 className="text-2xl font-bold text-purple-900 mb-4 uppercase">
+                <h2 className="text-2xl font-bold text-purple-900 mb-4 uppercase font-montserrat">
                   {industry.name}
                 </h2>
-                <p className="text-lg text-gray-800">{industry.description}</p>
+                <p className="text-lg text-gray-800 font-poppins">{industry.description}</p>
               </div>
             </motion.div>
           </Link>

@@ -31,7 +31,7 @@ const faqSections = {
         We believe in complete transparency and collaboration with our clients regarding white-label software development. We understand that every business has unique requirements and needs, and we work closely with our clients to ensure that we meet all their specific needs. We also offer 24/7 support and maintenance services to ensure that our client’s businesses always run smoothly.`,
     },
   ],
-  Pricing: [
+  "Pricing": [
     {
       id: 5,
       question: "What is the pricing structure for your services?",

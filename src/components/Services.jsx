@@ -17,7 +17,7 @@ const Services = ({ renderComplete }) => {
   return (
     <div>
       <div className="my-8">
-        <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-2 font-semibold text-[#330073] text-center">
+        <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-2 font-semibold text-[#330073] text-center font-montserrat">
           Services We Offer
         </h1>
         <div className="flex justify-evenly flex-wrap mx-6">
@@ -37,10 +37,10 @@ const Services = ({ renderComplete }) => {
                 ) : (
                   <Code2 className="size-6 text-[#330073] group-hover:text-white mb-2" />
                 )}
-                <h5 class="mb-2 text-slate-800 text-xl text-center font-semibold group-hover:text-white">
+                <h5 class="mb-2 text-slate-800 text-xl text-center font-semibold group-hover:text-white font-montserrat">
                   {service.name}
                 </h5>
-                <p class="text-slate-700 leading-normal text-sm text-center font-light group-hover:text-slate-400">
+                <p class="text-slate-700 leading-normal text-sm text-center font-light group-hover:text-slate-400 font-poppins">
                   {service.description}
                 </p>
               </div>
@@ -54,7 +54,7 @@ const Services = ({ renderComplete }) => {
         <div className="flex justify-center items-center">
           <a
             href="/services/all-services"
-            className=" px-6 py-2 bg-[#330073] text-white text-center rounded-full hover:bg-[#330073] transition duration-300"
+            className=" px-6 py-2 bg-[#330073] text-white text-center rounded-full hover:bg-[#330073] transition duration-300 font-plex"
           >
             View More
           </a>

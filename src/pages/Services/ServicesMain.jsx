@@ -22,13 +22,13 @@ const ServicesMain = () => {
       {/*  */}
 
       <div className="flex flex-col items-center p-8 mx-10">
-        <h2 className="text-2xl font-semibold text-[#330073] mb-8">
+        <h2 className="text-2xl font-semibold text-[#330073] mb-8 font-montserrat">
           How it Works
         </h2>
 
         <div className="relative flex flex-col md:flex-row justify-center items-center gap-8">
           {/* Step 1 */}
-          <div className="relative flex flex-col items-center text-center bg-purple-100 p-6 rounded-2xl shadow-lg w-64">
+          <div className="relative flex flex-col items-center text-center bg-purple-100 p-6 rounded-2xl shadow-lg w-64 transition-all ease-in-out duration-500 hover:scale-105 font-poppins">
             <div className="bg-white text-black p-4 rounded-xl shadow-md">
               <MagnifyingGlassIcon className="text-[#330073] w-10 h-10" />
             </div>
@@ -85,7 +85,7 @@ const ServicesMain = () => {
           </div>
 
           {/* Step 2 */}
-          <div className="relative flex flex-col items-center text-center bg-purple-100 p-6 rounded-2xl shadow-lg w-64">
+          <div className="relative flex flex-col items-center text-center bg-purple-100 p-6 rounded-2xl shadow-lg w-64 transition-all ease-in-out duration-500 hover:scale-105 font-poppins">
             <div className="bg-white p-4 rounded-xl shadow-md">
               {/* <img
                 src="/icons/solution-icon.svg"
@@ -147,7 +147,7 @@ const ServicesMain = () => {
           </div>
 
           {/* Step 3 */}
-          <div className="relative flex flex-col items-center text-center bg-purple-100 p-6 rounded-2xl shadow-lg w-64">
+          <div className="relative flex flex-col items-center text-center bg-purple-100 p-6 rounded-2xl shadow-lg w-64 transition-all ease-in-out duration-500 hover:scale-105 font-poppins">
             <div className="bg-white p-4 rounded-xl shadow-md">
               <PenTool className="text-[#330073] w-10 h-10" />
             </div>

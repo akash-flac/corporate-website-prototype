@@ -20,8 +20,8 @@ const OurMission = () => {
           alt="mission"
           className="rounded-2xl my-3 md:h-72"
         />
-        <p className="max-w-xl text-md md:text-xl text-center lg:text-start md:mx-4">
-          <h1 className="font-bold my-3">Our Mission</h1>
+        <p className="max-w-xl text-md md:text-xl text-center lg:text-start md:mx-4 font-poppins">
+          <h1 className="font-bold my-3 font-montserrat">Our Mission</h1>
           At Markle Tech & Media, our mission extends beyond delivering
           technology solutions—we aim to create meaningful change that empowers
           businesses and individuals alike. We believe that every business has a

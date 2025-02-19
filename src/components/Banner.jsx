@@ -18,14 +18,14 @@ const ContactLink = ({ type, value }) => {
 
 export default function Banner() {
   return (
-    <div className="bg-[#330073] relative items-center overflow-hidden px-4 sm:px-6 py-2 md:py-1 hidden sm:flex justify-between md:items-center z-10">
+    <div className="bg-[#330073] relative items-center overflow-hidden px-4 sm:px-12 py-2 md:py-1 hidden sm:flex justify-between md:items-center z-10">
       {/* Left Section: 8 Years Image (Hidden on Mobile) */}
       <div className="hidden md:flex items-center gap-4">
         <img src={yearsImg} alt="8 years" className="h-8 w-auto" />
       </div>
 
       {/* Center Section: Contact Information */}
-      <div className="flex flex-col sm:flex-row items-center text-center md:text-left gap-2 md:gap-4 mx-3">
+      <div className="flex flex-col sm:flex-row items-center text-center md:text-left gap-2 md:gap-4 mx-3 font-montserrat">
         <p className="text-sm text-white font-semibold uppercase">
           <ContactLink type="email" value="Contact@markletech.com" />
         </p>
@@ -79,14 +79,14 @@ export default function Banner() {
       </div>
 
       {/* Login Button */}
-      <div className="flex items-center justify-center md:ml-4">
+      {/* <div className="flex items-center justify-center md:ml-4 font-montserrat">
         <a
           href="/login"
           className="text-white font-semibold uppercase hover:underline"
         >
           LOGIN
         </a>
-      </div>
+      </div> */}
     </div>
   );
 }

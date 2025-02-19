@@ -7,9 +7,7 @@ import ServicesCommon from "../../components/ServicesCommon";
 const MobileAppDevelopment = () => {
   return (
     <div>
-      <Hero heading={mobileAppObj.title} bgImage={mobileAppObj.src} content={mobileAppObj.description}/>
       <ServicesCommon obj={mobileAppObj} />
-      <Footer />
     </div>
   );
 };

@@ -143,7 +143,7 @@ const solutionsObj = [
     icon: ClipboardDocumentListIcon,
   },
   {
-    name: "Human Resources Management System",
+    name: "HRMS",
     // description: "Build strategic funnels that will convert",
     href: "/solutions/hrms",
     icon: UserIcon,

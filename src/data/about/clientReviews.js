@@ -15,6 +15,7 @@ export const reviews = [
     id: 1,
     icon: sarahPatel,
     reviewerDesc: "Operations Manager at NextGen Retailers",
+    stars: 5,
   },
   {
     name: "Rahul Deo",
@@ -23,6 +24,7 @@ export const reviews = [
     id: 2,
     icon: rahulDeo,
     reviewerDesc: "CEO of TechWave Solutions",
+    stars: 5,
   },
   {
     name: "Akash",
@@ -31,6 +33,7 @@ export const reviews = [
     id: 3,
     icon: akash,
     reviewerDesc: "Founder of BuildTech Innovations",
+    stars: 5,
   },
   {
     name: "Nitin Jain",
@@ -39,6 +42,7 @@ export const reviews = [
     id: 4,
     icon: nitinJain,
     reviewerDesc: "Co-Founder of GreenSpark Technologies",
+    stars: 5,
   },
   {
     name: "Neha Kapoor",
@@ -47,6 +51,7 @@ export const reviews = [
     id: 5,
     icon: nehaKapoor,
     reviewerDesc: "CTO of FutureTech Enterprises",
+    stars: 4,
   },
   {
     name: "James Anderson",
@@ -55,21 +60,24 @@ export const reviews = [
     id: 6,
     icon: jamesAnderson,
     reviewerDesc: "IT Director at Optima Solutions, New York, USA",
+    stars: 4,
   },
   {
     name: "Rebecca Harris",
     review:
-      "Markletech provided invaluable advice and implementation services as we moved to the cloud. Their experts took the time to understand our business requirements, and the result was a seamless transition that minimized downtime. Excellent service!",
+      "Markle Tech provided invaluable advice and implementation services as we moved to the cloud. Their experts took the time to understand our business requirements, and the result was a seamless transition that minimized downtime. Excellent service!",
     id: 7,
     icon: rebeccaHarris,
     reviewerDesc: "Head of IT at CloudBridge Ltd., London, UK",
+    stars: 3,
   },
   {
     name: "Daniel Clark",
     review:
-      "Our company has been working with Markletech for over a year now, and their IT consulting services have been outstanding. Their team is proactive, always anticipating our needs and offering solutions that keep us ahead of the curve. They’re a true asset to our business.",
+      "Our company has been working with Markle Tech for over a year now, and their IT consulting services have been outstanding. Their team is proactive, always anticipating our needs and offering solutions that keep us ahead of the curve. They’re a true asset to our business.",
     id: 8,
     icon: danielClark,
     reviewerDesc: "CEO of TechWave Pty Ltd., Sydney, Australia",
+    stars: 5,
   },
 ];

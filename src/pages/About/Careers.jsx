@@ -38,7 +38,7 @@ const Careers = () => {
       <div class="">
         <div class="p-4 bg-white shadow-md sm:p-10 sm:px-32 ">
           <div class="flex justify-center items-center mb-4">
-            <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed font-semibold text-[#330073] text-center">
+            <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed font-semibold text-[#330073] text-center font-montserrat">
               Careers
             </h1>
             {/* <a
@@ -48,7 +48,7 @@ const Careers = () => {
               View all
             </a> */}
           </div>
-          <div class="flow-root">
+          <div class="flow-root font-poppins">
             <ul role="list" class="divide-y divide-gray-200 ">
               {careerObj.map((career) => (
                 <li key={career.id} class="p-4 py-3 sm:py-4 hover:bg-gray-50">

@@ -9,7 +9,7 @@ const Goal = () => {
             <img src="src\images\pink-cube.png" alt="" className="md:w-32 lg:w-40 xl:w-36 z-20" />
           </div>
 
-          <p className="text-white text-center px-5 md:px-10 md:pe-32 lg:px-12 lg:pe-40 py-5 text-sm sm:text-lg md:text-xl lg:text-2xl break-normal">
+          <p className="text-white text-center px-5 md:px-10 md:pe-32 lg:px-12 lg:pe-40 py-5 text-sm sm:text-lg md:text-xl lg:text-2xl break-normal font-poppins">
             Our goal is to develop custom software solutions that empower
             businesses, streamline processes and provide an opportunity to
             establish as renowned brands.

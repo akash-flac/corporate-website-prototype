@@ -7,13 +7,7 @@ import ServicesCommon from "../../components/ServicesCommon";
 const ECommerce = () => {
   return (
     <div>
-      <Hero
-        heading={eCommerceObj.title}
-        bgImage={eCommerceObj.src}
-        content={eCommerceObj.description}
-      />
       <ServicesCommon obj={eCommerceObj} />
-      <Footer />
     </div>
   );
 };

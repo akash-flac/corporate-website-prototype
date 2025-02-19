@@ -167,12 +167,12 @@ const Pricing = () => {
             className="max-w-6xl w-full bg-white rounded-xl shadow-lg p-6 my-4 mx-0"
           >
             {/* Heading */}
-            <h2 className="text-xl md:text-3xl font-extrabold text-purple-800 m-4 text-center uppercase tracking-wide">
+            <h2 className="text-xl md:text-3xl font-extrabold text-[#330073] m-4 text-center uppercase tracking-wide font-montserrat">
               {component.heading}
             </h2>
 
             {/* Description */}
-            <p className="font-light text-lg md:text-xl text-gray-700 text-justify md:text-center p-4 leading-relaxed">
+            <p className="font-light text-lg md:text-xl text-gray-600 text-justify md:text-center p-4 leading-relaxed font-poppins">
               {component.desc}
             </p>
 
@@ -192,10 +192,10 @@ const Pricing = () => {
                   />
 
                   {/* Dark Overlay (Hover Effect Added) */}
-                  <div className="absolute inset-0 bg-black group bg-opacity-40 group-hover:bg-opacity-60 transition duration-300 ease-in-out"></div>
+                  <div className="absolute inset-0 bg-black group bg-opacity-50 group-hover:bg-opacity-65 transition duration-300 ease-in-out"></div>
 
                   {/* Text Overlay */}
-                  <p className="absolute inset-0 flex items-center justify-center text-white font-semibold text-lg px-3 text-center leading-tight">
+                  <p className="absolute inset-0 flex items-center justify-center text-white font-semibold text-lg px-3 text-center leading-tight font-plex">
                     {img.title}
                   </p>
                 </Link>
@@ -207,12 +207,12 @@ const Pricing = () => {
       <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4 bg-[#E9D9FF]">
         <div className="max-w-6xl w-full bg-white rounded-xl shadow-lg p-6 my-4 mx-0">
           {/* Heading */}
-          <h2 className="text-xl md:text-3xl font-extrabold text-purple-800 m-4 text-center uppercase tracking-wide">
+          <h2 className="text-xl md:text-3xl font-extrabold text-[#330073] m-4 text-center uppercase tracking-wide font-montserrat">
             Pricing Models We Rely On
           </h2>
 
           {/* Description */}
-          <p className="font-medium text-md md:text-xl text-gray-700 text-justify md:text-center p-4 leading-relaxed">
+          <p className="font-medium text-md md:text-xl text-gray-700 text-justify md:text-center p-4 leading-relaxed font-poppins">
             Markle offers flexible pricing models tailored to the cooperation
             scope and the client’s budget limitations. Depending on the required
             services, we employ time and materials (T&M), time and materials
@@ -226,12 +226,12 @@ const Pricing = () => {
       <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4 bg-[#E9D9FF]">
         <div className="max-w-6xl w-full bg-white rounded-xl shadow-lg p-6 my-4 mx-0">
           {/* Heading */}
-          <h2 className="text-xl md:text-3xl font-extrabold text-purple-800 m-4 text-center uppercase tracking-wide">
+          <h2 className="text-xl md:text-3xl font-extrabold text-[#330073] m-4 text-center uppercase tracking-wide font-montserrat">
             Check Our Sample Estimates
           </h2>
 
           {/* Description */}
-          <p className="font-medium text-md md:text-xl text-gray-700 text-justify md:text-center p-4 leading-relaxed">
+          <p className="font-medium text-md md:text-xl text-gray-700 text-justify md:text-center p-4 leading-relaxed font-poppins">
             The estimates provided here are not ScienceSoft's official pricing.
             We assess the cost of each project individually, based on our
             clients' specific situations and needs. Feel free to use our cost

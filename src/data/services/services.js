@@ -6,6 +6,7 @@ import {
   CheckBadgeIcon,
   CodeBracketIcon,
   Cog6ToothIcon,
+  CpuChipIcon,
   CursorArrowRaysIcon,
   DevicePhoneMobileIcon,
   EllipsisHorizontalIcon,
@@ -49,6 +50,7 @@ import lowCodeImg from "/src/images/services/servicesHero/low-code.jpg";
 import digitalMarketingImg from "/src/images/services/servicesHero/digital-marketing.jpg";
 import saasImg from "/src/images/services/servicesHero/saas.jpg";
 import ItConsulting from "/src/images/services/servicesHero/it-consulting.jpeg";
+import aiMlImg from "/src/images/services/servicesHero/aiMl.jpg";
 
 const servicesObj = [
   {
@@ -115,11 +117,11 @@ const servicesObj = [
     icon: LucideCloudLightning,
   },
   {
-    name: "Testing and QA",
+    name: "AI & Machine Learning Solutions",
     description:
-      "Ensure your product's quality with thorough testing and quality assurance services",
-    href: "/services/testing-and-quality-assurance",
-    icon: CheckBadgeIcon,
+      "Harness the power of AI and ML for automation, predictive analytics, NLP, computer vision, and intelligent business insights.",
+    href: "/services/aiml-services",
+    icon: CpuChipIcon,
   },
   {
     name: "IT Consulting",
@@ -127,6 +129,13 @@ const servicesObj = [
       "Develop scalable and user-friendly SaaS applications to meet modern business demands",
     href: "/services/it-consulting",
     icon: CloudIcon,
+  },
+  {
+    name: "Testing and QA",
+    description:
+      "Ensure your product's quality with thorough testing and quality assurance services",
+    href: "/services/testing-and-quality-assurance",
+    icon: CheckBadgeIcon,
   },
   {
     name: "SaaS Products",
@@ -492,6 +501,35 @@ const saasProductsObj = {
   icon: "☁",
 };
 
+const aiMlObj = {
+  title: "Artificial Intelligence & Machine Learning Solutions",
+  src: aiMlImg, // Replace with actual image source
+  description:
+    "Leverage AI and ML to drive automation, optimize processes, and extract valuable insights. Our intelligent solutions help businesses enhance decision-making, improve efficiency, and stay ahead in a data-driven world.",
+  details:
+    "We provide cutting-edge AI and ML solutions tailored to your business needs, from predictive analytics and deep learning to NLP and computer vision. Our expertise ensures seamless integration with your existing systems, allowing for intelligent automation, real-time insights, and scalable AI-driven applications. We prioritize ethical AI development, ensuring transparency, security, and accuracy in all our AI models.",
+  extendedContent:
+    "Our AI & ML development process begins with understanding your business challenges and data infrastructure. We then design, train, and deploy custom AI models using the latest advancements in deep learning, reinforcement learning, and big data analytics. Our team specializes in AI-powered automation, chatbots, predictive modeling, and intelligent data processing. Whether you need AI-driven customer insights, process automation, or advanced analytics, our solutions are built to enhance efficiency and scalability. Additionally, we provide continuous monitoring, optimization, and retraining of AI models to keep them relevant in an ever-evolving digital landscape.",
+  keywords: [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Deep Learning",
+    "Predictive Analytics",
+    "Computer Vision",
+    "Natural Language Processing",
+    "AI Automation",
+    "Data Science",
+    "Big Data",
+    "Neural Networks",
+    "AI Chatbots",
+    "Reinforcement Learning",
+    "AI for Business Intelligence",
+    "Cloud AI Solutions",
+    "Smart Recommendations",
+  ],
+  icon: "🤖",
+};
+
 export {
   servicesObj,
   softwareObj,
@@ -506,4 +544,5 @@ export {
   testingObj,
   itConsultingObj,
   saasProductsObj,
+  aiMlObj,
 };

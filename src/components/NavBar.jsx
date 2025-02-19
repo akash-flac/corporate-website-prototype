@@ -64,7 +64,7 @@ import { motion } from "framer-motion";
 import LogoBlack from "/markle-logo-black.png";
 const callsToAction = [
   { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  { name: "Get Consultations", href: "#", icon: PhoneIcon },
+  { name: "Get Consultation", href: "tel:+91-7982 332 070", icon: PhoneIcon },
 ];
 
 const NavBar = ({ isBlack = false }) => {
@@ -94,7 +94,7 @@ const NavBar = ({ isBlack = false }) => {
             : "bg-transparent top-0 sm:top-10"
         }`}
       >
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between font-montserrat">
           <div className="flex flex-1">
             <NavLink to="/" className="m-1.5 mx-3 p-0.5 md:mx-3">
               <span className="sr-only">Markle Tech</span>
@@ -112,7 +112,7 @@ const NavBar = ({ isBlack = false }) => {
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-100"
             >
               <span className="sr-only">Open main menu</span>
-              <Bars3Icon aria-hidden="true" className="size-6" />
+              <Bars3Icon aria-hidden="true" className="size-6 sm:size-8" />
             </button>
           </div>
 
@@ -131,7 +131,7 @@ const NavBar = ({ isBlack = false }) => {
                   transition
                   className="absolute left-10 top-full z-10 mt-3 w-screen max-w-xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
                 >
-                  <div className="grid grid-cols-2 gap-4 p-4">
+                  <div className="grid grid-cols-2 gap-4 p-4 font-poppins">
                     {aboutObj.map((item) => (
                       <div
                         key={item.name}
@@ -182,7 +182,7 @@ const NavBar = ({ isBlack = false }) => {
                   transition
                   className="absolute -left-24 top-full z-10 mt-3 w-screen max-w-3xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
                 >
-                  <div className="grid grid-cols-3 gap-4 p-5">
+                  <div className="grid grid-cols-3 gap-4 p-5 font-poppins">
                     {[
                       ...servicesObj.slice(0, 11),
                       servicesObj[servicesObj.length - 1],
@@ -244,7 +244,7 @@ const NavBar = ({ isBlack = false }) => {
                   transition
                   className="absolute -left-56 top-full z-10 mt-3 w-screen max-w-3xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
                 >
-                  <div className="grid grid-cols-3 gap-4 p-5">
+                  <div className="grid grid-cols-3 gap-4 p-5 font-poppins">
                     {[
                       ...industriesObj.slice(0, 11),
                       industriesObj[industriesObj.length - 1],
@@ -290,7 +290,7 @@ const NavBar = ({ isBlack = false }) => {
                   transition
                   className="absolute mt-2 w-screen z-10 overflow-hidden -left-96 max-w-3xl rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
                 >
-                  <div className="grid grid-cols-3 gap-4 p-5">
+                  <div className="grid grid-cols-3 gap-4 p-5 font-poppins">
                     {solutionsObj.map((item) => (
                       <div
                         key={item.name}
@@ -352,7 +352,7 @@ const NavBar = ({ isBlack = false }) => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", stiffness: 200, damping: 30 }}
-            className="h-full flex flex-col p-6"
+            className="h-full flex flex-col p-6 overflow-y-scroll"
           >
             {/* Header */}
             <div className="flex items-center justify-between mx-3">

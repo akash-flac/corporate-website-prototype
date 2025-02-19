@@ -33,10 +33,10 @@ export default function Hero({ bgImage, heading, content, bgVideo }) {
           <Banner />
           <NavBar />
           <div className="px-10 max-w-5xl my-48 sm:my-40 lg:my-48 text-left">
-            <h1 className="text-2xl tracking-normal uppercase sm:text-5xl md:text-6xl lg:text-7xl font-black">
+            <h1 className="text-2xl tracking-normal uppercase sm:text-5xl md:text-6xl lg:text-7xl font-black font-montserrat">
               {heading}
             </h1>
-            <p className="mt-8 text-lg font-medium text-gray-300 sm:text-xl leading-relaxed">
+            <p className="mt-8 text-lg font-medium text-gray-300 sm:text-xl leading-relaxed font-poppins">
               {content}
             </p>
           </div>

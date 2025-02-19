@@ -47,14 +47,14 @@ const Footer = () => {
               </Link>
               <div className="md:my-6">
                 <hr class="w-full my-3 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-3" />
-                <p className="text-white text-justify max-w-lg">
+                <p className="text-white text-justify max-w-lg font-montserrat">
                   Subscribe to our newsletter and unlock a world of exclusive
                   benefits. Be the first to know about our latest products,
                   special promotions, and exciting updates.
                 </p>
               </div>
             </div>
-            <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 mx-4 sm:place-content-center md:mx-5 md:place-items-start">
+            <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 mx-4 sm:place-content-center md:mx-5 md:place-items-start font-montserrat">
               {links.map((link, index) => (
                 <div key={index}>
                   <h2 class="mb-3 text-sm font-semibold text-gray-900 uppercase dark:text-white">
@@ -74,7 +74,7 @@ const Footer = () => {
             </div>
           </div>
           <hr class="my-4 border-gray-200 sm:mx-auto dark:border-gray-700" />
-          <div class="flex flex-col items-center sm:flex md:flex-row sm:items-center sm:justify-around">
+          <div class="flex flex-col items-center sm:flex md:flex-row sm:items-center sm:justify-around font-montserrat">
             <Typography
               variant="small"
               className="mb-2 text-center font-normal text-white md:mb-0"

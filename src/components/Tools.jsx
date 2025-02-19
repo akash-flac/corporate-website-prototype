@@ -286,7 +286,7 @@ export default function Tools() {
 
   return (
     <div className="py-4 sm:p-6 lg:p-10">
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-[#330073] mb-4">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-[#330073] mb-4 font-montserrat">
         Tools We Use
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-6 sm:space-x-4 mb-4 sm:mb-6">
@@ -294,10 +294,10 @@ export default function Tools() {
           <button
             key={category.category}
             onClick={() => setActiveHeading(category.category)}
-            className={`px-4 sm:px-4 py-1 sm:py-2 rounded-full font-semibold font-mono transition-colors duration-300 text-left sm:text-center ${
+            className={`px-4 sm:px-4 py-1 sm:py-2 rounded-full font-semibold transition-colors duration-300 text-left sm:text-center font-plex ${
               activeHeading === category.category
                 ? "text-[#330073] "
-                : "text-gray-400"
+                : "text-gray-500"
             }`}
           >
             {category.category}
@@ -348,7 +348,7 @@ export default function Tools() {
                   alt="Item Logo"
                   className="w-12 h-12 sm:w-16 sm:h-16 mb-2 mx-auto"
                 />
-                <p className="text-sm sm:text-base text-gray-700 text-center">
+                <p className="text-sm sm:text-base text-gray-900 text-center font-poppins">
                   {item.content}
                 </p>
               </motion.div>

@@ -5,11 +5,11 @@ const Achievements = () => {
   return (
     <div className="m-10">
       <div className="m-2">
-        <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-0 font-semibold text-[#330073] text-center">
+        <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-0 font-semibold text-[#330073] text-center font-montserrat">
           Our <span className="font-bold">Achievements</span>
         </h1>
         <div className="flex justify-center">
-          <p className="font-light text-gray-600 text-sm md:text-lg md:max-w-7xl text-center">
+          <p className="text-gray-600 text-center text-sm md:text-lg max-w-3xl mx-auto mt-2 font-poppins">
             We are empowering businesses of all sizes to achieve digital
             dominance.
           </p>

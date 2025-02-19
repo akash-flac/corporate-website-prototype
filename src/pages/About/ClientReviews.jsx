@@ -20,6 +20,7 @@ const ClientReviews = () => {
             reviewerDesc={`${reviewer.reviewerDesc}`}
             review={`${reviewer.review}`}
             reviewerIcon={`${reviewer.icon}`}
+            stars={`${reviewer.stars}`}
           />
         ))}
       </div>

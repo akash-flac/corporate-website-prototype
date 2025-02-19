@@ -5,6 +5,7 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 import { motion } from "motion/react";
+import faqSections from "../data/about/faqs";
 
 const faqObj = [
   {
@@ -350,7 +351,7 @@ export const AccordionItem = ({ item, open, handleOpen }) => {
   return (
     <Accordion
       open={open === item.id}
-      className={`mb-1 p-4 md:p-1 rounded-lg border border-blue-gray-100 md:px-6 transition-all ease-in-out  ${
+      className={`mb-1 p-4 md:p-1 rounded-lg border border-blue-gray-100 md:px-6 transition-all ease-in-out font-poppins ${
         open === item.id ? " bg-[#330073]" : " bg-[#E9D9FF]"
       }`}
     >
@@ -359,7 +360,7 @@ export const AccordionItem = ({ item, open, handleOpen }) => {
         className="flex cursor-pointer items-center justify-between"
       >
         <AccordionHeader
-          className={`border-b-0 text-sm sm:text-lg md:text-xl transition-all ease-in-out ${
+          className={`border-b-0 text-sm sm:text-lg md:text-lg transition-all ease-in-out ${
             open === item.id ? "text-white " : "text-[#330073]"
           }`}
         >
@@ -392,7 +393,7 @@ export const AccordionItem = ({ item, open, handleOpen }) => {
       </div>
 
       <AccordionBody
-        className={`py-2 sm:pe-12 text-md sm:text-lg md:text-2xl font-light md:font-normal ${
+        className={`py-2 sm:pe-12 text-md sm:text-lg font-light md:font-normal ${
           open === item.id ? "text-white" : ""
         }`}
       >
@@ -410,11 +411,11 @@ const FAQ = () => {
     <div className="m-4 md:m-8">
       {/* Heading */}
       <div className="">
-        <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed font-semibold text-[#330073] text-center">
+        <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed font-semibold text-[#330073] text-center font-montserrat">
           Frequently Asked <span className="font-bold">Questions</span>{" "}
         </h1>
         <div className="flex justify-center">
-          <p className="font-light text-gray-600 text-sm md:text-lg md:max-w-7xl text-center">
+          <p className="text-gray-600 text-sm md:text-lg md:max-w-7xl text-center font-poppins">
             Here's a list of FAQs that will help you to know more about Markle
             Tech.
           </p>
@@ -422,7 +423,7 @@ const FAQ = () => {
 
         {/* Accordion for FAQs */}
         <div className="m-4">
-          {faqObj.slice(0, window.innerWidth < 640 ? 3 : 5).map((item) => (
+          {faqSections["About Markle"].slice(0, window.innerWidth < 640 ? 3 : 5).map((item) => (
             <AccordionItem
               key={item.id}
               item={item}
@@ -434,7 +435,7 @@ const FAQ = () => {
         <div className="flex justify-center items-center">
           <a
             href="/about/faqs"
-            className=" px-6 py-2 bg-[#3b0b7d] text-white text-center rounded-full hover:bg-[#3b0b7d] transition duration-300"
+            className=" px-6 py-2 bg-[#3b0b7d] text-white text-center rounded-full hover:bg-[#3b0b7d] transition duration-300 font-plex"
           >
             View More
           </a>
