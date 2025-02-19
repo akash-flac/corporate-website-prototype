@@ -64,7 +64,7 @@ import { motion } from "framer-motion";
 import LogoBlack from "/markle-logo-black.png";
 const callsToAction = [
   { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  { name: "Contact Sales", href: "#", icon: PhoneIcon },
+  { name: "Get Consultations", href: "#", icon: PhoneIcon },
 ];
 
 const NavBar = ({ isBlack = false }) => {
@@ -95,13 +95,13 @@ const NavBar = ({ isBlack = false }) => {
         }`}
       >
         <div className="flex items-center justify-between">
-          <div className="flex lg:flex-1">
-            <NavLink to="/" className="m-1.5 mx-3 p-0.5 md:mx-6">
+          <div className="flex flex-1">
+            <NavLink to="/" className="m-1.5 mx-3 p-0.5 md:mx-3">
               <span className="sr-only">Markle Tech</span>
               <img
                 alt="Logo"
                 src={Logo}
-                className="h-8 md:h-8 lg:w-48 lg:h-12 w-auto"
+                className="h-8 sm:h-12 sm:w-60 lg:w-44 lg:h-9"
               />
             </NavLink>
           </div>
@@ -115,213 +115,220 @@ const NavBar = ({ isBlack = false }) => {
               <Bars3Icon aria-hidden="true" className="size-6" />
             </button>
           </div>
-          <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-            <Popover className="relative">
-              <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
-                About
-                <ChevronDownIcon
-                  aria-hidden="true"
-                  className="size-5 flex-none text-gray-400"
-                />
-              </PopoverButton>
 
-              <PopoverPanel
-                transition
-                className="absolute left-10 top-full z-10 mt-3 w-screen max-w-xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
-              >
-                <div className="grid grid-cols-2 gap-4 p-4">
-                  {aboutObj.map((item) => (
-                    <div
-                      key={item.name}
-                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-lg hover:bg-gray-50"
-                    >
-                      <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        {/* {item.icon} */}
-                        {item.icon ? (
+          <div className="hidden lg:flex lg:justify-center lg:flex-1 flex-shrink">
+            <PopoverGroup className="hidden lg:flex lg:gap-x-6">
+              <Popover className="relative">
+                <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
+                  About
+                  <ChevronDownIcon
+                    aria-hidden="true"
+                    className="size-5 flex-none text-gray-400"
+                  />
+                </PopoverButton>
+
+                <PopoverPanel
+                  transition
+                  className="absolute left-10 top-full z-10 mt-3 w-screen max-w-xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                >
+                  <div className="grid grid-cols-2 gap-4 p-4">
+                    {aboutObj.map((item) => (
+                      <div
+                        key={item.name}
+                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-lg hover:bg-gray-50"
+                      >
+                        <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                          {/* {item.icon} */}
+                          {item.icon ? (
+                            <item.icon
+                              aria-hidden="true"
+                              className="size-6 text-gray-600 group-hover:text-indigo-600"
+                            />
+                          ) : (
+                            <Code2
+                              aria-hidden="true"
+                              className="size-6 text-gray-600 group-hover:text-indigo-600"
+                            />
+                          )}
+                        </div>
+                        <div className="flex-auto">
+                          <NavLink
+                            to={item.href}
+                            className="block font-semibold text-gray-900"
+                          >
+                            {item.name}
+                            <span className="absolute inset-0" />
+                          </NavLink>
+                          <p className="mt-1 text-xs text-gray-600">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </PopoverPanel>
+              </Popover>
+
+              <Popover className="relative">
+                <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
+                  Services
+                  <ChevronDownIcon
+                    aria-hidden="true"
+                    className="size-5 flex-none text-gray-400"
+                  />
+                </PopoverButton>
+
+                <PopoverPanel
+                  transition
+                  className="absolute -left-24 top-full z-10 mt-3 w-screen max-w-3xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                >
+                  <div className="grid grid-cols-3 gap-4 p-5">
+                    {[
+                      ...servicesObj.slice(0, 11),
+                      servicesObj[servicesObj.length - 1],
+                    ].map((item) => (
+                      <div
+                        key={item.name}
+                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-lg hover:bg-gray-50"
+                      >
+                        <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                           <item.icon
                             aria-hidden="true"
                             className="size-6 text-gray-600 group-hover:text-indigo-600"
                           />
-                        ) : (
-                          <Code2
+                        </div>
+                        <div className="flex-auto">
+                          <NavLink
+                            to={item.href}
+                            className="block font-semibold text-gray-900"
+                          >
+                            {item.name}
+                            <span className="absolute inset-0" />
+                          </NavLink>
+                          {/* <p className="mt-1 text-xs text-gray-600">
+                        {item.description}
+                      </p> */}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                    {callsToAction.map((item) => (
+                      <NavLink
+                        key={item.name}
+                        to={item.href}
+                        className="flex items-center justify-center gap-x-2.5 p-3 text-lg font-semibold text-gray-900 hover:bg-gray-100"
+                      >
+                        <item.icon
+                          aria-hidden="true"
+                          className="size-5 flex-none text-gray-400"
+                        />
+                        {item.name}
+                      </NavLink>
+                    ))}
+                  </div>
+                </PopoverPanel>
+              </Popover>
+
+              <Popover className="relative">
+                <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
+                  Industries
+                  <ChevronDownIcon
+                    aria-hidden="true"
+                    className="size-5 flex-none text-gray-400"
+                  />
+                </PopoverButton>
+
+                <PopoverPanel
+                  transition
+                  className="absolute -left-56 top-full z-10 mt-3 w-screen max-w-3xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                >
+                  <div className="grid grid-cols-3 gap-4 p-5">
+                    {[
+                      ...industriesObj.slice(0, 11),
+                      industriesObj[industriesObj.length - 1],
+                    ].map((item) => (
+                      <div
+                        key={item.name}
+                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-lg hover:bg-gray-50"
+                      >
+                        <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                          <item.icon
                             aria-hidden="true"
                             className="size-6 text-gray-600 group-hover:text-indigo-600"
                           />
-                        )}
+                        </div>
+                        <div className="flex-auto">
+                          <NavLink
+                            to={item.href}
+                            className="block font-semibold text-gray-900"
+                          >
+                            {item.name}
+                            <span className="absolute inset-0" />
+                          </NavLink>
+                          <p className="mt-1 text-gray-600">
+                            {item.description}
+                          </p>
+                        </div>
                       </div>
-                      <div className="flex-auto">
-                        <NavLink
-                          to={item.href}
-                          className="block font-semibold text-gray-900"
-                        >
-                          {item.name}
-                          <span className="absolute inset-0" />
-                        </NavLink>
-                        <p className="mt-1 text-xs text-gray-600">
-                          {item.description}
-                        </p>
+                    ))}
+                  </div>
+                </PopoverPanel>
+              </Popover>
+
+              <Popover className="relative">
+                <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
+                  Solutions
+                  <ChevronDownIcon
+                    aria-hidden="true"
+                    className="size-5 flex-none text-gray-400"
+                  />
+                </PopoverButton>
+
+                <PopoverPanel
+                  transition
+                  className="absolute mt-2 w-screen z-10 overflow-hidden -left-96 max-w-3xl rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                >
+                  <div className="grid grid-cols-3 gap-4 p-5">
+                    {solutionsObj.map((item) => (
+                      <div
+                        key={item.name}
+                        className="group relative flex items-center gap-x-6 rounded-lg p-2 text-lg hover:bg-gray-50"
+                      >
+                        <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                          <item.icon
+                            aria-hidden="true"
+                            className="size-6 text-gray-600 group-hover:text-indigo-600"
+                          />
+                        </div>
+                        <div className="flex-auto">
+                          <NavLink
+                            to={item.href}
+                            className="block font-semibold text-gray-900"
+                          >
+                            {item.name}
+                            <span className="absolute inset-0" />
+                          </NavLink>
+                          <p className="mt-1 text-gray-600">
+                            {item.description}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-              </PopoverPanel>
-            </Popover>
+                    ))}
+                  </div>
+                </PopoverPanel>
+              </Popover>
 
-            <Popover className="relative">
-              <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
-                Services
-                <ChevronDownIcon
-                  aria-hidden="true"
-                  className="size-5 flex-none text-gray-400"
-                />
-              </PopoverButton>
-
-              <PopoverPanel
-                transition
-                className="absolute -left-24 top-full z-10 mt-3 w-screen max-w-3xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+              <NavLink
+                to="/pricing"
+                className="text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0"
               >
-                <div className="grid grid-cols-3 gap-4 p-5">
-                  {[
-                    ...servicesObj.slice(0, 11),
-                    servicesObj[servicesObj.length - 1],
-                  ].map((item) => (
-                    <div
-                      key={item.name}
-                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-lg hover:bg-gray-50"
-                    >
-                      <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon
-                          aria-hidden="true"
-                          className="size-6 text-gray-600 group-hover:text-indigo-600"
-                        />
-                      </div>
-                      <div className="flex-auto">
-                        <NavLink
-                          to={item.href}
-                          className="block font-semibold text-gray-900"
-                        >
-                          {item.name}
-                          <span className="absolute inset-0" />
-                        </NavLink>
-                        {/* <p className="mt-1 text-xs text-gray-600">
-                        {item.description}
-                      </p> */}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                  {callsToAction.map((item) => (
-                    <NavLink
-                      key={item.name}
-                      to={item.href}
-                      className="flex items-center justify-center gap-x-2.5 p-3 text-lg font-semibold text-gray-900 hover:bg-gray-100"
-                    >
-                      <item.icon
-                        aria-hidden="true"
-                        className="size-5 flex-none text-gray-400"
-                      />
-                      {item.name}
-                    </NavLink>
-                  ))}
-                </div>
-              </PopoverPanel>
-            </Popover>
-
-            <Popover className="relative">
-              <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
-                Industries
-                <ChevronDownIcon
-                  aria-hidden="true"
-                  className="size-5 flex-none text-gray-400"
-                />
-              </PopoverButton>
-
-              <PopoverPanel
-                transition
-                className="absolute -left-56 top-full z-10 mt-3 w-screen max-w-3xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
-              >
-                <div className="grid grid-cols-3 gap-4 p-5">
-                  {[
-                    ...industriesObj.slice(0, 11),
-                    industriesObj[industriesObj.length - 1],
-                  ].map((item) => (
-                    <div
-                      key={item.name}
-                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-lg hover:bg-gray-50"
-                    >
-                      <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon
-                          aria-hidden="true"
-                          className="size-6 text-gray-600 group-hover:text-indigo-600"
-                        />
-                      </div>
-                      <div className="flex-auto">
-                        <NavLink
-                          to={item.href}
-                          className="block font-semibold text-gray-900"
-                        >
-                          {item.name}
-                          <span className="absolute inset-0" />
-                        </NavLink>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </PopoverPanel>
-            </Popover>
-
-            <Popover className="relative">
-              <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
-                Solutions
-                <ChevronDownIcon
-                  aria-hidden="true"
-                  className="size-5 flex-none text-gray-400"
-                />
-              </PopoverButton>
-
-              <PopoverPanel
-                transition
-                className="absolute mt-2 w-screen z-10 overflow-hidden -left-96 max-w-3xl rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
-              >
-                <div className="grid grid-cols-3 gap-4 p-5">
-                  {solutionsObj.map((item) => (
-                    <div
-                      key={item.name}
-                      className="group relative flex items-center gap-x-6 rounded-lg p-2 text-lg hover:bg-gray-50"
-                    >
-                      <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon
-                          aria-hidden="true"
-                          className="size-6 text-gray-600 group-hover:text-indigo-600"
-                        />
-                      </div>
-                      <div className="flex-auto">
-                        <NavLink
-                          to={item.href}
-                          className="block font-semibold text-gray-900"
-                        >
-                          {item.name}
-                          <span className="absolute inset-0" />
-                        </NavLink>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </PopoverPanel>
-            </Popover>
-
-            <NavLink
-              to="/pricing"
-              className="text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0"
-            >
-              Pricing
-            </NavLink>
-          </PopoverGroup>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end me-6">
+                Pricing
+              </NavLink>
+            </PopoverGroup>
+          </div>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end mx-6">
             <NavLink
               to="/contact-us"
               className="text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0"

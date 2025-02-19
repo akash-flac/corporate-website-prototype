@@ -101,7 +101,7 @@ const solutionsObj = [
     icon: DocumentTextIcon,
   },
   {
-    name: "e-Commerce",
+    name: "E-commerce",
     // description: "Build strategic funnels that will convert",
     href: "/solutions/e-commerce",
     icon: ShoppingCartIcon,

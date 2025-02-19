@@ -97,7 +97,7 @@ const industriesObj = [
     icon: TruckIcon,
   },
   {
-    name: "Professional services",
+    name: "Professional Services",
     // description: "Build strategic funnels that will convert",
     href: "/industries/professional-services",
     icon: BriefcaseBusinessIcon,
@@ -109,7 +109,7 @@ const industriesObj = [
     icon: PlayIcon,
   },
   {
-    name: "Retail & e-Commerce",
+    name: "Retail & E-commerce",
     // description: "Build strategic funnels that will convert",
     href: "/industries/retail-and-ecommerce",
     icon: ShoppingBagIcon,
@@ -745,8 +745,6 @@ const transportationObj = {
     },
   ],
 };
-
-// Content needs to be updated
 
 const mediaObj = {
   title: "Media and Entertainment",

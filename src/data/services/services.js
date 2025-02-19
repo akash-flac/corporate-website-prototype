@@ -108,7 +108,7 @@ const servicesObj = [
     icon: ShoppingBagIcon,
   },
   {
-    name: "Low Code - No Code",
+    name: "Low Code/No Code",
     description:
       "Empower your team with low-code and no-code solutions to develop apps faster and more efficiently",
     href: "/services/low-code",
