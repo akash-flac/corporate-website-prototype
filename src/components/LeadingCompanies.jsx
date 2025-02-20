@@ -11,7 +11,7 @@ const LeadingCompanies = () => {
             Leading companies trust us{" "}
             <span className="font-bold lg:block"> to develop software</span>
           </h1>
-          <p className="row-span-1 text-lg sm:text-xl md:text-2xl md:pt-3 text-justify font-poppins">
+          <p className="row-span-1 text-lg sm:text-xl md:text-xl md:pt-3 text-left font-poppins">
             We <span className="text-[#330073]">add development capacity</span>{" "}
             to tech teams. Our value isn’t limited to building teams but is
             equally distributed across the project lifecycle. We are a custom

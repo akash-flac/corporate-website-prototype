@@ -62,10 +62,7 @@ import { solutionsObj } from "../data/solutions/solutions";
 import Logo from "/markle-logo.png";
 import { motion } from "framer-motion";
 import LogoBlack from "/markle-logo-black.png";
-const callsToAction = [
-  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  { name: "Get Consultation", href: "tel:+91-7982 332 070", icon: PhoneIcon },
-];
+import { callsToAction } from "../data/callsToAction";
 
 const NavBar = ({ isBlack = false }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -262,14 +259,14 @@ const NavBar = ({ isBlack = false }) => {
                         <div className="flex-auto">
                           <NavLink
                             to={item.href}
-                            className="block font-semibold text-gray-900"
+                            className="block font-semibold text-gray-900 w-32 overflow-hidden overflow-ellipsis"
                           >
                             {item.name}
                             <span className="absolute inset-0" />
                           </NavLink>
-                          <p className="mt-1 text-gray-600">
+                          {/* <p className="mt-1 text-gray-600">
                             {item.description}
-                          </p>
+                          </p> */}
                         </div>
                       </div>
                     ))}

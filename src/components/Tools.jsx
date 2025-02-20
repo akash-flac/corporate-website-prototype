@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import { FreeMode } from "swiper/modules";
 
 const cardDataArray = [
   {
@@ -289,22 +293,47 @@ export default function Tools() {
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-[#330073] mb-4 font-montserrat">
         Tools We Use
       </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-6 sm:space-x-4 mb-4 sm:mb-6">
+
+      {/* <div className="grid grid-cols-2 sm:grid-cols-6 sm:space-x-4 mb-4 sm:mb-6">
         {cardDataArray.map((category) => (
           <button
             key={category.category}
             onClick={() => setActiveHeading(category.category)}
-            className={`px-4 sm:px-4 py-1 sm:py-2 rounded-full font-semibold transition-colors duration-300 text-left sm:text-center font-plex ${
+            className={`px-4 sm:px-2 py-1 sm:py-1 rounded-full font-semibold transition-colors duration-300 text-left sm:text-center hover:bg-[#330073] text-gray-50 font-plex ${
               activeHeading === category.category
-                ? "text-[#330073] "
-                : "text-gray-500"
+                ? "bg-[#330073] "
+                : "bg-gray-400"
             }`}
           >
             {category.category}
           </button>
         ))}
+      </div> */}
+      <div className="space-x-1 sm:space-x-4 overflow-x-auto mx-3 sm:mx-auto">
+        <Swiper
+          slidesPerView="auto"
+          spaceBetween={10}
+          freeMode={true}
+          modules={[FreeMode]}
+          className="w-full sm:max-w-screen-xl"
+        >
+          {cardDataArray.map((category) => (
+            <SwiperSlide key={category.category} className="!w-fit">
+              <button
+                key={category.category}
+                onClick={() => setActiveHeading(category.category)}
+                className={`px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-center hover:bg-[#330073] hover:text-white font-plex ${
+                  activeHeading === category.category
+                    ? "bg-[#330073] text-white "
+                    : "bg-[#E9D9FF] text-[#330073] "
+                }`}
+              >
+                {category.category}
+              </button>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
-
       <div className="relative">
         {showArrows && (
           <button
@@ -317,7 +346,7 @@ export default function Tools() {
 
         <div
           ref={carouselRef}
-          className="flex space-x-1 sm:space-x-4 overflow-x-auto px-4 sm:px-10 scrollbar-hide"
+          className="flex space-x-1 sm:space-x-4 overflow-x-auto px-2 sm:px-10 scrollbar-hide"
           style={{
             scrollSnapType: "x mandatory",
             scrollbarWidth: "none",

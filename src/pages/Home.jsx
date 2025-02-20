@@ -22,10 +22,8 @@ const Home = () => {
       {/* <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme"> */}
       <Hero
         bgVideo={heroVideo}
-        heading={"Transforming Ideas Into Digital Solutions"}
-        content={
-          "As a leading software development establishment, we turn complex challenges into innovative digital solutions. Be it website development or app development, we empower organizations toinnovate, automate, and grow in today’s fast-paced digital ecosystem."
-        }
+        heading={"Transforming IT with Cutting-Edge Solutions"}
+        content={"Reduce costs, streamline processes, and drive innovation."}
       />
       <ScrollingLogos />
       <Services renderComplete={false} />

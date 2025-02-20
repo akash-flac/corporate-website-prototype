@@ -352,7 +352,7 @@ export const AccordionItem = ({ item, open, handleOpen }) => {
     <Accordion
       open={open === item.id}
       className={`mb-1 p-4 md:p-1 rounded-lg border border-blue-gray-100 md:px-6 transition-all ease-in-out font-poppins ${
-        open === item.id ? " bg-[#330073]" : " bg-[#E9D9FF]"
+        open === item.id ? " bg-[#330073]" : " bg-[#E9D9FF] hover:bg-[#C3A6FF]"
       }`}
     >
       <div
@@ -435,7 +435,7 @@ const FAQ = () => {
         <div className="flex justify-center items-center">
           <a
             href="/about/faqs"
-            className=" px-6 py-2 bg-[#3b0b7d] text-white text-center rounded-full hover:bg-[#3b0b7d] transition duration-300 font-plex"
+            className=" px-6 py-2 bg-[#3b0b7d] text-white text-center rounded-full hover:bg-[#3b0b7d] hover:scale-105 transition duration-300 font-plex"
           >
             View More
           </a>

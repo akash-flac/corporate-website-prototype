@@ -115,7 +115,7 @@ const SolutionsWeDeliver = () => {
         <div className="flex justify-center">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="px-6 py-2 bg-[#3b0b7d] text-white rounded-full hover:bg-[#3b0b7d] transition duration-300 font-plex "
+            className="px-6 py-2 bg-[#3b0b7d] text-white rounded-full hover:bg-[#3b0b7d] hover:scale-105 transition duration-300 font-plex "
           >
             
             {showAll ? "View Less" : (`View More`)}

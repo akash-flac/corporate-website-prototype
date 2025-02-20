@@ -8,7 +8,7 @@ const NextGen = () => {
         every business
       </h1>
       <div className="flex justify-center">
-        <p className="text-gray-900 text-xl md:text-2xl md:max-w-7xl text-justify md:text-center font-poppins">
+        <p className="text-gray-900 text-xl md:text-2xl md:max-w-7xl text-left md:text-center font-poppins">
           We are empowering businesses of all sizes to achieve digital dominance
           that propels you to the forefront of your industry to ensure long-term
           success. We offer tailored strategies for limitless growth.
