@@ -27,7 +27,7 @@ const IndustryCommon = ({ obj }) => {
                 {section.items.map((item, idx) => (
                   <div
                     key={idx}
-                    className="p-3 text-[#330073] hover:bg-gray-100 bg-white transition rounded-xl shadow-sm shadow-[#330073] text-center font-semibold border hover:shadow-md hover:-translate-y-1"
+                    className="p-3 text-[#330073] bg-white hover:bg-[#E9D9FF] transition rounded-xl shadow-sm shadow-[#330073] text-center font-semibold border hover:shadow-md hover:-translate-y-1"
                   >
                     <h3 className="text-md font-bold mb-2 font-montserrat">{item.name}</h3>
                     <p className="text-xs text-gray-800 font-poppins">{item.info}</p>

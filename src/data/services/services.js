@@ -103,7 +103,7 @@ const servicesObj = [
     icon: GlobeAltIcon,
   },
   {
-    name: "e-commerce",
+    name: "E-commerce",
     description:
       "Build seamless and feature-rich online stores to deliver exceptional shopping experiences",
     href: "/services/e-commerce",
@@ -357,7 +357,7 @@ const webObj = {
 };
 
 const eCommerceObj = {
-  title: "E-Commerce",
+  title: "E-commerce",
   src: ecommerceImg,
   description:
     "Developing secure and scalable e-commerce platforms for businesses of all sizes.",

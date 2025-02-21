@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Accordion,
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import faqSections from "../data/about/faqs";
 
 const faqObj = [
@@ -348,20 +348,29 @@ const faqObj = [
 
 // Accordion
 export const AccordionItem = ({ item, open, handleOpen }) => {
+  const contentRef = useRef(null);
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setHeight(contentRef.current.scrollHeight);
+    }
+  }, [open]);
+  
   return (
     <Accordion
       open={open === item.id}
-      className={`mb-1 p-4 md:p-1 rounded-lg border border-blue-gray-100 md:px-6 transition-all ease-in-out font-poppins ${
+      className={`mb-1 p-4 md:p-1 rounded-lg border border-blue-gray-100 md:px-6 transition-all duration-300 ease-in-out font-poppins ${
         open === item.id ? " bg-[#330073]" : " bg-[#E9D9FF] hover:bg-[#C3A6FF]"
       }`}
     >
       <div
         onClick={() => handleOpen(item.id)}
-        className="flex cursor-pointer items-center justify-between"
+        className="flex cursor-pointer items-center justify-between transition-all duration-500 ease-in-out"
       >
         <AccordionHeader
           className={`border-b-0 text-sm sm:text-lg md:text-lg transition-all ease-in-out ${
-            open === item.id ? "text-white " : "text-[#330073]"
+            open === item.id ? "text-white" : "text-[#330073]"
           }`}
         >
           {item.question}
@@ -378,7 +387,7 @@ export const AccordionItem = ({ item, open, handleOpen }) => {
             scale: 1,
             rotate: open === item.id ? 0 : 90,
           }}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: 0.3 }}
         >
           <path
             fillRule="evenodd"
@@ -392,13 +401,21 @@ export const AccordionItem = ({ item, open, handleOpen }) => {
         </motion.svg>
       </div>
 
-      <AccordionBody
-        className={`py-2 sm:pe-12 text-md sm:text-lg font-light md:font-normal ${
-          open === item.id ? "text-white" : ""
-        }`}
-      >
-        {item.answer}
-      </AccordionBody>
+      <AnimatePresence initial={false}>
+        {open === item.id && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <AccordionBody className="py-2 sm:pe-12 text-md sm:text-lg font-light md:font-normal text-white">
+              {item.answer}
+            </AccordionBody>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </Accordion>
   );
 };
@@ -423,14 +440,16 @@ const FAQ = () => {
 
         {/* Accordion for FAQs */}
         <div className="m-4">
-          {faqSections["About Markle"].slice(0, window.innerWidth < 640 ? 3 : 5).map((item) => (
-            <AccordionItem
-              key={item.id}
-              item={item}
-              open={open}
-              handleOpen={handleOpen}
-            />
-          ))}
+          {faqSections["About Markle"]
+            .slice(0, window.innerWidth < 640 ? 3 : 5)
+            .map((item) => (
+              <AccordionItem
+                key={item.id}
+                item={item}
+                open={open}
+                handleOpen={handleOpen}
+              />
+            ))}
         </div>
         <div className="flex justify-center items-center">
           <a
