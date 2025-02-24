@@ -32,7 +32,7 @@ const Home = () => {
       <Goal />
       <NextGen />
       <Tools />
-      <Achievements />
+      {/* <Achievements /> */}
       <SolutionsWeDeliver />
       <FAQ />
       <Footer />

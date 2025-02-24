@@ -43,10 +43,14 @@ const Footer = () => {
           <div className="md:grid md:grid-cols-2 ms-3 md:ms-0">
             <div className="my-5 mx-4 flex flex-col justify-center items-center">
               <Link to="/">
-                <img src={Logo} class="h-14 md:h-20" alt="MarkleTech Logo" />
+                <img
+                  src={Logo}
+                  className="h-14 md:h-20"
+                  alt="MarkleTech Logo"
+                />
               </Link>
               <div className="md:my-6">
-                <hr class="w-full my-3 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-3" />
+                <hr className="w-full my-3 sm:mx-auto border-gray-600 lg:my-3" />
                 <p className="text-white text-justify max-w-lg font-montserrat">
                   Subscribe to our newsletter and unlock a world of exclusive
                   benefits. Be the first to know about our latest products,
@@ -57,7 +61,7 @@ const Footer = () => {
             <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 mx-4 sm:place-content-center md:mx-5 md:place-items-start font-montserrat">
               {links.map((link, index) => (
                 <div key={index}>
-                  <h2 class="mb-3 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                  <h2 class="mb-3 text-sm font-semibold text-white uppercase ">
                     {link.title}
                   </h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
@@ -73,7 +77,7 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          <hr class="my-4 border-gray-200 sm:mx-auto dark:border-gray-700" />
+          <hr class="my-4 sm:mx-auto border-gray-600" />
           <div class="flex flex-col items-center sm:flex md:flex-row sm:items-center sm:justify-around font-montserrat">
             <Typography
               variant="small"
@@ -83,7 +87,7 @@ const Footer = () => {
               Reserved.
             </Typography>
 
-            <div className="flex gap-8 text-gray-400 font-light">
+            <div className="flex gap-8 text-white font-montserrat">
               <a href="" className="hover:text-white">
                 Terms
               </a>
@@ -97,7 +101,7 @@ const Footer = () => {
             <div class="flex mt-4 sm:justify-center sm:mt-2">
               <a
                 href="https://www.facebook.com/markletechandmedia/"
-                class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                class="text-gray-300 hover:text-gray-100"
               >
                 <svg
                   class="w-4 h-4"
@@ -116,7 +120,7 @@ const Footer = () => {
               </a>
               <a
                 href="https://www.instagram.com/markletechandmedia/"
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+                className="text-gray-300 hover:text-gray-100 ms-5"
               >
                 <svg
                   class="w-4 h-4"
@@ -135,7 +139,7 @@ const Footer = () => {
               </a>
               <a
                 href="https://in.linkedin.com/company/markle-tech-and-mediaagency"
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+                className="text-gray-300 hover:text-gray-100 ms-5"
               >
                 <svg
                   className="w-4 h-4"
@@ -144,9 +148,26 @@ const Footer = () => {
                   fill="currentColor"
                   viewBox="0 0 50 50"
                 >
-                  <path d="M 9 4 C 6.2504839 4 4 6.2504839 4 9 L 4 41 C 4 43.749516 6.2504839 46 9 46 L 41 46 C 43.749516 46 46 43.749516 46 41 L 46 9 C 46 6.2504839 43.749516 4 41 4 L 9 4 z M 9 6 L 41 6 C 42.668484 6 44 7.3315161 44 9 L 44 41 C 44 42.668484 42.668484 44 41 44 L 9 44 C 7.3315161 44 6 42.668484 6 41 L 6 9 C 6 7.3315161 7.3315161 6 9 6 z M 14 11.011719 C 12.904779 11.011719 11.919219 11.339079 11.189453 11.953125 C 10.459687 12.567171 10.011719 13.484511 10.011719 14.466797 C 10.011719 16.333977 11.631285 17.789609 13.691406 17.933594 A 0.98809878 0.98809878 0 0 0 13.695312 17.935547 A 0.98809878 0.98809878 0 0 0 14 17.988281 C 16.27301 17.988281 17.988281 16.396083 17.988281 14.466797 A 0.98809878 0.98809878 0 0 0 17.986328 14.414062 C 17.884577 12.513831 16.190443 11.011719 14 11.011719 z M 14 12.988281 C 15.392231 12.988281 15.94197 13.610038 16.001953 14.492188 C 15.989803 15.348434 15.460091 16.011719 14 16.011719 C 12.614594 16.011719 11.988281 15.302225 11.988281 14.466797 C 11.988281 14.049083 12.140703 13.734298 12.460938 13.464844 C 12.78117 13.19539 13.295221 12.988281 14 12.988281 z M 11 19 A 1.0001 1.0001 0 0 0 10 20 L 10 39 A 1.0001 1.0001 0 0 0 11 40 L 17 40 A 1.0001 1.0001 0 0 0 18 39 L 18 33.134766 L 18 20 A 1.0001 1.0001 0 0 0 17 19 L 11 19 z M 20 19 A 1.0001 1.0001 0 0 0 19 20 L 19 39 A 1.0001 1.0001 0 0 0 20 40 L 26 40 A 1.0001 1.0001 0 0 0 27 39 L 27 29 C 27 28.170333 27.226394 27.345035 27.625 26.804688 C 28.023606 26.264339 28.526466 25.940057 29.482422 25.957031 C 30.468166 25.973981 30.989999 26.311669 31.384766 26.841797 C 31.779532 27.371924 32 28.166667 32 29 L 32 39 A 1.0001 1.0001 0 0 0 33 40 L 39 40 A 1.0001 1.0001 0 0 0 40 39 L 40 28.261719 C 40 25.300181 39.122788 22.95433 37.619141 21.367188 C 36.115493 19.780044 34.024172 19 31.8125 19 C 29.710483 19 28.110853 19.704889 27 20.423828 L 27 20 A 1.0001 1.0001 0 0 0 26 19 L 20 19 z M 12 21 L 16 21 L 16 33.134766 L 16 38 L 12 38 L 12 21 z M 21 21 L 25 21 L 25 22.560547 A 1.0001 1.0001 0 0 0 26.798828 23.162109 C 26.798828 23.162109 28.369194 21 31.8125 21 C 33.565828 21 35.069366 21.582581 36.167969 22.742188 C 37.266572 23.901794 38 25.688257 38 28.261719 L 38 38 L 34 38 L 34 29 C 34 27.833333 33.720468 26.627107 32.990234 25.646484 C 32.260001 24.665862 31.031834 23.983076 29.517578 23.957031 C 27.995534 23.930001 26.747519 24.626988 26.015625 25.619141 C 25.283731 26.611293 25 27.829667 25 29 L 25 38 L 21 38 L 21 21 z"></path>
+                  <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
                 </svg>
+
                 <span className="sr-only">LinkedIn page</span>
+              </a>
+              <a
+                href="https://www.youtube.com/@markletechandmedia"
+                className="text-gray-300 hover:text-gray-100 ms-5"
+              >
+                <svg
+                  className="w-4 h-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 50 50"
+                >
+                  <path d="M 44.898438 14.5 C 44.5 12.300781 42.601563 10.699219 40.398438 10.199219 C 37.101563 9.5 31 9 24.398438 9 C 17.800781 9 11.601563 9.5 8.300781 10.199219 C 6.101563 10.699219 4.199219 12.199219 3.800781 14.5 C 3.398438 17 3 20.5 3 25 C 3 29.5 3.398438 33 3.898438 35.5 C 4.300781 37.699219 6.199219 39.300781 8.398438 39.800781 C 11.898438 40.5 17.898438 41 24.5 41 C 31.101563 41 37.101563 40.5 40.601563 39.800781 C 42.800781 39.300781 44.699219 37.800781 45.101563 35.5 C 45.5 33 46 29.398438 46.101563 25 C 45.898438 20.5 45.398438 17 44.898438 14.5 Z M 19 32 L 19 18 L 31.199219 25 Z"></path>
+                </svg>
+
+                <span className="sr-only">Youtube channel</span>
               </a>
             </div>
           </div>

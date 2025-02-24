@@ -37,9 +37,9 @@ const ServicesCommon = ({ obj }) => {
           }`}
         >
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6 ">
-            <span className="text-5xl sm:text-6xl drop-shadow-lg">
+            {/* <span className="text-5xl sm:text-6xl drop-shadow-lg">
               {obj.icon}
-            </span>
+            </span> */}
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight text-center sm:text-left font-montserrat">
               {obj.title}
             </h1>

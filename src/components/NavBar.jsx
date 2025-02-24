@@ -42,6 +42,7 @@ import {
 } from "@heroicons/react/20/solid";
 import {
   BriefcaseIcon,
+  ChevronUpIcon,
   CloudIcon,
   CloudLightningIcon,
   Code2,
@@ -66,6 +67,15 @@ import { callsToAction } from "../data/callsToAction";
 
 const NavBar = ({ isBlack = false }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const [open, setOpen] = useState(null);
+  const handleOpen = (id) => setOpen(open === id ? null : id);
+
+  useEffect(() => {
+    const handleClickOutside = () => setOpen(null);
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
 
   //for sticky navbar
   const [scrolled, setScrolled] = useState(false);
@@ -116,25 +126,33 @@ const NavBar = ({ isBlack = false }) => {
           <div className="hidden lg:flex lg:justify-center lg:flex-1 flex-shrink">
             <PopoverGroup className="hidden lg:flex lg:gap-x-6">
               <Popover className="relative">
-                <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
+                <PopoverButton
+                  className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0"
+                  onClick={() => handleOpen(1)}
+                >
                   About
-                  <ChevronDownIcon
-                    aria-hidden="true"
-                    className="size-5 flex-none text-gray-400"
-                  />
+                  <motion.div
+                    animate={{ rotate: open === 1 ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <ChevronDownIcon
+                      aria-hidden="true"
+                      className="size-5 flex-none text-gray-400"
+                    />
+                  </motion.div>
                 </PopoverButton>
 
                 <PopoverPanel
                   transition
-                  className="absolute left-10 top-full z-10 mt-3 w-screen max-w-xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                  className="absolute left-10 top-full z-10 mt-3 w-screen max-w-xl overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
                 >
                   <div className="grid grid-cols-2 gap-4 p-4 font-poppins">
                     {aboutObj.map((item) => (
                       <div
                         key={item.name}
-                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-lg hover:bg-gray-50"
+                        className="group relative flex items-center gap-x-6 rounded-2xl p-4 text-lg hover:bg-gray-50"
                       >
-                        <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                        <div className="flex size-11 flex-none items-center justify-center rounded-2xl bg-gray-50 group-hover:bg-white">
                           {/* {item.icon} */}
                           {item.icon ? (
                             <item.icon
@@ -156,9 +174,9 @@ const NavBar = ({ isBlack = false }) => {
                             {item.name}
                             <span className="absolute inset-0" />
                           </NavLink>
-                          <p className="mt-1 text-xs text-gray-600">
+                          {/* <p className="mt-1 text-xs text-gray-600">
                             {item.description}
-                          </p>
+                          </p> */}
                         </div>
                       </div>
                     ))}
@@ -167,17 +185,25 @@ const NavBar = ({ isBlack = false }) => {
               </Popover>
 
               <Popover className="relative">
-                <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
+                <PopoverButton
+                  className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0 "
+                  onClick={() => handleOpen(2)}
+                >
                   Services
-                  <ChevronDownIcon
-                    aria-hidden="true"
-                    className="size-5 flex-none text-gray-400"
-                  />
+                  <motion.div
+                    animate={{ rotate: open === 2 ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <ChevronDownIcon
+                      aria-hidden="true"
+                      className="size-5 flex-none text-gray-400"
+                    />
+                  </motion.div>
                 </PopoverButton>
 
                 <PopoverPanel
                   transition
-                  className="absolute -left-24 top-full z-10 mt-3 w-screen max-w-3xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                  className="absolute -left-24 top-full z-10 mt-3 w-screen max-w-3xl overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
                 >
                   <div className="grid grid-cols-3 gap-4 p-5 font-poppins">
                     {[
@@ -186,9 +212,9 @@ const NavBar = ({ isBlack = false }) => {
                     ].map((item) => (
                       <div
                         key={item.name}
-                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-lg hover:bg-gray-50"
+                        className="group relative flex items-center gap-x-6 rounded-2xl p-4 text-lg hover:bg-gray-50"
                       >
-                        <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                        <div className="flex size-11 flex-none items-center justify-center rounded-2xl bg-gray-50 group-hover:bg-white">
                           <item.icon
                             aria-hidden="true"
                             className="size-6 text-gray-600 group-hover:text-indigo-600"
@@ -229,17 +255,25 @@ const NavBar = ({ isBlack = false }) => {
               </Popover>
 
               <Popover className="relative">
-                <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
+                <PopoverButton
+                  className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0"
+                  onClick={() => handleOpen(3)}
+                >
                   Industries
-                  <ChevronDownIcon
-                    aria-hidden="true"
-                    className="size-5 flex-none text-gray-400"
-                  />
+                  <motion.div
+                    animate={{ rotate: open === 3 ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <ChevronDownIcon
+                      aria-hidden="true"
+                      className="size-5 flex-none text-gray-400"
+                    />
+                  </motion.div>
                 </PopoverButton>
 
                 <PopoverPanel
                   transition
-                  className="absolute -left-56 top-full z-10 mt-3 w-screen max-w-3xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                  className="absolute -left-56 top-full z-10 mt-3 w-screen max-w-3xl overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
                 >
                   <div className="grid grid-cols-3 gap-4 p-5 font-poppins">
                     {[
@@ -248,9 +282,9 @@ const NavBar = ({ isBlack = false }) => {
                     ].map((item) => (
                       <div
                         key={item.name}
-                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-lg hover:bg-gray-50"
+                        className="group relative flex items-center gap-x-6 rounded-2xl p-4 text-lg hover:bg-gray-50"
                       >
-                        <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                        <div className="flex size-11 flex-none items-center justify-center rounded-2xl bg-gray-50 group-hover:bg-white">
                           <item.icon
                             aria-hidden="true"
                             className="size-6 text-gray-600 group-hover:text-indigo-600"
@@ -275,25 +309,33 @@ const NavBar = ({ isBlack = false }) => {
               </Popover>
 
               <Popover className="relative">
-                <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0">
+                <PopoverButton
+                  className="flex items-center gap-x-1 text-lg font-semibold text-gray-100 focus:outline-none focus:ring-0 focus-visible:ring-0"
+                  onClick={() => handleOpen(4)}
+                >
                   Solutions
-                  <ChevronDownIcon
-                    aria-hidden="true"
-                    className="size-5 flex-none text-gray-400"
-                  />
+                  <motion.div
+                    animate={{ rotate: open === 4 ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <ChevronDownIcon
+                      aria-hidden="true"
+                      className="size-5 flex-none text-gray-400"
+                    />
+                  </motion.div>
                 </PopoverButton>
 
                 <PopoverPanel
                   transition
-                  className="absolute mt-2 w-screen z-10 overflow-hidden -left-96 max-w-3xl rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                  className="absolute mt-2 w-screen z-10 overflow-hidden -left-96 max-w-3xl rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
                 >
                   <div className="grid grid-cols-3 gap-4 p-5 font-poppins">
                     {solutionsObj.map((item) => (
                       <div
                         key={item.name}
-                        className="group relative flex items-center gap-x-6 rounded-lg p-2 text-lg hover:bg-gray-50"
+                        className="group relative flex items-center gap-x-6 rounded-2xl p-2 text-lg hover:bg-gray-50"
                       >
-                        <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                        <div className="flex size-11 flex-none items-center justify-center rounded-2xl bg-gray-50 group-hover:bg-white">
                           <item.icon
                             aria-hidden="true"
                             className="size-6 text-gray-600 group-hover:text-indigo-600"
@@ -393,7 +435,7 @@ const NavBar = ({ isBlack = false }) => {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="block rounded-lg py-2 pl-6 pr-3 text-lg font-semibold text-gray-900 hover:bg-gray-50"
+                        className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold text-gray-900 hover:bg-gray-50"
                       >
                         {item.name}
                       </a>

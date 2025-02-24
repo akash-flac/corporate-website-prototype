@@ -77,7 +77,7 @@ const solutionsObj = [
     icon: BuildingOfficeIcon,
   },
   {
-    name: "e-learning",
+    name: "E-learning",
     // description: "Speak directly to your customers",
     href: "/solutions/e-learning",
     icon: AcademicCapIcon,
@@ -264,7 +264,7 @@ const solutionsObj = [
 
 // data/solutions.js
 const ERPObj = {
-  title: "ERP",
+  title: "ERP (Enterprise Resource Planning)",
   description: "Streamline Your Business Operations",
   extendedContent:
     "ERP systems integrate core business processes like finance, HR, supply chain, and manufacturing into a single system. This comprehensive integration improves efficiency, data accuracy, and enables real-time decision-making, helping businesses operate smoothly and adapt quickly to changing market conditions.",
@@ -292,7 +292,7 @@ const ERPObj = {
 };
 
 const CRMObj = {
-  title: "CRM",
+  title: "CRM (Customer Relationship Management)",
   description: "Enhance Customer Relationships",
   extendedContent:
     "CRM solutions help businesses manage customer interactions, track sales leads, marketing campaigns, and support services. By centralizing customer data, CRM tools improve customer satisfaction, boost sales performance, and enable personalized communication strategies.",
@@ -319,10 +319,10 @@ const CRMObj = {
 };
 
 const eLearningObj = {
-  title: "e-Learning",
+  title: "E-learning",
   description: "Transform Education with Technology",
   extendedContent:
-    "e-Learning platforms provide interactive and flexible learning environments, offering tools for online courses, virtual classrooms, and assessments. They support both academic institutions and corporate training by enabling remote learning, content management, and progress tracking.",
+    "E-learning platforms provide interactive and flexible learning environments, offering tools for online courses, virtual classrooms, and assessments. They support both academic institutions and corporate training by enabling remote learning, content management, and progress tracking.",
   icon: "🎓",
   src: eLearningImg,
   sections: [
@@ -373,10 +373,10 @@ const operationsManagementObj = {
 };
 
 const CMSObj = {
-  title: "CMS",
+  title: "CMS (Content Management System)",
   description: "Manage Digital Content Effortlessly",
   extendedContent:
-    "Content Management Systems (CMS) allow organizations to create, manage, and publish digital content easily. They support website management, blogging, e-commerce, and media libraries, providing user-friendly interfaces for both technical and non-technical users.",
+    "CMS allows organizations to create, manage, and publish digital content easily. They support website management, blogging, e-commerce, and media libraries, providing user-friendly interfaces for both technical and non-technical users.",
   icon: "📝",
   src: cmsImg,
   sections: [

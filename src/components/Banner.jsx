@@ -1,7 +1,7 @@
 import IconButton from "./IconButton";
 
 //data
-import { fbIcons, insta, linkedIn } from "../data/components/banner";
+import { fbIcons, insta, linkedIn, youtubeIcon } from "../data/components/banner";
 import { yearsImg } from "../data/home/homepage";
 
 const ContactLink = ({ type, value }) => {
@@ -26,8 +26,8 @@ export default function Banner() {
 
       {/* Center Section: Contact Information */}
       <div className="flex flex-col sm:flex-row items-center text-center md:text-left gap-2 md:gap-4 mx-3 font-montserrat">
-        <p className="text-sm text-white font-semibold uppercase">
-          <ContactLink type="email" value="Contact@markletech.com" />
+        <p className="text-sm text-white font-semibold">
+          <ContactLink type="email" value="contact@markletech.com" />
         </p>
         <svg
           viewBox="0 0 2 2"
@@ -73,6 +73,13 @@ export default function Banner() {
           svg={linkedIn}
           bgColor="bg-[#006699]"
           href="https://in.linkedin.com/company/markle-tech-and-mediaagency"
+          target="_blank"
+          rel="noopener noreferrer"
+        />
+        <IconButton
+          svg={youtubeIcon}
+          bgColor="bg-[#FF3000]"
+          href="https://www.youtube.com/@markletechandmedia"
           target="_blank"
           rel="noopener noreferrer"
         />

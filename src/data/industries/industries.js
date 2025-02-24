@@ -749,62 +749,62 @@ const transportationObj = {
 const mediaObj = {
   title: "Media and Entertainment",
   src: transportationImg,
-  description: "Driving Efficiency Through Advanced Technology",
-  extendedContent: `Revolutionize your logistics and transportation operations with our innovative IT solutions. We specialize in fleet management systems, supply chain optimization tools, and real-time tracking technologies that improve route efficiency, reduce costs, and ensure regulatory compliance.`,
+  description: "Innovating Content Creation and Distribution",
+  extendedContent: `Enhance the media and entertainment landscape with cutting-edge technology solutions. From content creation and digital streaming to audience analytics and interactive experiences, our IT solutions empower businesses to deliver high-quality entertainment efficiently and effectively.`,
   sections: [
     {
-      title: "Fleet Management",
-      description: "Tools to manage and optimize vehicle fleets.",
+      title: "Content Production & Management",
+      description: "Optimizing media production and asset management.",
       items: [
         {
-          name: "GPS Tracking Systems",
-          info: "Real-time tracking of vehicles and routes.",
+          name: "Cloud-Based Editing Platforms",
+          info: "Collaborative tools for video and audio production teams.",
         },
         {
-          name: "Fleet Maintenance Software",
-          info: "Applications to schedule and track vehicle maintenance.",
+          name: "Digital Asset Management (DAM)",
+          info: "Organizing and securing media content with AI-powered tagging.",
         },
       ],
     },
     {
-      title: "Supply Chain Optimization",
-      description: "Improving supply chain efficiency and transparency.",
+      title: "Streaming & Digital Distribution",
+      description: "Delivering seamless and scalable streaming experiences.",
       items: [
         {
-          name: "Logistics Management Systems",
-          info: "Software to streamline logistics operations.",
+          name: "OTT Streaming Solutions",
+          info: "Custom platforms for video-on-demand and live streaming.",
         },
         {
-          name: "Warehouse Management Tools",
-          info: "Applications for inventory control and storage optimization.",
+          name: "CDN Optimization",
+          info: "Enhancing content delivery speed and reducing latency.",
         },
       ],
     },
     {
-      title: "Route Planning Solutions",
-      description: "Enhancing delivery efficiency with optimized routes.",
+      title: "Audience Engagement & Monetization",
+      description: "Driving revenue through data-driven audience insights.",
       items: [
         {
-          name: "Dynamic Routing Tools",
-          info: "Real-time route optimization based on traffic conditions.",
+          name: "AI-Powered Content Recommendations",
+          info: "Personalized viewing experiences based on user preferences.",
         },
         {
-          name: "Delivery Scheduling Software",
-          info: "Applications for planning and managing delivery schedules.",
+          name: "AdTech & Monetization Platforms",
+          info: "Advanced advertising and subscription models for revenue growth.",
         },
       ],
     },
     {
-      title: "Compliance & Safety Management",
-      description: "Ensuring transportation safety and regulatory compliance.",
+      title: "Immersive & Interactive Media",
+      description: "Enhancing entertainment with next-gen experiences.",
       items: [
         {
-          name: "Driver Safety Monitoring Systems",
-          info: "Tools to monitor driver behavior and promote safety.",
+          name: "Augmented & Virtual Reality",
+          info: "Creating immersive entertainment experiences using AR/VR.",
         },
         {
-          name: "Regulatory Compliance Software",
-          info: "Applications to manage industry-specific compliance requirements.",
+          name: "Gamification & Interactive Storytelling",
+          info: "Engaging audiences through interactive and gamified content.",
         },
       ],
     },
