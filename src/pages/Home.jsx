@@ -23,7 +23,9 @@ const Home = () => {
       <Hero
         bgVideo={heroVideo}
         heading={"Transforming IT with Cutting-Edge Solutions"}
-        content={"Reduce costs, streamline processes, and drive innovation."}
+        content={
+          "As a leading software development establishment, we turn complex challenges into innovative digital solutions. Be it Website development or App development, we empower organizations to innovate, automate, and grow in today’s fast-paced digital ecosystem."
+        }
       />
       <ScrollingLogos />
       <Services renderComplete={false} />

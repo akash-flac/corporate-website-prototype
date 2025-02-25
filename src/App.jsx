@@ -82,6 +82,10 @@ import OilGas from "./pages/Industries/OilGas";
 import ScrollToTop from "./components/ScrollToTop";
 import NotFoundPage from "./pages/NotFoundPage";
 import AiMl from "./pages/Services/AiMl";
+import Terms from "./pages/Footer/Terms";
+import PrivacyPolicy from "./pages/Footer/PrivacyPolicy";
+import Disclaimer from "./pages/Footer/Disclaimer";
+import RefundPolicy from "./pages/Footer/RefundPolicy";
 
 function App() {
   return (
@@ -215,6 +219,11 @@ function App() {
           <Route path="/cost-calculator/thank-you" element={<ThankYou />} />
 
           <Route path="/contact-us" element={<ContactUs />} />
+
+          <Route path="/terms-and-conditions" element={<Terms/>} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
+          <Route path="/disclaimer" element={<Disclaimer/>} />
+          <Route path="/refund-policy" element={<RefundPolicy/>} />
         </Routes>
       </BrowserRouter>
     </div>

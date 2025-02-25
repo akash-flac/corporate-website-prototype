@@ -12,7 +12,7 @@ const SolutionsCommon = ({ obj }) => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="bg-white text-[#330073] rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl max-w-4xl w-full border transition-shadow duration-300"
+          className="bg-white text-[#330073] rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl max-w-4xl w-full border transition-all duration-300"
         >
           <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
             {/* <span className="text-5xl sm:text-6xl drop-shadow-lg">
@@ -39,7 +39,7 @@ const SolutionsCommon = ({ obj }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-r from-[#330073] to-[#6C4AB6] text-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-transparent hover:border-[#330073] hover:bg-white hover:scale-105 font-poppins"
+                className="bg-gradient-to-r from-[#330073] to-[#6C4AB6] text-white p-6 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 hover:bg-white hover:scale-105 font-poppins"
               >
                 <h2 className="text-xl font-bold mb-2 text-center sm:text-left">
                   {section.title}

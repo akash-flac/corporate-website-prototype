@@ -15,7 +15,9 @@ const environmentPreferences = [
 const Step7 = () => {
   const [selectedEnvironment, setSelectedEnvironment] = useState("");
   const [requireIntegrations, setRequireIntegrations] = useState("");
+  const [showIntegrationsInput, setShowIntegrationsInput] = useState(false);
   const [techStack, setTechStack] = useState("");
+  const [showTechStackInput, setShowTechStackInput] = useState(false);
   const [additionalDetails, setAdditionalDetails] = useState("");
 
   const handleSubmit = (e) => {
@@ -69,24 +71,36 @@ const Step7 = () => {
                 <input
                   type="radio"
                   name="integrations"
-                  value="No, I wouldn’t"
-                  checked={requireIntegrations === "No, I wouldn’t"}
-                  onChange={() => setRequireIntegrations("No, I wouldn’t")}
-                  className="w-4 h-4 text-gray-500 border-[#E9D9FF] bg-[#330073] rounded focus:ring focus:ring-[#E9D9FF]"
+                  value="Yes"
+                  checked={showIntegrationsInput}
+                  onChange={() => setShowIntegrationsInput(true)}
+                  className="w-4 h-4"
                 />
-                <span className="text-gray-500">No, I wouldn’t</span>
+                <span className="text-gray-500">Yes</span>
               </label>
-              <input
-                type="text"
-                placeholder="Specify other integrations"
-                value={
-                  requireIntegrations !== "No, I wouldn’t"
-                    ? requireIntegrations
-                    : ""
-                }
-                onChange={(e) => setRequireIntegrations(e.target.value)}
-                className="w-full mt-2 p-2 border rounded-lg text-black"
-              />
+              <label className="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="integrations"
+                  value="No"
+                  checked={!showIntegrationsInput}
+                  onChange={() => {
+                    setShowIntegrationsInput(false);
+                    setRequireIntegrations("");
+                  }}
+                  className="w-4 h-4"
+                />
+                <span className="text-gray-500">No</span>
+              </label>
+              {showIntegrationsInput && (
+                <input
+                  type="text"
+                  placeholder="Specify other integrations"
+                  value={requireIntegrations}
+                  onChange={(e) => setRequireIntegrations(e.target.value)}
+                  className="w-full mt-2 p-2 border rounded-lg text-black"
+                />
+              )}
             </div>
 
             {/* Tech Stack */}
@@ -98,20 +112,36 @@ const Step7 = () => {
                 <input
                   type="radio"
                   name="techStack"
+                  value="Yes"
+                  checked={showTechStackInput}
+                  onChange={() => setShowTechStackInput(true)}
+                  className="w-4 h-4"
+                />
+                <span className="text-gray-500">Yes</span>
+              </label>
+              <label className="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="techStack"
                   value="No"
-                  checked={techStack === "No"}
-                  onChange={() => setTechStack("No")}
-                  className="w-4 h-4 text-gray-500 border-[#E9D9FF] bg-[#330073] rounded focus:ring focus:ring-[#E9D9FF]"
+                  checked={!showTechStackInput}
+                  onChange={() => {
+                    setShowTechStackInput(false);
+                    setTechStack("");
+                  }}
+                  className="w-4 h-4"
                 />
                 <span className="text-gray-500">No</span>
               </label>
-              <input
-                type="text"
-                placeholder="Specify tech stack preferences"
-                value={techStack !== "No" ? techStack : ""}
-                onChange={(e) => setTechStack(e.target.value)}
-                className="w-full mt-2 p-2 border rounded-lg text-black"
-              />
+              {showTechStackInput && (
+                <input
+                  type="text"
+                  placeholder="Specify tech stack preferences"
+                  value={techStack}
+                  onChange={(e) => setTechStack(e.target.value)}
+                  className="w-full mt-2 p-2 border rounded-lg text-black"
+                />
+              )}
             </div>
 
             {/* Additional Details */}
@@ -126,8 +156,6 @@ const Step7 = () => {
                 className="w-full p-2 border rounded-lg text-black resize-none"
               />
             </div>
-
-            {/* Buttons */}
           </form>
         </div>
         <div className="m-6 flex flex-row gap-4">
@@ -151,3 +179,20 @@ const Step7 = () => {
 };
 
 export default Step7;
+
+{
+  /* <div className="m-6 flex flex-row gap-4">
+          <Link
+            to="/cost-calculator/6"
+            className="px-6 py-2 text-white bg-[#330073] hover:bg-[#E9D9FF] hover:text-gray-700 rounded-full text-center w-full"
+          >
+            Prev
+          </Link>
+          <Link
+            to="/cost-calculator/thank-you"
+            className="px-6 py-2 text-white bg-[#330073] hover:bg-[#E9D9FF] hover:text-gray-700 rounded-full text-center w-full"
+          >
+            Next
+          </Link>
+        </div> */
+}

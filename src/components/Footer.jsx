@@ -88,14 +88,17 @@ const Footer = () => {
             </Typography>
 
             <div className="flex gap-8 text-white font-montserrat">
-              <a href="" className="hover:text-white">
+              <a href="/terms-and-conditions" className="hover:text-white">
                 Terms
               </a>
-              <a href="" className="hover:text-white">
+              <a href="/privacy-policy" className="hover:text-white">
                 Privacy
               </a>
-              <a href="" className="hover:text-white">
-                Cookies
+              <a href="/refund-policy" className="hover:text-white">
+                Refund
+              </a>
+              <a href="/disclaimer" className="hover:text-white">
+                Disclaimer
               </a>
             </div>
             <div class="flex mt-4 sm:justify-center sm:mt-2">
