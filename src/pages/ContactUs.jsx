@@ -13,13 +13,36 @@ const ContactUs = () => {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Submitted Data:", formData);
+    setLoading(true);
+    setSuccess("");
+
+    try {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSuccess("Message sent successfully!");
+        setFormData({ name: "", email: "", mobile: "", message: "" });
+      } else {
+        setSuccess("Something went wrong. Try again!");
+      }
+    } catch (error) {
+      setSuccess("Server error. Try again later.");
+    }
+
+    setLoading(false);
   };
 
   return (
@@ -67,7 +90,7 @@ const ContactUs = () => {
                   placeholder={`${
                     field.charAt(0).toUpperCase() + field.slice(1)
                   }*`}
-                  className="w-full p-3 border border-gray-500 rounded-md bg-slate-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C3A6FF]"
+                  className="w-full p-3 border border-gray-500 rounded-md bg-slate-200 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#C3A6FF]"
                   required
                 />
               ))}
@@ -77,7 +100,7 @@ const ContactUs = () => {
                 onChange={handleChange}
                 rows="4"
                 placeholder="Enter your message"
-                className="w-full p-3 border border-gray-500 rounded-md bg-slate-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C3A6FF]"
+                className="w-full p-3 border border-gray-500 rounded-md bg-slate-200 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#C3A6FF]"
                 required
               ></textarea>
               <button
