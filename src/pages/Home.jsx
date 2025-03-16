@@ -16,6 +16,7 @@ import Services from "/src/components/Services";
 import SolutionsWeDeliver from "/src/components/SolutionsWeDeliver";
 import heroImage from "/src/images/hero-image.png";
 import heroVideo from "/final.mp4";
+import DownloadButton from "../components/DownloadButton";
 const Home = () => {
   return (
     <div>
@@ -27,6 +28,7 @@ const Home = () => {
           "As a leading software development establishment, we turn complex challenges into innovative digital solutions. Be it Website development or App development, we empower organizations to innovate, automate, and grow in today’s fast-paced digital ecosystem."
         }
       />
+      {/* <DownloadButton/> */}
       <ScrollingLogos />
       <Services renderComplete={false} />
       <LeadingCompanies />

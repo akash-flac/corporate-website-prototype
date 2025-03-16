@@ -309,89 +309,92 @@ export default function Tools() {
           </button>
         ))}
       </div> */}
-      <div className="space-x-1 sm:space-x-4 overflow-x-auto mx-3 sm:mx-auto">
-        <Swiper
-          slidesPerView="auto"
-          spaceBetween={10}
-          freeMode={true}
-          modules={[FreeMode]}
-          className="w-full sm:max-w-screen-xl"
-        >
-          {cardDataArray.map((category) => (
-            <SwiperSlide key={category.category} className="!w-fit">
-              <button
-                key={category.category}
-                onClick={() => setActiveHeading(category.category)}
-                className={`px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-center hover:bg-[#330073] hover:text-white font-plex ${
-                  activeHeading === category.category
-                    ? "bg-[#330073] text-white "
-                    : "bg-[#E9D9FF] text-[#330073] "
-                }`}
-              >
-                {category.category}
-              </button>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-      <div className="relative">
-        {showArrows && (
-          <button
-            onClick={() => scrollCarousel("left")}
-            className="absolute hidden md:block left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-1 sm:p-2 rounded-full z-10 opacity-85 hover:bg-gray-200"
-          >
-            <ChevronLeft size={20} />
-          </button>
-        )}
 
-        <div
-          ref={carouselRef}
-          className="flex space-x-1 sm:space-x-4 overflow-x-auto px-2 sm:px-10 scrollbar-hide"
-          style={{
-            scrollSnapType: "x mandatory",
-            scrollbarWidth: "none",
-            msOverflowStyle: "none",
-          }}
-          onMouseDown={startDrag}
-          onMouseLeave={stopDrag}
-          onMouseUp={stopDrag}
-          onMouseMove={handleDrag}
-        >
-          <style>
-            {`
+      <div className="px-2">
+        <div className="space-x-1 sm:space-x-4 overflow-x-auto mx-3 sm:mx-auto">
+          <Swiper
+            slidesPerView="auto"
+            spaceBetween={10}
+            freeMode={true}
+            modules={[FreeMode]}
+            className="w-full sm:max-w-screen-xl"
+          >
+            {cardDataArray.map((category) => (
+              <SwiperSlide key={category.category} className="!w-fit mx-auto">
+                <button
+                  key={category.category}
+                  onClick={() => setActiveHeading(category.category)}
+                  className={`px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-center hover:bg-[#330073] hover:text-white font-plex ${
+                    activeHeading === category.category
+                      ? "bg-[#330073] text-white "
+                      : "bg-[#E9D9FF] text-[#330073] "
+                  }`}
+                >
+                  {category.category}
+                </button>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        <div className="relative">
+          {showArrows && (
+            <button
+              onClick={() => scrollCarousel("left")}
+              className="absolute hidden md:block left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-1 sm:p-2 rounded-full z-0 opacity-85 hover:bg-gray-200"
+            >
+              <ChevronLeft size={20} />
+            </button>
+          )}
+
+          <div
+            ref={carouselRef}
+            className="flex space-x-1 sm:space-x-4 overflow-x-auto px-2 md:px-10 scrollbar-hide"
+            style={{
+              scrollSnapType: "x mandatory",
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+            }}
+            onMouseDown={startDrag}
+            onMouseLeave={stopDrag}
+            onMouseUp={stopDrag}
+            onMouseMove={handleDrag}
+          >
+            <style>
+              {`
               .scrollbar-hide::-webkit-scrollbar {
                 display: none;
               }
             `}
-          </style>
-          {cardDataArray
-            .find((category) => category.category === activeHeading)
-            .items.map((item, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                className="min-w-[200px] sm:min-w-[250px] lg:min-w-[300px] shadow-[#E9D9FF] border-2 border-[#E9D9FF] hover:bg-[#E9D9FF] rounded-2xl shadow-lg m-4 p-6 cursor-pointer scroll-snap-align-start transition-transform duration-300"
-              >
-                <img
-                  src={item.logo}
-                  alt="Item Logo"
-                  className="w-12 h-12 sm:w-16 sm:h-16 mb-2 mx-auto"
-                />
-                <p className="text-sm sm:text-base text-gray-900 text-center font-poppins">
-                  {item.content}
-                </p>
-              </motion.div>
-            ))}
-        </div>
+            </style>
+            {cardDataArray
+              .find((category) => category.category === activeHeading)
+              .items.map((item, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.05 }}
+                  className="min-w-[200px] sm:min-w-[250px] lg:min-w-[300px] shadow-[#E9D9FF] border-2 border-[#E9D9FF] hover:bg-[#E9D9FF] rounded-2xl shadow-lg m-4 p-6 cursor-pointer scroll-snap-align-start transition-transform duration-300"
+                >
+                  <img
+                    src={item.logo}
+                    alt="Item Logo"
+                    className="w-12 h-12 sm:w-16 sm:h-16 mb-2 mx-auto"
+                  />
+                  <p className="text-sm sm:text-base text-gray-900 text-center font-poppins">
+                    {item.content}
+                  </p>
+                </motion.div>
+              ))}
+          </div>
 
-        {showArrows && (
-          <button
-            onClick={() => scrollCarousel("right")}
-            className="absolute hidden md:block right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-1 sm:p-2 rounded-full z-10 opacity-85 hover:bg-gray-200"
-          >
-            <ChevronRight size={20} />
-          </button>
-        )}
+          {showArrows && (
+            <button
+              onClick={() => scrollCarousel("right")}
+              className="absolute hidden md:block right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-1 sm:p-2 rounded-full z-10 opacity-85 hover:bg-gray-200"
+            >
+              <ChevronRight size={20} />
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );
