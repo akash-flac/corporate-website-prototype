@@ -3,6 +3,7 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Banner from "./Banner";
 import NavBar from "./NavBar";
+import DownloadButton from "./DownloadButton";
 
 export default function Hero({ bgImage, heading, content, bgVideo }) {
   return (
@@ -33,6 +34,7 @@ export default function Hero({ bgImage, heading, content, bgVideo }) {
           <Banner />
           <NavBar />
           <div className="px-10 max-w-5xl my-48 sm:my-40 lg:my-48 text-left">
+            <DownloadButton />
             <h1 className="text-2xl tracking-normal uppercase sm:text-5xl md:text-6xl lg:text-7xl font-black font-montserrat">
               {heading}
             </h1>

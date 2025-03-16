@@ -9,7 +9,7 @@ const links = [
     items: [
       { name: "ERP", href: "/solutions/erp" },
       { name: "CRM", href: "/solutions/crm" },
-      { name: "e-commerce", href: "/solutions/e-commerce" },
+      { name: "E-commerce", href: "/solutions/e-commerce" },
       { name: "OTT Platform", href: "/solutions/erp" },
     ],
   },
