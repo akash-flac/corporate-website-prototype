@@ -1,39 +1,23 @@
 import React from "react";
-const achievementsObj = [
-  {
-    id: 1,
-    src: "src/images/microsoft.png",
-  },
-  {
-    id: 2,
-    src: "src/images/google-cloud.png",
-  },
-  {
-    id: 3,
-    src: "src/images/clutch.png",
-  },
-  {
-    id: 4,
-    src: "src/images/aws.png",
-  },
-];
+import { achievementsObj } from "../data/home/homepage";
+
 const Achievements = () => {
   return (
     <div className="m-10">
-      <div className="">
-        <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-0 font-semibold text-[#330073] text-center">
+      <div className="m-2">
+        <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-0 font-semibold text-[#330073] text-center font-montserrat">
           Our <span className="font-bold">Achievements</span>
         </h1>
         <div className="flex justify-center">
-          <p className="font-light text-gray-600 text-sm md:text-lg md:max-w-7xl text-center">
+          <p className="text-gray-600 text-center text-sm md:text-lg max-w-3xl mx-auto mt-2 font-poppins">
             We are empowering businesses of all sizes to achieve digital
             dominance.
           </p>
         </div>
       </div>
-      <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4">
+      <div className="flex justify-evenly flex-wrap md:m-5">
         {/* Image Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-items-center gap-6 gap-x-14 m-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 justify-items-center gap-6 m-2">
           {achievementsObj.map((achievementsObj, imgIndex) => (
             <div
               key={imgIndex}

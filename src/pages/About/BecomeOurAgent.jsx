@@ -3,6 +3,7 @@ import Hero from "../../components/Hero";
 import { Mail, MapPin, Phone } from "lucide-react";
 // import Form from "../../components/Form";
 import Footer from "../../components/Footer";
+import becomeAgentHero from "/src/images/become-our-agent.jpeg";
 const BecomeOurAgent = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -23,7 +24,7 @@ const BecomeOurAgent = () => {
   return (
     <div className="">
       <Hero
-        bgImage={"/src/images/become-our-agent.jpeg"}
+        bgImage={becomeAgentHero}
         heading={"Become Our Agent"}
         content={`Unlock New Opportunities, Drive Growth, and Be a Part of Our Success Story at Markle Tech!`}
       />
@@ -31,10 +32,10 @@ const BecomeOurAgent = () => {
         <div className="flex flex-col md:flex-row justify-center mx-4 space-y-6 md:space-x-8">
           {/* Contacts Section */}
           <div className="md:w-1/2 space-y-4">
-            <h1 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed font-semibold text-[#330073] text-center">
+            <h1 className="text-2xl md:text-3xl/relaxed lg:text-3xl/relaxed font-semibold text-[#330073] text-left font-montserrat">
               Markle Tech to support all of your IT needs
             </h1>
-            <p>
+            <p className="font-poppins">
               With 8+ years of expertise and 300+ professional developers,
               Markle Tech offers top-notch app/software development and digital
               transformation services to enhance your business’s productivity
@@ -42,7 +43,7 @@ const BecomeOurAgent = () => {
               bussinesses with us.
             </p>
 
-            <div className="space-y-4">
+            <div className="space-y-4 font-poppins">
               <div className="flex items-center space-x-3">
                 <MapPin className="w-8 h-8" />
                 <p className="font-bold">
@@ -62,7 +63,7 @@ const BecomeOurAgent = () => {
           </div>
 
           {/* Form Section */}
-          <div className="md:w-1/2 bg-white p-6 shadow-lg shadow-[#330073] rounded-lg">
+          <div className="md:w-1/2 bg-white p-6 shadow-lg shadow-[#330073] rounded-lg font-poppins">
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"

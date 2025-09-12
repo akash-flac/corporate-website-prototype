@@ -18,7 +18,7 @@ import IndustriesMain from "./pages/Industries/IndustriesMain";
 import Pricing from "./pages/Pricing/Pricing";
 import PricingTwo from "./pages/Pricing/PricingTwo";
 import ContactUs from "./pages/ContactUs";
-import CostCalculator from "./pages/Pricing/CostCalculator";
+// import CostCalculator from "./pages/Pricing/CostCalculator";
 
 // Industries
 import FinanceAndFintech from "./pages/Industries/FinanceAndFintech";
@@ -65,13 +65,36 @@ import ProjectManagementSystem from "./pages/Solutions/ProjectManagementSystem";
 import ELearning from "./pages/Solutions/Elearning";
 import SolutionsMain from "./pages/Solutions/SolutionsMain";
 
+//Pricing
+import Step1 from "./pages/Pricing/Steps/Step1";
+import Step2 from "./pages/Pricing/Steps/Step2";
+import Step3 from "./pages/Pricing/Steps/Step3";
+import Step4 from "./pages/Pricing/Steps/Step4";
+import Step5 from "./pages/Pricing/Steps/Step5";
+import Step6 from "./pages/Pricing/Steps/Step6";
+import Step7 from "./pages/Pricing/Steps/Step7";
+import ThankYou from "./pages/Pricing/ThankYou";
+import AstroHoroscope from "./pages/Industries/AstroHoroscope";
+import Insurance from "./pages/Industries/Insurance";
+import Banking from "./pages/Industries/Banking";
+import Automotive from "./pages/Industries/Automotive";
+import OilGas from "./pages/Industries/OilGas";
+import ScrollToTop from "./components/ScrollToTop";
+import NotFoundPage from "./pages/NotFoundPage";
+import AiMl from "./pages/Services/AiMl";
+import Terms from "./pages/Footer/Terms";
+import PrivacyPolicy from "./pages/Footer/PrivacyPolicy";
+import Disclaimer from "./pages/Footer/Disclaimer";
+import RefundPolicy from "./pages/Footer/RefundPolicy";
+
 function App() {
   return (
     <div>
       <BrowserRouter>
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
-
+          <Route path="*" element={<NotFoundPage />} />
           {/* About Section */}
           <Route path="about">
             <Route path="company" element={<AboutCompany />} />
@@ -102,6 +125,7 @@ function App() {
             />
             <Route path="saas-products" element={<SaasProducts />} />
             <Route path="it-consulting" element={<ItConsulting />} />
+            <Route path="aiml-services" element={<AiMl />} />
             <Route path="all-services" element={<ServicesMain />} />
           </Route>
 
@@ -136,6 +160,14 @@ function App() {
             />
             <Route path="manufacturing" element={<Manufacturing />} />
             <Route path="telecommunications" element={<Telecommunications />} />
+            <Route
+              path="astrology-and-horoscope"
+              element={<AstroHoroscope />}
+            />
+            <Route path="insurance" element={<Insurance />} />
+            <Route path="banking" element={<Banking />} />
+            <Route path="automotive" element={<Automotive />} />
+            <Route path="oil-and-gas" element={<OilGas />} />
             <Route path="all-industries" element={<IndustriesMain />} />
           </Route>
 
@@ -176,10 +208,22 @@ function App() {
           {/* Pricing */}
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/pricing-2" element={<PricingTwo />} />
-          <Route path="/cost-calculator/*" element={<CostCalculator />} />
-          {/* <Route path="/thank-you" element={<ThankYou />} /> */}
+          {/* <Route path="/cost-calculator/*" element={<CostCalculator />} /> */}
+          <Route path="/cost-calculator/1" element={<Step1 />} />
+          <Route path="/cost-calculator/2" element={<Step2 />} />
+          <Route path="/cost-calculator/3" element={<Step3 />} />
+          <Route path="/cost-calculator/4" element={<Step4 />} />
+          <Route path="/cost-calculator/5" element={<Step5 />} />
+          <Route path="/cost-calculator/6" element={<Step6 />} />
+          <Route path="/cost-calculator/7" element={<Step7 />} />
+          <Route path="/cost-calculator/thank-you" element={<ThankYou />} />
 
           <Route path="/contact-us" element={<ContactUs />} />
+
+          <Route path="/terms-and-conditions" element={<Terms/>} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
+          <Route path="/disclaimer" element={<Disclaimer/>} />
+          <Route path="/refund-policy" element={<RefundPolicy/>} />
         </Routes>
       </BrowserRouter>
     </div>

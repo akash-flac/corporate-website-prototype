@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import { FreeMode } from "swiper/modules";
 
 const cardDataArray = [
   {
@@ -285,206 +289,235 @@ export default function Tools() {
   const showArrows = currentItems.length > 4;
 
   return (
-    <div className="p-4 sm:p-6 lg:p-10">
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-[#330073] mb-4">
+    <div className="py-4 sm:p-6 lg:p-10">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-[#330073] mb-4 font-montserrat">
         Tools We Use
       </h2>
-      <div className="flex flex-wrap justify-center space-x-2 sm:space-x-4 mb-4 sm:mb-6">
+
+      {/* <div className="grid grid-cols-2 sm:grid-cols-6 sm:space-x-4 mb-4 sm:mb-6">
         {cardDataArray.map((category) => (
           <button
             key={category.category}
             onClick={() => setActiveHeading(category.category)}
-            className={`px-3 sm:px-4 py-1 sm:py-2 rounded-full font-semibold font-mono transition-colors duration-300 ${
+            className={`px-4 sm:px-2 py-1 sm:py-1 rounded-full font-semibold transition-colors duration-300 text-left sm:text-center hover:bg-[#330073] text-gray-50 font-plex ${
               activeHeading === category.category
-                ? "text-[#330073] "
-                : "text-gray-400"
+                ? "bg-[#330073] "
+                : "bg-gray-400"
             }`}
           >
             {category.category}
           </button>
         ))}
-      </div>
+      </div> */}
 
-      <div className="relative">
-        {showArrows && (
-          <button
-            onClick={() => scrollCarousel("left")}
-            className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-1 sm:p-2 rounded-full z-10 opacity-85 hover:bg-gray-200"
+      <div className="px-2">
+        <div className="space-x-1 sm:space-x-4 overflow-x-auto mx-3 sm:mx-auto">
+          <Swiper
+            slidesPerView="auto"
+            spaceBetween={10}
+            freeMode={true}
+            modules={[FreeMode]}
+            className="w-full sm:max-w-screen-xl"
           >
-            <ChevronLeft size={20} />
-          </button>
-        )}
+            {cardDataArray.map((category) => (
+              <SwiperSlide key={category.category} className="!w-fit mx-auto">
+                <button
+                  key={category.category}
+                  onClick={() => setActiveHeading(category.category)}
+                  className={`px-4 py-2 rounded-full font-semibold transition-colors duration-300 text-center hover:bg-[#330073] hover:text-white font-plex ${
+                    activeHeading === category.category
+                      ? "bg-[#330073] text-white "
+                      : "bg-[#E9D9FF] text-[#330073] "
+                  }`}
+                >
+                  {category.category}
+                </button>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        <div className="relative">
+          {showArrows && (
+            <button
+              onClick={() => scrollCarousel("left")}
+              className="absolute hidden md:block left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-1 sm:p-2 rounded-full z-0 opacity-85 hover:bg-gray-200"
+            >
+              <ChevronLeft size={20} />
+            </button>
+          )}
 
-        <div
-          ref={carouselRef}
-          className="flex space-x-2 sm:space-x-4 overflow-x-auto px-4 sm:px-10 scrollbar-hide"
-          style={{
-            scrollSnapType: "x mandatory",
-            scrollbarWidth: "none",
-            msOverflowStyle: "none",
-          }}
-          onMouseDown={startDrag}
-          onMouseLeave={stopDrag}
-          onMouseUp={stopDrag}
-          onMouseMove={handleDrag}
-        >
-          <style>
-            {`
+          <div
+            ref={carouselRef}
+            className="flex space-x-1 sm:space-x-4 overflow-x-auto px-2 md:px-10 scrollbar-hide"
+            style={{
+              scrollSnapType: "x mandatory",
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+            }}
+            onMouseDown={startDrag}
+            onMouseLeave={stopDrag}
+            onMouseUp={stopDrag}
+            onMouseMove={handleDrag}
+          >
+            <style>
+              {`
               .scrollbar-hide::-webkit-scrollbar {
                 display: none;
               }
             `}
-          </style>
-          {cardDataArray
-            .find((category) => category.category === activeHeading)
-            .items.map((item, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                className="min-w-[200px] sm:min-w-[250px] lg:min-w-[300px] shadow-[#E9D9FF] border-2 border-[#E9D9FF] hover:bg-[#E9D9FF] rounded-2xl shadow-lg m-4 p-6 cursor-pointer scroll-snap-align-start transition-transform duration-300"
-              >
-                <img
-                  src={item.logo}
-                  alt="Item Logo"
-                  className="w-12 h-12 sm:w-16 sm:h-16 mb-2 mx-auto"
-                />
-                <p className="text-sm sm:text-base text-gray-700 text-center">
-                  {item.content}
-                </p>
-              </motion.div>
-            ))}
-        </div>
+            </style>
+            {cardDataArray
+              .find((category) => category.category === activeHeading)
+              .items.map((item, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.05 }}
+                  className="min-w-[200px] sm:min-w-[250px] lg:min-w-[300px] shadow-[#E9D9FF] border-2 border-[#E9D9FF] hover:bg-[#E9D9FF] rounded-2xl shadow-lg m-4 p-6 cursor-pointer scroll-snap-align-start transition-transform duration-300"
+                >
+                  <img
+                    src={item.logo}
+                    alt="Item Logo"
+                    className="w-12 h-12 sm:w-16 sm:h-16 mb-2 mx-auto"
+                  />
+                  <p className="text-sm sm:text-base text-gray-900 text-center font-poppins">
+                    {item.content}
+                  </p>
+                </motion.div>
+              ))}
+          </div>
 
-        {showArrows && (
-          <button
-            onClick={() => scrollCarousel("right")}
-            className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-1 sm:p-2 rounded-full z-10 opacity-85 hover:bg-gray-200"
-          >
-            <ChevronRight size={20} />
-          </button>
-        )}
+          {showArrows && (
+            <button
+              onClick={() => scrollCarousel("right")}
+              className="absolute hidden md:block right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-1 sm:p-2 rounded-full z-10 opacity-85 hover:bg-gray-200"
+            >
+              <ChevronRight size={20} />
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );
-  // return (
-  //   <div className="">
-  //     <div className="m-8 px-8 sm:m-10 md:h-64">
-  //       <div className="">
-  //         {/* <div className=""> */}
-  //         <h2 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed font-bold text-[#330073] text-center">
-  //           Tools We Use
-  //         </h2>
-  //         <div className="flex space-x-3 md:space-x-6 mb-6 justify-center items-center mt-4">
-  //           {/* Tools Headings */}
-  //           {cardDataArray.map((category) => (
-  //             <button
-  //               key={category.category}
-  //               onClick={() => setActiveHeading(category.category)}
-  //               className={`px-3 md:py-1 rounded-lg font-mono font-semibold group ${
-  //                 activeHeading === category.category
-  //                   ? "text-[#330073]"
-  //                   : " text-gray-500"
-  //               }`}
-  //             >
-  //               {category.category}
-  //             </button>
-  //           ))}
-  //         </div>
-  //         {/* </div> */}
-
-  //         {/* Cards */}
-
-  //         {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 justify-items-center my-4 mx-11 p-2"> */}
-  //         <div className="relative">
-  //           {" "}
-  //           <button
-  //             onClick={() => scrollCarousel("left")}
-  //             className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white shadow-lg p-2 rounded-full z-10 hover:bg-gray-200"
-  //           >
-  //             <ChevronLeft size={24} />
-  //           </button>
-  //           <div
-  //             ref={carouselRef}
-  //             className="flex space-x-4 overflow-x-auto px-10 scrollbar-hide"
-  //             style={{
-  //               scrollSnapType: "x mandatory",
-  //               scrollbarWidth: "none",
-  //               msOverflowStyle: "none",
-  //             }}
-  //             onMouseDown={startDrag}
-  //             onMouseLeave={stopDrag}
-  //             onMouseUp={stopDrag}
-  //             onMouseMove={handleDrag}
-  //           >
-  //             <style>
-  //               {`
-  //             .scrollbar-hide::-webkit-scrollbar {
-  //               display: none;
-  //             }
-  //           `}
-  //             </style>
-  //             {cardDataArray
-  //               .find((category) => category.category === activeHeading)
-  //               .items.map((item, index) => (
-  //                 // <div
-  //                 //   key={index}
-  //                 //   // onClick={() => {
-  //                 //   //   if (isExpanded == index) setIsExpanded(null);
-  //                 //   //   else if (isExpanded != index) setIsExpanded(index);
-  //                 //   // }}
-  //                 //   onMouseEnter={() => setIsExpanded(index)}
-  //                 //   onMouseLeave={() => setIsExpanded(null)}
-  //                 //   onClick={() =>
-  //                 //     isExpanded === index
-  //                 //       ? setIsExpanded(null)
-  //                 //       : setIsExpanded(index)
-  //                 //   }
-  //                 //   className={`w-60 cursor-pointer overflow-hidden transition delay-150 duration-500 ease-in-out ${
-  //                 //     isExpanded === index ? "max-h-64" : "max-h-16"
-  //                 //   }`}
-  //                 // >
-  //                 //   {/* Card Title */}
-  //                 //   <h3
-  //                 //     className={`font-bold text-lg p-4 rounded-t-2xl duration-100 ease-in-out ${
-  //                 //       isExpanded === index
-  //                 //         ? "bg-[#330073] text-[#E9D9FF]"
-  //                 //         : "bg-[#E9D9FF] rounded-xl"
-  //                 //     }`}
-  //                 //   >
-  //                 //     {item.title}
-  //                 //   </h3>
-
-  //                 //   {/* Card Content */}
-  //                 //   <div
-  //                 //     className={`p-4 text-sm text-[#E9D9FF] bg-[#330073] rounded-b-2xl duration-500 ease-in-out ${
-  //                 //       isExpanded === index ? "opacity-100" : "opacity-0 hidden"
-  //                 //     }`}
-  //                 //   >
-  //                 //     {item.content}
-  //                 //   </div>
-  //                 // </div>
-
-  //                 <motion.div
-  //                   key={index}
-  //                   whileHover={{ scale: 1.05 }}
-  //                   className="min-w-[240px] bg-[#E9D9FF] rounded-2xl shadow-md p-4 cursor-pointer scroll-snap-align-start transition-transform duration-300"
-  //                 >
-  //                   <h3 className="font-bold text-xl text-[#330073] mb-2">
-  //                     {item.title}
-  //                   </h3>
-  //                   <p className="text-gray-700">{item.content}</p>
-  //                 </motion.div>
-  //               ))}
-  //           </div>
-  //           <button
-  //             onClick={() => scrollCarousel("right")}
-  //             className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white shadow-lg p-2 rounded-full z-10 hover:bg-gray-200"
-  //           >
-  //             <ChevronRight size={24} />
-  //           </button>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
 }
+// return (
+//   <div className="">
+//     <div className="m-8 px-8 sm:m-10 md:h-64">
+//       <div className="">
+//         {/* <div className=""> */}
+//         <h2 className="text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed font-bold text-[#330073] text-center">
+//           Tools We Use
+//         </h2>
+//         <div className="flex space-x-3 md:space-x-6 mb-6 justify-center items-center mt-4">
+//           {/* Tools Headings */}
+//           {cardDataArray.map((category) => (
+//             <button
+//               key={category.category}
+//               onClick={() => setActiveHeading(category.category)}
+//               className={`px-3 md:py-1 rounded-lg font-mono font-semibold group ${
+//                 activeHeading === category.category
+//                   ? "text-[#330073]"
+//                   : " text-gray-500"
+//               }`}
+//             >
+//               {category.category}
+//             </button>
+//           ))}
+//         </div>
+//         {/* </div> */}
+
+//         {/* Cards */}
+
+//         {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 justify-items-center my-4 mx-11 p-2"> */}
+//         <div className="relative">
+//           {" "}
+//           <button
+//             onClick={() => scrollCarousel("left")}
+//             className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white shadow-lg p-2 rounded-full z-10 hover:bg-gray-200"
+//           >
+//             <ChevronLeft size={24} />
+//           </button>
+//           <div
+//             ref={carouselRef}
+//             className="flex space-x-4 overflow-x-auto px-10 scrollbar-hide"
+//             style={{
+//               scrollSnapType: "x mandatory",
+//               scrollbarWidth: "none",
+//               msOverflowStyle: "none",
+//             }}
+//             onMouseDown={startDrag}
+//             onMouseLeave={stopDrag}
+//             onMouseUp={stopDrag}
+//             onMouseMove={handleDrag}
+//           >
+//             <style>
+//               {`
+//             .scrollbar-hide::-webkit-scrollbar {
+//               display: none;
+//             }
+//           `}
+//             </style>
+//             {cardDataArray
+//               .find((category) => category.category === activeHeading)
+//               .items.map((item, index) => (
+//                 // <div
+//                 //   key={index}
+//                 //   // onClick={() => {
+//                 //   //   if (isExpanded == index) setIsExpanded(null);
+//                 //   //   else if (isExpanded != index) setIsExpanded(index);
+//                 //   // }}
+//                 //   onMouseEnter={() => setIsExpanded(index)}
+//                 //   onMouseLeave={() => setIsExpanded(null)}
+//                 //   onClick={() =>
+//                 //     isExpanded === index
+//                 //       ? setIsExpanded(null)
+//                 //       : setIsExpanded(index)
+//                 //   }
+//                 //   className={`w-60 cursor-pointer overflow-hidden transition delay-150 duration-500 ease-in-out ${
+//                 //     isExpanded === index ? "max-h-64" : "max-h-16"
+//                 //   }`}
+//                 // >
+//                 //   {/* Card Title */}
+//                 //   <h3
+//                 //     className={`font-bold text-lg p-4 rounded-t-2xl duration-100 ease-in-out ${
+//                 //       isExpanded === index
+//                 //         ? "bg-[#330073] text-[#E9D9FF]"
+//                 //         : "bg-[#E9D9FF] rounded-xl"
+//                 //     }`}
+//                 //   >
+//                 //     {item.title}
+//                 //   </h3>
+
+//                 //   {/* Card Content */}
+//                 //   <div
+//                 //     className={`p-4 text-sm text-[#E9D9FF] bg-[#330073] rounded-b-2xl duration-500 ease-in-out ${
+//                 //       isExpanded === index ? "opacity-100" : "opacity-0 hidden"
+//                 //     }`}
+//                 //   >
+//                 //     {item.content}
+//                 //   </div>
+//                 // </div>
+
+//                 <motion.div
+//                   key={index}
+//                   whileHover={{ scale: 1.05 }}
+//                   className="min-w-[240px] bg-[#E9D9FF] rounded-2xl shadow-md p-4 cursor-pointer scroll-snap-align-start transition-transform duration-300"
+//                 >
+//                   <h3 className="font-bold text-xl text-[#330073] mb-2">
+//                     {item.title}
+//                   </h3>
+//                   <p className="text-gray-700">{item.content}</p>
+//                 </motion.div>
+//               ))}
+//           </div>
+//           <button
+//             onClick={() => scrollCarousel("right")}
+//             className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white shadow-lg p-2 rounded-full z-10 hover:bg-gray-200"
+//           >
+//             <ChevronRight size={24} />
+//           </button>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// );
+// }

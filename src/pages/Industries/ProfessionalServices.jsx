@@ -6,11 +6,6 @@ import IndustryCommon from "../../components/IndustryCommon";
 const ProfessionalServices = () => {
   return (
     <div>
-      <Hero
-        heading={professionalObj.title}
-        bgImage={professionalObj.src}
-        content={professionalObj.description}
-      />
       <IndustryCommon obj={professionalObj} />
     </div>
   );

@@ -7,9 +7,7 @@ import ServicesCommon from "../../components/ServicesCommon";
 const TestingAndQA = () => {
   return (
     <div>
-      <Hero heading={testingObj.title} bgImage={testingObj.src} content={testingObj.description}/>
       <ServicesCommon obj={testingObj} />
-      <Footer />
     </div>
   );
 };

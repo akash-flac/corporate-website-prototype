@@ -7,9 +7,7 @@ import { saasProductsObj } from "../../data/services/services";
 const SaasProducts = () => {
   return (
     <div>
-      <Hero heading={saasProductsObj.title} bgImage={saasProductsObj.src} content={saasProductsObj.description}/>
       <ServicesCommon obj={saasProductsObj} />
-      <Footer />
     </div>
   );
 };

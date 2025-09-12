@@ -7,9 +7,7 @@ import ServicesCommon from "../../components/ServicesCommon";
 const UiUxDesign = () => {
   return (
     <div>
-      <Hero heading={uiuxObj.title} bgImage={uiuxObj.src} content={uiuxObj.description}/>
       <ServicesCommon obj={uiuxObj} />
-      <Footer />
     </div>
   );
 };

@@ -4,17 +4,18 @@ import WhyChooseMarkle from "../../components/WhyChooseMarkle";
 import Footer from "/src/components/Footer";
 import Services from "/src/components/Services";
 import SolutionsWeDeliver from "/src/components/SolutionsWeDeliver";
+import { AboutUsImg } from "../../data/about/about";
 
 const AboutCompany = () => {
   return (
     <div>
       <Hero
-        bgImage={"/src/images/aboutUs.jpeg"}
+        bgImage={AboutUsImg}
         heading={"About Us"}
         content={"Driving Success Through Innovative IT Solutions"}
       />
       <WhyChooseMarkle />
-      <Services />
+      <Services renderComplete={false} />
       <SolutionsWeDeliver />
       <Footer />
     </div>

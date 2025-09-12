@@ -1,21 +1,19 @@
-import React from 'react'
+import React from "react";
 
 //components
-import Hero from '../../components/Hero'
-import Footer from '../../components/Footer'
-import IndustryCommon from '../../components/IndustryCommon'
+import Hero from "../../components/Hero";
+import Footer from "../../components/Footer";
+import IndustryCommon from "../../components/IndustryCommon";
 
 //data
-import { healthObj } from '../../data/industries/industries'
+import { healthObj } from "../../data/industries/industries";
 
 const HealthAndWellness = () => {
   return (
     <div>
-      <Hero heading={healthObj.title} bgImage={healthObj.src}/>
       <IndustryCommon obj={healthObj} />
-      <Footer/>
     </div>
-  )
-}
+  );
+};
 
-export default HealthAndWellness
+export default HealthAndWellness;

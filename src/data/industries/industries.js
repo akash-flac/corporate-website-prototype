@@ -1,6 +1,9 @@
 import {
+  AcademicCapIcon,
   ArrowPathIcon,
+  BanknotesIcon,
   Bars3Icon,
+  BuildingOfficeIcon,
   ChartPieIcon,
   ChatBubbleBottomCenterTextIcon,
   CheckBadgeIcon,
@@ -13,11 +16,15 @@ import {
   GlobeAltIcon,
   InformationCircleIcon,
   LightBulbIcon,
+  PaperAirplaneIcon,
   PencilSquareIcon,
   PercentBadgeIcon,
+  PlayIcon,
   QuestionMarkCircleIcon,
   RocketLaunchIcon,
+  SignalIcon,
   SquaresPlusIcon,
+  TruckIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import {
@@ -26,12 +33,14 @@ import {
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
 import {
+  BriefcaseBusinessIcon,
   BriefcaseIcon,
   CloudIcon,
   CloudLightningIcon,
   Code2,
   CodeIcon,
   HandshakeIcon,
+  HeartPulseIcon,
   LucideCloudLightning,
   MegaphoneIcon,
   ShoppingBagIcon,
@@ -47,6 +56,13 @@ import telecommunicationsImg from "/src/images/industries/IndustriesHero/telecom
 import transportationImg from "/src/images/industries/IndustriesHero/transportation-and-logistics.jpg";
 import professionalImg from "/src/images/industries/IndustriesHero/professional-services.jpg";
 import manufacturingImg from "/src/images/industries/IndustriesHero/manufacturing.jpg";
+import automotiveImg from "/src/images/industries/IndustriesHero/automotiveHero.jpg";
+import astrologyImg from "/src/images/industries/IndustriesHero/astroHoroscopeHero.jpg";
+import oilImg from "/src/images/industries/IndustriesHero/oilGasHero.jpg";
+import retailEcommerceImg from "/src/images/industries/IndustriesHero/retailEcommerceHero.webp";
+import bankingImg from "/src/images/industries/IndustriesHero/bankingHero.webp";
+import insuranceImg from "/src/images/industries/IndustriesHero/insuranceHero.jpg";
+// import automotiveImg from "/src/images/industries/IndustriesHero/automotiveHero.jpg";
 
 // import
 const industriesObj = [
@@ -54,70 +70,88 @@ const industriesObj = [
     name: "Finance & FinTech",
     // description: "Get a better understanding of your traffic",
     href: "/industries/finance-and-fintech",
-    icon: ChartPieIcon,
+    icon: BanknotesIcon,
   },
   {
     name: "Travel & Hospitality",
     // description: "Speak directly to your customers",
     href: "/industries/travel-and-hospitality",
-    icon: CursorArrowRaysIcon,
+    icon: PaperAirplaneIcon,
   },
   {
     name: "Real Estate & Construction",
     // description: "Your customers’ data will be safe and secure",
     href: "/industries/real-estate-and-construction",
-    icon: FingerPrintIcon,
+    icon: BuildingOfficeIcon,
   },
   {
     name: "Health & Wellness",
     // description: "Connect with third-party tools",
-    href: "/health-and-wellness",
-    icon: SquaresPlusIcon,
+    href: "/industries/health-and-wellness",
+    icon: HeartPulseIcon,
   },
   {
     name: "Transportation & Logistics",
     // description: "Build strategic funnels that will convert",
     href: "/industries/transportation-and-logistics",
-    icon: ArrowPathIcon,
+    icon: TruckIcon,
   },
   {
-    name: "Professional services",
+    name: "Professional Services",
     // description: "Build strategic funnels that will convert",
     href: "/industries/professional-services",
-    icon: ArrowPathIcon,
+    icon: BriefcaseBusinessIcon,
   },
   {
     name: "Media & Entertainment",
     // description: "Build strategic funnels that will convert",
     href: "/industries/media-and-entertainment",
-    icon: ArrowPathIcon,
+    icon: PlayIcon,
   },
   {
-    name: "Retail & e-Commerce",
+    name: "Retail & E-commerce",
     // description: "Build strategic funnels that will convert",
     href: "/industries/retail-and-ecommerce",
-    icon: ArrowPathIcon,
+    icon: ShoppingBagIcon,
   },
   {
     name: "Education",
     // description: "Build strategic funnels that will convert",
     href: "/industries/education",
-    icon: ArrowPathIcon,
+    icon: AcademicCapIcon,
   },
   {
     name: "Manufacturing",
     // description: "Build strategic funnels that will convert",
     href: "/industries/manufacturing",
-    icon: ArrowPathIcon,
+    icon: Cog6ToothIcon,
   },
   {
     name: "Telecommunications",
     // description: "Build strategic funnels that will convert",
     href: "/industries/telecommunications",
+    icon: SignalIcon,
+  },
+  {
+    name: "Banking",
+    // description: "Build strategic funnels that will convert",
+    href: "/industries/banking",
     icon: ArrowPathIcon,
   },
   {
-    name: "View All Industries",
+    name: "Insurance",
+    // description: "Build strategic funnels that will convert",
+    href: "/industries/insurance",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Astrology & Horoscope",
+    // description: "Build strategic funnels that will convert",
+    href: "/industries/astrology-and-horoscope",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "View More Industries",
     // description: "Build strategic funnels that will convert",
     href: "/industries/all-industries",
     icon: EllipsisHorizontalIcon,
@@ -712,131 +746,350 @@ const transportationObj = {
   ],
 };
 
-// Content needs to be updated
-const telecommunicationsObj = {
-  title: "Transportation & Logistics",
+const mediaObj = {
+  title: "Media and Entertainment",
   src: transportationImg,
-  description: "Driving Efficiency Through Advanced Technology",
-  extendedContent: `Revolutionize your logistics and transportation operations with our innovative IT solutions. We specialize in fleet management systems, supply chain optimization tools, and real-time tracking technologies that improve route efficiency, reduce costs, and ensure regulatory compliance.`,
+  description: "Innovating Content Creation and Distribution",
+  extendedContent: `Enhance the media and entertainment landscape with cutting-edge technology solutions. From content creation and digital streaming to audience analytics and interactive experiences, our IT solutions empower businesses to deliver high-quality entertainment efficiently and effectively.`,
   sections: [
     {
-      title: "Fleet Management",
-      description: "Tools to manage and optimize vehicle fleets.",
+      title: "Content Production & Management",
+      description: "Optimizing media production and asset management.",
       items: [
         {
-          name: "GPS Tracking Systems",
-          info: "Real-time tracking of vehicles and routes.",
+          name: "Cloud-Based Editing Platforms",
+          info: "Collaborative tools for video and audio production teams.",
         },
         {
-          name: "Fleet Maintenance Software",
-          info: "Applications to schedule and track vehicle maintenance.",
+          name: "Digital Asset Management (DAM)",
+          info: "Organizing and securing media content with AI-powered tagging.",
         },
       ],
     },
     {
-      title: "Supply Chain Optimization",
-      description: "Improving supply chain efficiency and transparency.",
+      title: "Streaming & Digital Distribution",
+      description: "Delivering seamless and scalable streaming experiences.",
       items: [
         {
-          name: "Logistics Management Systems",
-          info: "Software to streamline logistics operations.",
+          name: "OTT Streaming Solutions",
+          info: "Custom platforms for video-on-demand and live streaming.",
         },
         {
-          name: "Warehouse Management Tools",
-          info: "Applications for inventory control and storage optimization.",
+          name: "CDN Optimization",
+          info: "Enhancing content delivery speed and reducing latency.",
         },
       ],
     },
     {
-      title: "Route Planning Solutions",
-      description: "Enhancing delivery efficiency with optimized routes.",
+      title: "Audience Engagement & Monetization",
+      description: "Driving revenue through data-driven audience insights.",
       items: [
         {
-          name: "Dynamic Routing Tools",
-          info: "Real-time route optimization based on traffic conditions.",
+          name: "AI-Powered Content Recommendations",
+          info: "Personalized viewing experiences based on user preferences.",
         },
         {
-          name: "Delivery Scheduling Software",
-          info: "Applications for planning and managing delivery schedules.",
+          name: "AdTech & Monetization Platforms",
+          info: "Advanced advertising and subscription models for revenue growth.",
         },
       ],
     },
     {
-      title: "Compliance & Safety Management",
-      description: "Ensuring transportation safety and regulatory compliance.",
+      title: "Immersive & Interactive Media",
+      description: "Enhancing entertainment with next-gen experiences.",
       items: [
         {
-          name: "Driver Safety Monitoring Systems",
-          info: "Tools to monitor driver behavior and promote safety.",
+          name: "Augmented & Virtual Reality",
+          info: "Creating immersive entertainment experiences using AR/VR.",
         },
         {
-          name: "Regulatory Compliance Software",
-          info: "Applications to manage industry-specific compliance requirements.",
+          name: "Gamification & Interactive Storytelling",
+          info: "Engaging audiences through interactive and gamified content.",
         },
       ],
     },
   ],
 };
 
-const retailingObj = {
-  title: "Transportation & Logistics",
-  src: transportationImg,
-  description: "Driving Efficiency Through Advanced Technology",
-  extendedContent: `Revolutionize your logistics and transportation operations with our innovative IT solutions. We specialize in fleet management systems, supply chain optimization tools, and real-time tracking technologies that improve route efficiency, reduce costs, and ensure regulatory compliance.`,
+const automotiveObj = {
+  title: "Automotive",
+  src: automotiveImg,
+  description: "Innovating the Future of Mobility",
+  extendedContent: `Transform the automotive industry with cutting-edge IT solutions. We offer advanced telematics, predictive maintenance systems, connected car technologies, and AI-driven automation to enhance vehicle performance, safety, and customer experience.`,
   sections: [
     {
-      title: "Fleet Management",
-      description: "Tools to manage and optimize vehicle fleets.",
+      title: "Connected Vehicles",
+      description: "Enhancing connectivity and smart features in vehicles.",
       items: [
         {
-          name: "GPS Tracking Systems",
-          info: "Real-time tracking of vehicles and routes.",
+          name: "Infotainment Systems",
+          info: "Advanced in-car entertainment and navigation solutions.",
         },
         {
-          name: "Fleet Maintenance Software",
-          info: "Applications to schedule and track vehicle maintenance.",
+          name: "Vehicle-to-Everything (V2X) Communication",
+          info: "Technology for real-time data exchange between vehicles and infrastructure.",
         },
       ],
     },
     {
-      title: "Supply Chain Optimization",
-      description: "Improving supply chain efficiency and transparency.",
+      title: "Predictive Maintenance",
+      description:
+        "AI-driven solutions for vehicle maintenance and diagnostics.",
       items: [
         {
-          name: "Logistics Management Systems",
-          info: "Software to streamline logistics operations.",
+          name: "IoT-based Diagnostic Tools",
+          info: "Real-time vehicle health monitoring and predictive analytics.",
         },
         {
-          name: "Warehouse Management Tools",
-          info: "Applications for inventory control and storage optimization.",
+          name: "Automated Maintenance Scheduling",
+          info: "Software for proactive maintenance planning.",
         },
       ],
     },
     {
-      title: "Route Planning Solutions",
-      description: "Enhancing delivery efficiency with optimized routes.",
+      title: "Supply Chain & Manufacturing",
+      description:
+        "Optimizing production and logistics for automotive companies.",
       items: [
         {
-          name: "Dynamic Routing Tools",
-          info: "Real-time route optimization based on traffic conditions.",
+          name: "Automotive ERP Systems",
+          info: "Enterprise resource planning solutions for streamlined operations.",
         },
         {
-          name: "Delivery Scheduling Software",
-          info: "Applications for planning and managing delivery schedules.",
+          name: "Robotic Process Automation",
+          info: "AI-powered automation in vehicle production lines.",
         },
       ],
     },
     {
-      title: "Compliance & Safety Management",
-      description: "Ensuring transportation safety and regulatory compliance.",
+      title: "Autonomous & Electric Vehicles",
+      description: "Driving innovation in self-driving and electric vehicles.",
       items: [
         {
-          name: "Driver Safety Monitoring Systems",
-          info: "Tools to monitor driver behavior and promote safety.",
+          name: "ADAS (Advanced Driver Assistance Systems)",
+          info: "AI-powered driving assistance and automation features.",
         },
         {
-          name: "Regulatory Compliance Software",
-          info: "Applications to manage industry-specific compliance requirements.",
+          name: "Battery Management Systems",
+          info: "Optimizing efficiency and longevity of EV batteries.",
+        },
+      ],
+    },
+  ],
+};
+
+const oilAndGasObj = {
+  title: "Oil and Gas",
+  src: oilImg,
+  description: "Optimizing Energy Production with Technology",
+  extendedContent: `We empower the oil and gas industry with smart IT solutions, including real-time monitoring, predictive analytics, and automation tools that improve efficiency, safety, and regulatory compliance.`,
+  sections: [
+    {
+      title: "Exploration & Production",
+      description: "Enhancing upstream operations with technology.",
+      items: [
+        {
+          name: "Geospatial Data Analytics",
+          info: "AI-driven analysis for accurate resource exploration.",
+        },
+        {
+          name: "Reservoir Management Systems",
+          info: "Advanced tools for efficient resource extraction.",
+        },
+      ],
+    },
+    {
+      title: "Asset Management & Maintenance",
+      description: "Ensuring optimal performance of oil & gas assets.",
+      items: [
+        {
+          name: "Predictive Maintenance Tools",
+          info: "AI-based failure prediction for equipment and pipelines.",
+        },
+        {
+          name: "IoT-Enabled Asset Tracking",
+          info: "Real-time monitoring of field equipment and assets.",
+        },
+      ],
+    },
+    {
+      title: "Safety & Compliance",
+      description: "Improving worker safety and environmental protection.",
+      items: [
+        {
+          name: "Environmental Monitoring Software",
+          info: "Tools for tracking emissions and compliance requirements.",
+        },
+        {
+          name: "Workplace Safety Solutions",
+          info: "IoT-enabled safety monitoring and incident response systems.",
+        },
+      ],
+    },
+    {
+      title: "Downstream Operations",
+      description: "Optimizing refining, distribution, and retail processes.",
+      items: [
+        {
+          name: "Refinery Process Automation",
+          info: "AI-powered optimization of refining operations.",
+        },
+        {
+          name: "Supply Chain Management Tools",
+          info: "Software for logistics and fuel distribution efficiency.",
+        },
+      ],
+    },
+  ],
+};
+
+const astrologyAndHoroscopeObj = {
+  title: "Astrology and Horoscope",
+  src: astrologyImg,
+  description: "Bringing Astrology into the Digital Age",
+  extendedContent: `Leverage technology to enhance astrology and horoscope services. Our solutions include AI-powered predictions, personalized horoscope generators, and seamless online consultation platforms for astrologers.`,
+  sections: [
+    {
+      title: "Online Consultation Platforms",
+      description: "Connecting users with astrologers in real time.",
+      items: [
+        {
+          name: "Live Video Consultation",
+          info: "Secure video calling for astrology sessions.",
+        },
+        {
+          name: "AI Chatbots for Horoscope Queries",
+          info: "Instant automated responses for astrology-related questions.",
+        },
+      ],
+    },
+    {
+      title: "Personalized Horoscope Systems",
+      description: "Delivering customized astrological insights.",
+      items: [
+        {
+          name: "Birth Chart Generators",
+          info: "Automated generation of Kundali and birth charts.",
+        },
+        {
+          name: "Daily & Weekly Predictions",
+          info: "AI-driven daily, weekly, and yearly horoscope forecasts.",
+        },
+      ],
+    },
+    {
+      title: "Astrology & AI Integration",
+      description: "Enhancing astrology accuracy with machine learning.",
+      items: [
+        {
+          name: "AI-powered Astrological Predictions",
+          info: "Data-driven insights for better accuracy in astrology readings.",
+        },
+        {
+          name: "Predictive Analysis for Future Trends",
+          info: "Using AI to predict astrological trends based on planetary movements.",
+        },
+      ],
+    },
+  ],
+};
+
+const insuranceObj = {
+  title: "Insurance",
+  src: insuranceImg,
+  description: "Transforming the Insurance Sector with Technology",
+  extendedContent: `Modernize the insurance industry with AI-driven automation, fraud detection, and customer experience solutions. We provide tools to streamline underwriting, claims processing, and policy management.`,
+  sections: [
+    {
+      title: "AI-Powered Risk Assessment",
+      description: "Improving underwriting with data analytics.",
+      items: [
+        {
+          name: "Predictive Risk Analytics",
+          info: "AI-based risk evaluation for policy underwriting.",
+        },
+        {
+          name: "Automated Fraud Detection",
+          info: "Machine learning algorithms for detecting fraudulent claims.",
+        },
+      ],
+    },
+    {
+      title: "Claims Processing Automation",
+      description: "Enhancing efficiency in claims settlements.",
+      items: [
+        {
+          name: "AI Claims Processing",
+          info: "Automated claim validation and settlement systems.",
+        },
+        {
+          name: "Blockchain for Insurance",
+          info: "Securing transactions and improving transparency.",
+        },
+      ],
+    },
+    {
+      title: "Customer Experience Solutions",
+      description: "Enhancing user engagement and satisfaction.",
+      items: [
+        {
+          name: "Chatbots for Customer Support",
+          info: "AI-driven virtual assistants for policyholders.",
+        },
+        {
+          name: "Personalized Policy Recommendations",
+          info: "AI-powered tools for suggesting the best coverage options.",
+        },
+      ],
+    },
+  ],
+};
+
+const bankingObj = {
+  title: "Banking",
+  src: bankingImg,
+  description: "Modernizing Banking with Fintech Innovations",
+  extendedContent: `Revolutionize the banking sector with AI-powered solutions, blockchain security, and digital banking platforms. Our solutions drive automation, fraud prevention, and seamless customer experiences.`,
+  sections: [
+    {
+      title: "Digital Banking & Fintech",
+      description: "Enhancing digital banking experiences.",
+      items: [
+        {
+          name: "Mobile Banking Apps",
+          info: "Secure and user-friendly banking applications.",
+        },
+        {
+          name: "AI-Powered Financial Assistants",
+          info: "Automated financial management and spending insights.",
+        },
+      ],
+    },
+    {
+      title: "Cybersecurity & Fraud Prevention",
+      description: "Protecting financial transactions and data.",
+      items: [
+        {
+          name: "AI-Based Fraud Detection",
+          info: "Real-time fraud prevention systems.",
+        },
+        {
+          name: "Blockchain for Secure Transactions",
+          info: "Enhanced security for banking operations.",
+        },
+      ],
+    },
+    {
+      title: "Loan & Credit Automation",
+      description: "Streamlining lending processes.",
+      items: [
+        {
+          name: "Automated Loan Underwriting",
+          info: "AI-driven credit assessment tools.",
+        },
+        {
+          name: "Credit Scoring Systems",
+          info: "Data-driven solutions for better risk evaluation.",
         },
       ],
     },
@@ -844,129 +1097,194 @@ const retailingObj = {
 };
 
 const professionalObj = {
-  title: "Transportation & Logistics",
-  src: transportationImg,
-  description: "Driving Efficiency Through Advanced Technology",
-  extendedContent: `Revolutionize your logistics and transportation operations with our innovative IT solutions. We specialize in fleet management systems, supply chain optimization tools, and real-time tracking technologies that improve route efficiency, reduce costs, and ensure regulatory compliance.`,
+  title: "Professional Services",
+  src: professionalImg,
+  description: "Empowering Professionals with Digital Transformation",
+  extendedContent: `Leverage advanced IT solutions to streamline operations, enhance collaboration, and improve service delivery across legal, consulting, financial, and other professional sectors. Our tools drive efficiency and ensure a seamless client experience.`,
   sections: [
     {
-      title: "Fleet Management",
-      description: "Tools to manage and optimize vehicle fleets.",
+      title: "Workflow Automation",
+      description: "Enhancing efficiency with smart automation tools.",
       items: [
         {
-          name: "GPS Tracking Systems",
-          info: "Real-time tracking of vehicles and routes.",
+          name: "Document Management Systems",
+          info: "Automating document organization, storage, and retrieval.",
         },
         {
-          name: "Fleet Maintenance Software",
-          info: "Applications to schedule and track vehicle maintenance.",
+          name: "Task & Project Management Software",
+          info: "Optimizing workflow with AI-driven task management.",
         },
       ],
     },
     {
-      title: "Supply Chain Optimization",
-      description: "Improving supply chain efficiency and transparency.",
+      title: "Client Relationship Management (CRM)",
+      description: "Improving client engagement and retention.",
       items: [
         {
-          name: "Logistics Management Systems",
-          info: "Software to streamline logistics operations.",
+          name: "AI-Powered CRM Tools",
+          info: "Automating client interactions and lead management.",
         },
         {
-          name: "Warehouse Management Tools",
-          info: "Applications for inventory control and storage optimization.",
+          name: "Virtual Assistance for Professionals",
+          info: "Chatbots and AI-driven assistants for client support.",
         },
       ],
     },
     {
-      title: "Route Planning Solutions",
-      description: "Enhancing delivery efficiency with optimized routes.",
+      title: "Data Security & Compliance",
+      description: "Ensuring secure and compliant business operations.",
       items: [
         {
-          name: "Dynamic Routing Tools",
-          info: "Real-time route optimization based on traffic conditions.",
+          name: "Cybersecurity Solutions",
+          info: "Advanced security measures to protect client data.",
         },
         {
-          name: "Delivery Scheduling Software",
-          info: "Applications for planning and managing delivery schedules.",
+          name: "Regulatory Compliance Tools",
+          info: "Ensuring adherence to industry regulations and legal standards.",
         },
       ],
     },
     {
-      title: "Compliance & Safety Management",
-      description: "Ensuring transportation safety and regulatory compliance.",
+      title: "Cloud-Based Collaboration",
+      description: "Enhancing remote and hybrid work environments.",
       items: [
         {
-          name: "Driver Safety Monitoring Systems",
-          info: "Tools to monitor driver behavior and promote safety.",
+          name: "Cloud Document Sharing",
+          info: "Secure and seamless document access from anywhere.",
         },
         {
-          name: "Regulatory Compliance Software",
-          info: "Applications to manage industry-specific compliance requirements.",
+          name: "Video Conferencing & Virtual Meeting Platforms",
+          info: "Integrated tools for remote collaboration and communication.",
         },
       ],
     },
   ],
 };
 
-const mediaObj = {
-  title: "Media and Entertainment",
-  src: transportationImg,
-  description: "Driving Efficiency Through Advanced Technology",
-  extendedContent: `Revolutionize your logistics and transportation operations with our innovative IT solutions. We specialize in fleet management systems, supply chain optimization tools, and real-time tracking technologies that improve route efficiency, reduce costs, and ensure regulatory compliance.`,
+const retailEcommerceObj = {
+  title: "Retail & E-Commerce",
+  src: retailEcommerceImg,
+  description: "Transforming Shopping Experiences with Technology",
+  extendedContent: `Enhance retail and e-commerce operations with AI-powered insights, omnichannel solutions, and secure payment processing. Our solutions optimize customer engagement, inventory management, and personalized shopping experiences.`,
   sections: [
     {
-      title: "Fleet Management",
-      description: "Tools to manage and optimize vehicle fleets.",
+      title: "Omnichannel Commerce",
+      description: "Seamless integration of online and offline shopping.",
       items: [
         {
-          name: "GPS Tracking Systems",
-          info: "Real-time tracking of vehicles and routes.",
+          name: "Unified Shopping Experience",
+          info: "Integrated platforms for web, mobile, and physical stores.",
         },
         {
-          name: "Fleet Maintenance Software",
-          info: "Applications to schedule and track vehicle maintenance.",
+          name: "AI-Powered Chatbots",
+          info: "Automated customer assistance and personalized recommendations.",
         },
       ],
     },
     {
-      title: "Supply Chain Optimization",
-      description: "Improving supply chain efficiency and transparency.",
+      title: "Inventory & Supply Chain Management",
+      description: "Optimizing stock levels and logistics operations.",
       items: [
         {
-          name: "Logistics Management Systems",
-          info: "Software to streamline logistics operations.",
+          name: "AI-Based Demand Forecasting",
+          info: "Predicting sales trends for better inventory planning.",
         },
         {
-          name: "Warehouse Management Tools",
-          info: "Applications for inventory control and storage optimization.",
+          name: "Real-Time Inventory Tracking",
+          info: "IoT-enabled monitoring for efficient stock management.",
         },
       ],
     },
     {
-      title: "Route Planning Solutions",
-      description: "Enhancing delivery efficiency with optimized routes.",
+      title: "Personalized Customer Experience",
+      description: "Enhancing engagement with data-driven insights.",
       items: [
         {
-          name: "Dynamic Routing Tools",
-          info: "Real-time route optimization based on traffic conditions.",
+          name: "Recommendation Engines",
+          info: "AI-driven product suggestions based on customer behavior.",
         },
         {
-          name: "Delivery Scheduling Software",
-          info: "Applications for planning and managing delivery schedules.",
+          name: "Loyalty & Rewards Programs",
+          info: "Personalized promotions and discounts using data analytics.",
         },
       ],
     },
     {
-      title: "Compliance & Safety Management",
-      description: "Ensuring transportation safety and regulatory compliance.",
+      title: "Secure Payments & Fraud Prevention",
+      description: "Ensuring safe and seamless transactions.",
       items: [
         {
-          name: "Driver Safety Monitoring Systems",
-          info: "Tools to monitor driver behavior and promote safety.",
+          name: "AI-Powered Fraud Detection",
+          info: "Machine learning algorithms for detecting fraudulent activities.",
         },
         {
-          name: "Regulatory Compliance Software",
-          info: "Applications to manage industry-specific compliance requirements.",
+          name: "Blockchain-Based Payments",
+          info: "Secure and decentralized transaction processing.",
+        },
+      ],
+    },
+  ],
+};
+
+const telecommunicationsObj = {
+  title: "Telecommunications",
+  src: telecommunicationsImg,
+  description: "Revolutionizing Connectivity with Advanced IT Solutions",
+  extendedContent: `We provide cutting-edge IT solutions to optimize telecom networks, enhance customer experience, and drive innovation in the communication industry. Our services include 5G optimization, AI-driven network monitoring, and digital customer engagement platforms.`,
+  sections: [
+    {
+      title: "Network Optimization & 5G",
+      description: "Improving network performance and connectivity.",
+      items: [
+        {
+          name: "AI-Powered Network Analytics",
+          info: "Automated monitoring and predictive maintenance for telecom networks.",
+        },
+        {
+          name: "5G Deployment & Optimization",
+          info: "Enhancing connectivity with next-gen network solutions.",
+        },
+      ],
+    },
+    {
+      title: "Customer Experience & Support",
+      description: "Enhancing telecom customer engagement.",
+      items: [
+        {
+          name: "AI Chatbots for Customer Support",
+          info: "Automated issue resolution and assistance for telecom customers.",
+        },
+        {
+          name: "Personalized Data Plans & Offers",
+          info: "Real-time analytics for tailored customer plans and promotions.",
+        },
+      ],
+    },
+    {
+      title: "Billing & Revenue Management",
+      description: "Streamlining telecom financial operations.",
+      items: [
+        {
+          name: "Real-Time Billing Systems",
+          info: "Automated and transparent billing solutions.",
+        },
+        {
+          name: "Fraud Detection & Prevention",
+          info: "AI-driven security solutions to detect billing fraud.",
+        },
+      ],
+    },
+    {
+      title: "IoT & Smart Connectivity",
+      description: "Expanding telecom services through IoT integration.",
+      items: [
+        {
+          name: "Smart City Connectivity",
+          info: "IoT solutions for urban infrastructure and communication networks.",
+        },
+        {
+          name: "Connected Devices & Wearables",
+          info: "Seamless communication for IoT-powered gadgets.",
         },
       ],
     },
@@ -983,7 +1301,12 @@ export {
   realEstateObj,
   transportationObj,
   telecommunicationsObj,
-  retailingObj,
   professionalObj,
-  mediaObj
+  mediaObj,
+  automotiveObj,
+  oilAndGasObj,
+  astrologyAndHoroscopeObj,
+  insuranceObj,
+  bankingObj,
+  retailEcommerceObj,
 };

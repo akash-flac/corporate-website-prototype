@@ -1,5 +1,9 @@
 import React from "react";
 import CountUp from "react-countup";
+import techExperts from "/src/images/techExperts.png";
+import skills from "/src/images/skills.jpeg";
+import projectManagement from "/src/images/projectManagement.jpeg";
+import happyClients from "/src/images/happyClients.jpeg";
 
 const imgs = [
   {
@@ -7,34 +11,34 @@ const imgs = [
     id: 1,
     number: 250,
     content: "Tech Experts On-board",
-    src: "/src/images/techExperts.png",
+    src: techExperts,
   },
   {
     name: "Tech Experts on Board",
     id: 2,
     number: 8,
     content: "Years Of Expertise",
-    src: "/src/images/skills.jpeg",
+    src: skills,
   },
   {
     name: "Tech Experts on Board",
     id: 3,
     number: 3350,
     content: "Projects Delivered",
-    src: "/src/images/projectManagement.jpeg",
+    src: projectManagement,
   },
   {
     name: "Tech Experts on Board",
     id: 4,
     number: 3120,
     content: "Happy Clients",
-    src: "/src/images/happyClients.jpeg",
+    src: happyClients,
   },
 ];
 const WhyChooseMarkle = () => {
   return (
     <div className="m-6">
-      <h1 className="row-span-1 text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-3 font-semibold text-[#330073] text-center uppercase">
+      <h1 className="row-span-1 text-2xl md:text-3xl/relaxed lg:text-4xl/relaxed md:pb-3 font-semibold text-[#330073] text-center uppercase font-montserrat">
         Why choose <span className="font-bold"> Markle</span>?
       </h1>
       <div className="flex justify-evenly flex-wrap m-2 md:m-5 p-4 bg-gray-50">
@@ -56,10 +60,10 @@ const WhyChooseMarkle = () => {
               {/* Dark Overlay (Hover Effect Added) */}
               <div className="absolute inset-0 bg-black bg-opacity-60 transition duration-300 ease-in-out"></div>
 
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-white font-semibold text-lg px-3 text-center leading-tight">
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-white font-semibold text-lg px-3 text-center leading-tight font-plex">
                 {/* Text Overlay */}
                 <p className=" ">
-                  <CountUp end={img.number} suffix="+" duration={3} />
+                  <CountUp end={img.number} suffix="+" duration={5} />
                 </p>
 
                 <p className="">{img.content}</p>

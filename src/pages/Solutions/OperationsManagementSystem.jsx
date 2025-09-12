@@ -7,9 +7,9 @@ import { operationsManagementObj } from '../../data/solutions/solutions'
 const OperationsManagementSystem = () => {
   return (
     <div>
-      <Hero heading={operationsManagementObj.title} bgImage={operationsManagementObj.src} content={operationsManagementObj.description} />
+      {/* <Hero heading={operationsManagementObj.title} bgImage={operationsManagementObj.src} content={operationsManagementObj.description} /> */}
       <SolutionsCommon obj={operationsManagementObj} />
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   )
 }
